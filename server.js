@@ -81,9 +81,12 @@ app.post("/api/mails", function(req, res) {
                 text: newMail.text,
               })
               .then((mailResp) => {
+                const respAsString = JSON.stringify(mailResp);
                 if (mailResp.status != 200) {
-                  handleError(res, JSON.stringify(mailResp), "Failed to send mail");
+                  handleError(res, respAsString, "Failed to send mail");
                   mailHasError = true;
+                } else {
+                  console.log('Mail seems to be sent: ', respAsString);
                 }
               })
               .catch((mailError) => {
