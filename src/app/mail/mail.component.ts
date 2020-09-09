@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Mail } from './mail';
 import { MailService } from './mail.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-mail',
@@ -9,9 +10,16 @@ import { MailService } from './mail.service';
 })
 export class MailComponent {
   mails: Mail[];
-  newMail: Mail = new Mail();
+  newMail: Mail;
 
-  constructor(private mailService: MailService) { }
+  constructor(private mailService: MailService) {
+    this.newMail = new Mail();
+    this.newMail.from = 'vincent_sels@hotmail.com';
+    this.newMail.to = 'vincent_sels@hotmail.com';
+    this.newMail.city = 'Anderlecht';
+    this.newMail.subject = 'Test subject ' + new Date();
+    this.newMail.body = 'Test body ' + new Date();
+  }
 
   ngOnInit() {
     this.mailService
