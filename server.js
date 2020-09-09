@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
-const axios = require("axios");
+const mailgun = require("mailgun-js");
+
 const ObjectID = mongodb.ObjectID;
 
 const MAILS_COLLECTION = "mails";
@@ -72,34 +73,29 @@ app.post("/api/mails", function(req, res) {
         // Try to send mail
         if (process.env.MAILGUN_API_KEY) {
           try {
-            const url = `https://api:${process.env.MAILGUN_API_KEY}@api.eu.mailgun.net/v3/klimaatraad.herokuapp.com`;
-            axios
-              .post(url, {
-                from: newMail.from,
-                to: newMail.to,
-                subject: newMail.subject,
-                text: newMail.text,
-              })
-              .then((mailResp) => {
-                const respAsString = JSON.stringify(mailResp.data);
-                if (mailResp.status != 200) {
-                  handleError(res, respAsString, "Failed to send mail");
-                } else {
-                  console.log('Mail seems to be sent: ', respAsString);
+            const mg = mailgun({ apiKey: process.env.MAILGUN_API_KE, domain: "klimaatraad.herokuapp.com" });
+            const data = {
+              from: newMail.from,
+              to: newMail.to,
+              subject: newMail.subject,
+              text: newMail.text,
+            };
+            mg.messages().send(data, (mailErr, body) => {
+              if (mailErr) {
+                handleError(res, mailErr, "Failed to send mail");
+              } else {
+                console.log('Mail seems to be sent: ', body);
 
-                  db.collection(MAILS_COLLECTION).replaceOne({_id: new ObjectID(newMail._id)}, newMail, function(updateError, updatedMail) {
-                    if (updateError) {
-                      handleError(res, err.message, "Failed to set mail as sent");
-                    } else {
-                      console.log('Mail marked as sent');
-                      res.status(201).json(newMail);
-                    }
-                  });
-                }
-              })
-              .catch((mailError) => {
-                handleError(res, mailError, "Failed to send mail");
-              });
+                db.collection(MAILS_COLLECTION).replaceOne({_id: new ObjectID(newMail._id)}, newMail, function(updateError, updatedMail) {
+                  if (updateError) {
+                    handleError(res, err.message, "Failed to set mail as sent");
+                  } else {
+                    console.log('Mail marked as sent');
+                    res.status(201).json(newMail);
+                  }
+                });
+              }
+            });
           } catch (mailError) {
             handleError(res, mailError, "Failed to send mail");
           }
