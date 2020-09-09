@@ -70,30 +70,41 @@ app.post("/api/mails", function(req, res) {
 
         // Try to send mail
         if (process.env.MAILGUN_API_KEY) {
+          const mailHasError;
           try {
             const url = `https://api:${process.env.MAILGUN_API_KEY}@api.eu.mailgun.net/v3/klimaatraad.herokuapp.com`;
-            axios.post(url, {
-              from: newMail.from,
-              to: newMail.to,
-              subject: newMail.subject,
-              text: newMail.text,
-            }).catch((mailError) => {
-              handleError(res, mailError, "Failed to send mail");
-            });
+            axios
+              .post(url, {
+                from: newMail.from,
+                to: newMail.to,
+                subject: newMail.subject,
+                text: newMail.text,
+              })
+              .then((mailResp) => {
+                if (mailResp.status != 200) {
+                  handleError(res, JSON.stringify(mailResp), "Failed to send mail");
+                  mailHasError = true;
+                }
+              })
+              .catch((mailError) => {
+                handleError(res, mailError, "Failed to send mail");
+              });
             console.log('Sent email');
           } catch (mailError) {
             handleError(res, mailError, "Failed to send mail");
           }
 
-          // Send mail worked: update record
-          savedMail.sent = true;
-          db.collection(MAILS_COLLECTION).replaceOne({_id: new ObjectID(savedMail._id)}, savedMail, function(updateError, updatedMail) {
-            if (updateError) {
-              handleError(res, err.message, "Failed to set mail as sent");
-            } else {
-              console.log('Mail marked as sent');
-            }
-          });
+          if (!mailHasError) {
+            // Send mail worked: update record
+            savedMail.sent = true;
+            db.collection(MAILS_COLLECTION).replaceOne({_id: new ObjectID(savedMail._id)}, savedMail, function(updateError, updatedMail) {
+              if (updateError) {
+                handleError(res, err.message, "Failed to set mail as sent");
+              } else {
+                console.log('Mail marked as sent');
+              }
+            });
+          }
         }
 
         res.status(201).json(savedMail);
