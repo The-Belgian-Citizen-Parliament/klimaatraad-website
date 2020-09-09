@@ -70,7 +70,7 @@ app.post("/api/mails", function(req, res) {
 
         // Try to send mail
         if (process.env.MAILGUN_API_KEY) {
-          const mailHasError;
+          let mailHasError;
           try {
             const url = `https://api:${process.env.MAILGUN_API_KEY}@api.eu.mailgun.net/v3/klimaatraad.herokuapp.com`;
             axios
