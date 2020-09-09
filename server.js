@@ -78,7 +78,7 @@ app.post("/api/mails", function(req, res) {
               from: newMail.from,
               to: newMail.to,
               subject: newMail.subject,
-              text: newMail.text,
+              text: newMail.body,
             };
             mg.messages().send(data, (mailErr, body) => {
               if (mailErr) {
