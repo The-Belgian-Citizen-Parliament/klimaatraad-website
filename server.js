@@ -73,7 +73,7 @@ app.post("/api/mails", function(req, res) {
         // Try to send mail
         if (process.env.MAILGUN_API_KEY) {
           try {
-            const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: "klimaatraad.herokuapp.com" });
+            const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
             const data = {
               from: newMail.from,
               to: newMail.to,
