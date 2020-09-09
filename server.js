@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
+const https = require("https");
 const ObjectID = mongodb.ObjectID;
 
 const MAILS_COLLECTION = "mails";
@@ -62,9 +63,36 @@ app.post("/api/mails", function(req, res) {
   } else {
     db.collection(MAILS_COLLECTION).insertOne(newMail, function(err, doc) {
       if (err) {
-        handleError(res, err.message, "Failed to create new contact.");
+        handleError(res, err.message, "Failed to create new mail.");
       } else {
-        res.status(201).json(doc.ops[0]);
+        const savedMail = doc.ops[0];
+
+        // Try to send mail
+        if (process.env.MAILGUN_API_KEY) {
+          try {
+            const url = `https://api:${process.env.MAILGUN_API_KEY}@api.eu.mailgun.net/v3/klimaatraad.herokuapp.com`;
+            https.post(url, {
+              from: newMail.from,
+              to: newMail.to,
+              subject: newMail.subject,
+              text: newMail.text,
+            }, (mailError, params) => {
+              handleError(res, mailError, "Failed to send mail");
+            });
+          } catch (mailError) {
+            handleError(res, mailError, "Failed to send mail");
+          }
+
+          // Send mail worked: update record
+          savedMail.sent = true;
+          db.collection(MAILS_COLLECTION).updateOne({_id: new ObjectID(savedMail._id)}, savedMail, function(updateError, updatedMail) {
+            if (updateError) {
+              handleError(res, err.message, "Failed to set mail as sent");
+            }
+          });
+        }
+
+        res.status(201).json(savedMail);
       }
     });
   }
