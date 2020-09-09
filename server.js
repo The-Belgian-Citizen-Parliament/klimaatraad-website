@@ -65,8 +65,9 @@ app.post("/api/mails", function(req, res) {
       if (err) {
         handleError(res, err.message, "Failed to create new mail.");
       } else {
-        const savedMail = doc.ops[0];
-        console.log('Created email record: ', savedMail);
+        const id = doc.ops[0]._id;
+        newMail._id = id;
+        console.log('Created email record: ', newMail);
 
         // Try to send mail
         if (process.env.MAILGUN_API_KEY) {
@@ -80,28 +81,25 @@ app.post("/api/mails", function(req, res) {
                 text: newMail.text,
               })
               .then((mailResp) => {
-                const respAsString = JSON.stringify(mailResp);
+                const respAsString = JSON.stringify(mailResp.data);
                 if (mailResp.status != 200) {
                   handleError(res, respAsString, "Failed to send mail");
-                  mailHasError = true;
                 } else {
                   console.log('Mail seems to be sent: ', respAsString);
 
-                  db.collection(MAILS_COLLECTION).replaceOne({_id: new ObjectID(savedMail._id)}, savedMail, function(updateError, updatedMail) {
+                  db.collection(MAILS_COLLECTION).replaceOne({_id: new ObjectID(newMail._id)}, newMail, function(updateError, updatedMail) {
                     if (updateError) {
                       handleError(res, err.message, "Failed to set mail as sent");
                     } else {
                       console.log('Mail marked as sent');
+                      res.status(201).json(newMail);
                     }
                   });
-
-                  res.status(201).json(savedMail);
                 }
               })
               .catch((mailError) => {
                 handleError(res, mailError, "Failed to send mail");
               });
-            console.log('Sent email');
           } catch (mailError) {
             handleError(res, mailError, "Failed to send mail");
           }
