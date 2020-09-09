@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb");
-const https = require("https");
+const axios = require("axios");
 const ObjectID = mongodb.ObjectID;
 
 const MAILS_COLLECTION = "mails";
@@ -71,12 +71,12 @@ app.post("/api/mails", function(req, res) {
         if (process.env.MAILGUN_API_KEY) {
           try {
             const url = `https://api:${process.env.MAILGUN_API_KEY}@api.eu.mailgun.net/v3/klimaatraad.herokuapp.com`;
-            https.post(url, {
+            axios.post(url, {
               from: newMail.from,
               to: newMail.to,
               subject: newMail.subject,
               text: newMail.text,
-            }, (mailError, params) => {
+            }).catch((mailError) => {
               handleError(res, mailError, "Failed to send mail");
             });
           } catch (mailError) {
