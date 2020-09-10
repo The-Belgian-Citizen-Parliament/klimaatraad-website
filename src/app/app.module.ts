@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MailComponent } from './mail/mail.component';
 import { MailService } from './mail/mail.service';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MainComponent,
     MailComponent,
   ],
   imports: [
