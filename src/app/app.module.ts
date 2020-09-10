@@ -16,7 +16,7 @@ import { MainComponent } from './main/main.component';
     MailComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

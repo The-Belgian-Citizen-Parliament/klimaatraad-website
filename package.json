@@ -6,7 +6,11 @@
     "start": "node server.js",
     "build": "ng build --prod",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev:ssr": "ng run klimaatraad:serve-ssr",
+    "serve:ssr": "node dist/klimaatraad/server/main.js",
+    "build:ssr": "ng build --prod && ng run klimaatraad:server:production",
+    "prerender": "ng run klimaatraad:prerender"
   },
   "private": true,
   "dependencies": {
@@ -17,7 +21,9 @@
     "@angular/forms": "~10.1.1",
     "@angular/platform-browser": "~10.1.1",
     "@angular/platform-browser-dynamic": "~10.1.1",
+    "@angular/platform-server": "~10.1.1",
     "@angular/router": "~10.1.1",
+    "@nguniversal/express-engine": "^10.1.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mailgun-js": "^0.22.0",
@@ -31,6 +37,8 @@
     "@angular/cli": "~10.1.1",
     "@angular/compiler-cli": "~10.1.1",
     "@angular/language-service": "~10.1.1",
+    "@nguniversal/builders": "^10.1.0",
+    "@types/express": "^4.17.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "ts-node": "~7.0.0",
