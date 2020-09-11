@@ -14,13 +14,17 @@
           </p>
           <p>
             <mat-form-field floatLabel="never" style="width: 300px; text-align: center;">
-              <input matInput #question [placeholder]="questionPlaceholder" [(ngModel)]="filter" autofocus />
+              <input matInput #question [placeholder]="questionPlaceholder" [(ngModel)]="filter" (keyup)="filterQuestions()" />
             </mat-form-field>
           </p>
         </div>
       </div>
 
       <app-question *ngFor="let question of questions" [question]="question"></app-question>
+
+      <p *ngIf="questions.length == 0">
+        Geen vragen gevonden met deze filter.
+      </p>
     </div>
   </div>
 </section>

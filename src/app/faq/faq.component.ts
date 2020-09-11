@@ -22,7 +22,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   isBrowser = false;
   timer;
 
-  constructor(@Inject(PLATFORM_ID) platformId: string, questionsService: QuestionsService) {
+  constructor(@Inject(PLATFORM_ID) platformId: string, private questionsService: QuestionsService) {
     this.questionPlaceholder = this.questionExamples[0];
     this.isBrowser = isPlatformBrowser(platformId);
     setTimeout(() => this.questionField.nativeElement.focus());
@@ -37,5 +37,14 @@ export class FaqComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     if (this.timer) clearInterval(this.timer);
+  }
+
+  filterQuestions() {
+    if (this.filter.length > 2) {
+      this.questions = questions.filter(q => q.question.includes(this.filter) || q.summary.includes(this.filter)
+        || (q.answer && q.answer.includes(this.filter)));
+    } else if (this.filter.length === 0) {
+      this.questions = this.questionsService.getRandomQuestions(3);
+    }
   }
 }
