@@ -4,7 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -14,6 +15,8 @@ import { MailComponent } from './mail/mail.component';
 import { MailService } from './mail/mail.service';
 import { MainComponent } from './main/main.component';
 import { FaqComponent } from './faq/faq.component';
+import { QuestionsService } from './questions/questions.service';
+import { QuestionComponent } from './questions/question/question.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { FaqComponent } from './faq/faq.component';
     MainComponent,
     MailComponent,
     FaqComponent,
+    QuestionComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -32,9 +36,11 @@ import { FaqComponent } from './faq/faq.component';
     MatSelectModule,
     MatButtonModule,
     FlexLayoutModule,
+    MatIconModule,
   ],
   providers: [
     MailService,
+    QuestionsService,
   ],
   bootstrap: [AppComponent]
 })

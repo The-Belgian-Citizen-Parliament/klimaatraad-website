@@ -1,0 +1,18 @@
+<div class="feature-extended">
+  <div class="feature-extended-body">
+    <h3 class="mt-0">{{ question.question }}</h3>
+    <div class="darker">
+      {{ question.summary }}
+      <div class="expand-button" *ngIf="question.answer && !expanded" (click)="expand()">
+        Toon meer <mat-icon class="inline">expand_more</mat-icon>
+      </div>
+    </div>
+    <div class="answer" [class.hidden]="!expanded">
+      {{ question.answer }}
+      <div class="expand-button" *ngIf="expanded" (click)="expand()">
+        Toon minder <mat-icon class="inline">expand_less</mat-icon>
+      </div>
+    </div>
+    <ul class="question-tags"><li *ngFor="let tag of question.tags">{{ tag }}</li></ul>
+  </div>
+</div>

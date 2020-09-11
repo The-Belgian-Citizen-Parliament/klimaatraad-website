@@ -1,0 +1,28 @@
+.answer {
+  font-size: 85%;
+  line-height: 22px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.expand-button {
+  margin-top: 8px;
+  font-size: 80%;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+ul.question-tags {
+  list-style: none;
+  opacity: 0.6;
+  padding-left: 0px;
+
+  li {
+    margin-right: 10px;
+    display: inline;
+  }
+}

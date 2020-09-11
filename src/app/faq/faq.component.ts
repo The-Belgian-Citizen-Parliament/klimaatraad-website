@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { QuestionsService } from '../questions/questions.service';
+import { questions, Question } from '../questions/questions';
 
 @Component({
   selector: 'app-faq',
@@ -12,21 +14,24 @@ export class FaqComponent implements OnInit, OnDestroy {
   filter = '';
 
   questionPlaceholder = '';
-  questions = ['klimaat', 'burger', 'politici', 'legitiem'];
+  questionExamples = ['klimaat', 'burger', 'politici', 'legitiem'];
   counter = 0;
+
+  questions: Question[] = [];
 
   isBrowser = false;
   timer;
 
-  constructor(@Inject(PLATFORM_ID) platformId: string) {
-    this.questionPlaceholder = this.questions[0];
+  constructor(@Inject(PLATFORM_ID) platformId: string, questionsService: QuestionsService) {
+    this.questionPlaceholder = this.questionExamples[0];
     this.isBrowser = isPlatformBrowser(platformId);
     setTimeout(() => this.questionField.nativeElement.focus());
+    this.questions = questionsService.getRandomQuestions(3);
   }
 
   ngOnInit(): void {
     if (this.isBrowser) {
-      this.timer = setInterval(() => this.questionPlaceholder = this.questions[(++this.counter) % this.questions.length], 3000);
+      this.timer = setInterval(() => this.questionPlaceholder = this.questionExamples[(++this.counter) % this.questionExamples.length], 3000);
     }
   }
 

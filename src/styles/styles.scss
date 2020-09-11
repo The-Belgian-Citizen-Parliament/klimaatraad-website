@@ -2,13 +2,9 @@
 @import './evelyn-extensions.scss';
 @import './material-theme.scss';
 
-ul.question-tags {
-  list-style: none;
-  opacity: 0.6;
-  padding-left: 0px;
-
-  li {
-    margin-right: 10px;
-    display: inline;
-  }
+.mat-icon.inline {
+  height: unset;
+  width: unset;
+  font-size: inherit;
+  vertical-align: text-bottom;
 }
