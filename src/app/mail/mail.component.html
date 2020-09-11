@@ -3,39 +3,63 @@
     <div class="clients-inner section-inner">
           <div class="container-sm">
             <h2 class="section-title mt-0 text-center">Mail je vertegenwoordigers</h2>
+            <div class="mat-typography">
 
               <!-- <ul class="list-reset mb-0">
               </ul> -->
 
               <ul>
                 <li *ngFor="let mail of mails">
-                  {{ mail.from }} <span *ngIf="mail.city">({{mail.city}})</span>
+                  {{ mail.firstName }} {{ mail.lastName }} <span *ngIf="mail.city">({{mail.city}})</span>
                 </li>
               </ul>
 
               <form class="col-md-12">
-                <div class="form-group">
-                  <label for="from">From email</label>
-                  <input class="form-control" name="from" [(ngModel)]="newMail.from" placeholder="From"/>
-                </div>
-                <div class="form-group">
-                  <label for="to">To email</label>
-                  <input class="form-control" name="to" [(ngModel)]="newMail.to" placeholder="To"/>
-                </div>
-                <div class="form-group">
-                  <label for="subject">Subject</label>
-                  <input class="form-control" name="subject" [(ngModel)]="newMail.subject" placeholder="Subject"/>
-                </div>
-                <div class="form-group">
-                  <label for="city">City</label>
-                  <input class="form-control" name="city" [(ngModel)]="newMail.city" placeholder="City"/>
-                </div>
-                <div class="form-group">
-                  <label for="body">Body</label>
-                  <textarea class="form-control" name="body" [(ngModel)]="newMail.body" placeholder="Body" rows="2"></textarea>
-                </div>
-                <button class="btn btn-primary" *ngIf="!newMail._id" (click)="sendMail()">Send</button>
+                <mat-form-field>
+                  <mat-label>Voornaam</mat-label>
+                  <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <mat-label>Achternaam</mat-label>
+                  <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <mat-label>Email</mat-label>
+                  <input matInput placeholder="voorbeeld@gmail.com" name="email" [(ngModel)]="newMail.email">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <mat-label>Postcode</mat-label>
+                  <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <mat-label>Stad</mat-label>
+                  <input matInput placeholder="Brussel" name="city" [(ngModel)]="newMail.city">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <mat-label>Onderwerp</mat-label>
+                  <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="Onderwerp" [(ngModel)]="newMail.subject">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <mat-label>Tekst</mat-label>
+                  <textarea matInput rows="4" placeholder="Leg uit waarom je dit belangrijk vindt." name="body" [(ngModel)]="newMail.body"></textarea>
+                </mat-form-field>
+<!--
+                <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
+
+                <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div>
+
+                <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
+-->
+
+                <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
               </form>
+            </div>
       </div>
     </div>
   </div>

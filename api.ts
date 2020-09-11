@@ -2,6 +2,7 @@ import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as mongodb from "mongodb";
 import * as mailgun from "mailgun-js";
+import { Mail } from 'src/app/mail/mail';
 
 const MAILS_COLLECTION = "mails";
 
@@ -29,10 +30,7 @@ export function bootstrap(app: express.Express) {
     console.log("Database connection ready");
   });
 
-  // app.get("/api/mails/test", function(req, res) {
-  //   res.status(200).json([{subject: 'test', from: 'mlsdkgj', city: 'mlkjml', to: 'mlsdgjsdmlg', body: 'qsqqssq'}]);
-  // });
-
+  // Only get firstName, lastName, city; where public flag is true
   app.get("/api/mails/last", function(req, res) {
     db.collection(MAILS_COLLECTION).find({}).toArray(function(err, docs) {
       if (err) {
@@ -44,56 +42,70 @@ export function bootstrap(app: express.Express) {
   });
 
   app.post("/api/mails", function(req, res) {
-    const newMail = req.body;
-    newMail.createDate = new Date();
+    const newMail = req.body as Mail;
 
-    if (!req.body.body) {
-      handleError(res, "Invalid user input", "Must provide a body.", 400);
-    } else if (!req.body.subject) {
-      handleError(res, "Invalid user input", "Must provide a subject.", 400);
-    } else if (!req.body.to) {
-      handleError(res, "Invalid user input", "Must provide a 'to'.", 400);
-    } else {
-      db.collection(MAILS_COLLECTION).insertOne(newMail, function(err, doc) {
-        if (err) {
-          handleError(res, err.message, "Failed to create new mail.");
-        } else {
-          const id = doc.ops[0]._id;
-          newMail._id = id;
-          console.log('Created email record: ', newMail);
+    if (!validate(req, newMail)) return;
 
-          // Try to send mail
-          if (process.env.MAILGUN_API_KEY) {
-            try {
-              const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
-              const data = {
-                from: newMail.from,
-                to: newMail.to,
-                subject: newMail.subject,
-                text: newMail.body,
-              };
-              mg.messages().send(data, (mailErr, body) => {
-                if (mailErr) {
-                  handleError(res, mailErr, "Failed to send mail");
-                } else {
-                  console.log('Mail seems to be sent: ', body);
+    db.collection(MAILS_COLLECTION).insertOne(newMail, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to create new mail.");
+      } else {
+        const id = doc.ops[0]._id;
+        newMail._id = id;
+        console.log('Created email record: ', newMail);
 
-                  db.collection(MAILS_COLLECTION).replaceOne({_id: new mongodb.ObjectID(newMail._id)}, newMail, function(updateError, updatedMail) {
-                    if (updateError) {
-                      handleError(res, err.message, "Failed to set mail as sent");
-                    } else {
-                      console.log('Mail marked as sent');
-                      res.status(201).json(newMail);
-                    }
-                  });
-                }
-              });
-            } catch (mailError) {
-              handleError(res, mailError, "Failed to send mail");
-            }
+        // Try to send mail
+        if (process.env.MAILGUN_API_KEY) {
+          try {
+            const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
+            const data = {
+              from: newMail.email,
+              to: newMail.to,
+              subject: newMail.subject,
+              text: newMail.body,
+            };
+            mg.messages().send(data, (mailErr, body) => {
+              if (mailErr) {
+                handleError(res, mailErr, "Failed to send mail");
+              } else {
+                console.log('Mail seems to be sent: ', body);
+
+                db.collection(MAILS_COLLECTION).replaceOne({_id: new mongodb.ObjectID(newMail._id)}, newMail, function(updateError, updatedMail) {
+                  if (updateError) {
+                    handleError(res, err.message, "Failed to set mail as sent");
+                  } else {
+                    console.log('Mail marked as sent');
+                    res.status(201).json(newMail);
+                  }
+                });
+              }
+            });
+          } catch (mailError) {
+            handleError(res, mailError, "Failed to send mail");
           }
         }
-      });
-    }
+      }
+    });
   });
+
+  function validate(res, mail: Mail) {
+    if (!mail.firstName) {
+      handleError(res, "Invalid user input", "Must provide a firstName.", 400);
+    } else if (!mail.lastName) {
+      handleError(res, "Invalid user input", "Must provide a lastName.", 400);
+    } else if (!mail.email) {
+      handleError(res, "Invalid user input", "Must provide a 'email'.", 400);
+    } else if (!mail.city) {
+      handleError(res, "Invalid user input", "Must provide a 'city'.", 400);
+    } else if (!mail.postalCode) {
+      handleError(res, "Invalid user input", "Must provide a 'postalCode'.", 400);
+    } else if (!mail.subject) {
+      handleError(res, "Invalid user input", "Must provide a 'subject'.", 400);
+    } else if (!mail.body) {
+      handleError(res, "Invalid user input", "Must provide a 'body'.", 400);
+    } else if (!mail.to) {
+      handleError(res, "Invalid user input", "Must provide a 'to'.", 400);
+    } else return true;
+    return false;
+  }
 }

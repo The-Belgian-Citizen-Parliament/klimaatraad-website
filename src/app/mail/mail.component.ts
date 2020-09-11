@@ -14,18 +14,27 @@ export class MailComponent {
 
   constructor(private mailService: MailService) {
     this.newMail = new Mail();
-    this.newMail.from = 'vincent_sels@hotmail.com';
+    this.newMail.email = 'vincent.sels@gmail.com';
     this.newMail.to = 'vincent_sels@hotmail.com';
     this.newMail.city = 'Anderlecht';
-    this.newMail.subject = 'Test subject ' + new Date();
-    this.newMail.body = 'Test body ' + new Date();
+    this.newMail.postalCode = '1070';
+    this.newMail.firstName = 'Vincent';
+    this.newMail.lastName = 'Sels';
+    this.newMail.allowPublic = true;
+    this.newMail.allowReplies = true;
+    this.newMail.stayUpToDate = false;
+    this.newMail.sentOn = new Date();
+    this.newMail.subject = 'Laat burgers zelf maatregelen uitwerken tegen ecologische crises!';
+    this.newMail.body = 'Een groep van 101 gelote burgers die rekening houdend met demografische criteria een representatieve dwarsdoorsnede vormt van de totale Belgische bevolking, buigt zich, geïnformeerd door een brede waaier experten en belanghebbenden, tussen 20 november 2020 en 7 maart 2021 over de volgende vraag: “Hoe kunnen bij de uitoefening van hun respectieve bevoegdheden de federale Staat, de gemeenschappen en de gewesten bijdragen tot de maximalisering van de kansen om het Belgische territorium en de planeet in haar totaliteit bewoonbaar te houden voor de huidige en toekomstige generaties?”\n\n' +
+'Het deliberatieve proces loopt over acht sessies van telkens drie dagen en telt vier belangrijke fasen: leren, consulteren, beraadslagen en beslissen. Om de participatiedrempel te verlagen ontvangen de leden van het Nationale Burgerparlement dagvergoedingen, transportvergoedingen, accommodatie en kinderopvang. Elk van hun beleidsvoorstellen wordt door de bevoegde regering(en) geïmplementeerd of ter stemming voorgelegd aan het bevoegde parlement of de bevoegde parlementen. Op aanvaarde, afgewezen of gewijzigde voorstellen volgen telkens grondige publieke motivaties.\n\n' +
+'Om elke schijn van partijdigheid te vermijden, speelt Extinction Rebellion zelf geen rol in de organisatie van het deliberatieve proces, de selectie van het deskundigenpanel of het toezicht. Het Nationale Burgerparlement wordt geïnitieerd en gefinancierd door de federale regering. Een coördinatiegroep, adviesraad, facilitatieteam, legistiek comité en toezichtpanel zorgen samen voor een goede gang van zaken en waarborgen de publieke transparantie, politieke onafhankelijkheid en democratische legitimiteit ervan.\n\n';
   }
 
   ngOnInit() {
     this.mailService
       .getLastMails()
       .then((mails: Mail[]) => {
-        this.mails = (mails || []).filter(m => m.from);
+        this.mails = (mails || []).filter(m => m.allowPublic);
       });
   }
 

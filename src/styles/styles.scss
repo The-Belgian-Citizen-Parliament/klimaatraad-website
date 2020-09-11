@@ -1,4 +1,17 @@
-//@import './evelyn/style.scss';
+// If we're not going to change anything; we don't need to duplicate this
+@import './evelyn/style.scss';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.site-header.small::before {
+  height: 130px;
+  transform: skewY(-2deg);
+}
+
+@media (max-width: 640px) {
+  .site-header.small::before {
+    height: 110px;
+  }
+}
+
+// MD set these; don't think we need these
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
