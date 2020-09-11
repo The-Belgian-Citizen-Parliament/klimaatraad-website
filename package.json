@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node dist/server",
+    "start": "node dist/klimaatraad/server/main.js",
     "build": "ng build --prod && ng run klimaatraad:server:production",
     "lint": "ng lint",
     "e2e": "ng e2e",
