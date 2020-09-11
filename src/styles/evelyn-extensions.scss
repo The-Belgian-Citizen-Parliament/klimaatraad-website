@@ -12,3 +12,11 @@
 .darker {
   color: color(typography, 1);
 }
+
+@media (min-width: 641px) {
+  .hero-media {
+    margin-top: 64px;
+    margin-top: 80px;
+    height: 450px;
+  }
+}
