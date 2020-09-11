@@ -1,0 +1,11 @@
+.hero-media {
+  background-image: url('/assets/movie_placeholder.png');
+
+  iframe {
+    visibility: hidden;
+
+    &.loaded {
+      visibility: visible;
+    }
+  }
+}
