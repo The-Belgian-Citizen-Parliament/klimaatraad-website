@@ -5,7 +5,7 @@
         <div class="container-sm">
           <h2 class="section-title mt-0">Antwoorden op al je vragen</h2>
           <p class="section-paragraph">
-            Je zit vast met veel vragen; zowel over de ernst van de ecologische kwesties waar we voor staan,
+            Je zit vast met veel vragen; zowel over de ernst van de ecologische uitdagingen waar we voor staan,
             over waarom politici er niet in slagen afdoende maatregelen te nemen, als over de burgerassemblee.
           </p>
           <p class="section-paragraph" style="margin-top: 16px">
@@ -14,7 +14,7 @@
           </p>
           <p>
             <mat-form-field floatLabel="never" style="width: 300px; text-align: center;">
-              <input matInput [placeholder]="questionPlaceholder" [(ngModel)]="filter"/>
+              <input matInput #question [placeholder]="questionPlaceholder" [(ngModel)]="filter" autofocus />
             </mat-form-field>
           </p>
         </div>
