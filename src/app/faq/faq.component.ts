@@ -17,6 +17,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   timer;
 
   constructor(@Inject(PLATFORM_ID) platformId: string) {
+    this.questionPlaceholder = this.questions[0];
     this.isBrowser = isPlatformBrowser(platformId)
   }
 
