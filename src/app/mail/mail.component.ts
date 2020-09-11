@@ -34,7 +34,7 @@ export class MailComponent {
     this.mailService
       .getLastMails()
       .then((mails: Mail[]) => {
-        this.mails = (mails || []).filter(m => m.allowPublic);
+        this.mails = (mails || []);
       });
   }
 

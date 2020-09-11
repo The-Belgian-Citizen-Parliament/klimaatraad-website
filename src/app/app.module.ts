@@ -13,12 +13,14 @@ import { AppComponent } from './app.component';
 import { MailComponent } from './mail/mail.component';
 import { MailService } from './mail/mail.service';
 import { MainComponent } from './main/main.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     MailComponent,
+    FaqComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

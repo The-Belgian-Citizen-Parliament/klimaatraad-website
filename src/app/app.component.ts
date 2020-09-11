@@ -14,7 +14,7 @@ export class AppComponent {
     router.events.pipe(
       filter((e: Event): e is NavigationEnd => e instanceof NavigationEnd)
    ).subscribe((e: NavigationEnd) => {
-    this.smallHeader = e.url.includes('deelnemen')
+    this.smallHeader = e.url !== "/";
    });
   }
 }

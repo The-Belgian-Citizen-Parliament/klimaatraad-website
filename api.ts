@@ -32,13 +32,27 @@ export function bootstrap(app: express.Express) {
 
   // Only get firstName, lastName, city; where public flag is true
   app.get("/api/mails/last", function(req, res) {
-    db.collection(MAILS_COLLECTION).find({}).toArray(function(err, docs) {
-      if (err) {
-        handleError(res, err.message, "Failed to get contacts.");
-      } else {
-        res.status(200).json(docs);
-      }
-    });
+    db.collection(MAILS_COLLECTION)
+      .find({
+        allowPublic: true,
+      })
+      .sort({
+        sentOn: -1,
+      })
+      .limit(10)
+      .project({
+        firstName: 1,
+        lastName: 1,
+        city: 1,
+        sentOn: 1
+      })
+      .toArray(function(err, docs) {
+        if (err) {
+          handleError(res, err.message, "Failed to get contacts.");
+        } else {
+          res.status(200).json(docs);
+        }
+      });
   });
 
   app.post("/api/mails", function(req, res) {
