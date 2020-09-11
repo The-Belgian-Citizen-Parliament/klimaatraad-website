@@ -57,6 +57,7 @@ export function bootstrap(app: express.Express) {
         // Try to send mail
         if (process.env.MAILGUN_API_KEY) {
           try {
+            console.log('Sending mail...');
             const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
             const data = {
               from: newMail.email,
@@ -83,6 +84,9 @@ export function bootstrap(app: express.Express) {
           } catch (mailError) {
             handleError(res, mailError, "Failed to send mail");
           }
+        } else {
+          console.log('No mail configured, returning');
+          res.status(201).json(newMail);
         }
       }
     });

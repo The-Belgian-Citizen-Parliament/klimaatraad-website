@@ -4,52 +4,46 @@
       <div class="container-sm">
         <h2 class="section-title mt-0 text-center">Mail je vertegenwoordigers</h2>
         <div class="mat-typography">
+          <!-- <ul class="list-reset mb-0"> </ul> -->
 
-          <!-- <ul class="list-reset mb-0">
-              </ul> -->
-
-          <ul>
-            <li *ngFor="let mail of mails">
-              {{ mail.firstName }} {{ mail.lastName }} <span *ngIf="mail.city">({{mail.city}})</span>
-            </li>
-          </ul>
-
-          <div fxLayout>
-            <form class="col-md-12">
-              <mat-form-field>
+          <div fxLayout="row" fxLayoutGap="20px">
+            <form class="col-md-12" fxFlex="60" fxLayout="column" fxLayoutGap="12px">
+              <mat-form-field fxFlex>
                 <mat-label>Voornaam</mat-label>
                 <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName">
               </mat-form-field>
 
-              <mat-form-field>
+              <mat-form-field fxFlex>
                 <mat-label>Achternaam</mat-label>
                 <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName">
               </mat-form-field>
 
-              <mat-form-field>
+              <mat-form-field fxFlex>
                 <mat-label>Email</mat-label>
                 <input matInput placeholder="voorbeeld@gmail.com" name="email" [(ngModel)]="newMail.email">
               </mat-form-field>
 
-              <mat-form-field>
-                <mat-label>Postcode</mat-label>
-                <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode">
-              </mat-form-field>
+              <div fxFlex fxLayout="row" fxLayoutGap="12px">
+                <mat-form-field fxFlex="30">
+                  <mat-label>Postcode</mat-label>
+                  <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode">
+                </mat-form-field>
 
-              <mat-form-field>
-                <mat-label>Stad</mat-label>
-                <input matInput placeholder="Brussel" name="city" [(ngModel)]="newMail.city">
-              </mat-form-field>
+                <mat-form-field fxFlex="70">
+                  <mat-label>Stad</mat-label>
+                  <input matInput placeholder="Brussel" name="city" [(ngModel)]="newMail.city">
+                </mat-form-field>
+              </div>
 
-              <mat-form-field>
+              <mat-form-field fxFlex>
                 <mat-label>Onderwerp</mat-label>
                 <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="Onderwerp"
                   [(ngModel)]="newMail.subject">
               </mat-form-field>
 
-              <mat-form-field>
+              <mat-form-field fxFlex>
                 <mat-label>Tekst</mat-label>
-                <textarea matInput rows="4" placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
+                <textarea matInput rows="10" placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
                   [(ngModel)]="newMail.body"></textarea>
               </mat-form-field>
               <!--
@@ -62,7 +56,17 @@
 
               <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
             </form>
+
+            <div fxFlex="40">
+              <h3>Recente deelnemers</h3>
+              <ul>
+                <li *ngFor="let mail of mails">
+                  {{ mail.firstName }} {{ mail.lastName.charAt(0).toUpperCase() }}. <span *ngIf="mail.city">({{mail.city}})</span>
+                </li>
+              </ul>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
