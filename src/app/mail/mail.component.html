@@ -14,50 +14,52 @@
                 </li>
               </ul>
 
-              <form class="col-md-12">
-                <mat-form-field>
-                  <mat-label>Voornaam</mat-label>
-                  <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName">
-                </mat-form-field>
+              <div fxLayout>
+                <form class="col-md-12">
+                  <mat-form-field>
+                    <mat-label>Voornaam</mat-label>
+                    <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName">
+                  </mat-form-field>
 
-                <mat-form-field>
-                  <mat-label>Achternaam</mat-label>
-                  <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName">
-                </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Achternaam</mat-label>
+                    <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName">
+                  </mat-form-field>
 
-                <mat-form-field>
-                  <mat-label>Email</mat-label>
-                  <input matInput placeholder="voorbeeld@gmail.com" name="email" [(ngModel)]="newMail.email">
-                </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="voorbeeld@gmail.com" name="email" [(ngModel)]="newMail.email">
+                  </mat-form-field>
 
-                <mat-form-field>
-                  <mat-label>Postcode</mat-label>
-                  <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode">
-                </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Postcode</mat-label>
+                    <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode">
+                  </mat-form-field>
 
-                <mat-form-field>
-                  <mat-label>Stad</mat-label>
-                  <input matInput placeholder="Brussel" name="city" [(ngModel)]="newMail.city">
-                </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Stad</mat-label>
+                    <input matInput placeholder="Brussel" name="city" [(ngModel)]="newMail.city">
+                  </mat-form-field>
 
-                <mat-form-field>
-                  <mat-label>Onderwerp</mat-label>
-                  <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="Onderwerp" [(ngModel)]="newMail.subject">
-                </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Onderwerp</mat-label>
+                    <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="Onderwerp" [(ngModel)]="newMail.subject">
+                  </mat-form-field>
 
-                <mat-form-field>
-                  <mat-label>Tekst</mat-label>
-                  <textarea matInput rows="4" placeholder="Leg uit waarom je dit belangrijk vindt." name="body" [(ngModel)]="newMail.body"></textarea>
-                </mat-form-field>
-<!--
-                <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
+                  <mat-form-field>
+                    <mat-label>Tekst</mat-label>
+                    <textarea matInput rows="4" placeholder="Leg uit waarom je dit belangrijk vindt." name="body" [(ngModel)]="newMail.body"></textarea>
+                  </mat-form-field>
+  <!--
+                  <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
 
-                <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div>
+                  <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div>
 
-                <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
--->
+                  <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
+  -->
 
-                <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
+                  <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
+                </div>
               </form>
             </div>
       </div>
