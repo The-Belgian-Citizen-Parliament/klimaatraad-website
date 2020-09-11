@@ -3,14 +3,16 @@
     <div class="hero-inner">
       <h1 class="hero-title h2-mobile mt-0">Nationaal klimaatbeleid door burgers!</h1>
       <p class="hero-paragraph">
-        De partijpolitiek slaagt er niet in afdoende maatregelen te nemen om tegemoed te komen aan de broodnodige en door Europa opgelegde
-        maatstaven om onze planeet bewoonbaar te houden. Ze vrezen stemmen te verliezen. Laat burgers deze zware taak daarom uit hun handen nemen!
+        De partijpolitiek slaagt er niet in afdoende maatregelen te nemen om tegemoed te komen aan de broodnodige en
+        door Europa opgelegde maatstaven om onze planeet bewoonbaar te houden. Ze vrezen stemmen te verliezen. Laat
+        burgers deze zware taak daarom uit hun handen nemen!
       </p>
       <p class="hero-cta"><a class="button-evelyn button-secondary button-shadow" routerLink="/deelnemen">Steun het
           initiatief</a></p>
       <div class="hero-media" id="het-concept" style="height: 450px;">
-        <iframe style="width: 100%; height: 100%; position: relative;" src="https://www.youtube.com/embed/zLhDgHC9V9A?modestbranding=1&controls=0"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        <iframe style="width: 100%; height: 100%; position: relative;"
+          src="https://www.youtube.com/embed/zLhDgHC9V9A?modestbranding=1&controls=0" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
           (load)="iFrameLoaded = true" [class.loaded]="iFrameLoaded"></iframe>
       </div>
     </div>
@@ -20,7 +22,7 @@
 <section class="features section text-center">
   <div class="container">
     <div class="features-inner section-inner">
-      <h2 class="section-title mt-0">Content here</h2>
+      <h2 class="section-title mt-0">Waarom een burgerassemblee?</h2>
       <div class="features-wrap">
         <div class="feature">
           <div class="feature-inner">
@@ -63,44 +65,22 @@
   </div>
 </section>
 
+
 <section class="features-extended section">
   <div class="container">
-    <div class="features-extended-inner section-inner has-top-divider">
+    <div class="features-extended-inner section-inner">
       <div class="features-extended-header text-center">
         <div class="container-sm">
-          <h2 class="section-title mt-0">More content</h2>
-          <p class="section-paragraph">Lorem ipsum is common placeholder text used to demonstrate the graphic elements
-            of a document or visual presentation</p>
+          <h2 class="section-title mt-0">Enkele vragen...</h2>
         </div>
       </div>
-      <div class="feature-extended">
-        <div class="feature-extended-image">
 
-        </div>
-        <div class="feature-extended-body">
-          <h3 class="mt-0">Discover</h3>
-          <p>Where text is visible, people tend to focus on the textual content rather than upon overall presentation
-          </p>
-        </div>
-      </div>
-      <div class="feature-extended">
-        <div class="feature-extended-image">
+      <app-question *ngFor="let question of questions" [question]="question"></app-question>
 
-        </div>
-        <div class="feature-extended-body">
-          <h3 class="mt-0">Discover</h3>
-          <p>Where text is visible, people tend to focus on the textual content rather than upon overall presentation
-          </p>
-        </div>
-      </div>
       <div class="feature-extended">
-        <div class="feature-extended-image">
-
-        </div>
         <div class="feature-extended-body">
-          <h3 class="mt-0">Discover</h3>
-          <p>Where text is visible, people tend to focus on the textual content rather than upon overall presentation
-          </p>
+          <a [routerLink]="" (click)="moreQuestions()"><mat-icon class="inline">refresh</mat-icon> Laad andere vragen</a>
+          of <a routerLink="/vraag">doorzoek alle vragen</a>!
         </div>
       </div>
     </div>
@@ -109,9 +89,45 @@
 
 <section class="pricing section">
   <div class="container">
+
     <div class="pricing-inner section-inner has-top-divider">
 
+      <div class="features-extended-header text-center">
+        <div class="container-sm">
+          <h2 class="section-title mt-0">Meer info</h2>
+        </div>
+      </div>
 
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla semper eget dui in placerat. Ut gravida sem at
+        nisi pellentesque, ac interdum nisl dictum. Mauris cursus turpis nec nibh rhoncus pulvinar. Nunc metus justo,
+        iaculis ac hendrerit sit amet, tristique at diam. Duis non nisl et quam porta gravida. Proin venenatis at dolor
+        vitae cursus. Nunc tempor eros at ligula tincidunt vestibulum. Aliquam erat volutpat. Cras ultrices vehicula
+        diam eget rutrum. Nulla ligula quam, posuere ullamcorper sem ut, viverra varius quam. Nulla tincidunt dapibus
+        massa sit amet rhoncus.
+      </p>
+      <p>
+        Cras vehicula porttitor neque, eu imperdiet nisl maximus at. Ut condimentum dignissim lectus, ac ultrices odio
+        pellentesque quis. Duis feugiat lacus odio. Sed quis massa laoreet, efficitur eros ut, maximus arcu. Maecenas a
+        ante vel felis blandit aliquam. Donec quis sapien quis urna posuere auctor sit amet congue orci. Nunc a
+        fermentum libero. Nunc feugiat at erat a eleifend. Sed sit amet lacus ex. Nulla id augue nec libero volutpat
+        lacinia. Maecenas finibus non nisi et vehicula.
+      </p>
+      <p>
+        Nullam eget mi felis. Maecenas ut mollis nisl, in imperdiet tortor. Sed a tristique odio. Donec nisi dui,
+        laoreet nec ultrices at, bibendum faucibus enim. Praesent efficitur lacus sed mauris finibus mollis. Phasellus
+        sollicitudin ullamcorper dui vel viverra. Nulla facilisi. Donec vitae metus lobortis quam eleifend euismod vitae
+        eget tellus.
+      </p>
+      <p>
+        Phasellus non ex ac sem condimentum ornare et ut dui. Aenean quis hendrerit quam, eget consectetur magna. Donec
+        vel lacinia ex. Nam at malesuada nisl, eget semper ante. Cras tincidunt lacus arcu, non sagittis massa pharetra
+        tincidunt. Donec lorem urna, mollis vitae arcu eget, pretium pellentesque nisl. Duis auctor eleifend finibus. In
+        convallis accumsan elit ac eleifend. Sed egestas congue magna id auctor. Donec et ullamcorper arcu. Aliquam in
+        neque lectus. Sed eget leo a purus aliquet facilisis. Donec felis metus, hendrerit sed mattis id, molestie ac
+        dui. Aliquam sollicitudin venenatis pharetra. Phasellus id lobortis lacus, in dapibus justo. Curabitur ornare
+        orci nec molestie tincidunt.
+      </p>
     </div>
   </div>
 </section>
