@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MailComponent } from './mail/mail.component';
 import { MailService } from './mail/mail.service';
 import { MainComponent } from './main/main.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MainComponent } from './main/main.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     MailService,
