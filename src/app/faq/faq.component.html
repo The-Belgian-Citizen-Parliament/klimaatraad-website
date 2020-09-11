@@ -4,10 +4,17 @@
       <div class="features-extended-header text-center">
         <div class="container-sm">
           <h2 class="section-title mt-0">Antwoorden op al je vragen</h2>
-          <p class="section-paragraph">Type hier om door alle vragen te zoeken</p>
-          <p class="mat-typography">
-            <mat-form-field floatLabel="never">
-              <input matInput placeholder="klimaat" [(ngModel)]="filter" />
+          <p class="section-paragraph">
+            Je zit vast met veel vragen; zowel over de ernst van de ecologische kwesties waar we voor staan,
+            over waarom politici er niet in slagen afdoende maatregelen te nemen, als over de burgerassemblee.
+          </p>
+          <p class="section-paragraph">
+            Staat jouw vraag er niet tussen?
+            <br /><a href="#">We beantwoorden hem graag voor jou en nemen hem mee op!</a>
+          </p>
+          <p>
+            <mat-form-field floatLabel="never" class="text-center" style="width: 300px">
+              <input matInput [placeholder]="questionPlaceholder" [(ngModel)]="filter" class="text-center" />
             </mat-form-field>
           </p>
         </div>
