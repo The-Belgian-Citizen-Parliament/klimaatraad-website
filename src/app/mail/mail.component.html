@@ -2,21 +2,23 @@
   <div class="container">
     <div class="clients-inner section-inner">
       <div class="container-sm">
-        <h2 class="section-title mt-0 text-center">Mail je vertegenwoordigers</h2>
+        <h2 class="section-title mt-0">Mail je vertegenwoordigers</h2>
         <div class="mat-typography">
           <!-- <ul class="list-reset mb-0"> </ul> -->
 
-          <div fxLayout="row" fxLayoutGap="20px">
-            <form class="col-md-12" fxFlex="60" fxLayout="column" fxLayoutGap="12px">
-              <mat-form-field fxFlex>
-                <mat-label>Voornaam</mat-label>
-                <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName">
-              </mat-form-field>
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
+            <form class="col-md-12" fxFlex="60" fxFlex.xs="100" fxLayout="column" fxLayoutGap="12px">
+              <div fxFlex fxLayout="row" fxLayoutGap="12px">
+                <mat-form-field fxFlex="40">
+                  <mat-label>Voornaam</mat-label>
+                  <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName">
+                </mat-form-field>
 
-              <mat-form-field fxFlex>
-                <mat-label>Achternaam</mat-label>
-                <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName">
-              </mat-form-field>
+                <mat-form-field fxFlex="60">
+                  <mat-label>Achternaam</mat-label>
+                  <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName">
+                </mat-form-field>
+              </div>
 
               <mat-form-field fxFlex>
                 <mat-label>Email</mat-label>
@@ -57,7 +59,7 @@
               <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
             </form>
 
-            <div fxFlex="40">
+            <div fxFlex="40" fxFlex.xs="100">
               <h3>Recente deelnemers</h3>
               <ul>
                 <li *ngFor="let mail of mails">
