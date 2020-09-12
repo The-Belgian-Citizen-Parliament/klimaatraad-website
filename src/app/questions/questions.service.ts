@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { shuffle } from 'lodash'
 import { questions } from './questions';
+import { shuffle } from '../util/functions';
 
 @Injectable()
 export class QuestionsService {
