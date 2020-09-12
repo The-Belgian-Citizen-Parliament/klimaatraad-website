@@ -19,9 +19,10 @@ import { MainComponent } from './main/main.component';
 import { FaqComponent } from './faq/faq.component';
 import { QuestionsService } from './questions/questions.service';
 import { QuestionComponent } from './questions/question/question.component';
+import { environment } from '../environments/environment';
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, environment.baseUrl + '/assets/i18n/', '.json');
 }
 
 @NgModule({
