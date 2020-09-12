@@ -10,13 +10,17 @@
         </div>
         <ul class="header-links list-reset m-0">
           <li>
-            <a routerLink="/">Het concept</a>
+            <a routerLink="/" translate>Het concept</a>
           </li>
           <li>
             <a routerLink="/vraag">Vragen en antwoorden</a>
           </li>
           <li>
             <a class="button-evelyn button-sm button-shadow" routerLink="/deelnemen">Neem deel</a>
+          </li>
+          <li>
+            <a *ngIf="lang === 'nl'" [routerLink]="" (click)="setLanguage('fr')">FR</a>
+            <a *ngIf="lang === 'fr'" [routerLink]="" (click)="setLanguage('nl')">NL</a>
           </li>
         </ul>
       </div>
