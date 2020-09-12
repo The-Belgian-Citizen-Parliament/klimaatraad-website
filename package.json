@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node dist/klimaatraad/server/main.js",
-    "build": "ng build --prod && ng run klimaatraad:server:production",
+    "build": "ng build --prod && ng run klimaatraad:server:production-fr",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run klimaatraad:serve-ssr",
