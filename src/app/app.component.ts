@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   smallHeader = false;
-  lang = 'nl';
+  lang = environment.language;
 
   constructor(public router: Router, private translate: TranslateService) {
     translate.setDefaultLang(this.lang);

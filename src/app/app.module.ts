@@ -9,7 +9,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,10 +19,7 @@ import { FaqComponent } from './faq/faq.component';
 import { QuestionsService } from './questions/questions.service';
 import { QuestionComponent } from './questions/question/question.component';
 import { environment } from '../environments/environment';
-
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, environment.baseUrl + '/assets/i18n/', '.json');
-}
+import { WebpackTranslateLoader } from './webpack-translate-loader';
 
 @NgModule({
   declarations: [
@@ -36,11 +32,10 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     TranslateModule.forRoot({
-      defaultLanguage: 'nl',
+      defaultLanguage: environment.language,
       loader: {
-          provide: TranslateLoader,
-          useFactory: (createTranslateLoader),
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useClass: WebpackTranslateLoader
       }
     }),
     AppRoutingModule,
