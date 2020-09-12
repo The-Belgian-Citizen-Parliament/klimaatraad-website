@@ -8,10 +8,6 @@
             Je zit vast met veel vragen; zowel over de ernst van de ecologische uitdagingen waar we voor staan,
             over waarom politici er niet in slagen afdoende maatregelen te nemen, als over de burgerassemblee.
           </p>
-          <p class="section-paragraph" style="margin-top: 16px">
-            Staat jouw vraag er niet tussen?
-            <br /><a href="#">We beantwoorden hem graag voor jou en nemen hem hier op!</a>
-          </p>
           <p>
             <mat-form-field floatLabel="never" style="width: 300px; text-align: center;">
               <input matInput #question [placeholder]="questionPlaceholder" [(ngModel)]="filter" (keyup)="filterQuestions()" />
@@ -20,11 +16,30 @@
         </div>
       </div>
 
-      <app-question *ngFor="let question of questions" [question]="question"></app-question>
+      <ng-container *ngIf="filter">
+        <app-question *ngFor="let question of filteredQuestions" [question]="question"></app-question>
 
-      <p *ngIf="questions.length == 0">
-        Geen vragen gevonden met deze filter.
-      </p>
+        <p *ngIf="filter && filter.length > 2 && filteredQuestions.length == 0">
+          Geen vragen gevonden met deze filter. <a [routerLink]="" (click)="clearFilter()">Toon terug alle vragen</a>
+        </p>
+      </ng-container>
+
+      <ng-container *ngIf="!filter">
+        <ul class="questionsToC">
+          <li *ngFor="let question of allQuestions"><a routerLink="/vraag" [fragment]="question.slug">{{ question.tags[0] }}: {{ question.question }}</a></li>
+        </ul>
+
+        <app-question [id]="question.slug" *ngFor="let question of allQuestions" [question]="question"></app-question>
+      </ng-container>
+
+      <div class="features-extended-header text-center">
+        <div class="container-sm">
+          <h2>Staat jouw vraag er niet tussen?</h2>
+          <p class="section-paragraph" style="margin-top: 16px">
+            <br /><a href="#">We beantwoorden hem graag voor jou en nemen hem hier op!</a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

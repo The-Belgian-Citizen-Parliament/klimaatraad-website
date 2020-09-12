@@ -17,7 +17,8 @@ export class FaqComponent implements OnInit, OnDestroy {
   questionExamples = ['klimaat', 'burger', 'politici', 'legitiem'];
   counter = 0;
 
-  questions: Question[] = [];
+  allQuestions: Question[] = questions;
+  filteredQuestions: Question[] = [];
 
   isBrowser = false;
   timer;
@@ -26,7 +27,6 @@ export class FaqComponent implements OnInit, OnDestroy {
     this.questionPlaceholder = this.questionExamples[0];
     this.isBrowser = isPlatformBrowser(platformId);
     setTimeout(() => this.questionField.nativeElement.focus());
-    this.questions = questionsService.getRandomQuestions(3);
   }
 
   ngOnInit(): void {
@@ -41,10 +41,11 @@ export class FaqComponent implements OnInit, OnDestroy {
 
   filterQuestions() {
     if (this.filter.length > 2) {
-      this.questions = questions.filter(q => q.question.includes(this.filter) || q.summary.includes(this.filter)
+      this.filteredQuestions = this.allQuestions.filter(q => q.question.includes(this.filter) || q.summary.includes(this.filter)
         || (q.answer && q.answer.includes(this.filter)));
     } else if (this.filter.length === 0) {
-      this.questions = this.questionsService.getRandomQuestions(3);
+      this.filteredQuestions = [];
     }
   }
+  clearFilter = () => this.filter = '';
 }
