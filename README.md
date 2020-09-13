@@ -1,27 +1,36 @@
-# Klimaatraad
+# Klimaatraad web app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.26.
+## Prerequisites
 
-## Development server
+You'll need the following:
+- Angular CLI v10
+- NPM v12
+- The Heroku CLI
+- MongoDB
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Developing
 
-## Code scaffolding
+Run the following command:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    npm run dev:ssr
 
-## Build
+This will boot up an Angular Universal build with SSR, hosting from `server.ts`. It will detect changes to any file and update automatically.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To boot up the French version, run:
 
-## Running unit tests
+    npm run dev:ssr:fr
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deploying
 
-## Running end-to-end tests
+To deploy the NL version:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    git push heroku-nl master
 
-## Further help
+To deploy the FR version, first merge to the `heroku-fr` branch:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    git checkout fr
+    git merge master
+
+and then push that `fr` branch to the french app on Heroku's `master` (it can only build from master):
+
+    git push heroku-fr fr:master
