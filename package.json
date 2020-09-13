@@ -4,12 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "node dist/klimaatraad/server/main.js",
-    "build": "ng build --prod && ng run klimaatraad:server:production-fr",
+    "build": "ng build --prod --configuration=production-fr && ng run klimaatraad:server:production-fr",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run klimaatraad:serve-ssr",
     "serve:ssr": "node dist/klimaatraad/server/main.js",
-    "build:ssr": "ng build --prod && ng run klimaatraad:server:production",
+    "build:ssr": "ng build --prod --configuration=production-fr && ng run klimaatraad:server:production-fr",
     "prerender": "ng run klimaatraad:prerender"
   },
   "private": true,
