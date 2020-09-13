@@ -80,35 +80,35 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "production-fr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.fr.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
-          },
-          "production-fr": {
-            "fileReplacements": [
-              {
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.fr.ts"
-              }
-            ],
-            "optimization": true,
-            "outputHashing": "all",
-            "sourceMap": false,
-            "extractCss": true,
-            "namedChunks": false,
-            "extractLicenses": true,
-            "vendorChunk": false,
-            "buildOptimizer": true,
-            "budgets": [
-              {
-                "type": "initial",
-                "maximumWarning": "2mb",
-                "maximumError": "5mb"
-              },
-              {
-                "type": "anyComponentStyle",
-                "maximumWarning": "6kb",
-                "maximumError": "10kb"
-              }
-            ]
           }
         },
         "serve": {
@@ -118,6 +118,9 @@
           },
           "configurations": {
             "production": {
+              "browserTarget": "klimaatraad:build:production"
+            },
+            "production-fr": {
               "browserTarget": "klimaatraad:build:production"
             }
           }
@@ -159,6 +162,17 @@
               ],
               "sourceMap": false,
               "optimization": true
+            },
+            "production-fr": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.fr.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
             }
           }
         },
@@ -172,6 +186,10 @@
             "production": {
               "browserTarget": "klimaatraad:build:production",
               "serverTarget": "klimaatraad:server:production"
+            },
+            "production-fr": {
+              "browserTarget": "klimaatraad:build:production-fr",
+              "serverTarget": "klimaatraad:server:production-fr"
             }
           }
         },
