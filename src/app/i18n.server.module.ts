@@ -1,8 +1,6 @@
-import { Inject, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { makeStateKey, TransferState } from '@angular/platform-browser';
-import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
-import { Request } from 'express';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { Observable, of } from 'rxjs';
@@ -20,10 +18,10 @@ import { environment } from '../environments/environment';
   ]
 })
 export class I18nServerModule {
-  constructor(translate: TranslateService, @Inject(REQUEST) req: Request) {
+  constructor(translate: TranslateService) {
     const lang = environment.language;
 
-    translate.addLangs(['en', 'ru']);
+    translate.addLangs(['nl', 'fr']);
     translate.use(lang);
   }
 }
