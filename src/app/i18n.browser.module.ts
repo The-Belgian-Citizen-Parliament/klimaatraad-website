@@ -26,7 +26,7 @@ import { environment } from 'src/environments/environment';
   ],
   exports: [TranslateModule]
 })
-export class I18nModule {
+export class I18nBrowserModule {
   constructor(
     translate: TranslateService,
     translateCacheService: TranslateCacheService

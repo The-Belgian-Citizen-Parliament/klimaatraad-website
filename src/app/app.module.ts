@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,6 @@ import { MainComponent } from './main/main.component';
 import { FaqComponent } from './faq/faq.component';
 import { QuestionsService } from './questions/questions.service';
 import { QuestionComponent } from './questions/question/question.component';
-import { I18nModule } from './i18n.module';
 
 @NgModule({
   declarations: [
@@ -28,8 +28,8 @@ import { I18nModule } from './i18n.module';
     QuestionComponent,
   ],
   imports: [
+    TranslateModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    I18nModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
