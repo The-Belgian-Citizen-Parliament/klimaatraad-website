@@ -29,6 +29,10 @@ To boot up the French version, run:
 
     npm run dev:ssr:fr
 
+If you don't need the backend and want faster reload times after changes, you can use the regular Angular development server:
+
+    ng serve
+
 ## Deploying
 
 In order to deploy to Heroku, you'll need to be added to the team. Contact the DI circle responsible.
