@@ -3,10 +3,11 @@ import 'zone.js/dist/zone-node';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { join } from 'path';
-
-import { AppServerModule } from './src/main.server';
+import sslRedirect from 'heroku-ssl-redirect';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
+
+import { AppServerModule } from './src/main.server';
 
 import * as api from './api';
 
@@ -15,6 +16,8 @@ export function app(): express.Express {
   const server = express();
   const distFolder = join(process.cwd(), 'dist/klimaatraad/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+
+  server.use(sslRedirect(['production'], 301));
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({

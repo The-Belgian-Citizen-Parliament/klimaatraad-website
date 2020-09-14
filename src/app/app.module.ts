@@ -36,7 +36,7 @@ import { WebpackTranslateLoader } from './webpack-translate-loader';
       loader: {
         provide: TranslateLoader,
         useClass: WebpackTranslateLoader
-      }
+      },
     }),
     AppRoutingModule,
     HttpClientModule,
