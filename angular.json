@@ -53,6 +53,14 @@
             "scripts": []
           },
           "configurations": {
+            "fr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.fr.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -173,6 +181,14 @@
               ],
               "sourceMap": false,
               "optimization": true
+            },
+            "fr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.fr.ts"
+                }
+              ]
             }
           }
         },
@@ -190,6 +206,10 @@
             "production-fr": {
               "browserTarget": "klimaatraad:build:production-fr",
               "serverTarget": "klimaatraad:server:production-fr"
+            },
+            "fr": {
+              "browserTarget": "klimaatraad:build:fr",
+              "serverTarget": "klimaatraad:server:fr"
             }
           }
         },
