@@ -14,9 +14,6 @@ export class AppComponent {
   lang = environment.language;
 
   constructor(public router: Router, private translate: TranslateService) {
-    translate.setDefaultLang(this.lang);
-    translate.use(this.lang);
-
     router.events.pipe(
       filter((e: Event): e is NavigationEnd => e instanceof NavigationEnd)
    ).subscribe((e: NavigationEnd) => {
