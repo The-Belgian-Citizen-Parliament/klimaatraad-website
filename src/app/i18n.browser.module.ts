@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslateCacheModule, TranslateCacheService, TranslateCacheSettings } from 'ngx-translate-cache';
 import { BrowserTransferStateModule, makeStateKey, TransferState } from '@angular/platform-browser';
 import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -17,26 +16,14 @@ import { environment } from 'src/environments/environment';
         deps: [HttpClient, TransferState]
       }
     }),
-    TranslateCacheModule.forRoot({
-      cacheService: {
-        provide: TranslateCacheService,
-        useFactory: translateCacheFactory,
-        deps: [TranslateService, TranslateCacheSettings]
-      },
-      cacheMechanism: 'Cookie'
-    }),
     BrowserTransferStateModule,
   ],
   exports: [TranslateModule]
 })
 export class I18nBrowserModule {
-  constructor(
-    translate: TranslateService,
-    translateCacheService: TranslateCacheService
-  ) {
+  constructor(translate: TranslateService) {
     const lang = environment.language;
 
-    translateCacheService.init();
     translate.addLangs(['nl', 'fr']);
     translate.setDefaultLang(lang);
     translate.use(lang);
@@ -45,13 +32,6 @@ export class I18nBrowserModule {
 
 export function translateLoaderFactory(httpClient: HttpClient, transferState: TransferState) {
   return new TranslateBrowserLoader(transferState, httpClient);
-}
-
-export function translateCacheFactory(
-  translateService: TranslateService,
-  translateCacheSettings: TranslateCacheSettings
-) {
-  return new TranslateCacheService(translateService, translateCacheSettings);
 }
 
 export class TranslateBrowserLoader implements TranslateLoader {
