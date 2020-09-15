@@ -22,7 +22,6 @@ export class AppComponent {
   }
 
   setLanguage(lang) {
-    console.log('In setLanguge in app.component', lang, environment);
     this.lang = lang;
     this.translate.setDefaultLang(this.lang);
     this.translate.use(this.lang);
