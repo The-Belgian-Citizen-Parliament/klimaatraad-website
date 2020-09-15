@@ -36,10 +36,31 @@ export class I18nBrowserModule {
   ) {
     const lang = environment.language;
 
+    console.log('Setting up onLangChange');
+
+    translate.onLangChange.subscribe((l, e, c) => {
+      if (e) console.log('error in onLangChange');
+      else if (l) console.log('Lang changed to', l);
+      else if (c) console.log('Lang completed', c);
+    })
+
+    console.log('In browser i18n module; before init', lang, environment);
+
     translateCacheService.init();
+
+    console.log('In browser i18n module; after init, before addLangs', lang, environment);
+
     translate.addLangs(['nl', 'fr']);
+
+    console.log('In browser i18n module; after add langs, before set default lang', lang, environment);
+
     translate.setDefaultLang(lang);
+
+    console.log('In browser i18n module; after set default lang, before use', lang, environment);
+
     translate.use(lang);
+
+    console.log('In browser i18n module; after use lang', lang, environment);
   }
 }
 
