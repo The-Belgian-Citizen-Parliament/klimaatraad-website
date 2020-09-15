@@ -6,8 +6,8 @@
           <!-- <ul class="list-reset mb-0"> </ul> -->
 
           <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
-            <form fxFlex="70" fxFlex.xs="100" fxLayout="column" fxLayoutGap="12px">
-              <h2 class="section-title mt-0">Mail je vertegenwoordigers</h2>
+            <form fxFlex="60" fxFlex.xs="100" fxLayout="column" fxLayoutGap="12px">
+              <h3 class="section-title mt-0">Mail je vertegenwoordigers</h3>
               <div fxFlex fxLayout="row" fxLayoutGap="12px">
                 <mat-form-field fxFlex="40">
                   <mat-label>Voornaam</mat-label>
@@ -48,17 +48,17 @@
                 <textarea matInput rows="10" placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
                   [(ngModel)]="newMail.body"></textarea>
               </mat-form-field>
-              <!--
-                  <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
 
-                  <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div>
+              <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
 
-                  <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
-  -->
+              <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div>
+
+              <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
+
               <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
             </form>
 
-            <div fxFlex="30" fxFlex.xs="100">
+            <div fxFlex="40" fxFlex.xs="100">
               <h3 class="mt-0">Recente deelnemers</h3>
               <ul>
                 <li *ngFor="let mail of mails">
