@@ -3,14 +3,24 @@
     <div class="container">
       <div class="site-header-inner">
         <div class="brand header-brand">
-          <h1 class="m-0">
-            <!-- <a href="#">
-                        </a> -->
-          </h1>
+            <a routerLink="/">
+              <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <title>Evelyn</title>
+                <defs>
+                  <radialGradient cy="0%" fx="50%" fy="0%" r="100%" id="logo-gradient-footer">
+                    <stop stop-color="#00A2B8" offset="0%" />
+                    <stop stop-color="#00F9D2" offset="100%" />
+                  </radialGradient>
+                </defs>
+                <path
+                  d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm0-10a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
+                  fill="url(#logo-gradient-footer)" fill-rule="evenodd" />
+              </svg>
+            </a>
         </div>
         <ul class="header-links list-reset m-0">
           <li>
-            <a routerLink="/" translate>Het concept</a>
+            <a routerLink="/memorandum" translate>Het memorandum</a>
           </li>
           <li>
             <a routerLink="/vraag" translate>Vragen en antwoorden</a>
