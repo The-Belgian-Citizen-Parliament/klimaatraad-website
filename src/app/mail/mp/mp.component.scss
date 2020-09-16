@@ -1,0 +1,30 @@
+.mp-card {
+  text-align: center;
+  padding: 12px;
+  transition: 0.2s;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 16px #E3E7EB;
+  }
+
+  &.selected {
+    box-shadow: 0 0 16px #b9bcc0;
+  }
+
+  div {
+    line-height: normal;
+  }
+
+  img {
+    max-width: 145px;
+    margin: 0 auto;
+  }
+
+  .mat-checkbox {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+}

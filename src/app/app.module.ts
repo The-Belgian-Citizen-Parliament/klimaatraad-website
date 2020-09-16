@@ -20,6 +20,7 @@ import { FaqComponent } from './faq/faq.component';
 import { QuestionsService } from './questions/questions.service';
 import { QuestionComponent } from './questions/question/question.component';
 import { MemorandumComponent } from './memorandum/memorandum.component';
+import { MpComponent } from './mail/mp/mp.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MemorandumComponent } from './memorandum/memorandum.component';
     FaqComponent,
     QuestionComponent,
     MemorandumComponent,
+    MpComponent,
   ],
   imports: [
     TranslateModule,

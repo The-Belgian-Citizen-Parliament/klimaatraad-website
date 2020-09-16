@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Mail } from './mail';
 import { MailService } from './mail.service';
 import { environment } from 'src/environments/environment';
+import { members } from './kamer-members';
+import { MP } from './mp/mp';
 
 @Component({
   selector: 'app-mail',
@@ -11,6 +13,9 @@ import { environment } from 'src/environments/environment';
 export class MailComponent {
   mails: Mail[];
   newMail: Mail;
+  mps: MP[] = members;
+  filteredMps: MP[] = [];
+  selectedMps: MP[] = [];
 
   constructor(private mailService: MailService) {
     this.newMail = new Mail();

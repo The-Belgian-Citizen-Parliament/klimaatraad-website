@@ -8,54 +8,63 @@
           <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
             <form fxFlex="60" fxFlex.xs="100" fxLayout="column" fxLayoutGap="12px">
               <h3 class="section-title mt-0">Mail je vertegenwoordigers</h3>
-              <div fxFlex fxLayout="row" fxLayoutGap="12px">
-                <mat-form-field fxFlex="40">
-                  <mat-label>Voornaam</mat-label>
-                  <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName">
-                </mat-form-field>
 
-                <mat-form-field fxFlex="60">
-                  <mat-label>Achternaam</mat-label>
-                  <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName">
-                </mat-form-field>
+              <h4>Wie wil je een mail sturen?</h4>
+
+              <div class="mp-list">
+                <app-mp *ngFor="let mp of mps" [mp]="mp" class="mp-card"></app-mp>
               </div>
 
-              <mat-form-field fxFlex>
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="voorbeeld@gmail.com" name="email" [(ngModel)]="newMail.email">
-              </mat-form-field>
+              <div *ngIf="selectedMps.length > 0">
+                <div fxFlex fxLayout="row" fxLayoutGap="12px">
+                  <mat-form-field fxFlex="40">
+                    <mat-label>Voornaam</mat-label>
+                    <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName">
+                  </mat-form-field>
 
-              <div fxFlex fxLayout="row" fxLayoutGap="12px">
-                <mat-form-field fxFlex="30">
-                  <mat-label>Postcode</mat-label>
-                  <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode">
+                  <mat-form-field fxFlex="60">
+                    <mat-label>Achternaam</mat-label>
+                    <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName">
+                  </mat-form-field>
+                </div>
+
+                <mat-form-field fxFlex>
+                  <mat-label>Email</mat-label>
+                  <input matInput placeholder="voorbeeld@gmail.com" name="email" [(ngModel)]="newMail.email">
                 </mat-form-field>
 
-                <mat-form-field fxFlex="70">
-                  <mat-label>Stad</mat-label>
-                  <input matInput placeholder="Brussel" name="city" [(ngModel)]="newMail.city">
+                <div fxFlex fxLayout="row" fxLayoutGap="12px">
+                  <mat-form-field fxFlex="30">
+                    <mat-label>Postcode</mat-label>
+                    <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode">
+                  </mat-form-field>
+
+                  <mat-form-field fxFlex="70">
+                    <mat-label>Stad</mat-label>
+                    <input matInput placeholder="Brussel" name="city" [(ngModel)]="newMail.city">
+                  </mat-form-field>
+                </div>
+
+                <mat-form-field fxFlex>
+                  <mat-label>Onderwerp</mat-label>
+                  <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="Onderwerp"
+                    [(ngModel)]="newMail.subject">
                 </mat-form-field>
+
+                <mat-form-field fxFlex>
+                  <mat-label>Tekst</mat-label>
+                  <textarea matInput rows="10" placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
+                    [(ngModel)]="newMail.body"></textarea>
+                </mat-form-field>
+
+                <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
+
+                <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div>
+
+                <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
+
+                <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
               </div>
-
-              <mat-form-field fxFlex>
-                <mat-label>Onderwerp</mat-label>
-                <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="Onderwerp"
-                  [(ngModel)]="newMail.subject">
-              </mat-form-field>
-
-              <mat-form-field fxFlex>
-                <mat-label>Tekst</mat-label>
-                <textarea matInput rows="10" placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
-                  [(ngModel)]="newMail.body"></textarea>
-              </mat-form-field>
-
-              <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
-
-              <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div>
-
-              <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
-
-              <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
             </form>
 
             <div fxFlex="40" fxFlex.xs="100">

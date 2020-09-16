@@ -1,3 +1,18 @@
 .smaller {
   font-size: 80%;
 }
+
+.mp-list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  height: 600px;
+  padding: 12px;
+}
+
+app-mp {
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  width: 200px;
+}
