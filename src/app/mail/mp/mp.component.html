@@ -1,7 +1,7 @@
-<div class="mp-card" (click)="selected = !selected" [class.selected]="selected">
-  <mat-checkbox name="selected" [(ngModel)]="selected"></mat-checkbox>
+<div class="mp-card" (click)="changeSelection()" [class.selected]="mp.selected">
+  <mat-checkbox name="selected" [(ngModel)]="mp.selected"></mat-checkbox>
   <img [src]="mp.image" onerror="this.src='/assets/anonymous.jpg'" />
-  <a [href]="mp.profile" target="_blank"><strong>{{ mp.name }}</strong></a>
+  <strong>{{ mp.name }}</strong>
   <div>Partij: {{ mp.party }}</div>
   <div>Taal: {{ mp.language }}</div>
   <div>Geboren: {{ mp.hometown }}</div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MP } from './mp';
 
 @Component({
@@ -9,5 +9,12 @@ import { MP } from './mp';
 export class MpComponent {
   @Input() mp: MP;
 
-  selected: boolean;
+  @Output('mpSelected') mpSelectedEmitter = new EventEmitter<MP>();
+  @Output('mpDeselected') mpDeselectedEmitter = new EventEmitter<MP>();
+
+  changeSelection() {
+    this.mp.selected = !this.mp.selected;
+    this.mp.selected ? this.mpSelectedEmitter.emit(this.mp)
+      : this.mpDeselectedEmitter.emit(this.mp);
+  }
 }

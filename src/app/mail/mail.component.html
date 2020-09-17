@@ -6,61 +6,107 @@
           <!-- <ul class="list-reset mb-0"> </ul> -->
 
           <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
-            <form fxFlex="70" fxFlex.xs="100" fxLayout="column" fxLayoutGap="12px">
+            <div fxFlex="70" fxFlex.xs="100">
               <h3 class="section-title mt-0">Mail je vertegenwoordigers</h3>
 
-              <div class="who">
+              <div class="who" *ngIf="!selectionComplete">
                 <h4>Wie wil je een mail sturen?</h4>
 
-                <div class="choice-list" *ngIf="!selectType">
-                  <button mat-raised-button color="primary" (click)="selectType = 'region'; detectLocation()">Vertegenwoordigers uit mijn kieskring</button>
-                  <button mat-raised-button color="primary" (click)="selectType = 'party'">Vertegenwoordigers van mijn partij</button>
-                  <button mat-raised-button color="primary" (click)="selectType = 'other'; selectionTypeComplete = true;">Andere criteria </button>
-                </div>
-
-                <div class="select-region" *ngIf="selectType === 'region'">
-                  <span *ngIf="askForLocation">Mogen we je locatie kennen om automatisch jouw vertegenwoordigers op te zoeken?</span>
-
-                  <span *ngIf=""></span>
-                </div>
+                <!-- <div class="choice-list" *ngIf="!selectType">
+                  <button mat-raised-button color="primary" (click)="selectType = 'filters'">Selectie op kieskring, naam of partij</button>
+                  <button mat-raised-button color="primary" (click)="selectType = 'region'">Op basis van locatie</button>
+                </div> -->
 
                 <div class="filters">
+                  <mat-form-field style="width: 100%">
+                    <mat-label>Kieskring</mat-label>
+                    <mat-select [(ngModel)]="selectedConstituency" name="selectedConstituency" (selectionChange)="filterMps()">
+                      <mat-option [value]=""></mat-option>
+                      <mat-option *ngFor="let constituency of constituencies" [value]="constituency">
+                        {{constituency}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
 
+                  <mat-form-field style="width: 100%">
+                    <mat-label>Partij</mat-label>
+                    <mat-select [(ngModel)]="selectedParty" name="selectedParty" (selectionChange)="filterMps()">
+                      <mat-option [value]=""></mat-option>
+                      <mat-option *ngFor="let party of parties" [value]="party">
+                        {{party}}
+                      </mat-option>
+                      <mat-option value="ONAFH">Onafhankelijk</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field style="width: 100%">
+                    <mat-label>Naam</mat-label>
+                    <input matInput name="nameFilter" [(ngModel)]="nameFilter" (keyup)="filterMps()" />
+                  </mat-form-field>
                 </div>
 
-                <div class="mp-list" *ngIf="selectType && selectionTypeComplete">
-                  <app-mp *ngFor="let mp of mps" [mp]="mp" class="mp-card"></app-mp>
+                <div class="action-list">
+                  <button mat-raised-button *ngIf="(selectedMps.length > 0) || selectionFilterSet"
+                    color="primary" (click)="confirmSelection()" [disabled]="selectedMps.length === 0">
+                    Selectie OK
+                    <ng-container *ngIf="selectedMps.length > 0">({{ selectedMps.length }})</ng-container>
+                  </button>
+                  <button mat-raised-button *ngIf="(selectedMps.length > 0) || selectionFilterSet"
+                    (click)="clearSelected()" [disabled]="selectedMps.length === 0">Selectie ongedaan maken</button>
+                  <button mat-raised-button *ngIf="selectionFilterSet" (click)="selectAllVisibleFiltered()" style="float: right">Allemaal selecteren</button>
+                </div>
+
+                <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet">
+                  <app-mp *ngFor="let mp of filteredMps" [mp]="mp" class="mp-card" (mpSelected)="mpSelected($event)" (mpDeselected)="mpDeselected($event)"></app-mp>
                 </div>
               </div>
 
-              <div *ngIf="selectedMps.length > 0">
+              <form #personalDataForm="ngForm" *ngIf="selectionComplete && selectedMps.length > 0 && !personalDataComplete" fxLayout="column" fxLayoutGap="12px">
                 <div fxFlex fxLayout="row" fxLayoutGap="12px">
                   <mat-form-field fxFlex="40">
                     <mat-label>Voornaam</mat-label>
-                    <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName">
+                    <input matInput placeholder="Voornaam" name="firstName" [(ngModel)]="newMail.firstName" required>
                   </mat-form-field>
 
                   <mat-form-field fxFlex="60">
                     <mat-label>Achternaam</mat-label>
-                    <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName">
+                    <input matInput placeholder="Achternaam" name="lastName" [(ngModel)]="newMail.lastName" required>
                   </mat-form-field>
                 </div>
 
                 <mat-form-field fxFlex>
                   <mat-label>Email</mat-label>
-                  <input matInput placeholder="voorbeeld@gmail.com" name="email" [(ngModel)]="newMail.email">
+                  <input matInput placeholder="voorbeeld@gmail.com" name="email" [(ngModel)]="newMail.email" required>
                 </mat-form-field>
 
                 <div fxFlex fxLayout="row" fxLayoutGap="12px">
                   <mat-form-field fxFlex="30">
                     <mat-label>Postcode</mat-label>
-                    <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode">
+                    <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode" required>
                   </mat-form-field>
 
                   <mat-form-field fxFlex="70">
                     <mat-label>Stad</mat-label>
-                    <input matInput placeholder="Brussel" name="city" [(ngModel)]="newMail.city">
+                    <input matInput placeholder="Brussel" name="city" [(ngModel)]="newMail.city" required>
                   </mat-form-field>
+                </div>
+
+                <button mat-raised-button color="primary" [disabled]="!personalDataForm.valid" (click)="personalDataComplete = true;">Ok - bijna klaar!</button>
+              </form>
+
+              <div *ngIf="personalDataComplete" fxLayout="column" fxLayoutGap="12px">
+                <div>
+                  <strong>Van: </strong> {{ newMail.firstName }} {{ newMail.lastName}} (<a [routerLink]="" (click)="personalDataComplete = false;">wijzig</a>)
+                </div>
+                <div>
+                  <strong>Aan: </strong>
+                  <span *ngIf="(selectedMps.length <= 5 || selectedMpListExpanded)" class="mpSelectionList">
+                    <span *ngFor="let selectedMp of selectedMps">{{ selectedMp.name }}</span>
+                  </span>
+                  <span *ngIf="selectedMps.length > 5">
+                    <ng-container *ngIf="!selectedMpListExpanded">{{ selectedMps.length }} vertegenwoordigers</ng-container> (<a
+                      [routerLink]="" (click)="selectedMpListExpanded = !selectedMpListExpanded">{{ selectedMpListExpanded ? 'verberg' : 'toon' }}</a>)</span>
+                  <span> (<a [routerLink]="" (click)="selectionComplete = false; personalDataComplete = false;">wijzig</a>)</span>
                 </div>
 
                 <mat-form-field fxFlex>
@@ -83,7 +129,7 @@
 
                 <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
               </div>
-            </form>
+            </div>
 
             <div fxFlex="30" fxFlex.xs="100">
               <strong>Namen recent deel...</strong>

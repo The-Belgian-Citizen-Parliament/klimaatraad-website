@@ -10,4 +10,5 @@ export class MP {
   hometown: string;
   language: string;
   email?: string;
+  selected?: boolean;
 }

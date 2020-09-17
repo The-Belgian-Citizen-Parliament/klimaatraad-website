@@ -17,10 +17,24 @@ export class MailComponent {
   filteredMps: MP[] = [];
   selectedMps: MP[] = [];
 
-  selectType: string;
+  selectType?: string = null;
   askForLocation = false;
+  noAutoLocation = true;
+  selectedConstituency?: string = null;
+  selectedParty?: string  = null;
+  nameFilter?: string  = null;
 
-  selectionTypeComplete = false;
+  constituencies = [
+    'Antwerpen', 'Brussel-Hoofdstad', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'];
+
+  parties = [
+    'PVDA-PTB', 'Ecolo-Groen', 'N-VA', 'PS', 'CD&V', 'Open Vld', 'sp.a', 'VB', 'MR', 'cdH', 'DéFI'];
+
+  selectionFilterSet = false;
+  selectionComplete = false;
+  personalDataComplete = false;
+
+  selectedMpListExpanded = false;
 
   constructor(private mailService: MailService) {
     this.newMail = new Mail();
@@ -55,18 +69,57 @@ export class MailComponent {
     ]);
   }
 
-  detectLocation() {
-    if (navigator.geolocation) {
-      this.askForLocation = true;
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.askForLocation = false;
-        this.selectionTypeComplete = true;
-        console.log(position);
-      }, (error) => {
-        console.log('error');
-      });
-    } else {
+  // TODO when we have time
+  // detectLocation() {
+  //   if (navigator.geolocation) {
+  //     this.askForLocation = true;
+  //     setTimeout(() => {
+  //       navigator.geolocation.getCurrentPosition((position) => {
+  //         this.askForLocation = false;
+  //         console.log(position);
+  //       }, (error) => {
+  //         this.noAutoLocation = true;
+  //       });
+  //     });
+  //   } else {
+  //     this.noAutoLocation = true;
+  //   }
+  // }
 
+  filterMps() {
+    this.filteredMps = this.mps.filter(mp =>
+      (!this.selectedConstituency || (mp.constituency === this.selectedConstituency)) &&
+      (!this.selectedParty || (mp.party === this.selectedParty)) &&
+      (!this.nameFilter || (mp.name.toLowerCase().includes(this.nameFilter.toLowerCase()))));
+
+    if (this.selectedConstituency || this.selectedParty || (this.nameFilter  && this.nameFilter.length > 2)) {
+      this.selectionFilterSet = true;
+    } else {
+      this.selectionFilterSet = false;
     }
+  }
+
+  selectAllVisibleFiltered() {
+    const newMps = this.filteredMps.filter(mp => !this.selectedMps.includes(mp));
+    newMps.forEach(mp => mp.selected = true);
+    this.selectedMps.push(...newMps);
+  }
+
+  confirmSelection() {
+    this.selectionComplete = true;
+  }
+
+  clearSelected() {
+    this.selectedMps = [];
+    this.mps.forEach(mp => mp.selected = false)
+  }
+
+  mpSelected(mp) {
+    if (this.selectedMps.includes(mp)) return;
+    this.selectedMps.push(mp);
+  }
+
+  mpDeselected(mp) {
+    this.selectedMps = this.selectedMps.filter(s => s !== mp);
   }
 }

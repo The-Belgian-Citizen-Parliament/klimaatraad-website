@@ -23,3 +23,20 @@ app-mp {
     margin-bottom: 6px;
   }
 }
+
+.action-list {
+  button {
+    margin-bottom: 12px;
+    margin-right: 12px;
+  }
+}
+
+.mpSelectionList {
+  span:after {
+    content: ", "
+  }
+
+  span:last-child:after {
+    content: ""
+  }
+}
