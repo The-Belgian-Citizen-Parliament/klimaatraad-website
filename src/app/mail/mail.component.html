@@ -6,7 +6,7 @@
           <!-- <ul class="list-reset mb-0"> </ul> -->
 
           <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
-            <div fxFlex="70" fxFlex.xs="100">
+            <div fxFlex="70" fxFlex.xs="100" *ngIf="!sent">
               <h3 class="section-title mt-0">Mail je vertegenwoordigers</h3>
 
               <div class="who" *ngIf="!selectionComplete">
@@ -23,7 +23,7 @@
                     <mat-select [(ngModel)]="selectedConstituency" name="selectedConstituency" (selectionChange)="filterMps()">
                       <mat-option [value]=""></mat-option>
                       <mat-option *ngFor="let constituency of constituencies" [value]="constituency">
-                        {{constituency}}
+                        {{ constituency }}
                       </mat-option>
                     </mat-select>
                   </mat-form-field>
@@ -33,7 +33,7 @@
                     <mat-select [(ngModel)]="selectedParty" name="selectedParty" (selectionChange)="filterMps()">
                       <mat-option [value]=""></mat-option>
                       <mat-option *ngFor="let party of parties" [value]="party">
-                        {{party}}
+                        {{ party }}
                       </mat-option>
                       <mat-option value="ONAFH">Onafhankelijk</mat-option>
                     </mat-select>
@@ -109,10 +109,19 @@
                   <strong>Van: </strong> {{ newMail.firstName }} {{ newMail.lastName}} (<a [routerLink]="" (click)="personalDataComplete = false;">wijzig</a>)
                 </div>
 
-                <mat-form-field fxFlex>
+                <mat-form-field fxFlex *ngIf="customSubject">
                   <mat-label>Onderwerp</mat-label>
-                  <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="Onderwerp"
-                    [(ngModel)]="newMail.subject">
+                  <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="customSubject" [(ngModel)]="newMail.subject" #customSubject>
+                </mat-form-field>
+
+                <mat-form-field fxFlex *ngIf="!customSubject">
+                  <mat-label>Onderwerp</mat-label>
+                  <mat-select [(ngModel)]="newMail.subject" name="predefinedSubject" (selectionChange)="subjectChanged()">
+                    <mat-option *ngFor="let subject of subjects" [value]="subject">
+                      {{ subject }}
+                    </mat-option>
+                    <mat-option [value]="" style="font-style: italic;">Schrijf zelf een onderwerp</mat-option>
+                  </mat-select>
                 </mat-form-field>
 
                 <mat-form-field fxFlex>
@@ -127,15 +136,21 @@
 
                 <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
 
-                <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur</button>
+                <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur!</button>
               </div>
+            </div>
+
+            <div fxFlex="70" fxFlex.xs="100" *ngIf="sent">
+              <h3 class="section-title mt-0">Bedankt!</h3>
+              <p>De door jou gekozen vertegenwoordigers ontvingen je mail en kunnen jou nu terugmailen. Fingers crossed!</p>
+              <p *ngIf="newMail.stayUpToDate">We zullen je hoe dan ook op de hoogte houden van het verdere verloop van deze actie.</p>
             </div>
 
             <div fxFlex="30" fxFlex.xs="100">
               <strong>Namen recent deel...</strong>
               <ul>
                 <li *ngFor="let mail of mails">
-                  {{ mail.firstName }} {{ mail.lastName.charAt(0).toUpperCase() }}. <span *ngIf="mail.city">({{mail.city}})</span>
+                  {{ mail.firstName }} {{ mail.lastName.charAt(0).toUpperCase() }}. <span *ngIf="mail.city">({{ mail.city }})</span>
                 </li>
               </ul>
             </div>

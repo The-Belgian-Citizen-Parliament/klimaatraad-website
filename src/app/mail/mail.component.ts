@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Mail } from './mail';
 import { MailService } from './mail.service';
 import { environment } from 'src/environments/environment';
 import { members } from './kamer-members';
 import { MP } from './mp/mp';
+import { FR_BODIES, FR_SUBJECTS, NL_BODIES, NL_SUBJECTS } from './mail-options';
 
 @Component({
   selector: 'app-mail',
@@ -11,6 +12,8 @@ import { MP } from './mp/mp';
   styleUrls: ['./mail.component.scss']
 })
 export class MailComponent {
+  @ViewChild('customSubject') customSubjectElement: ElementRef;
+
   mails: Mail[];
   newMail: Mail;
   mps: MP[] = members;
@@ -30,13 +33,21 @@ export class MailComponent {
   parties = [
     'PVDA-PTB', 'Ecolo-Groen', 'N-VA', 'PS', 'CD&V', 'Open Vld', 'sp.a', 'VB', 'MR', 'cdH', 'DéFI'];
 
+  subjects = [];
+  bodies = [];
+
   selectionFilterSet = false;
   selectionComplete = false;
   personalDataComplete = false;
+  sent = false;
 
+  customSubject = false;
   selectedMpListExpanded = false;
 
   constructor(private mailService: MailService) {
+    this.subjects = environment.language === 'nl' ? NL_SUBJECTS : FR_SUBJECTS;
+    this.bodies = environment.language === 'nl' ? NL_BODIES : FR_BODIES;
+
     this.newMail = new Mail();
     this.newMail.email = 'vincent.sels@gmail.com';
     this.newMail.to = 'vincent_sels@hotmail.com';
@@ -48,10 +59,8 @@ export class MailComponent {
     this.newMail.allowReplies = true;
     this.newMail.stayUpToDate = false;
     this.newMail.sentOn = new Date();
-    this.newMail.subject = 'Laat burgers zelf maatregelen uitwerken tegen ecologische crises!';
-    this.newMail.body = 'Een groep van 101 gelote burgers die rekening houdend met demografische criteria een representatieve dwarsdoorsnede vormt van de totale Belgische bevolking, buigt zich, geïnformeerd door een brede waaier experten en belanghebbenden, tussen 20 november 2020 en 7 maart 2021 over de volgende vraag: “Hoe kunnen bij de uitoefening van hun respectieve bevoegdheden de federale Staat, de gemeenschappen en de gewesten bijdragen tot de maximalisering van de kansen om het Belgische territorium en de planeet in haar totaliteit bewoonbaar te houden voor de huidige en toekomstige generaties?”\n\n' +
-'Het deliberatieve proces loopt over acht sessies van telkens drie dagen en telt vier belangrijke fasen: leren, consulteren, beraadslagen en beslissen. Om de participatiedrempel te verlagen ontvangen de leden van het Nationale Burgerparlement dagvergoedingen, transportvergoedingen, accommodatie en kinderopvang. Elk van hun beleidsvoorstellen wordt door de bevoegde regering(en) geïmplementeerd of ter stemming voorgelegd aan het bevoegde parlement of de bevoegde parlementen. Op aanvaarde, afgewezen of gewijzigde voorstellen volgen telkens grondige publieke motivaties.\n\n' +
-'Om elke schijn van partijdigheid te vermijden, speelt Extinction Rebellion zelf geen rol in de organisatie van het deliberatieve proces, de selectie van het deskundigenpanel of het toezicht. Het Nationale Burgerparlement wordt geïnitieerd en gefinancierd door de federale regering. Een coördinatiegroep, adviesraad, facilitatieteam, legistiek comité en toezichtpanel zorgen samen voor een goede gang van zaken en waarborgen de publieke transparantie, politieke onafhankelijkheid en democratische legitimiteit ervan.\n\n';
+    this.newMail.subject = this.subjects[Math.floor(Math.random() * this.subjects.length)];
+    this.newMail.body = this.bodies[Math.floor(Math.random() * this.bodies.length)];
   }
 
   ngOnInit() {
@@ -63,10 +72,11 @@ export class MailComponent {
   }
 
   sendMail() {
-    this.mailService.createMail(this.newMail).then(m => this.mails = [
-      m as Mail,
+    this.mailService.createMail(this.newMail).then(() => this.mails = [
+      this.newMail,
       ...this.mails,
     ]);
+    this.sent = true;
   }
 
   // TODO when we have time
@@ -121,5 +131,12 @@ export class MailComponent {
 
   mpDeselected(mp) {
     this.selectedMps = this.selectedMps.filter(s => s !== mp);
+  }
+
+  subjectChanged() {
+    if (!this.newMail.subject) {
+      this.customSubject = true;
+      setTimeout(() => this.customSubjectElement.nativeElement.focus());
+    }
   }
 }
