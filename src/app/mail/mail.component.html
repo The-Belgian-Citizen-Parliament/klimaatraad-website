@@ -128,6 +128,7 @@
                   <mat-label>Tekst</mat-label>
                   <textarea matInput rows="10" placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
                     [(ngModel)]="newMail.body"></textarea>
+                  <mat-hint align="start"><strong>Wij verzorgen de aanhef en ondertekening!</strong> </mat-hint>
                 </mat-form-field>
 
                 <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
