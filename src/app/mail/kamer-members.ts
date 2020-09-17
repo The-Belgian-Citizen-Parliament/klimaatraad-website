@@ -383,7 +383,7 @@ export const members: MP[] = [
       "image": "https://www.dekamer.be/site/wwwroot/images/cv/00746.gif",
       "profile": "https://www.dekamer.be/kvvcr/showpage.cfm?section=/depute&language=nl&cfm=cvview54.cfm?key=00746&lactivity=55",
       "constituency": "Namen",
-      "hometown": "Oignies-en-Thi�rache",
+      "hometown": "Oignies-en-Thiérache",
       "language": "Frans",
       "localImg": "00746.gif"
   },
@@ -1241,7 +1241,7 @@ export const members: MP[] = [
       "image": "https://www.dekamer.be/site/wwwroot/images/cv/ksegna_55/01217.jpg",
       "profile": "https://www.dekamer.be/kvvcr/showpage.cfm?section=/depute&language=nl&cfm=cvview54.cfm?key=01217&lactivity=55",
       "constituency": "Waals-Brabant",
-      "hometown": "Malm�dy",
+      "hometown": "Malmédy",
       "language": "Frans",
       "localImg": "01217.jpg"
   },
@@ -1720,7 +1720,7 @@ export const members: MP[] = [
       "image": "https://www.dekamer.be/site/wwwroot/images/cv/ksegna_55/06897.jpg",
       "profile": "https://www.dekamer.be/kvvcr/showpage.cfm?section=/depute&language=nl&cfm=cvview54.cfm?key=06897&lactivity=55",
       "constituency": "Oost-Vlaanderen",
-      "hometown": "L�denscheid (Duitsland)",
+      "hometown": "Lüdenscheid (Duitsland)",
       "language": "Nederlands",
       "localImg": "06897.jpg"
   },

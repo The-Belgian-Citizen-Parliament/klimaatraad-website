@@ -17,6 +17,11 @@ export class MailComponent {
   filteredMps: MP[] = [];
   selectedMps: MP[] = [];
 
+  selectType: string;
+  askForLocation = false;
+
+  selectionTypeComplete = false;
+
   constructor(private mailService: MailService) {
     this.newMail = new Mail();
     this.newMail.email = 'vincent.sels@gmail.com';
@@ -48,5 +53,20 @@ export class MailComponent {
       m as Mail,
       ...this.mails,
     ]);
+  }
+
+  detectLocation() {
+    if (navigator.geolocation) {
+      this.askForLocation = true;
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.askForLocation = false;
+        this.selectionTypeComplete = true;
+        console.log(position);
+      }, (error) => {
+        console.log('error');
+      });
+    } else {
+
+    }
   }
 }

@@ -1,18 +1,36 @@
 <section class="section" id="neem-deel">
   <div class="container">
     <div class="clients-inner section-inner">
-      <div class="container-sm">
+      <div class="container">
         <div class="smaller">
           <!-- <ul class="list-reset mb-0"> </ul> -->
 
           <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
-            <form fxFlex="60" fxFlex.xs="100" fxLayout="column" fxLayoutGap="12px">
+            <form fxFlex="70" fxFlex.xs="100" fxLayout="column" fxLayoutGap="12px">
               <h3 class="section-title mt-0">Mail je vertegenwoordigers</h3>
 
-              <h4>Wie wil je een mail sturen?</h4>
+              <div class="who">
+                <h4>Wie wil je een mail sturen?</h4>
 
-              <div class="mp-list">
-                <app-mp *ngFor="let mp of mps" [mp]="mp" class="mp-card"></app-mp>
+                <div class="choice-list" *ngIf="!selectType">
+                  <button mat-raised-button color="primary" (click)="selectType = 'region'; detectLocation()">Vertegenwoordigers uit mijn kieskring</button>
+                  <button mat-raised-button color="primary" (click)="selectType = 'party'">Vertegenwoordigers van mijn partij</button>
+                  <button mat-raised-button color="primary" (click)="selectType = 'other'; selectionTypeComplete = true;">Andere criteria </button>
+                </div>
+
+                <div class="select-region" *ngIf="selectType === 'region'">
+                  <span *ngIf="askForLocation">Mogen we je locatie kennen om automatisch jouw vertegenwoordigers op te zoeken?</span>
+
+                  <span *ngIf=""></span>
+                </div>
+
+                <div class="filters">
+
+                </div>
+
+                <div class="mp-list" *ngIf="selectType && selectionTypeComplete">
+                  <app-mp *ngFor="let mp of mps" [mp]="mp" class="mp-card"></app-mp>
+                </div>
               </div>
 
               <div *ngIf="selectedMps.length > 0">
@@ -67,8 +85,8 @@
               </div>
             </form>
 
-            <div fxFlex="40" fxFlex.xs="100">
-              <h3 class="mt-0">Recente deelnemers</h3>
+            <div fxFlex="30" fxFlex.xs="100">
+              <strong>Namen recent deel...</strong>
               <ul>
                 <li *ngFor="let mail of mails">
                   {{ mail.firstName }} {{ mail.lastName.charAt(0).toUpperCase() }}. <span *ngIf="mail.city">({{mail.city}})</span>
