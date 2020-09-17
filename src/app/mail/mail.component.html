@@ -96,9 +96,6 @@
 
               <div *ngIf="personalDataComplete" fxLayout="column" fxLayoutGap="12px">
                 <div>
-                  <strong>Van: </strong> {{ newMail.firstName }} {{ newMail.lastName}} (<a [routerLink]="" (click)="personalDataComplete = false;">wijzig</a>)
-                </div>
-                <div>
                   <strong>Aan: </strong>
                   <span *ngIf="(selectedMps.length <= 5 || selectedMpListExpanded)" class="mpSelectionList">
                     <span *ngFor="let selectedMp of selectedMps">{{ selectedMp.name }}</span>
@@ -107,6 +104,9 @@
                     <ng-container *ngIf="!selectedMpListExpanded">{{ selectedMps.length }} vertegenwoordigers</ng-container> (<a
                       [routerLink]="" (click)="selectedMpListExpanded = !selectedMpListExpanded">{{ selectedMpListExpanded ? 'verberg' : 'toon' }}</a>)</span>
                   <span> (<a [routerLink]="" (click)="selectionComplete = false; personalDataComplete = false;">wijzig</a>)</span>
+                </div>
+                <div>
+                  <strong>Van: </strong> {{ newMail.firstName }} {{ newMail.lastName}} (<a [routerLink]="" (click)="personalDataComplete = false;">wijzig</a>)
                 </div>
 
                 <mat-form-field fxFlex>
@@ -123,7 +123,7 @@
 
                 <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
 
-                <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div>
+                <!-- <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div> -->
 
                 <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
 
