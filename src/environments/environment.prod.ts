@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://klimaatraad.herokuapp.com',
+  baseUrl: 'https://www.klimaatraad.be',
   language: 'nl',
 };
