@@ -1,5 +1,9 @@
 .hero-media {
-  background-image: url('/assets/movie_placeholder.jpg');
+  height: 450px;
+
+  video {
+    width: 100%;
+  }
 
   iframe {
     visibility: hidden;
