@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { MP } from './mp';
 
 @Component({
@@ -11,6 +12,8 @@ export class MpComponent {
 
   @Output('mpSelected') mpSelectedEmitter = new EventEmitter<MP>();
   @Output('mpDeselected') mpDeselectedEmitter = new EventEmitter<MP>();
+
+  cdnBaseUrl = environment.cdnBaseUrl;
 
   changeSelection() {
     if (!this.mp.email) return;

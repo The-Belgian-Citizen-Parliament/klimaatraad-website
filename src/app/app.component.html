@@ -19,17 +19,18 @@
         </div>
         <ul class="header-links list-reset m-0">
           <li>
-            <a routerLink="/memorandum" translate>Het memorandum</a>
+            <a routerLink="/memorandum">{{ 'The memorandum' | translate }}</a>
           </li>
           <li>
-            <a routerLink="/vraag" translate>Vragen en antwoorden</a>
+            <a routerLink="/vraag">{{ 'Questions and answers' | translate }}</a>
           </li>
           <li>
-            <a class="button-evelyn button-sm button-shadow" routerLink="/deelnemen">Neem deel</a>
+            <a class="button-evelyn button-sm button-shadow" routerLink="/deelnemen">{{ 'Participate' | translate }}</a>
           </li>
-          <li>
-            <a *ngIf="lang === 'nl'" [routerLink]="" (click)="setLanguage('fr')">FR</a>
-            <a *ngIf="lang === 'fr'" [routerLink]="" (click)="setLanguage('nl')">NL</a>
+          <li style="padding-left: 8px">
+            <a *ngIf="lang !== 'fr'" href="https://www.leparlementcitoyen.be" style="padding-left: 8px; padding-right: 8px;">FR</a>
+            <a *ngIf="lang !== 'nl'" href="https://www.hetburgerparlement.be" style="padding-left: 8px; padding-right: 8px;">NL</a>
+            <a *ngIf="lang !== 'en'" [routerLink]="" (click)="setLanguage('en')" style="padding-left: 8px; padding-right: 8px;">EN</a>
           </li>
         </ul>
       </div>

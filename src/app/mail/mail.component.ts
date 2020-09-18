@@ -112,7 +112,7 @@ export class MailComponent {
   }
 
   selectAllVisibleFiltered() {
-    const newMps = this.filteredMps.filter(mp => !this.selectedMps.includes(mp));
+    const newMps = this.filteredMps.filter(mp => !this.selectedMps.includes(mp) && mp.email);
     newMps.forEach(mp => mp.selected = true);
     this.selectedMps.push(...newMps);
   }
