@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   baseUrl: 'http://localhost:4200',
   language: 'nl',
-  cdnBaseUrl: 'http://vincentsels.be/ext/belgiancitizenparliament/img',
+  cdnBaseUrl: 'https://belgiancitizenparliament.blob.core.windows.net/files',
 };
 
 /*
