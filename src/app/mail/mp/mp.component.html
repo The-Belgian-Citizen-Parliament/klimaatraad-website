@@ -4,6 +4,6 @@
   <strong>{{ mp.name }}</strong>
   <div>{{ 'Party' | translate }}: {{ mp.party }}</div>
   <div>{{ 'Hometown' | translate }}: {{ mp.hometown }}</div>
-  <div>{{ 'Constituency' | translate }}: {{ mp.constituency }}</div>
+  <div>{{ 'Constituency' | translate }}: {{ mp.constituency | translate }}</div>
   <div *ngIf="!mp.email" style="font-style: italic;">{{ 'No email' | translate }}</div>
 </div>

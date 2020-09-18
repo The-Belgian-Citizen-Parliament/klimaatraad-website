@@ -45,5 +45,17 @@
   "Thanks": "Thanks",
   "representativesMailed": "Your chosen representatives received your mail and can now mail you back. Fingers crossed!",
   "weWillKeepYouUpToDate": "We'll keep you up-to-date about the results from this campaign.",
-  "No email": "No email address"
+  "No email": "No email address",
+
+  "Antwerpen": "Antwerpen",
+  "Brussel-Hoofdstad": "Brussel-Hoofdstad",
+  "Henegouwen": "Henegouwen",
+  "Limburg": "Limburg",
+  "Luik": "Luik",
+  "Luxemburg": "Luxemburg",
+  "Namen": "Namen",
+  "Oost-Vlaanderen": "Oost-Vlaanderen",
+  "Vlaams-Brabant": "Vlaams-Brabant",
+  "Waals-Brabant": "Waals-Brabant",
+  "West-Vlaanderen": "West-Vlaanderen"
 }
