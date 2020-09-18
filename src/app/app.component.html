@@ -22,10 +22,11 @@
             <a routerLink="/memorandum">{{ 'The memorandum' | translate }}</a>
           </li>
           <li>
-            <a routerLink="/vraag">{{ 'Questions and answers' | translate }}</a>
+            <a [routerLink]="lang === 'fr' ? '/question' : '/vraag'">{{ 'Questions and answers' | translate }}</a>
           </li>
           <li>
-            <a class="button-evelyn button-sm button-shadow" routerLink="/deelnemen">{{ 'Participate' | translate }}</a>
+            <a class="button-evelyn button-sm button-shadow"
+              [routerLink]="lang === 'fr' ? '/participer' : '/deelnemen'">{{ 'Participate' | translate }}</a>
           </li>
           <li style="padding-left: 8px">
             <a *ngIf="lang !== 'fr'" href="https://www.leparlementcitoyen.be" style="padding-left: 8px; padding-right: 8px;">FR</a>
