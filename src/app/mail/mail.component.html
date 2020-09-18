@@ -46,22 +46,25 @@
                 </div>
 
                 <div class="action-list">
-                  <button mat-raised-button *ngIf="(selectedMps.length > 0) || selectionFilterSet"
-                    color="primary" (click)="confirmSelection()" [disabled]="selectedMps.length === 0">
+                  <button mat-raised-button *ngIf="(selectedMps.length > 0) || selectionFilterSet" color="primary"
+                    (click)="confirmSelection()" [disabled]="selectedMps.length === 0">
                     Selectie OK
                     <ng-container *ngIf="selectedMps.length > 0">({{ selectedMps.length }})</ng-container>
                   </button>
-                  <button mat-raised-button *ngIf="(selectedMps.length > 0) || selectionFilterSet"
-                    (click)="clearSelected()" [disabled]="selectedMps.length === 0">Selectie ongedaan maken</button>
-                  <button mat-raised-button *ngIf="selectionFilterSet" (click)="selectAllVisibleFiltered()" style="float: right">Allemaal selecteren</button>
+                  <button mat-raised-button *ngIf="(selectedMps.length > 0) || selectionFilterSet" (click)="clearSelected()"
+                    [disabled]="selectedMps.length === 0">Selectie ongedaan maken</button>
+                  <button mat-raised-button *ngIf="selectionFilterSet" (click)="selectAllVisibleFiltered()" style="float: right">Allemaal
+                    selecteren</button>
                 </div>
 
                 <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet">
-                  <app-mp *ngFor="let mp of filteredMps" [mp]="mp" class="mp-card" (mpSelected)="mpSelected($event)" (mpDeselected)="mpDeselected($event)"></app-mp>
+                  <app-mp *ngFor="let mp of filteredMps" [mp]="mp" class="mp-card" (mpSelected)="mpSelected($event)"
+                    (mpDeselected)="mpDeselected($event)"></app-mp>
                 </div>
               </div>
 
-              <form #personalDataForm="ngForm" *ngIf="selectionComplete && selectedMps.length > 0 && !personalDataComplete" fxLayout="column" fxLayoutGap="12px">
+              <form #personalDataForm="ngForm" *ngIf="selectionComplete && selectedMps.length > 0 && !personalDataComplete"
+                fxLayout="column" fxLayoutGap="12px">
                 <div fxFlex fxLayout="row" fxLayoutGap="12px">
                   <mat-form-field fxFlex="40">
                     <mat-label>Voornaam</mat-label>
@@ -91,7 +94,8 @@
                   </mat-form-field>
                 </div>
 
-                <button mat-raised-button color="primary" [disabled]="!personalDataForm.valid" (click)="personalDataComplete = true;">Ok - bijna klaar!</button>
+                <button mat-raised-button color="primary" [disabled]="!personalDataForm.valid" (click)="personalDataComplete = true;">
+                  Ok - bijna klaar!</button>
               </form>
 
               <div *ngIf="personalDataComplete" fxLayout="column" fxLayoutGap="12px">
@@ -102,16 +106,20 @@
                   </span>
                   <span *ngIf="selectedMps.length > 5">
                     <ng-container *ngIf="!selectedMpListExpanded">{{ selectedMps.length }} vertegenwoordigers</ng-container> (<a
-                      [routerLink]="" (click)="selectedMpListExpanded = !selectedMpListExpanded">{{ selectedMpListExpanded ? 'verberg' : 'toon' }}</a>)</span>
+                      [routerLink]=""
+                      (click)="selectedMpListExpanded = !selectedMpListExpanded">{{ selectedMpListExpanded ? 'verberg' : 'toon' }}</a>)
+                  </span>
                   <span> (<a [routerLink]="" (click)="selectionComplete = false; personalDataComplete = false;">wijzig</a>)</span>
                 </div>
                 <div>
-                  <strong>Van: </strong> {{ newMail.firstName }} {{ newMail.lastName}} (<a [routerLink]="" (click)="personalDataComplete = false;">wijzig</a>)
+                  <strong>Van: </strong> {{ newMail.firstName }} {{ newMail.lastName}} (<a [routerLink]=""
+                    (click)="personalDataComplete = false;">wijzig</a>)
                 </div>
 
                 <mat-form-field fxFlex *ngIf="customSubject">
                   <mat-label>Onderwerp</mat-label>
-                  <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="customSubject" [(ngModel)]="newMail.subject" #customSubject>
+                  <input matInput placeholder="Bv: Neem afdoende maatregelen voor een leefbare toekomst!" name="customSubject"
+                    [(ngModel)]="newMail.subject" #customSubject>
                 </mat-form-field>
 
                 <mat-form-field fxFlex *ngIf="!customSubject">
@@ -131,11 +139,17 @@
                   <mat-hint align="start"><strong>Wij verzorgen de aanhef en ondertekening!</strong> </mat-hint>
                 </mat-form-field>
 
-                <div><mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.</mat-checkbox></div>
+                <div>
+                  <mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">Mijn ondertekening mag publiek op de site verschijnen.
+                  </mat-checkbox>
+                </div>
 
                 <!-- <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div> -->
 
-                <div><mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat van deze campagne.</mat-checkbox></div>
+                <div>
+                  <mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">Ik wil graag op de hoogte blijven van het resultaat
+                    van deze campagne.</mat-checkbox>
+                </div>
 
                 <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">Verstuur!</button>
               </div>

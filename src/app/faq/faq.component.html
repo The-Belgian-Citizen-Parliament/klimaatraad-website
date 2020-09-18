@@ -26,7 +26,8 @@
 
       <ng-container *ngIf="!filter">
         <ul class="questionsToC">
-          <li *ngFor="let question of allQuestions"><a routerLink="/vraag" [fragment]="question.slug">{{ question.tags[0] }}: {{ question.question }}</a></li>
+          <li *ngFor="let question of allQuestions"><a routerLink="/vraag" [fragment]="question.slug">{{ question.tags[0] }}:
+              {{ question.question }}</a></li>
         </ul>
 
         <app-question [id]="question.slug" *ngFor="let question of allQuestions" [question]="question"></app-question>
