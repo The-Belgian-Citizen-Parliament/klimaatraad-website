@@ -24,7 +24,7 @@
                       <mat-select [(ngModel)]="selectedConstituency" name="selectedConstituency" (selectionChange)="filterMps()">
                         <mat-option [value]=""></mat-option>
                         <mat-option *ngFor="let constituency of constituencies" [value]="constituency">
-                          {{ constituency }}
+                          {{ constituency | translate }}
                         </mat-option>
                       </mat-select>
                     </mat-form-field>

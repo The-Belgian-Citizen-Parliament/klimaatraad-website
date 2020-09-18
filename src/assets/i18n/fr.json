@@ -45,5 +45,17 @@
   "Thanks": "Bedankt",
   "representativesMailed": "De door jou gekozen vertegenwoordigers ontvingen je mail en kunnen jou nu terugmailen. Fingers crossed!",
   "weWillKeepYouUpToDate": "We zullen je hoe dan ook op de hoogte houden van het verdere verloop van deze actie.",
-  "No email": "Geen email adres"
+  "No email": "Geen email adres",
+
+  "Antwerpen": "Anvers",
+  "Brussel-Hoofdstad": "Bruxelles-Capitale",
+  "Henegouwen": "Hainaut",
+  "Limburg": "Limbourg",
+  "Luik": "Liège",
+  "Luxemburg": "Luxembourg",
+  "Namen": "Namur",
+  "Oost-Vlaanderen": "Flandre-Orientale",
+  "Vlaams-Brabant": "Brabant flamand",
+  "Waals-Brabant": "Brabant wallon",
+  "West-Vlaanderen": "Flandre-Occidentale"
 }
