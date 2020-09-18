@@ -58,7 +58,7 @@
                   <button mat-raised-button *ngIf="(selectedMps.length > 0) || selectionFilterSet" (click)="clearSelected()"
                     [disabled]="selectedMps.length === 0">{{ 'Clear selection' | translate }}</button>
                   <button mat-raised-button *ngIf="selectionFilterSet" (click)="selectAllVisibleFiltered()" style="float: right">
-                    {{ 'Select all' | translate</button>
+                    {{ 'Select all' | translate }}</button>
                 </div>
 
                 <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet">
