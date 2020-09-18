@@ -5,6 +5,11 @@
   position: relative;
   cursor: pointer;
 
+  &.unavailable {
+    opacity: 0.4;
+    cursor: default;
+  }
+
   &:hover {
     box-shadow: 0 0 16px #E3E7EB;
   }

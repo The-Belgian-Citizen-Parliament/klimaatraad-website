@@ -18,31 +18,35 @@
                 </div> -->
 
                 <div class="filters">
-                  <mat-form-field style="width: 100%">
-                    <mat-label>Kieskring</mat-label>
-                    <mat-select [(ngModel)]="selectedConstituency" name="selectedConstituency" (selectionChange)="filterMps()">
-                      <mat-option [value]=""></mat-option>
-                      <mat-option *ngFor="let constituency of constituencies" [value]="constituency">
-                        {{ constituency }}
-                      </mat-option>
-                    </mat-select>
-                  </mat-form-field>
+                  <div fxLayout fxLayoutGap="12px">
+                    <mat-form-field fxFlex="50">
+                      <mat-label>Kieskring</mat-label>
+                      <mat-select [(ngModel)]="selectedConstituency" name="selectedConstituency" (selectionChange)="filterMps()">
+                        <mat-option [value]=""></mat-option>
+                        <mat-option *ngFor="let constituency of constituencies" [value]="constituency">
+                          {{ constituency }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
 
-                  <mat-form-field style="width: 100%">
-                    <mat-label>Partij</mat-label>
-                    <mat-select [(ngModel)]="selectedParty" name="selectedParty" (selectionChange)="filterMps()">
-                      <mat-option [value]=""></mat-option>
-                      <mat-option *ngFor="let party of parties" [value]="party">
-                        {{ party }}
-                      </mat-option>
-                      <mat-option value="ONAFH">Onafhankelijk</mat-option>
-                    </mat-select>
-                  </mat-form-field>
+                    <mat-form-field fxFlex="50">
+                      <mat-label>Partij</mat-label>
+                      <mat-select [(ngModel)]="selectedParty" name="selectedParty" (selectionChange)="filterMps()">
+                        <mat-option [value]=""></mat-option>
+                        <mat-option *ngFor="let party of parties" [value]="party">
+                          {{ party }}
+                        </mat-option>
+                        <mat-option value="ONAFH">Onafhankelijk</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
 
-                  <mat-form-field style="width: 100%">
-                    <mat-label>Naam</mat-label>
-                    <input matInput name="nameFilter" [(ngModel)]="nameFilter" (keyup)="filterMps()" />
-                  </mat-form-field>
+                  <div fxLayout fxLayoutGap="12px">
+                    <mat-form-field fxFlex="100">
+                      <mat-label>Naam</mat-label>
+                      <input matInput name="nameFilter" [(ngModel)]="nameFilter" (keyup)="filterMps()" />
+                    </mat-form-field>
+                  </div>
                 </div>
 
                 <div class="action-list">

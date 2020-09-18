@@ -13,6 +13,7 @@ export class MpComponent {
   @Output('mpDeselected') mpDeselectedEmitter = new EventEmitter<MP>();
 
   changeSelection() {
+    if (!this.mp.email) return;
     this.mp.selected = !this.mp.selected;
     this.mp.selected ? this.mpSelectedEmitter.emit(this.mp)
       : this.mpDeselectedEmitter.emit(this.mp);

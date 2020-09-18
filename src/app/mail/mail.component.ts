@@ -97,10 +97,12 @@ export class MailComponent {
   // }
 
   filterMps() {
-    this.filteredMps = this.mps.filter(mp =>
-      (!this.selectedConstituency || (mp.constituency === this.selectedConstituency)) &&
-      (!this.selectedParty || (mp.party === this.selectedParty)) &&
-      (!this.nameFilter || (mp.name.toLowerCase().includes(this.nameFilter.toLowerCase()))));
+    this.filteredMps = this.mps
+      .filter(mp =>
+        (!this.selectedConstituency || (mp.constituency === this.selectedConstituency)) &&
+        (!this.selectedParty || (mp.party === this.selectedParty)) &&
+        (!this.nameFilter || (mp.name.toLowerCase().includes(this.nameFilter.toLowerCase()))))
+      .sort((a, b) => (a.email || 'ZZZZ').localeCompare(b.email || 'ZZZZ'));
 
     if (this.selectedConstituency || this.selectedParty || (this.nameFilter  && this.nameFilter.length > 2)) {
       this.selectionFilterSet = true;
