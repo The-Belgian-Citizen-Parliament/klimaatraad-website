@@ -5,8 +5,8 @@
         <div class="smaller">
           <!-- <ul class="list-reset mb-0"> </ul> -->
 
-          <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
-            <div fxFlex="70" fxFlex.xs="100" *ngIf="!sent">
+          <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px">
+            <div fxFlex="70" fxFlex.lt-md="100" *ngIf="!sent">
               <h3 class="section-title mt-0 mb-0">{{ 'Mail your representatives' | translate }}</h3>
 
               <div class="who" *ngIf="!selectionComplete" fxLayout="column">
@@ -164,13 +164,13 @@
               </div>
             </div>
 
-            <div fxFlex="70" fxFlex.xs="100" *ngIf="sent">
+            <div fxFlex="70" fxFlex.lt-md="100" *ngIf="sent">
               <h3 class="section-title mt-0">{{ 'Thanks' | translate }}!</h3>
               <p>{{ 'representativesMailed' | translate }}</p>
               <p *ngIf="newMail.stayUpToDate">{{ 'weWillKeepYouUpToDate' | translate }}</p>
             </div>
 
-            <div fxFlex="30" fxFlex.xs="100">
+            <div fxFlex="30" fxFlex.lt-md="100">
               <strong>Namen recent deel...</strong>
               <ul>
                 <li *ngFor="let mail of mails">

@@ -1,9 +1,13 @@
 <div class="mp-card" [class.unavailable]="!mp.email" (click)="changeSelection()" [class.selected]="mp.selected">
-  <mat-checkbox name="selected" [(ngModel)]="mp.selected"></mat-checkbox>
-  <img [src]="cdnBaseUrl + '/representatives/' + mp.localImg" onerror="this.src='/assets/anonymous.jpg'" />
-  <strong>{{ mp.name }}</strong>
-  <div>{{ 'Party' | translate }}: {{ mp.party }}</div>
-  <div>{{ 'Hometown' | translate }}: {{ mp.hometown }}</div>
-  <div>{{ 'Constituency' | translate }}: {{ mp.constituency | translate }}</div>
-  <div *ngIf="!mp.email" style="font-style: italic;">{{ 'No email' | translate }}</div>
+  <mat-checkbox class="mp-cb" name="selected" [(ngModel)]="mp.selected"></mat-checkbox>
+  <div class="mp-img"><img [src]="cdnBaseUrl + '/representatives/' + mp.localImg" onerror="this.src='/assets/anonymous.jpg'" /></div>
+  <div class="mp-info">
+    <strong class="name">{{ mp.name }}</strong>
+    <div class="info">
+      <div class="info-party"><span class="info-label">{{ 'Party' | translate }}: </span>{{ mp.party }}</div>
+      <div class="info-hometown"><span class="info-label">{{ 'Hometown' | translate }}: </span>{{ mp.hometown }}</div>
+      <div class="info-constituency"><span class="info-label">{{ 'Constituency' | translate }}: </span>{{ mp.constituency | translate }}</div>
+      <div class="info-email" *ngIf="!mp.email" style="font-style: italic;">{{ 'No email' | translate }}</div>
+    </div>
+  </div>
 </div>
