@@ -7,10 +7,11 @@
 
           <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
             <div fxFlex="70" fxFlex.xs="100" *ngIf="!sent">
-              <h3 class="section-title mt-0">{{ 'Mail your representatives' | translate }}</h3>
+              <h3 class="section-title mt-0 mb-0">{{ 'Mail your representatives' | translate }}</h3>
 
-              <div class="who" *ngIf="!selectionComplete">
-                <h4>{{ 'Who do you want to mail?' | translate }}</h4>
+              <div class="who" *ngIf="!selectionComplete" fxLayout="column">
+                <h4 class="mb-0">{{ 'step1' | translate }}: {{ 'step1title' | translate }}</h4>
+                <div class="subtitle">{{ 'step1explanation' | translate }}</div>
 
                 <!-- <div class="choice-list" *ngIf="!selectType">
                   <button mat-raised-button color="primary" (click)="selectType = 'filters'">Selectie op kieskring, naam of partij</button>
@@ -68,7 +69,10 @@
               </div>
 
               <form #personalDataForm="ngForm" *ngIf="selectionComplete && selectedMps.length > 0 && !personalDataComplete"
-                fxLayout="column" fxLayoutGap="12px">
+                fxLayout="column">
+                <h4 class="mb-0">{{ 'step2' | translate }}: {{ 'step2title' | translate }}</h4>
+                <div class="subtitle">{{ 'step2explanation' | translate }} <a routerLink="privacy">{{ 'here' | translate }}</a>.</div>
+
                 <div fxFlex fxLayout="row" fxLayoutGap="12px">
                   <mat-form-field fxFlex="40">
                     <mat-label>{{ 'First name' | translate }}</mat-label>
@@ -102,18 +106,21 @@
                   {{ 'OK - Almost there!' | translate }}</button>
               </form>
 
-              <div *ngIf="personalDataComplete" fxLayout="column" fxLayoutGap="12px">
+              <div *ngIf="personalDataComplete" fxLayout="column">
+                <h4 class="mb-0">{{ 'step3' | translate }}: {{ 'step3title' | translate }}</h4>
+                <div class="subtitle">{{ 'step3explanation' | translate }}</div>
                 <div>
                   <strong>{{ 'To' | translate }}: </strong>
                   <span *ngIf="(selectedMps.length <= 5 || selectedMpListExpanded)" class="mpSelectionList">
                     <span *ngFor="let selectedMp of selectedMps">{{ selectedMp.name }}</span>
                   </span>
                   <span *ngIf="selectedMps.length > 5">
-                    <ng-container *ngIf="!selectedMpListExpanded">{{ selectedMps.length }} {{ 'representatives' | translate }}</ng-container> (<a
-                      [routerLink]=""
+                    <ng-container *ngIf="!selectedMpListExpanded">{{ selectedMps.length }} {{ 'representatives' | translate }}
+                    </ng-container> (<a [routerLink]=""
                       (click)="selectedMpListExpanded = !selectedMpListExpanded">{{ selectedMpListExpanded ? ('hide' | translate) : ('show' | translate) }}</a>)
                   </span>
-                  <span> (<a [routerLink]="" (click)="selectionComplete = false; personalDataComplete = false;">{{ 'change' | translate }}</a>)</span>
+                  <span> (<a [routerLink]=""
+                      (click)="selectionComplete = false; personalDataComplete = false;">{{ 'change' | translate }}</a>)</span>
                 </div>
                 <div>
                   <strong>{{ 'From' | translate }}: </strong> {{ newMail.firstName }} {{ newMail.lastName}} (<a [routerLink]=""
