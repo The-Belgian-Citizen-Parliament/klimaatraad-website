@@ -17,6 +17,15 @@
   .hero-media {
     margin-top: 64px;
     margin-top: 80px;
-    height: 450px;
   }
+}
+
+@media (min-width: 641px) {
+  .hero-media {
+    height: unset;
+  }
+}
+
+.hero-media {
+  height: unset;
 }

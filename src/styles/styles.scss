@@ -12,3 +12,17 @@
 body {
   overflow-y: scroll;
 }
+
+.primary {
+  color: mat-color($app-primary);
+}
+
+.accent {
+  color: mat-color($app-accent);
+}
+
+// Material overwrites
+
+.mat-checkbox-layout {
+  white-space: unset !important;
+}

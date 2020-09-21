@@ -1,7 +1,11 @@
 {
-  "The memorandum": "Le mémorandum",
-  "Questions and answers": "Questions et réponses",
+  "The proposal": "La proposition",
+  "Frequently Asked Questions": "Questions et réponses",
   "Participate": "Participer",
+  "About us": "About us",
+  "Contact": "Contact",
+  "Press": "Presse",
+  "Privacy Statement": "Déclaration de confidentialité",
 
   "Show more": "Toon meer",
   "Show less": "Toon minder",
@@ -9,6 +13,8 @@
   "A national citizens parliament concerning the ecological emergencies": "Une assemblée citoyenne nationale sur l'urgence écologique",
   "Memorandum for the new federal government": "Mémorandum aux nouveau gouvernement",
   "openingMessage": "Art. 7bis de la Constitution belge: « Dans l’exercice de leurs compétences respectives, l’État fédéral, les communautés et les régions poursuivent les objectifs d’un développement durable, dans ses dimensions sociale, économique et environnementale, en tenant compte de la solidarité entre les générations ».",
+
+  "whyCitizenParliament": "Pourquoi un <span class=\"primary\">parlement citoyen</span>?",
 
   "Mail your representatives": "Mail je vertegenwoordigers",
   "Who do you want to mail?": "Wie wil je mailen?",

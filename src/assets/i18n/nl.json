@@ -1,7 +1,11 @@
 {
-  "The memorandum": "Het memorandum",
-  "Questions and answers": "Vragen en antwoorden",
+  "The proposal": "Het voorstel",
+  "Frequently Asked Questions": "Veelgestelde vragen",
   "Participate": "Doe mee",
+  "About us": "Over ons",
+  "Contact": "Contact",
+  "Press": "Pers",
+  "Privacy Statement": "Privacyverklaring",
 
   "Show more": "Toon meer",
   "Show less": "Toon minder",
@@ -9,6 +13,8 @@
   "A national citizens parliament concerning the ecological emergencies": "Een nationaal burgerparlement rond de ecologische noodtoestand",
   "Memorandum for the new federal government": "Memorandum for the new federal government",
   "openingMessage": "Art. 7bis van de Belgische Grondwet: \"Bij de uitoefening van hun respectieve bevoegdheden streven de federale Staat, de gemeenschappen en de gewesten de doelstellingen na van een duurzame ontwikkeling in haar sociale, economische en milieu-gebonden aspecten, rekening houdend met de solidariteit tussen de generaties\".",
+
+  "whyCitizenParliament": "Waarom een <span class=\"primary\">burgerparlement</span>?",
 
   "Mail your representatives": "Mail je vertegenwoordigers",
   "Who do you want to mail?": "Wie wil je mailen?",
@@ -46,6 +52,16 @@
   "representativesMailed": "De door jou gekozen vertegenwoordigers ontvingen je mail en kunnen jou nu terugmailen. Fingers crossed!",
   "weWillKeepYouUpToDate": "We zullen je hoe dan ook op de hoogte houden van het verdere verloop van deze actie.",
   "No email": "Geen email adres",
+  "step1": "Stap 1/3",
+  "step1title": "Wie wil je mailen?",
+  "step1explanation": "Gebruik de filters en selecteer zoveel politici als je wil",
+  "step2": "Stap 2/3",
+  "step2title": "Mogen we weten wie je bent?",
+  "step2explanation": "We nemen je privacy erg serieus. We tonen je data nergens publiek als je dat niet wil. Lees onze volledige privacyverklaring ",
+  "here": "hier",
+  "step3": "Stap 3/3",
+  "step3title": "Stel je mail op",
+  "step3explanation": "Neem je tijd om uit te leggen waarom dit belangrijk is voor jou, of gebruik één van de voorgedefiniëerde onderwerpen en teksten als je gehaast bent",
 
   "Antwerpen": "Antwerpen",
   "Brussel-Hoofdstad": "Brussel-Hoofdstad",

@@ -8,14 +8,18 @@
       <p class="hero-cta"><a class="button-evelyn button-secondary button-shadow" routerLink="/deelnemen">Steun het
           initiatief</a></p>
       <div class="hero-media" id="het-concept">
-        <video controls poster="/assets/maaike_bg.jpg">
-          <source src="https://vincentsels.be/ext/belgiancitizenparliament/video/maaike.mp4" type="video/mp4">
+        <video controls [poster]="currentVideo.poster" [src]="currentVideo.src" type="video/mp4" #videoPlayer>
           Sorry, your browser doesn't support embedded videos.
         </video>
         <!-- <iframe style="width: 100%; height: 100%; position: relative;"
           src="https://www.youtube.com/embed/zLhDgHC9V9A?modestbranding=1&controls=0" frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen (load)="iFrameLoaded = true"
           [class.loaded]="iFrameLoaded"></iframe> -->
+          <div class="vid-carrousel" #videoCarrousel cdkScrollable>
+            <div class="vid-prev" (click)="scrollLeft()"></div>
+            <img class="vid-thumb" [src]="vid.poster" *ngFor="let vid of videos" (click)="playVid(vid)" />
+            <div class="vid-next" (click)="scrollRight()"></div>
+          </div>
       </div>
     </div>
   </div>
@@ -24,7 +28,7 @@
 <section class="features section text-center">
   <div class="container">
     <div class="features-inner section-inner">
-      <h2 class="section-title mt-0">Waarom een burgerassemblee?</h2>
+      <h2 class="section-title mt-0" [innerHtml]="'whyCitizenParliament' | translate"></h2>
       <div class="features-wrap">
         <div class="feature">
           <div class="feature-inner">

@@ -5,14 +5,11 @@
 .mp-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 12px;
+  margin-top: 12px;
 }
 
 app-mp {
   display: inline-block;
-  margin-right: 6px;
-  margin-bottom: 6px;
-  width: 200px;
 }
 
 .choice-list {
@@ -26,6 +23,10 @@ app-mp {
   button {
     margin-bottom: 12px;
     margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 
@@ -37,4 +38,9 @@ app-mp {
   span:last-child:after {
     content: ""
   }
+}
+
+.subtitle {
+  line-height: 20px;
+  margin-bottom: 24px;
 }
