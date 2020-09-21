@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { QuestionsService } from '../questions/questions.service';
 import { Question } from '../questions/questions';
 
@@ -9,7 +9,7 @@ const VID_WIDTH = 320; // Should reflect the width of a vid
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
+export class MainComponent implements AfterViewInit {
   @ViewChild('videoPlayer') videoPlayer: ElementRef;
   @ViewChild('videoCarrousel') videoCarrousel: ElementRef;
 
@@ -30,6 +30,10 @@ export class MainComponent {
   constructor(private questionsService: QuestionsService) {
     this.questions = questionsService.getRandomQuestions(3);
     this.currentVideo = this.videos[4];
+  }
+
+  ngAfterViewInit(): void {
+    (this.videoPlayer.nativeElement as HTMLVideoElement).onended = () => this.playVid(this.videos[this.currentVideo.nr + 1]);
   }
 
   moreQuestions = () => this.questions = this.questionsService.getRandomQuestions(3);
