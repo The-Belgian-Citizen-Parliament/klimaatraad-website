@@ -6,8 +6,8 @@ aspecten, rekening houdend met de solidariteit tussen de generaties.
 
 ## Introductie
 
-Dit document bevat een gedetailleerd voorstel voor een Nationaal Burger-
-parlement rond de ecologische noodtoestand. Het initiatief bezit het potentieel
+<span class="accent">Dit document</span> bevat een gedetailleerd voorstel voor een <span class="primary">Nationaal Burgerparlement</span> 
+rond de ecologische noodtoestand. Het initiatief bezit het potentieel
 om de politieke impasse ten aanzien van deze historische crisis te helpen door-
 breken. Volgens welingelichte bronnen zouden biodiversiteit en klimaat geen
 prioriteiten zijn in de lopende regeringsonderhandelingen, wat onbegrijpelijk
