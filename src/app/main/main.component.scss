@@ -18,9 +18,15 @@ $vid-courrousel-height: 180px;
   margin-top: 20px;
   width: 100%;
   height: $vid-courrousel-height;
-  overflow-x: hidden;
+  overflow-x: scroll;
   display: flex;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
+    display: none;
+  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 
   .vid-thumb {
     height: 100%;
@@ -39,7 +45,6 @@ $vid-courrousel-height: 180px;
   left: 0;
   cursor: url(/assets/cursors/cursor_arrow_left.png), url(/assets/cursors/cursor_arrow_left.cur),w-resize;
 }
-
 
 .vid-next {
   right: 0;
@@ -62,4 +67,15 @@ $vid-courrousel-height: 180px;
 .vid-next:hover {
   background-image: url(/assets/arrow_right.gif);
   background-position: center;
+}
+
+@media (max-width: 720px) {
+  .vid-prev, .vid-next {
+    display: none;
+    visibility: hidden;
+  }
+
+  .vid-carrousel, .vid-prev, .vid-next {
+    height: $vid-courrousel-height / 2;
+  }
 }

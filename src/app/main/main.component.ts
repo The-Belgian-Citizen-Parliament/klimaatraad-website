@@ -2,8 +2,6 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { QuestionsService } from '../questions/questions.service';
 import { Question } from '../questions/questions';
 
-const VID_WIDTH = 320; // Should reflect the width of a vid
-
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -41,14 +39,16 @@ export class MainComponent implements AfterViewInit {
   playVid(vid) {
     this.currentVideo = vid;
     setTimeout(() => this.videoPlayer.nativeElement.play());
-    this.videoCarrousel.nativeElement.scrollLeft = (vid.nr * VID_WIDTH) - VID_WIDTH;
+    this.videoCarrousel.nativeElement.scrollLeft = (vid.nr * this.getImageWidth()) - (this.getImageWidth() / 2);
   }
 
   scrollLeft() {
-    this.videoCarrousel.nativeElement.scrollLeft -= VID_WIDTH
+    this.videoCarrousel.nativeElement.scrollLeft -= this.getImageWidth()
   }
 
   scrollRight() {
-    this.videoCarrousel.nativeElement.scrollLeft += VID_WIDTH;
+    this.videoCarrousel.nativeElement.scrollLeft += this.getImageWidth();
   }
+
+  getImageWidth = () => this.videoCarrousel.nativeElement.children[1].offsetWidth; // 0 = scroll image
 }
