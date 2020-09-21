@@ -8,8 +8,8 @@
       <p class="hero-cta"><a class="button-evelyn button-secondary button-shadow" routerLink="/deelnemen">Steun het
           initiatief</a></p>
       <div class="hero-media" id="het-concept">
-        <video controls poster="/assets/maaike_bg.jpg">
-          <source src="https://vincentsels.be/ext/belgiancitizenparliament/video/maaike.mp4" type="video/mp4">
+        <video controls [poster]="currentVideo.poster">
+          <source [src]="currentVideo.src" type="video/mp4">
           Sorry, your browser doesn't support embedded videos.
         </video>
         <!-- <iframe style="width: 100%; height: 100%; position: relative;"
