@@ -12,7 +12,7 @@
 
                 <div class="who" *ngIf="!selectionComplete" fxLayout="column">
                   <h4 class="mb-0">{{ 'step1' | translate }}: {{ 'step1title' | translate }}</h4>
-                  <div class="subtitle">{{ 'step1explanation' | translate }}</div>
+                  <div class="subtitle">{{ 'step1explanation' | translate }}.</div>
 
                   <!-- <div class="choice-list" *ngIf="!selectType">
                     <button mat-raised-button color="primary" (click)="selectType = 'filters'">Selectie op kieskring, naam of partij</button>
@@ -109,7 +109,7 @@
 
                 <div *ngIf="personalDataComplete" fxLayout="column">
                   <h4 class="mb-0">{{ 'step3' | translate }}: {{ 'step3title' | translate }}</h4>
-                  <div class="subtitle">{{ 'step3explanation' | translate }}</div>
+                  <div class="subtitle">{{ 'step3explanation' | translate }}.</div>
                   <div>
                     <strong>{{ 'To' | translate }}: </strong>
                     <span *ngIf="(selectedMps.length <= 5 || selectedMpListExpanded)" class="mpSelectionList">

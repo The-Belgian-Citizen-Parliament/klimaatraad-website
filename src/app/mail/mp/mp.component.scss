@@ -43,8 +43,7 @@
 
 @media (max-width: 740px) {
   .mp-card {
-    width: 180px;
-    margin: 4px;
+    width: 240px;
     text-align: unset;
     display: flex;
 
@@ -60,21 +59,12 @@
       flex: 1;
     }
 
-    &.unavailable {
-      opacity: 0.4;
-      cursor: default;
-    }
-
     &:hover {
-      box-shadow: 0 0 16px #E3E7EB;
+      box-shadow: unset;
     }
 
     &.selected {
-      box-shadow: 0 0 16px #b9bcc0;
-    }
-
-    div {
-      line-height: normal;
+      box-shadow: unset;
     }
 
     .name {

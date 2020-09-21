@@ -12,3 +12,9 @@
 body {
   overflow-y: scroll;
 }
+
+// Material overwrites
+
+.mat-checkbox-layout {
+  white-space: unset !important;
+}

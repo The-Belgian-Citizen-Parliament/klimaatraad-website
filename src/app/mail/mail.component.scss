@@ -23,6 +23,10 @@ app-mp {
   button {
     margin-bottom: 12px;
     margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 
