@@ -19,10 +19,10 @@
         </div>
         <ul class="header-links list-reset m-0">
           <li>
-            <a routerLink="/memorandum">{{ 'The memorandum' | translate }}</a>
+            <a routerLink="/memorandum">{{ 'The proposal' | translate }}</a>
           </li>
           <li>
-            <a [routerLink]="lang === 'fr' ? '/question' : '/vraag'">{{ 'Questions and answers' | translate }}</a>
+            <a [routerLink]="lang === 'fr' ? '/question' : '/vraag'">{{ 'Frequently Asked Questions' | translate }}</a>
           </li>
           <li>
             <a class="button-evelyn button-sm button-shadow"
@@ -62,16 +62,16 @@
         </div>
         <ul class="footer-links list-reset">
           <li>
-            <a href="#">Contact</a>
+            <a [routerLink]="">{{ 'Contact' | translate }}</a>
           </li>
           <li>
-            <a href="#">About us</a>
+            <a [routerLink]="">{{ 'About us' | translate }}</a>
           </li>
           <li>
-            <a href="#">FAQ's</a>
+            <a [routerLink]="">{{ 'Press' | translate }}</a>
           </li>
           <li>
-            <a href="#">Support</a>
+            <a [routerLink]="">{{ 'Privacy Statement' | translate }}</a>
           </li>
         </ul>
         <ul class="footer-social-links list-reset">
