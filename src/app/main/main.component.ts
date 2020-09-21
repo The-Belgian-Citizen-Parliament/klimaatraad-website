@@ -2,13 +2,16 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { QuestionsService } from '../questions/questions.service';
 import { Question } from '../questions/questions';
 
+const VID_WIDTH = 320; // Should reflect the width of a vid
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-  @ViewChild('videoPlayer') videoplayer: ElementRef;
+  @ViewChild('videoPlayer') videoPlayer: ElementRef;
+  @ViewChild('videoCarrousel') videoCarrousel: ElementRef;
 
   iFrameLoaded = false;
 
@@ -33,6 +36,15 @@ export class MainComponent {
 
   playVid(vid) {
     this.currentVideo = vid;
-    setTimeout(() => this.videoplayer.nativeElement.play());
+    setTimeout(() => this.videoPlayer.nativeElement.play());
+    this.videoCarrousel.nativeElement.scrollLeft = (vid.nr * VID_WIDTH) - VID_WIDTH;
+  }
+
+  scrollLeft() {
+    this.videoCarrousel.nativeElement.scrollLeft -= VID_WIDTH
+  }
+
+  scrollRight() {
+    this.videoCarrousel.nativeElement.scrollLeft += VID_WIDTH;
   }
 }

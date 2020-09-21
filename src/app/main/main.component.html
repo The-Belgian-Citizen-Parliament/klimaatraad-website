@@ -15,8 +15,10 @@
           src="https://www.youtube.com/embed/zLhDgHC9V9A?modestbranding=1&controls=0" frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen (load)="iFrameLoaded = true"
           [class.loaded]="iFrameLoaded"></iframe> -->
-          <div class="vid-carrousel">
+          <div class="vid-carrousel" #videoCarrousel>
+            <div class="vid-prev" (click)="scrollLeft()"></div>
             <img class="vid-thumb" [src]="vid.poster" *ngFor="let vid of videos" (click)="playVid(vid)" />
+            <div class="vid-next" (click)="scrollRight()"></div>
           </div>
       </div>
     </div>

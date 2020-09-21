@@ -12,14 +12,54 @@
   }
 }
 
+$vid-courrousel-height: 180px;
+
 .vid-carrousel {
   margin-top: 20px;
   width: 100%;
-  height: 200px;
-  overflow-x: scroll;
+  height: $vid-courrousel-height;
+  overflow-x: hidden;
   display: flex;
+  scroll-behavior: smooth;
 
   .vid-thumb {
     height: 100%;
   }
+}
+
+.vid-prev, .vid-next {
+  min-width: 75px;
+  width: 50px;
+  height: $vid-courrousel-height;
+  position: absolute;
+  z-index: 1;
+}
+
+.vid-prev {
+  left: 0;
+  cursor: url(/assets/cursors/cursor_arrow_left.png), url(/assets/cursors/cursor_arrow_left.cur),w-resize;
+}
+
+
+.vid-next {
+  right: 0;
+  cursor: url(/assets/cursors/cursor_arrow_right.png), url(/assets/cursors/cursor_arrow_right.cur),w-resize;
+}
+
+.vid-prev:hover, .vid-next:hover {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  filter: alpha(opacity = 35);
+  position: absolute;
+}
+
+.vid-prev:hover {
+  background-image: url(/assets/arrow_left.gif);
+  background-position: center;
+}
+
+.vid-next:hover {
+  background-image: url(/assets/arrow_right.gif);
+  background-position: center;
 }
