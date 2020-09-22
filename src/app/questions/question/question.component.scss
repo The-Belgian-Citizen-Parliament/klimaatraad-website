@@ -29,8 +29,11 @@ ul.question-tags {
 
 .question-link {
   visibility: hidden;
-  vertical-align: text-bottom;
   margin-left: 12px;
+
+  mat-icon {
+    vertical-align: text-bottom;
+  }
 }
 
 .question-title:hover {

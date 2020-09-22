@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { go } from 'fuzzysort';
 import { QuestionsService } from '../questions/questions.service';
 import { nl, Question } from '../questions/questions';
 import { environment } from 'src/environments/environment';
@@ -52,8 +53,10 @@ export class FaqComponent implements OnInit, OnDestroy {
 
   filterQuestions() {
     if (this.filter.length > 2) {
-      this.filteredQuestions = this.allQuestions.filter(q => q.question.includes(this.filter) || q.summary.includes(this.filter)
-        || (q.answer && q.answer.includes(this.filter)));
+      this.filteredQuestions = go(this.filter, this.allQuestions, { keys: ['question', 'summary', 'answer'] }).map(r => r.obj);
+
+      // this.filteredQuestions = this.allQuestions.filter(q => q.question.includes(this.filter) || q.summary.includes(this.filter)
+      //   || (q.answer && q.answer.includes(this.filter)));
     } else if (this.filter.length === 0) {
       this.filteredQuestions = [];
     }
