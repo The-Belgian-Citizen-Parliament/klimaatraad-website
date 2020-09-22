@@ -1,6 +1,9 @@
 <div class="feature-extended">
   <div class="feature-extended-body">
-    <h3 class="mt-0">{{ question.question }}</h3>
+    <h3 class="question-title mt-0" *ngIf="!answerOnly">
+      {{ question.question }}
+      <a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug" class="question-link"><mat-icon>link</mat-icon></a>
+    </h3>
     <div class="darker">
       {{ question.summary }}
       <div class="expand-button" *ngIf="question.answer && !expanded" (click)="expand()">

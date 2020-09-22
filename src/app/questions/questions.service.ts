@@ -5,4 +5,5 @@ import { shuffle } from '../util/functions';
 @Injectable()
 export class QuestionsService {
     getRandomQuestions = (amt: number) => shuffle(questions).slice(0, amt);
+    getQuestionBySlug = (slug) => questions.find(q => q.slug === slug);
 }

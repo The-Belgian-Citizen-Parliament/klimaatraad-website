@@ -26,3 +26,18 @@ ul.question-tags {
     display: inline;
   }
 }
+
+.question-link {
+  visibility: hidden;
+}
+
+.question-title:hover {
+  .question-link {
+    visibility: visible;
+    opacity: 0.6;
+  }
+
+  .question-link:hover {
+    opacity: 1;
+  }
+}
