@@ -75,21 +75,21 @@ export const nl: Question[] = [
     summary: 'We pleiten ervoor dat naast het fysieke parlement met gelote burgers, ook een website aangeboden wordt waar communicatie in de twee richtingen kan verlopen. We zouden graag hebben dat iedereen ideeën kan aanreiken, gemodereerde discussies kan voeren, en stemmen. Het zal uiteindelijk aan de regering zijn of ze dit al dan niet voorzien. We zullen er in ieder geval voor vechten!',
     answer: '',
     tags: ['parlement', 'democratie'],
-    slug: 'inspraak-wanneer-niet-geloot',
+    slug: 'heb-ik-inspraak-wanneer-niet-geloot',
   },
   {
     question: 'Zeg jongens, overdrijven jullie niet met die ecologische noodtoestand?',
     summary: 'Oh, wat wouden we dat dat waar was!',
     answer: '',
     tags: ['noodtoestand', 'ecologie', 'ideologie'],
-    slug: 'handpoppen-van-groen',
+    slug: 'is-noodtoestand-niet-overdreven',
   },
   {
     question: 'Zeggen jullie nu dat het huidige partijpolitieke systeem waardeloos is?',
     summary: 'Helemaal niet! Er wordt fantastisch werk geleverd door kabinetten, commissies en administraties. De representatieve democratie heeft op veel vlakken haar sporen verdiend. We erkennen bovendien de complexiteit van vele politieke onderwerpen, en op veel vlakken is een democratisch, ideologisch debat een gezonde manier om met kleine stappen vooruitgang te boeken.',
     answer: 'Toch denken we dat een burgerparlement om twee redenen een noodzakelijke toevoeging is aan de democratische toolbox.',
     tags: ['democratie', 'speltheorie'],
-    slug: 'handpoppen-van-groen',
+    slug: 'is-huidige-politiek-dan-waardeloos',
   },
 ]
 

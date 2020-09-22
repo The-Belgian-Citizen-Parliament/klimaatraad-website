@@ -58,5 +58,6 @@ export class FaqComponent implements OnInit, OnDestroy {
       this.filteredQuestions = [];
     }
   }
+
   clearFilter = () => this.filter = '';
 }
