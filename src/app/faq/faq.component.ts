@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRe
 import { isPlatformBrowser } from '@angular/common';
 import { QuestionsService } from '../questions/questions.service';
 import { nl, Question } from '../questions/questions';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-faq',
@@ -11,6 +12,8 @@ import { nl, Question } from '../questions/questions';
 export class FaqComponent implements OnInit, OnDestroy {
   @ViewChild('question', { static: false }) questionField: ElementRef;
 
+  lang = environment.language;
+
   filter = '';
 
   questionPlaceholder = '';
@@ -19,6 +22,7 @@ export class FaqComponent implements OnInit, OnDestroy {
 
   allQuestions: Question[] = nl;
   filteredQuestions: Question[] = [];
+  groupedQuestions = [];
 
   isBrowser = false;
   timer;
@@ -27,6 +31,13 @@ export class FaqComponent implements OnInit, OnDestroy {
     this.questionPlaceholder = this.questionExamples[0];
     this.isBrowser = isPlatformBrowser(platformId);
     setTimeout(() => this.questionField.nativeElement.focus());
+
+    this.groupedQuestions = this.allQuestions.reduce((all, curr) => {
+      if (!all.find(t => t.topic === curr.tags[0])) all.push({ topic: curr.tags[0], questions: [] });
+      const topic = all.find(t => t.topic === curr.tags[0]);
+      topic.questions.push(curr);
+      return all;
+    }, []);
   }
 
   ngOnInit(): void {
