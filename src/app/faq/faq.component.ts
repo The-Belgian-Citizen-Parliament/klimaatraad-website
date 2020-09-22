@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { QuestionsService } from '../questions/questions.service';
-import { questions, Question } from '../questions/questions';
+import { nl, Question } from '../questions/questions';
 
 @Component({
   selector: 'app-faq',
@@ -17,7 +17,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   questionExamples = ['klimaat', 'burger', 'politici', 'legitiem'];
   counter = 0;
 
-  allQuestions: Question[] = questions;
+  allQuestions: Question[] = nl;
   filteredQuestions: Question[] = [];
 
   isBrowser = false;

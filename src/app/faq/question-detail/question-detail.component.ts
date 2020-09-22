@@ -17,6 +17,7 @@ export class QuestionDetailComponent {
     const slug = /[^/]*$/.exec(router.url)[0];
     if (!slug) router.navigate(['/faq']);
     this.question = questionService.getQuestionBySlug(slug);
+    if (!this.question) router.navigate(['/faq']);
     this.randomQuestions = questionService.getRandomQuestions(3);
   }
 }

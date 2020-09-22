@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { questions } from './questions';
+import { nl } from './questions';
 import { shuffle } from '../util/functions';
 
 @Injectable()
 export class QuestionsService {
-    getRandomQuestions = (amt: number) => shuffle(questions).slice(0, amt);
-    getQuestionBySlug = (slug) => questions.find(q => q.slug === slug);
+    getRandomQuestions = (amt: number) => shuffle(nl).slice(0, amt);
+    getQuestionBySlug = (slug) => nl.find(q => q.slug === slug);
 }
