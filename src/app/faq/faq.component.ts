@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { go } from 'fuzzysort';
+import * as lunr from 'lunr';
+
 import { QuestionsService } from '../questions/questions.service';
 import { nl, Question } from '../questions/questions';
 import { environment } from 'src/environments/environment';
@@ -24,6 +25,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   allQuestions: Question[] = nl;
   filteredQuestions: Question[] = [];
   groupedQuestions = [];
+  allQuestionsIndex;
 
   isBrowser = false;
   timer;
@@ -39,6 +41,18 @@ export class FaqComponent implements OnInit, OnDestroy {
       topic.questions.push(curr);
       return all;
     }, []);
+
+    const self = this;
+    this.allQuestionsIndex = lunr(function () {
+      this.ref('question');
+      this.field('question');
+      this.field('summary');
+      this.field('answer');
+
+      self.allQuestions.forEach(function (doc) {
+        this.add(doc);
+      }, this)
+    })
   }
 
   ngOnInit(): void {
@@ -53,7 +67,10 @@ export class FaqComponent implements OnInit, OnDestroy {
 
   filterQuestions() {
     if (this.filter.length > 2) {
-      this.filteredQuestions = go(this.filter, this.allQuestions, { keys: ['question', 'summary', 'answer'] }).map(r => r.obj);
+      const filterWithWildCards = this.filter.split(' ').filter(x => x).map(part => part + '*').join(' ');
+
+      this.filteredQuestions = this.allQuestionsIndex.search(filterWithWildCards)
+        .map(result => this.allQuestions.find(q => q.question === result.ref));
 
       // this.filteredQuestions = this.allQuestions.filter(q => q.question.includes(this.filter) || q.summary.includes(this.filter)
       //   || (q.answer && q.answer.includes(this.filter)));
