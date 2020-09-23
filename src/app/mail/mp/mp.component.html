@@ -2,7 +2,7 @@
   <mat-checkbox class="mp-cb" name="selected" [(ngModel)]="mp.selected"></mat-checkbox>
   <div class="mp-img"><img [src]="cdnBaseUrl + '/representatives/' + mp.localImg" onerror="this.src='/assets/anonymous.jpg'" /></div>
   <div class="mp-info">
-    <strong class="name">{{ mp.name }}</strong>
+    <strong class="name">{{ mp.firstName }} {{ mp.lastName }}</strong>
     <div class="info">
       <div class="info-party"><span class="info-label">{{ 'Party' | translate }}: </span>{{ mp.party }}</div>
       <div class="info-hometown"><span class="info-label">{{ 'Hometown' | translate }}: </span>{{ mp.hometown }}</div>

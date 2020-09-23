@@ -113,7 +113,7 @@
                   <div>
                     <strong>{{ 'To' | translate }}: </strong>
                     <span *ngIf="(selectedMps.length <= 5 || selectedMpListExpanded)" class="mpSelectionList">
-                      <span *ngFor="let selectedMp of selectedMps">{{ selectedMp.name }}</span>
+                      <span *ngFor="let selectedMp of selectedMps">{{ selectedMp.firstName }} {{ selectedMp.lastName }}</span>
                     </span>
                     <span *ngIf="selectedMps.length > 5">
                       <ng-container *ngIf="!selectedMpListExpanded">{{ selectedMps.length }} {{ 'representatives' | translate }}
