@@ -5,7 +5,7 @@
     <strong class="name">{{ mp.firstName }} {{ mp.lastName }}</strong>
     <div class="info">
       <div class="info-parliament"><span class="info-label">{{ 'Parlement' | translate }}: </span>{{ mp.parliament | translate }}</div>
-      <div class="info-party"><span class="info-label">{{ 'Party' | translate }}: </span>{{ mp.party }}</div>
+      <div class="info-party"><span class="info-label">{{ 'Party' | translate }}: </span>{{ mp.party | translate }}</div>
       <div class="info-hometown" *ngIf="mp.hometown"><span class="info-label">{{ 'Hometown' | translate }}: </span>{{ mp.hometown }}</div>
       <div class="info-city" *ngIf="mp.city"><span class="info-label">{{ 'City' | translate }}: </span>{{ mp.city }}</div>
       <div class="info-constituency" *ngIf="mp.constituency"><span class="info-label">{{ 'Constituency' | translate }}: </span>{{ mp.constituency | translate }}</div>
