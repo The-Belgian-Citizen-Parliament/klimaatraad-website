@@ -5,7 +5,7 @@
         <div class="brand header-brand">
           <a routerLink="/">
             <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <title>Evelyn</title>
+              <title>Het Burgerparlement</title>
               <defs>
                 <radialGradient cy="0%" fx="50%" fy="0%" r="100%" id="logo-gradient-footer">
                   <stop stop-color="#00A2B8" offset="0%" />
@@ -19,10 +19,10 @@
         </div>
         <ul class="header-links list-reset m-0">
           <li>
-            <a routerLink="/memorandum">{{ 'The proposal' | translate }}</a>
+            <a [routerLink]="lang === 'fr' ? '/proposition' : '/voorstel'">{{ 'The proposal' | translate }}</a>
           </li>
           <li>
-            <a [routerLink]="lang === 'fr' ? '/question' : '/vraag'">{{ 'Frequently Asked Questions' | translate }}</a>
+            <a routerLink="/faq">{{ 'Frequently Asked Questions' | translate }}</a>
           </li>
           <li>
             <a class="button-evelyn button-sm button-shadow"

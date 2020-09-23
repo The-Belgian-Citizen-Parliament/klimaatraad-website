@@ -1,14 +1,17 @@
 <div class="feature-extended">
   <div class="feature-extended-body">
-    <h3 class="mt-0">{{ question.question }}</h3>
+    <h4 class="question-title mt-0" *ngIf="!answerOnly">
+      <span [innerHtml]="question.question"></span>
+      <a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug" class="question-link"><mat-icon>link</mat-icon></a>
+    </h4>
     <div class="darker">
-      {{ question.summary }}
+      <span class="keep-newlines" [innerHtml]="question.summary"></span>
       <div class="expand-button" *ngIf="question.answer && !expanded" (click)="expand()">
         {{ 'Show more' | translate }} <mat-icon class="inline">expand_more</mat-icon>
       </div>
     </div>
     <div class="answer" [class.hidden]="!expanded">
-      {{ question.answer }}
+      <span class="keep-newlines" [innerHtml]="question.answer"></span>
       <div class="expand-button" *ngIf="expanded" (click)="expand()">
         {{ 'Show less' | translate }} <mat-icon class="inline">expand_less</mat-icon>
       </div>

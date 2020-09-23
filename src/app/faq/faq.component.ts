@@ -1,7 +1,10 @@
 import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import * as lunr from 'lunr';
+
 import { QuestionsService } from '../questions/questions.service';
-import { questions, Question } from '../questions/questions';
+import { nl, Question } from '../questions/questions';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-faq',
@@ -11,14 +14,18 @@ import { questions, Question } from '../questions/questions';
 export class FaqComponent implements OnInit, OnDestroy {
   @ViewChild('question', { static: false }) questionField: ElementRef;
 
+  lang = environment.language;
+
   filter = '';
 
   questionPlaceholder = '';
   questionExamples = ['klimaat', 'burger', 'politici', 'legitiem'];
   counter = 0;
 
-  allQuestions: Question[] = questions;
+  allQuestions: Question[] = nl;
   filteredQuestions: Question[] = [];
+  groupedQuestions = [];
+  allQuestionsIndex;
 
   isBrowser = false;
   timer;
@@ -27,6 +34,25 @@ export class FaqComponent implements OnInit, OnDestroy {
     this.questionPlaceholder = this.questionExamples[0];
     this.isBrowser = isPlatformBrowser(platformId);
     setTimeout(() => this.questionField.nativeElement.focus());
+
+    this.groupedQuestions = this.allQuestions.reduce((all, curr) => {
+      if (!all.find(t => t.topic === curr.tags[0])) all.push({ topic: curr.tags[0], questions: [] });
+      const topic = all.find(t => t.topic === curr.tags[0]);
+      topic.questions.push(curr);
+      return all;
+    }, []);
+
+    const self = this;
+    this.allQuestionsIndex = lunr(function () {
+      this.ref('question');
+      this.field('question');
+      this.field('summary');
+      this.field('answer');
+
+      self.allQuestions.forEach(function (doc) {
+        this.add(doc);
+      }, this)
+    })
   }
 
   ngOnInit(): void {
@@ -41,11 +67,17 @@ export class FaqComponent implements OnInit, OnDestroy {
 
   filterQuestions() {
     if (this.filter.length > 2) {
-      this.filteredQuestions = this.allQuestions.filter(q => q.question.includes(this.filter) || q.summary.includes(this.filter)
-        || (q.answer && q.answer.includes(this.filter)));
+      const filterWithWildCards = this.filter.split(' ').filter(x => x).map(part => part + '*').join(' ');
+
+      this.filteredQuestions = this.allQuestionsIndex.search(filterWithWildCards)
+        .map(result => this.allQuestions.find(q => q.question === result.ref));
+
+      // this.filteredQuestions = this.allQuestions.filter(q => q.question.includes(this.filter) || q.summary.includes(this.filter)
+      //   || (q.answer && q.answer.includes(this.filter)));
     } else if (this.filter.length === 0) {
       this.filteredQuestions = [];
     }
   }
+
   clearFilter = () => this.filter = '';
 }

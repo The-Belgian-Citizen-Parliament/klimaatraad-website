@@ -1,0 +1,21 @@
+<section class="features-extended section">
+  <div class="container">
+    <div class="features-extended-inner section-inner">
+      <div class="features-extended-header text-center">
+        <div class="container-sm">
+          <h2 class="section-title mt-0">{{ question.question }} </h2>
+        </div>
+      </div>
+
+      <app-question [question]="question" [answerOnly]="true"></app-question>
+
+      <h3 class="has-top-divider">{{ 'Other questions' | translate }}</h3>
+
+      <app-question *ngFor="let question of randomQuestions" [question]="question"></app-question>
+
+      <div class="features-extended-header text-center has-top-divider">
+        {{ 'Check out' | translate }} <a routerLink="/faq">{{ 'all questions' | translate }}</a>!
+      </div>
+    </div>
+  </div>
+</section>

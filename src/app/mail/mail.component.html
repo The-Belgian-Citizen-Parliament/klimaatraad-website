@@ -36,7 +36,7 @@
                         <mat-select [(ngModel)]="selectedParty" name="selectedParty" (selectionChange)="filterMps()">
                           <mat-option [value]=""></mat-option>
                           <mat-option *ngFor="let party of parties" [value]="party">
-                            {{ party }}
+                            {{ party | translate }}
                           </mat-option>
                           <mat-option value="ONAFH">{{ 'Independent' | translate }}</mat-option>
                         </mat-select>
@@ -47,6 +47,16 @@
                       <mat-form-field fxFlex="100">
                         <mat-label>{{ 'Name' | translate }}</mat-label>
                         <input matInput name="nameFilter" [(ngModel)]="nameFilter" (keyup)="filterMps()" />
+                      </mat-form-field>
+
+                      <mat-form-field fxFlex="50">
+                        <mat-label>{{ 'Parliament' | translate }}</mat-label>
+                        <mat-select [(ngModel)]="selectedParliament" name="selectedParliament" (selectionChange)="filterMps()">
+                          <mat-option [value]=""></mat-option>
+                          <mat-option *ngFor="let parliament of parliaments" [value]="parliament">
+                            {{ parliament | translate }}
+                          </mat-option>
+                        </mat-select>
                       </mat-form-field>
                     </div>
                   </div>
@@ -63,7 +73,11 @@
                       <mat-icon fxHide fxShow.xs>library_add_check</mat-icon><span fxHide.xs>{{ 'Select all' | translate }}</span></button>
                   </div>
 
-                  <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet">
+                  <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet && filteredMps && filteredMps.length === 0">
+                    <i>{{ 'No representatives found with these filters' | translate }}</i>
+                  </div>
+
+                  <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet && filteredMps && filteredMps.length > 0">
                     <app-mp *ngFor="let mp of filteredMps" [mp]="mp" class="mp-card" (mpSelected)="mpSelected($event)"
                       (mpDeselected)="mpDeselected($event)"></app-mp>
                   </div>
@@ -113,7 +127,7 @@
                   <div>
                     <strong>{{ 'To' | translate }}: </strong>
                     <span *ngIf="(selectedMps.length <= 5 || selectedMpListExpanded)" class="mpSelectionList">
-                      <span *ngFor="let selectedMp of selectedMps">{{ selectedMp.name }}</span>
+                      <span *ngFor="let selectedMp of selectedMps">{{ selectedMp.firstName }} {{ selectedMp.lastName }}</span>
                     </span>
                     <span *ngIf="selectedMps.length > 5">
                       <ng-container *ngIf="!selectedMpListExpanded">{{ selectedMps.length }} {{ 'representatives' | translate }}

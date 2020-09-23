@@ -25,12 +25,16 @@
       </ng-container>
 
       <ng-container *ngIf="!filter">
-        <ul class="questionsToC">
-          <li *ngFor="let question of allQuestions"><a routerLink="/vraag" [fragment]="question.slug">{{ question.tags[0] }}:
-              {{ question.question }}</a></li>
-        </ul>
+        <div *ngFor="let topic of groupedQuestions">
+          <h4 style="text-transform: capitalize;">{{ topic.topic }}</h4>
+          <ul class="questionsToC">
+            <li *ngFor="let question of topic.questions"><a routerLink="/faq" [fragment]="question.slug">{{ question.question }}</a></li>
+          </ul>
+        </div>
 
-        <app-question [id]="question.slug" *ngFor="let question of allQuestions" [question]="question"></app-question>
+        <div *ngFor="let topic of groupedQuestions">
+          <app-question [id]="question.slug" *ngFor="let question of topic.questions" [question]="question"></app-question>
+        </div>
       </ng-container>
 
       <div class="features-extended-header text-center">

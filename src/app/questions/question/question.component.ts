@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef, Input } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Question } from '../questions';
 
 @Component({
@@ -9,6 +9,10 @@ import { Question } from '../questions';
 })
 export class QuestionComponent {
   @Input() question: Question;
+  @Input() answerOnly: boolean;
+
+  lang = environment.language;
   expanded = false;
+
   expand = () => this.expanded = !this.expanded;
 }

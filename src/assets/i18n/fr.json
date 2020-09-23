@@ -18,6 +18,7 @@
 
   "Mail your representatives": "Mail je vertegenwoordigers",
   "Who do you want to mail?": "Wie wil je mailen?",
+  "Parliament": "Parlement",
   "Constituency": "Kieskring",
   "Party": "Partij",
   "Hometown": "Geboren",
@@ -52,9 +53,10 @@
   "representativesMailed": "De door jou gekozen vertegenwoordigers ontvingen je mail en kunnen jou nu terugmailen. Fingers crossed!",
   "weWillKeepYouUpToDate": "We zullen je hoe dan ook op de hoogte houden van het verdere verloop van deze actie.",
   "No email": "Geen email adres",
+  "No representatives found with these filters": "Geen vertegenwoordigers gevonden met deze filters",
 
   "Antwerpen": "Anvers",
-  "Brussel-Hoofdstad": "Bruxelles-Capitale",
+  "Brussel-Hoofdstad": "Bruxelles",
   "Henegouwen": "Hainaut",
   "Limburg": "Limbourg",
   "Luik": "Liège",
@@ -63,5 +65,12 @@
   "Oost-Vlaanderen": "Flandre-Orientale",
   "Vlaams-Brabant": "Brabant flamand",
   "Waals-Brabant": "Brabant wallon",
-  "West-Vlaanderen": "Flandre-Occidentale"
+  "West-Vlaanderen": "Flandre-Occidentale",
+
+  "Walloon": "Wallon",
+  "Flemish ": "Flandres",
+  "Federal": "Fédéral",
+
+  "PVDA-PTB": "PTB",
+  "Ecolo-Groen": "Ecolo"
 }

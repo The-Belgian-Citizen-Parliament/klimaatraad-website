@@ -2,9 +2,12 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Mail } from './mail';
 import { MailService } from './mail.service';
 import { environment } from 'src/environments/environment';
-import { members } from './kamer-members';
-import { MP } from './mp/mp';
+import { mpsFederal } from './mps/federal';
+import { MP } from './mp';
 import { FR_BODIES, FR_SUBJECTS, NL_BODIES, NL_SUBJECTS } from './mail-options';
+import { mpsBrussels } from './mps/brussels';
+import { mpsFlemish } from './mps/flemish';
+import { mpsWalloon } from './mps/walloon';
 
 @Component({
   selector: 'app-mail',
@@ -16,16 +19,19 @@ export class MailComponent {
 
   mails: Mail[];
   newMail: Mail;
-  mps: MP[] = members;
+  mps: MP[] = [...mpsFederal, ...mpsBrussels, ...mpsFlemish, ...mpsWalloon ];
   filteredMps: MP[] = [];
   selectedMps: MP[] = [];
 
   selectType?: string = null;
   askForLocation = false;
   noAutoLocation = true;
+  selectedParliament?: string = 'Federal';
   selectedConstituency?: string = null;
   selectedParty?: string  = null;
   nameFilter?: string  = null;
+
+  parliaments = ['Federal', 'Flemish', 'Walloon', 'Brussels Parliament'];
 
   constituencies = [
     'Antwerpen', 'Brussel-Hoofdstad', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'];
@@ -99,9 +105,10 @@ export class MailComponent {
   filterMps() {
     this.filteredMps = this.mps
       .filter(mp =>
+        (!this.selectedParliament || (mp.parliament === this.selectedParliament)) &&
         (!this.selectedConstituency || (mp.constituency === this.selectedConstituency)) &&
         (!this.selectedParty || (mp.party === this.selectedParty)) &&
-        (!this.nameFilter || (mp.name.toLowerCase().includes(this.nameFilter.toLowerCase()))))
+        (!this.nameFilter || ((mp.firstName + ' ' + mp.lastName).toLowerCase().includes(this.nameFilter.toLowerCase()))))
       .sort((a, b) => (a.email || 'ZZZZ').localeCompare(b.email || 'ZZZZ'));
 
     if (this.selectedConstituency || this.selectedParty || (this.nameFilter  && this.nameFilter.length > 2)) {

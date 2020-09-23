@@ -14,10 +14,15 @@
   "Memorandum for the new federal government": "Memorandum aan de nieuwe federale regering",
   "openingMessage": "Party politics as usual has not been able to take the necessary measures to prevent ecological disasters such as climate change, biodiversity and biomass loss, pollution or soil erosion. Let's join many other countries and organize a national citizens' assembly to draft issues to these complex solutions!",
 
+  "Other questions": "Other questions",
+  "Check out": "Check out",
+  "all questions": "all questions",
+
   "whyCitizenParliament": "Why a <span class=\"primary\">citizen parliament</span>?",
 
   "Mail your representatives": "Mail your representatives",
   "Who do you want to mail?": "Who do you want to mail?",
+  "Parliament": "Parliament",
   "Constituency": "Constituency",
   "Party": "Party",
   "Hometown": "Home town",
@@ -62,16 +67,24 @@
   "step3": "Step 3/3",
   "step3title": "Compose your mail",
   "step3explanation": "Take your time to write why this is important to you, or use one of the predefined texts if you're in a hurry",
+  "No representatives found with these filters": "No representatives found with these filters",
 
-  "Antwerpen": "Antwerpen",
-  "Brussel-Hoofdstad": "Brussel-Hoofdstad",
+  "Antwerpen": "Antwerp",
+  "Brussel-Hoofdstad": "Brussels",
   "Henegouwen": "Henegouwen",
   "Limburg": "Limburg",
   "Luik": "Luik",
   "Luxemburg": "Luxemburg",
   "Namen": "Namen",
-  "Oost-Vlaanderen": "Oost-Vlaanderen",
-  "Vlaams-Brabant": "Vlaams-Brabant",
-  "Waals-Brabant": "Waals-Brabant",
-  "West-Vlaanderen": "West-Vlaanderen"
+  "Oost-Vlaanderen": "Eastern Flanders",
+  "Vlaams-Brabant": "Flemish Brabant",
+  "Waals-Brabant": "Walloon Brabant",
+  "West-Vlaanderen": "Western Flanders",
+
+  "Walloon": "Walloon",
+  "Flemish ": "Flemish",
+  "Federal": "Federal",
+
+  "PVDA-PTB": "PVDA-PTB",
+  "Ecolo-Groen": "Ecolo-Groen"
 }

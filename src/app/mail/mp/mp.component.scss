@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .mp-card {
   position: relative;
   width: 200px;
@@ -17,7 +19,11 @@
   }
 
   &.selected {
-    box-shadow: 0 0 16px #b9bcc0;
+    box-shadow: 0 0 16px $primary-color;
+  }
+
+  .mp-cb {
+    visibility: hidden;
   }
 
   div {
@@ -48,6 +54,7 @@
     display: flex;
 
     .mp-cb {
+      visibility: visible;
       flex: 0 0 20px;
     }
 
@@ -88,6 +95,16 @@
     }
 
     .info-hometown {
+      visibility: hidden;
+      display: none;
+    }
+
+    .info-parliament {
+      visibility: hidden;
+      display: none;
+    }
+
+    .info-city {
       visibility: hidden;
       display: none;
     }
