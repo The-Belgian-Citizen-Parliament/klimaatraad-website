@@ -2,7 +2,7 @@ import { MP } from '../mp';
 
 export const members: MP[] = [
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Meyrem",
       "lastName": "Almaci",
       "city": "Brussel",
@@ -14,7 +14,7 @@ export const members: MP[] = [
       "localImg": "flemish/4381.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Els",
       "lastName": "Ampe",
       "city": "Brussel",
@@ -26,7 +26,7 @@ export const members: MP[] = [
       "localImg": "flemish/4382.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Hannes",
       "lastName": "Anaf",
       "city": "Brussel",
@@ -38,7 +38,7 @@ export const members: MP[] = [
       "localImg": "flemish/4383.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Imade",
       "lastName": "Annouri",
       "city": "Brussel",
@@ -50,7 +50,7 @@ export const members: MP[] = [
       "localImg": "flemish/4052.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Roosmarijn",
       "lastName": "Beckers",
       "city": "Sint-truiden",
@@ -62,7 +62,7 @@ export const members: MP[] = [
       "localImg": "flemish/4384.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Stijn",
       "lastName": "Bex",
       "city": "Brussel",
@@ -74,7 +74,7 @@ export const members: MP[] = [
       "localImg": "flemish/4385.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Adeline",
       "lastName": "Blancquaert",
       "city": "Brussel",
@@ -86,7 +86,7 @@ export const members: MP[] = [
       "localImg": "flemish/4386.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Robrecht",
       "lastName": "Bothuyne",
       "city": "Brussel",
@@ -98,7 +98,7 @@ export const members: MP[] = [
       "localImg": "flemish/3430.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Jo",
       "lastName": "Brouns",
       "city": "Kinrooi",
@@ -110,7 +110,7 @@ export const members: MP[] = [
       "localImg": "flemish/4430.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Karin",
       "lastName": "Brouwers",
       "city": "Brussel",
@@ -122,7 +122,7 @@ export const members: MP[] = [
       "localImg": "flemish/3426.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Filip",
       "lastName": "Brusselmans",
       "city": "Brussel",
@@ -134,7 +134,7 @@ export const members: MP[] = [
       "localImg": "flemish/4387.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Yves",
       "lastName": "Buysse",
       "city": "Brussel",
@@ -146,7 +146,7 @@ export const members: MP[] = [
       "localImg": "flemish/4388.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Lode",
       "lastName": "Ceyssens",
       "city": "Oudsbergen",
@@ -158,7 +158,7 @@ export const members: MP[] = [
       "localImg": "flemish/3388.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Allessia",
       "lastName": "Claes",
       "city": "Brussel",
@@ -170,7 +170,7 @@ export const members: MP[] = [
       "localImg": "flemish/4389.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Bart",
       "lastName": "Claes",
       "city": "Brussel",
@@ -182,7 +182,7 @@ export const members: MP[] = [
       "localImg": "flemish/4390.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Arnout",
       "lastName": "Coel",
       "city": "Brussel",
@@ -194,7 +194,7 @@ export const members: MP[] = [
       "localImg": "flemish/4444.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Steven",
       "lastName": "Coenegrachts",
       "city": "Brussel",
@@ -206,7 +206,7 @@ export const members: MP[] = [
       "localImg": "flemish/4446.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Cathy",
       "lastName": "Coudyser",
       "city": "Brussel",
@@ -218,7 +218,7 @@ export const members: MP[] = [
       "localImg": "flemish/4068.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Johan",
       "lastName": "Danen",
       "city": "Bilzen",
@@ -230,7 +230,7 @@ export const members: MP[] = [
       "localImg": "flemish/4069.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Koen",
       "lastName": "Daniëls",
       "city": "Brussel",
@@ -242,7 +242,7 @@ export const members: MP[] = [
       "localImg": "flemish/4070.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Piet",
       "lastName": "De Bruyn",
       "city": "Rotselaar",
@@ -254,7 +254,7 @@ export const members: MP[] = [
       "localImg": "flemish/3324.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Johan",
       "lastName": "Deckmyn",
       "city": "Gent",
@@ -266,7 +266,7 @@ export const members: MP[] = [
       "localImg": "flemish/2838.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Inez",
       "lastName": "De Coninck",
       "city": "Brussel",
@@ -278,7 +278,7 @@ export const members: MP[] = [
       "localImg": "flemish/4391.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Jean-Jacques",
       "lastName": "De Gucht",
       "city": "Brussel",
@@ -290,7 +290,7 @@ export const members: MP[] = [
       "localImg": "flemish/3416.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Kurt",
       "lastName": "De Loor",
       "city": "Zottegem",
@@ -302,7 +302,7 @@ export const members: MP[] = [
       "localImg": "flemish/2791.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Ann",
       "lastName": "De Martelaer",
       "city": "Lubbeek",
@@ -314,7 +314,7 @@ export const members: MP[] = [
       "localImg": "flemish/1781.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Tom",
       "lastName": "De Meester",
       "city": "Brussel",
@@ -326,7 +326,7 @@ export const members: MP[] = [
       "localImg": "flemish/4401.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Immanuel",
       "lastName": "De Reuse",
       "city": "Roeselare",
@@ -338,7 +338,7 @@ export const members: MP[] = [
       "localImg": "flemish/4432.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Annick",
       "lastName": "De Ridder",
       "city": "Brussel",
@@ -350,7 +350,7 @@ export const members: MP[] = [
       "localImg": "flemish/2793.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Maaike",
       "lastName": "De Rudder",
       "city": "Sint-gillis-waas",
@@ -362,7 +362,7 @@ export const members: MP[] = [
       "localImg": "flemish/4392.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Maarten",
       "lastName": "De Veuster",
       "city": "Brussel",
@@ -374,7 +374,7 @@ export const members: MP[] = [
       "localImg": "flemish/4393.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Maaike",
       "lastName": "De Vreese",
       "city": "Brussel",
@@ -386,7 +386,7 @@ export const members: MP[] = [
       "localImg": "flemish/4394.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Gwenny",
       "lastName": "De Vroe",
       "city": "Brussel",
@@ -398,7 +398,7 @@ export const members: MP[] = [
       "localImg": "flemish/3448.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Bart",
       "lastName": "De Wever",
       "city": "Brussel",
@@ -410,7 +410,7 @@ export const members: MP[] = [
       "localImg": "flemish/2796.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Filip",
       "lastName": "Dewinter",
       "city": "Brussel",
@@ -422,7 +422,7 @@ export const members: MP[] = [
       "localImg": "flemish/1803.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Kim",
       "lastName": "De Witte",
       "city": "Brussel",
@@ -434,7 +434,7 @@ export const members: MP[] = [
       "localImg": "flemish/4407.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Jos",
       "lastName": "D'Haese",
       "city": "Brussel",
@@ -446,7 +446,7 @@ export const members: MP[] = [
       "localImg": "flemish/4411.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Guy",
       "lastName": "D'haeseleer",
       "city": "Brussel",
@@ -458,7 +458,7 @@ export const members: MP[] = [
       "localImg": "flemish/4074.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Stephanie",
       "lastName": "D'Hose",
       "city": "Brussel",
@@ -470,7 +470,7 @@ export const members: MP[] = [
       "localImg": "flemish/4395.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Bart",
       "lastName": "Dochy",
       "city": "Ledegem",
@@ -482,7 +482,7 @@ export const members: MP[] = [
       "localImg": "flemish/4075.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Sihame",
       "lastName": "El Kaouakibi",
       "city": "Brussel",
@@ -494,7 +494,7 @@ export const members: MP[] = [
       "localImg": "flemish/4396.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Martine",
       "lastName": "Fournier",
       "city": "Menen",
@@ -506,7 +506,7 @@ export const members: MP[] = [
       "localImg": "flemish/3299.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Caroline",
       "lastName": "Gennez",
       "city": "Brussel",
@@ -518,7 +518,7 @@ export const members: MP[] = [
       "localImg": "flemish/2836.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Hannelore",
       "lastName": "Goeman",
       "city": "Brussel",
@@ -530,7 +530,7 @@ export const members: MP[] = [
       "localImg": "flemish/4397.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Celia",
       "lastName": "Groothedde",
       "city": "Brussel",
@@ -542,7 +542,7 @@ export const members: MP[] = [
       "localImg": "flemish/4398.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Karolien",
       "lastName": "Grosemans",
       "city": "Brussel",
@@ -554,7 +554,7 @@ export const members: MP[] = [
       "localImg": "flemish/4399.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Andries",
       "lastName": "Gryffroy",
       "city": "Brussel",
@@ -566,7 +566,7 @@ export const members: MP[] = [
       "localImg": "flemish/4077.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Liesbeth",
       "lastName": "Homans",
       "city": "Brussel",
@@ -578,7 +578,7 @@ export const members: MP[] = [
       "localImg": "flemish/3411.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Vera",
       "lastName": "Jans",
       "city": "Brussel",
@@ -590,7 +590,7 @@ export const members: MP[] = [
       "localImg": "flemish/2808.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Chris",
       "lastName": "Janssens",
       "city": "Brussel",
@@ -602,7 +602,7 @@ export const members: MP[] = [
       "localImg": "flemish/3418.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Sofie",
       "lastName": "Joosen",
       "city": "Brussel",
@@ -614,7 +614,7 @@ export const members: MP[] = [
       "localImg": "flemish/4078.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Marino",
       "lastName": "Keulen",
       "city": "Lanaken",
@@ -626,7 +626,7 @@ export const members: MP[] = [
       "localImg": "flemish/1834.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Kathleen",
       "lastName": "Krekels",
       "city": "Brussel",
@@ -638,7 +638,7 @@ export const members: MP[] = [
       "localImg": "flemish/4079.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Jan",
       "lastName": "Laeremans",
       "city": "Brussel",
@@ -650,7 +650,7 @@ export const members: MP[] = [
       "localImg": "flemish/4400.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Annick",
       "lastName": "Lambrecht",
       "city": "Brussel",
@@ -662,7 +662,7 @@ export const members: MP[] = [
       "localImg": "flemish/4402.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Bert",
       "lastName": "Maertens",
       "city": "Brussel",
@@ -674,7 +674,7 @@ export const members: MP[] = [
       "localImg": "flemish/4110.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Ilse",
       "lastName": "Malfroot",
       "city": "Brussel",
@@ -686,7 +686,7 @@ export const members: MP[] = [
       "localImg": "flemish/4403.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Marius",
       "lastName": "Meremans",
       "city": "Brussel",
@@ -698,7 +698,7 @@ export const members: MP[] = [
       "localImg": "flemish/3919.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Elisabeth",
       "lastName": "Meuleman",
       "city": "Oudenaarde",
@@ -710,7 +710,7 @@ export const members: MP[] = [
       "localImg": "flemish/3173.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "An",
       "lastName": "Moerenhout",
       "city": "Brussel",
@@ -722,7 +722,7 @@ export const members: MP[] = [
       "localImg": "flemish/4058.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Philippe",
       "lastName": "Muyters",
       "city": "Brussel",
@@ -734,7 +734,7 @@ export const members: MP[] = [
       "localImg": "flemish/3461.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Joris",
       "lastName": "Nachtergaele",
       "city": "Brussel",
@@ -746,7 +746,7 @@ export const members: MP[] = [
       "localImg": "flemish/4442.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Tom",
       "lastName": "Ongena",
       "city": "Brussel",
@@ -758,7 +758,7 @@ export const members: MP[] = [
       "localImg": "flemish/4445.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Katrien",
       "lastName": "Partyka",
       "city": "Tienen",
@@ -770,7 +770,7 @@ export const members: MP[] = [
       "localImg": "flemish/4059.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Lorin",
       "lastName": "Parys",
       "city": "Brussel",
@@ -782,7 +782,7 @@ export const members: MP[] = [
       "localImg": "flemish/4083.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Gustaaf",
       "lastName": "Pelckmans",
       "city": "Brussel",
@@ -794,7 +794,7 @@ export const members: MP[] = [
       "localImg": "flemish/4404.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Freya",
       "lastName": "Perdaens",
       "city": "Brussel",
@@ -806,7 +806,7 @@ export const members: MP[] = [
       "localImg": "flemish/4405.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Leo",
       "lastName": "Pieters",
       "city": "Maaseik",
@@ -818,7 +818,7 @@ export const members: MP[] = [
       "localImg": "flemish/3298.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Els",
       "lastName": "Robeyns",
       "city": "Wellen",
@@ -830,7 +830,7 @@ export const members: MP[] = [
       "localImg": "flemish/3221.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Tinne",
       "lastName": "Rombouts",
       "city": "Brussel",
@@ -842,7 +842,7 @@ export const members: MP[] = [
       "localImg": "flemish/2832.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Axel",
       "lastName": "Ronse",
       "city": "Kortrijk",
@@ -854,7 +854,7 @@ export const members: MP[] = [
       "localImg": "flemish/4060.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Conner",
       "lastName": "Rousseau",
       "city": "Brussel",
@@ -866,7 +866,7 @@ export const members: MP[] = [
       "localImg": "flemish/4406.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Gwendolyn",
       "lastName": "Rutten",
       "city": "Brussel",
@@ -878,7 +878,7 @@ export const members: MP[] = [
       "localImg": "flemish/4061.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Carmen",
       "lastName": "Ryheul",
       "city": "Brussel",
@@ -890,7 +890,7 @@ export const members: MP[] = [
       "localImg": "flemish/4408.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Björn",
       "lastName": "Rzoska",
       "city": "Brussel",
@@ -902,7 +902,7 @@ export const members: MP[] = [
       "localImg": "flemish/3920.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Freya",
       "lastName": "Saeys",
       "city": "Brussel",
@@ -914,7 +914,7 @@ export const members: MP[] = [
       "localImg": "flemish/4086.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Joke",
       "lastName": "Schauvliege",
       "city": "Brussel",
@@ -926,7 +926,7 @@ export const members: MP[] = [
       "localImg": "flemish/2831.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Mieke",
       "lastName": "Schauvliege",
       "city": "Brussel",
@@ -938,7 +938,7 @@ export const members: MP[] = [
       "localImg": "flemish/4409.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Willem-Frederik",
       "lastName": "Schiltz",
       "city": "Brussel",
@@ -950,7 +950,7 @@ export const members: MP[] = [
       "localImg": "flemish/4062.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Katrien",
       "lastName": "Schryvers",
       "city": "Brussel",
@@ -962,7 +962,7 @@ export const members: MP[] = [
       "localImg": "flemish/3433.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Katia",
       "lastName": "Segers",
       "city": "Brussel",
@@ -974,7 +974,7 @@ export const members: MP[] = [
       "localImg": "flemish/4087.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Stefaan",
       "lastName": "Sintobin",
       "city": "",
@@ -986,7 +986,7 @@ export const members: MP[] = [
       "localImg": "flemish/2825.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Kristof",
       "lastName": "Slagmulder",
       "city": "Brussel",
@@ -998,7 +998,7 @@ export const members: MP[] = [
       "localImg": "flemish/4410.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Elke",
       "lastName": "Sleurs",
       "city": "Brussel",
@@ -1010,7 +1010,7 @@ export const members: MP[] = [
       "localImg": "flemish/4088.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Klaas",
       "lastName": "Slootmans",
       "city": "Brussel",
@@ -1022,7 +1022,7 @@ export const members: MP[] = [
       "localImg": "flemish/4412.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Sarah",
       "lastName": "Smeyers",
       "city": "Brussel",
@@ -1034,7 +1034,7 @@ export const members: MP[] = [
       "localImg": "flemish/4413.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Nadia",
       "lastName": "Sminate",
       "city": "Brussel",
@@ -1046,7 +1046,7 @@ export const members: MP[] = [
       "localImg": "flemish/4089.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Chris",
       "lastName": "Steenwegen",
       "city": "Brussel",
@@ -1058,7 +1058,7 @@ export const members: MP[] = [
       "localImg": "flemish/4414.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Els",
       "lastName": "Sterckx",
       "city": "Brussel",
@@ -1070,7 +1070,7 @@ export const members: MP[] = [
       "localImg": "flemish/4416.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Emmily",
       "lastName": "Talpe",
       "city": "Ieper",
@@ -1082,7 +1082,7 @@ export const members: MP[] = [
       "localImg": "flemish/4272.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Annabel",
       "lastName": "Tavernier",
       "city": "Brussel",
@@ -1094,7 +1094,7 @@ export const members: MP[] = [
       "localImg": "flemish/4417.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Bruno",
       "lastName": "Tobback",
       "city": "Brussel",
@@ -1106,7 +1106,7 @@ export const members: MP[] = [
       "localImg": "flemish/1882.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Bart",
       "lastName": "Tommelein",
       "city": "Oostende",
@@ -1118,7 +1118,7 @@ export const members: MP[] = [
       "localImg": "flemish/3434.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Wilfried",
       "lastName": "Vandaele",
       "city": "Brussel",
@@ -1130,7 +1130,7 @@ export const members: MP[] = [
       "localImg": "flemish/3464.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Lise",
       "lastName": "Vandecasteele",
       "city": "Brussel",
@@ -1142,7 +1142,7 @@ export const members: MP[] = [
       "localImg": "flemish/4415.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Steve",
       "lastName": "Vandenberghe",
       "city": "Bredene",
@@ -1154,7 +1154,7 @@ export const members: MP[] = [
       "localImg": "flemish/4107.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Freya",
       "lastName": "Van den Bossche",
       "city": "Brussel",
@@ -1166,7 +1166,7 @@ export const members: MP[] = [
       "localImg": "flemish/3458.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Tine",
       "lastName": "Van den Brande",
       "city": "Brussel",
@@ -1178,7 +1178,7 @@ export const members: MP[] = [
       "localImg": "flemish/4419.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Koen",
       "lastName": "Van den Heuvel",
       "city": "Puurs-sint-amands",
@@ -1190,7 +1190,7 @@ export const members: MP[] = [
       "localImg": "flemish/2815.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Ludwig",
       "lastName": "Vandenhove",
       "city": "Sint-truiden",
@@ -1202,7 +1202,7 @@ export const members: MP[] = [
       "localImg": "flemish/4423.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Steven",
       "lastName": "Vandeput",
       "city": "Brussel",
@@ -1214,7 +1214,7 @@ export const members: MP[] = [
       "localImg": "flemish/4424.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Maurits",
       "lastName": "Vande Reyde",
       "city": "Brussel",
@@ -1226,7 +1226,7 @@ export const members: MP[] = [
       "localImg": "flemish/4422.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Anke",
       "lastName": "Van dermeersch",
       "city": "Brussel",
@@ -1238,7 +1238,7 @@ export const members: MP[] = [
       "localImg": "flemish/4095.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Tine",
       "lastName": "van der Vloet",
       "city": "Brussel",
@@ -1250,7 +1250,7 @@ export const members: MP[] = [
       "localImg": "flemish/4094.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Orry",
       "lastName": "Van de Wauwer",
       "city": "Brussel",
@@ -1262,7 +1262,7 @@ export const members: MP[] = [
       "localImg": "flemish/4356.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Kris",
       "lastName": "Van Dijck",
       "city": "Dessel",
@@ -1274,7 +1274,7 @@ export const members: MP[] = [
       "localImg": "flemish/1895.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Loes",
       "lastName": "Vandromme",
       "city": "Poperinge",
@@ -1286,7 +1286,7 @@ export const members: MP[] = [
       "localImg": "flemish/4425.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Jeremie",
       "lastName": "Vaneeckhout",
       "city": "Brussel",
@@ -1298,7 +1298,7 @@ export const members: MP[] = [
       "localImg": "flemish/4426.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Karl",
       "lastName": "Vanlouwe",
       "city": "Brussel",
@@ -1310,7 +1310,7 @@ export const members: MP[] = [
       "localImg": "flemish/4102.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Paul",
       "lastName": "Van Miert",
       "city": "Turnhout",
@@ -1322,7 +1322,7 @@ export const members: MP[] = [
       "localImg": "flemish/4064.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Vincent",
       "lastName": "Van Peteghem",
       "city": "Brussel",
@@ -1334,7 +1334,7 @@ export const members: MP[] = [
       "localImg": "flemish/4420.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Peter",
       "lastName": "Van Rompuy",
       "city": "Beersel",
@@ -1346,7 +1346,7 @@ export const members: MP[] = [
       "localImg": "flemish/3918.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Sam",
       "lastName": "Van Rooy",
       "city": "Brussel",
@@ -1358,7 +1358,7 @@ export const members: MP[] = [
       "localImg": "flemish/4421.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Kurt",
       "lastName": "Vanryckeghem",
       "city": "Waregem",
@@ -1370,7 +1370,7 @@ export const members: MP[] = [
       "localImg": "flemish/4427.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Mercedes",
       "lastName": "Van Volcem",
       "city": "Brugge",
@@ -1382,7 +1382,7 @@ export const members: MP[] = [
       "localImg": "flemish/3444.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Manuela",
       "lastName": "Van Werde",
       "city": "Brussel",
@@ -1394,7 +1394,7 @@ export const members: MP[] = [
       "localImg": "flemish/4099.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Wim",
       "lastName": "Verheyden",
       "city": "Bornem",
@@ -1406,7 +1406,7 @@ export const members: MP[] = [
       "localImg": "flemish/4433.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Katja",
       "lastName": "Verheyen",
       "city": "Brussel",
@@ -1418,7 +1418,7 @@ export const members: MP[] = [
       "localImg": "flemish/4431.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Frieda",
       "lastName": "Verougstraete-Deschacht",
       "city": "Oostende",
@@ -1430,7 +1430,7 @@ export const members: MP[] = [
       "localImg": "flemish/4434.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Maxim",
       "lastName": "Veys",
       "city": "Brussel",
@@ -1442,7 +1442,7 @@ export const members: MP[] = [
       "localImg": "flemish/4428.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Brecht",
       "lastName": "Warnez",
       "city": "Wingene",
@@ -1454,7 +1454,7 @@ export const members: MP[] = [
       "localImg": "flemish/4443.jpg"
   },
   {
-      "parliament": "Vlaams Parlement",
+      "parliament": "Flemish",
       "firstName": "Suzy",
       "lastName": "Wouters",
       "city": "Brussel",

@@ -73,5 +73,10 @@
   "Oost-Vlaanderen": "Oost-Vlaanderen",
   "Vlaams-Brabant": "Vlaams-Brabant",
   "Waals-Brabant": "Waals-Brabant",
-  "West-Vlaanderen": "West-Vlaanderen"
+  "West-Vlaanderen": "West-Vlaanderen",
+
+  "Brussels Parliament": "Brussels",
+  "Walloon": "Waals",
+  "Flemish ": "Vlaams",
+  "Federal": "Federaal"
 }

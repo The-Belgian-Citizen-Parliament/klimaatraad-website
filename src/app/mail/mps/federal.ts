@@ -2,7 +2,7 @@ import { MP } from '../mp';
 
 export const members: MP[] = [
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "07508",
       "constituency": "West-Vlaanderen",
@@ -13,7 +13,7 @@ export const members: MP[] = [
       "lastName": "Anseeuw"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "id": "07124",
       "constituency": "Brussel-Hoofdstad",
@@ -24,7 +24,7 @@ export const members: MP[] = [
       "lastName": "Aouasti"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "cdH",
       "email": "josy.arens@lachambre.be",
       "id": "00866",
@@ -36,7 +36,7 @@ export const members: MP[] = [
       "lastName": "Arens"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "id": "07169",
       "constituency": "Henegouwen",
@@ -47,7 +47,7 @@ export const members: MP[] = [
       "lastName": "Bayet"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "id": "06733",
       "constituency": "Luik",
@@ -58,7 +58,7 @@ export const members: MP[] = [
       "lastName": "Ben Achour"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "sp.a",
       "id": "06172",
       "constituency": "Antwerpen",
@@ -69,7 +69,7 @@ export const members: MP[] = [
       "lastName": "Bertels"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "id": "07254",
       "constituency": "Luik",
@@ -80,7 +80,7 @@ export const members: MP[] = [
       "lastName": "Bihet"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "email": "hendrik.bogaert@dekamer.be",
       "id": "01039",
@@ -92,7 +92,7 @@ export const members: MP[] = [
       "lastName": "Bogaert"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "id": "06934",
       "constituency": "Namen",
@@ -103,7 +103,7 @@ export const members: MP[] = [
       "lastName": "Bombled"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "id": "07133",
       "constituency": "Brussel-Hoofdstad",
@@ -114,7 +114,7 @@ export const members: MP[] = [
       "lastName": "Boukili"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "id": "07346",
       "constituency": "Oost-Vlaanderen",
@@ -125,7 +125,7 @@ export const members: MP[] = [
       "lastName": "Briers"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "email": "emmanuel.burton@lachambre.be",
       "id": "O1057",
@@ -137,7 +137,7 @@ export const members: MP[] = [
       "lastName": "Burton"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "katleen.bury@dekamer.be",
       "id": "07425",
@@ -149,7 +149,7 @@ export const members: MP[] = [
       "lastName": "Bury"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "06030",
       "constituency": "Oost-Vlaanderen",
@@ -160,7 +160,7 @@ export const members: MP[] = [
       "lastName": "Buysrogge"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "id": "07010",
       "constituency": "Antwerpen",
@@ -171,7 +171,7 @@ export const members: MP[] = [
       "lastName": "Buyst"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "kristof.calvo@dekamer.be",
       "id": "06128",
@@ -183,7 +183,7 @@ export const members: MP[] = [
       "lastName": "Calvo"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "id": "07245",
       "constituency": "Luik",
@@ -194,7 +194,7 @@ export const members: MP[] = [
       "lastName": "Chanson"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "samuel.cogolati@huy.be",
       "id": "07244",
@@ -206,7 +206,7 @@ export const members: MP[] = [
       "lastName": "Cogolati"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "id": "07271",
       "constituency": "Luik",
@@ -217,7 +217,7 @@ export const members: MP[] = [
       "lastName": "Colebunders"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "id": "07199",
       "constituency": "Limburg",
@@ -228,7 +228,7 @@ export const members: MP[] = [
       "lastName": "Creemers"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "steven.creyelman@vlaamsbelang.org",
       "id": "06873",
@@ -240,7 +240,7 @@ export const members: MP[] = [
       "lastName": "Creyelman"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "sp.a",
       "email": "john.crombez@s-p-a.be",
       "id": "01307",
@@ -252,7 +252,7 @@ export const members: MP[] = [
       "language": "Nederlands"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "id": "07048",
       "constituency": "Antwerpen",
@@ -263,7 +263,7 @@ export const members: MP[] = [
       "lastName": "Daems"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "cdH",
       "email": "georges.dallemagne@lachambre.be",
       "id": "00951",
@@ -275,7 +275,7 @@ export const members: MP[] = [
       "lastName": "Dallemagne"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "id": "07182",
       "constituency": "Henegouwen",
@@ -286,7 +286,7 @@ export const members: MP[] = [
       "lastName": "D'Amico"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "email": "info@robbydecaluwe.be",
       "id": "07358",
@@ -298,7 +298,7 @@ export const members: MP[] = [
       "lastName": "De Caluwé"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "ONAFH",
       "email": "jean-marie.dedecker@dekamer.be",
       "id": "00954",
@@ -310,7 +310,7 @@ export const members: MP[] = [
       "lastName": "Dedecker"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "ludivine.dedonder@tournai.be",
       "id": "06336",
@@ -322,7 +322,7 @@ export const members: MP[] = [
       "lastName": "Dedonder"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "email": "burgemeester@ninove.be",
       "id": "07352",
@@ -334,7 +334,7 @@ export const members: MP[] = [
       "lastName": "De Jonge"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "id": "07111",
       "constituency": "Brussel-Hoofdstad",
@@ -345,7 +345,7 @@ export const members: MP[] = [
       "lastName": "de Laveleye"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "jean-marc.delizee@lachambre.be",
       "id": "00746",
@@ -357,7 +357,7 @@ export const members: MP[] = [
       "lastName": "Delizée"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "id": "07419",
       "constituency": "Vlaams-Brabant",
@@ -368,7 +368,7 @@ export const members: MP[] = [
       "lastName": "Delvaux"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "id": "07122",
       "constituency": "Brussel-Hoofdstad",
@@ -379,7 +379,7 @@ export const members: MP[] = [
       "lastName": "De Maegd"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "email": "franky.demon@dekamer.be",
       "id": "06805",
@@ -391,7 +391,7 @@ export const members: MP[] = [
       "lastName": "Demon"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "07387",
       "constituency": "Oost-Vlaanderen",
@@ -402,7 +402,7 @@ export const members: MP[] = [
       "lastName": "Depoorter"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "ortwin.depoortere@vlaamsbelang.org",
       "id": "01129",
@@ -414,7 +414,7 @@ export const members: MP[] = [
       "lastName": "Depoortere"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "sp.a",
       "id": "07494",
       "constituency": "West-Vlaanderen",
@@ -425,7 +425,7 @@ export const members: MP[] = [
       "lastName": "Depraetere"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "peter.deroover@dekamer.be",
       "id": "06588",
@@ -437,7 +437,7 @@ export const members: MP[] = [
       "lastName": "De Roover"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "DéFI",
       "email": "fdesmet@defi.eu",
       "id": "07100",
@@ -449,7 +449,7 @@ export const members: MP[] = [
       "lastName": "De Smet"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "pieter.despiegeleer@dekamer.be",
       "id": "07339",
@@ -461,7 +461,7 @@ export const members: MP[] = [
       "lastName": "De Spiegeleer"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "wouter.de.vriendt@dekamer.be",
       "id": "01199",
@@ -473,7 +473,7 @@ export const members: MP[] = [
       "lastName": "De Vriendt"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "id": "07399",
       "constituency": "Oost-Vlaanderen",
@@ -484,7 +484,7 @@ export const members: MP[] = [
       "lastName": "De Vuyst"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "email": "patrick.dewael@dekamer.be",
       "id": "00124",
@@ -496,7 +496,7 @@ export const members: MP[] = [
       "lastName": "Dewael"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "sophie.dewit@dekamer.be",
       "id": "06141",
@@ -508,7 +508,7 @@ export const members: MP[] = [
       "lastName": "De Wit"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "nathalie.dewulf@vlaamsbelang.org",
       "id": "07477",
@@ -520,7 +520,7 @@ export const members: MP[] = [
       "lastName": "Dewulf"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "christoph.dhaese@dekamer.be",
       "id": "06907",
@@ -532,7 +532,7 @@ export const members: MP[] = [
       "lastName": "D'Haese"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "email": "leen.dierick@dekamer.be",
       "id": "01201",
@@ -544,7 +544,7 @@ export const members: MP[] = [
       "lastName": "Dierick"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "marijke.dillen@outlook.be",
       "id": "00636",
@@ -556,7 +556,7 @@ export const members: MP[] = [
       "lastName": "Dillen"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "id": "07255",
       "constituency": "Luik",
@@ -567,7 +567,7 @@ export const members: MP[] = [
       "lastName": "Dock"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "07207",
       "constituency": "Limburg",
@@ -578,7 +578,7 @@ export const members: MP[] = [
       "lastName": "Donné"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "id": "07192",
       "constituency": "Limburg",
@@ -589,7 +589,7 @@ export const members: MP[] = [
       "lastName": "Farih"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "andre.flahaut@lachambre.be",
       "id": "00761",
@@ -601,7 +601,7 @@ export const members: MP[] = [
       "lastName": "Flahaut"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "cdH",
       "email": "catherine.fonck@lachambre.be",
       "id": "01076",
@@ -613,7 +613,7 @@ export const members: MP[] = [
       "lastName": "Fonck"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "theo.francken@dekamer.be",
       "id": "04666",
@@ -625,7 +625,7 @@ export const members: MP[] = [
       "lastName": "Francken"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "michael.freilich@n-va.be",
       "id": "07022",
@@ -637,7 +637,7 @@ export const members: MP[] = [
       "lastName": "Freilich"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "email": "benoit.friart@lachambre.be",
       "id": "06663",
@@ -649,7 +649,7 @@ export const members: MP[] = [
       "lastName": "Friart"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "email": "katja.gabriels@dekamer.be",
       "id": "06885",
@@ -661,7 +661,7 @@ export const members: MP[] = [
       "lastName": "Gabriëls"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "email": "isabelle.galant@lachambre.be",
       "id": "06665",
@@ -673,7 +673,7 @@ export const members: MP[] = [
       "lastName": "Galant"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "06499",
       "constituency": "Limburg",
@@ -684,7 +684,7 @@ export const members: MP[] = [
       "lastName": "Gijbels"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "erik.gilissen@dekamer.be",
       "id": "07228",
@@ -696,7 +696,7 @@ export const members: MP[] = [
       "lastName": "Gilissen"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "georges.gilkinet@lachambre.be",
       "id": "01205",
@@ -708,7 +708,7 @@ export const members: MP[] = [
       "lastName": "Gilkinet"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "id": "O599",
       "constituency": "Brussel-Hoofdstad",
@@ -719,7 +719,7 @@ export const members: MP[] = [
       "lastName": "Gilson"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "deputegoblet@outlook.com",
       "id": "07261",
@@ -731,7 +731,7 @@ export const members: MP[] = [
       "lastName": "Goblet"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "id": "07295",
       "constituency": "Luxemburg",
@@ -742,7 +742,7 @@ export const members: MP[] = [
       "lastName": "Hanus"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "email": "raoul.hedebouw@lachambre.be",
       "id": "06759",
@@ -754,7 +754,7 @@ export const members: MP[] = [
       "lastName": "Hedebouw"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "id": "06309",
       "constituency": "Henegouwen",
@@ -765,7 +765,7 @@ export const members: MP[] = [
       "lastName": "Hennuy"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "07417",
       "constituency": "Vlaams-Brabant",
@@ -776,7 +776,7 @@ export const members: MP[] = [
       "lastName": "Houtmeyers"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "07481",
       "constituency": "West-Vlaanderen",
@@ -787,7 +787,7 @@ export const members: MP[] = [
       "lastName": "Ingels"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "id": "01207",
       "constituency": "Luik",
@@ -798,7 +798,7 @@ export const members: MP[] = [
       "lastName": "Jadin"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "sp.a",
       "id": "01070",
       "constituency": "Vlaams-Brabant",
@@ -809,7 +809,7 @@ export const members: MP[] = [
       "lastName": "Jiroflée"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "zakia.khattabi@ecolo.be",
       "id": "01310",
@@ -821,7 +821,7 @@ export const members: MP[] = [
       "lastName": "Khattabi"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "ONAFH",
       "email": "emir.kir@lachambre.be",
       "id": "06645",
@@ -833,7 +833,7 @@ export const members: MP[] = [
       "lastName": "Kir"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "sp.a",
       "email": "meryame@kitir.be ",
       "id": "01209",
@@ -845,7 +845,7 @@ export const members: MP[] = [
       "lastName": "Kitir"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "ahmed.laaouej@lachambre.be",
       "id": "06461",
@@ -857,7 +857,7 @@ export const members: MP[] = [
       "lastName": "Laaouej"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "email": "egbert.lachaert@dekamer.be",
       "id": "06884",
@@ -869,7 +869,7 @@ export const members: MP[] = [
       "lastName": "Lachaert"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "christophe.lacroix@lachambre.be",
       "id": "06389",
@@ -881,7 +881,7 @@ export const members: MP[] = [
       "lastName": "Lacroix"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "id": "01042",
       "constituency": "Antwerpen",
@@ -892,7 +892,7 @@ export const members: MP[] = [
       "lastName": "Lanjri"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "marie-colline.leroy@ecolo.be",
       "id": "07153",
@@ -904,7 +904,7 @@ export const members: MP[] = [
       "lastName": "Leroy"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "id": "07034",
       "constituency": "Antwerpen",
@@ -915,7 +915,7 @@ export const members: MP[] = [
       "lastName": "Leysen"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "id": "07448",
       "constituency": "Vlaams-Brabant",
@@ -926,7 +926,7 @@ export const members: MP[] = [
       "lastName": "Liekens"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "06985",
       "constituency": "West-Vlaanderen",
@@ -937,7 +937,7 @@ export const members: MP[] = [
       "lastName": "Loones"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "id": "07407",
       "constituency": "Vlaams-Brabant",
@@ -948,7 +948,7 @@ export const members: MP[] = [
       "lastName": "Mahdi"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "id": "07193",
       "constituency": "Limburg",
@@ -959,7 +959,7 @@ export const members: MP[] = [
       "lastName": "Matheï"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "cdH",
       "email": "vanessa.matz@lachambre.be",
       "id": "01281",
@@ -971,7 +971,7 @@ export const members: MP[] = [
       "lastName": "Matz"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "email": "sofie.merckx@ptb.be",
       "id": "07181",
@@ -983,7 +983,7 @@ export const members: MP[] = [
       "lastName": "Merckx"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "id": "07047",
       "constituency": "Antwerpen",
@@ -994,7 +994,7 @@ export const members: MP[] = [
       "lastName": "Mertens"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "koen.metsu@dekamer.be",
       "id": "06591",
@@ -1006,7 +1006,7 @@ export const members: MP[] = [
       "hometown": "Edegem"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "email": "nadia.moscufo@ptb.be",
       "id": "07270",
@@ -1018,7 +1018,7 @@ export const members: MP[] = [
       "lastName": "Moscufo"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "id": "06534",
       "constituency": "Waals-Brabant",
@@ -1029,7 +1029,7 @@ export const members: MP[] = [
       "lastName": "Moutquin"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "ozlem.ozen@lachambre.be",
       "id": "06326",
@@ -1041,7 +1041,7 @@ export const members: MP[] = [
       "lastName": "Özen"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "barbara.pas@vlaamsbelang.org",
       "id": "01236",
@@ -1053,7 +1053,7 @@ export const members: MP[] = [
       "lastName": "Pas"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "email": "benoit.piedboeuf@lachambre.be",
       "id": "06423",
@@ -1065,7 +1065,7 @@ export const members: MP[] = [
       "lastName": "Piedboeuf"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "email": "philippe@pivin.be",
       "id": "06618",
@@ -1077,7 +1077,7 @@ export const members: MP[] = [
       "lastName": "Pivin"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "annick.ponthier@dekamer.be",
       "id": "01292",
@@ -1089,7 +1089,7 @@ export const members: MP[] = [
       "lastName": "Ponthier"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "cdH",
       "email": "maxime.prevot@lachambre.be",
       "id": "01216",
@@ -1101,7 +1101,7 @@ export const members: MP[] = [
       "lastName": "Prévot"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "id": "06967",
       "constituency": "Henegouwen",
@@ -1112,7 +1112,7 @@ export const members: MP[] = [
       "lastName": "Prévot"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "06498",
       "constituency": "Limburg",
@@ -1123,7 +1123,7 @@ export const members: MP[] = [
       "lastName": "Raskin"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "kurt.ravyts@vlaamsbelang.org",
       "id": "07485",
@@ -1135,7 +1135,7 @@ export const members: MP[] = [
       "lastName": "Ravyts"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "email": "florence.reuter@waterloo.be",
       "id": "01217",
@@ -1147,7 +1147,7 @@ export const members: MP[] = [
       "lastName": "Reuter"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "id": "07263",
       "constituency": "Luik",
@@ -1158,7 +1158,7 @@ export const members: MP[] = [
       "hometown": "Waremme"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "07369",
       "constituency": "Oost-Vlaanderen",
@@ -1169,7 +1169,7 @@ export const members: MP[] = [
       "lastName": "Roggeman"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "DéFI",
       "email": "srohonyi@defi.eu",
       "id": "07102",
@@ -1181,7 +1181,7 @@ export const members: MP[] = [
       "lastName": "Rohonyi"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "07416",
       "constituency": "Vlaams-Brabant",
@@ -1192,7 +1192,7 @@ export const members: MP[] = [
       "lastName": "Safai"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "ellen.samyn@dekamer.be",
       "id": "07076",
@@ -1204,7 +1204,7 @@ export const members: MP[] = [
       "lastName": "Samyn"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "sarah.schlitz@ecolo.be",
       "id": "06722",
@@ -1216,7 +1216,7 @@ export const members: MP[] = [
       "lastName": "Schlitz"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "id": "06287",
       "constituency": "Waals Brabant",
@@ -1227,7 +1227,7 @@ export const members: MP[] = [
       "lastName": "Scourneau"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "sp.a",
       "id": "07063",
       "constituency": "Antwerpen",
@@ -1238,7 +1238,7 @@ export const members: MP[] = [
       "lastName": "Segers"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "daniel.senesael@lachambre.be",
       "id": "06682",
@@ -1250,7 +1250,7 @@ export const members: MP[] = [
       "lastName": "Senesael"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "email": "bercy.slegers@dekamer.be",
       "id": "04872",
@@ -1262,7 +1262,7 @@ export const members: MP[] = [
       "lastName": "Slegers"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB ",
       "email": "dominiek.sneppe@dekamer.be",
       "id": "O1330",
@@ -1274,7 +1274,7 @@ export const members: MP[] = [
       "lastName": "Sneppe"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "id": "07410",
       "constituency": "Vlaams-Brabant",
@@ -1285,7 +1285,7 @@ export const members: MP[] = [
       "lastName": "Soors"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "jan.spooren@n-va.be",
       "id": "06841",
@@ -1297,7 +1297,7 @@ export const members: MP[] = [
       "language": "Nederlands"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "MR",
       "email": "caroline.taquin@lachambre.be",
       "id": "07162",
@@ -1309,7 +1309,7 @@ export const members: MP[] = [
       "lastName": "Taquin"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "deputee@sophiethemont.be",
       "id": "07262",
@@ -1321,7 +1321,7 @@ export const members: MP[] = [
       "lastName": "Thémont"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "cecile.thibaut@ecolo.be",
       "id": "01309",
@@ -1333,7 +1333,7 @@ export const members: MP[] = [
       "lastName": "Thibaut"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "eric.thiebaut@lachambre.be",
       "id": "01222",
@@ -1345,7 +1345,7 @@ export const members: MP[] = [
       "lastName": "Thiébaut"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "id": "O2619",
       "constituency": "Namen",
@@ -1356,7 +1356,7 @@ export const members: MP[] = [
       "lastName": "Tillieux"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "id": "07171",
       "constituency": "Henegouwen",
@@ -1367,7 +1367,7 @@ export const members: MP[] = [
       "lastName": "Tison"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "frank.troosters@dekamer.be",
       "id": "07227",
@@ -1379,7 +1379,7 @@ export const members: MP[] = [
       "lastName": "Troosters"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "id": "07411",
       "constituency": "Vlaams-Brabant",
@@ -1390,7 +1390,7 @@ export const members: MP[] = [
       "lastName": "Vanbesien"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "07354",
       "constituency": "Oost-Vlaanderen",
@@ -1401,7 +1401,7 @@ export const members: MP[] = [
       "lastName": "Van Bossuyt"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "yoleen.vancamp@dekamer.be",
       "id": "06590",
@@ -1413,7 +1413,7 @@ export const members: MP[] = [
       "lastName": "Van Camp"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "id": "01131",
       "constituency": "Antwerpen",
@@ -1424,7 +1424,7 @@ export const members: MP[] = [
       "lastName": "Van den Bergh"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "sp.a",
       "id": "07366",
       "constituency": "Oost-Vlaanderen",
@@ -1435,7 +1435,7 @@ export const members: MP[] = [
       "lastName": "Vandenbroucke"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "gilles.vandenburre@lachambre.be",
       "id": "06638",
@@ -1447,7 +1447,7 @@ export const members: MP[] = [
       "lastName": "Vanden Burre"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "email": "tim.vandenput@dekamer.be",
       "id": "06823",
@@ -1459,7 +1459,7 @@ export const members: MP[] = [
       "lastName": "Vandenput"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "id": "06595",
       "constituency": "Antwerpen",
@@ -1470,7 +1470,7 @@ export const members: MP[] = [
       "lastName": "Van der Donckt"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "id": "01226",
       "constituency": "Brussel-Hoofdstad",
@@ -1481,7 +1481,7 @@ export const members: MP[] = [
       "lastName": "Van der Straeten"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "tom.vangrieken@vlaamsbelang.org",
       "id": "07075",
@@ -1493,7 +1493,7 @@ export const members: MP[] = [
       "lastName": "Van Grieken"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "stefaan.vanhecke@dekamer.be",
       "id": "01227",
@@ -1505,7 +1505,7 @@ export const members: MP[] = [
       "lastName": "Van Hecke"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "email": "marco.vanhees@lachambre.be",
       "id": "06701",
@@ -1517,7 +1517,7 @@ export const members: MP[] = [
       "lastName": "Van Hees"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "email": "els.vanhoof@dekamer.be",
       "id": "06852",
@@ -1529,7 +1529,7 @@ export const members: MP[] = [
       "lastName": "Van Hoof"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "dries.vanlangenhove@dekamer.be",
       "id": "07424",
@@ -1541,7 +1541,7 @@ export const members: MP[] = [
       "lastName": "Van Langenhove"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "reccino.vanlommel@vlaamsbelang.org",
       "id": "07077",
@@ -1553,7 +1553,7 @@ export const members: MP[] = [
       "lastName": "Van Lommel"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "valerie.vanpeel@dekamer.be",
       "id": "06589",
@@ -1565,7 +1565,7 @@ export const members: MP[] = [
       "lastName": "Van Peel"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "email": "vincentvq@mac.com",
       "id": "00972",
@@ -1577,7 +1577,7 @@ export const members: MP[] = [
       "lastName": "Van Quickenborne"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "sp.a",
       "id": "06897",
       "constituency": "Oost-Vlaanderen",
@@ -1588,7 +1588,7 @@ export const members: MP[] = [
       "lastName": "Vanrobaeys"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "kristien.vanvaerenbergh@dekamer.be",
       "id": "06230",
@@ -1600,7 +1600,7 @@ export const members: MP[] = [
       "lastName": "Van Vaerenbergh"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "sp.a",
       "id": "07219",
       "constituency": "Limburg",
@@ -1611,7 +1611,7 @@ export const members: MP[] = [
       "lastName": "Verduyckt"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "id": "07035",
       "constituency": "Antwerpen",
@@ -1622,7 +1622,7 @@ export const members: MP[] = [
       "lastName": "Verhaert"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Open Vld",
       "email": "kathleen-verhelst@kathleen-verhelst.be",
       "id": "07502",
@@ -1634,7 +1634,7 @@ export const members: MP[] = [
       "lastName": "Verhelst"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "CD&V",
       "email": "servais.verherstraeten@dekamer.be",
       "id": "00826",
@@ -1646,7 +1646,7 @@ export const members: MP[] = [
       "lastName": "Verherstraeten"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "wouter.vermeersch@vlaamsbelang.org",
       "id": "07487",
@@ -1658,7 +1658,7 @@ export const members: MP[] = [
       "lastName": "Vermeersch"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "VB",
       "email": "hans.verreyt@vlaamsbelang.org",
       "id": "07078",
@@ -1670,7 +1670,7 @@ export const members: MP[] = [
       "lastName": "Verreyt"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "albert.vicaire@ecolo.be",
       "id": "07154",
@@ -1682,7 +1682,7 @@ export const members: MP[] = [
       "lastName": "Vicaire"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "id": "07137",
       "constituency": "Brussel-Hoofdstad",
@@ -1693,7 +1693,7 @@ export const members: MP[] = [
       "lastName": "Vindevoghel"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PVDA-PTB",
       "email": "thierry.warmoes@ptb.be",
       "id": "07322",
@@ -1705,7 +1705,7 @@ export const members: MP[] = [
       "lastName": "Warmoes"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "Ecolo-Groen",
       "email": "evita.willaert@groen.be",
       "id": "06861",
@@ -1717,7 +1717,7 @@ export const members: MP[] = [
       "lastName": "Willaert"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "N-VA",
       "email": "bert.wollants@dekamer.be",
       "id": "06147",
@@ -1729,7 +1729,7 @@ export const members: MP[] = [
       "lastName": "Wollants"
   },
   {
-      "parliament": "De Kamer",
+      "parliament": "Federal",
       "party": "PS",
       "email": "laurencezanchetta@hotmail.com",
       "id": "07170",
