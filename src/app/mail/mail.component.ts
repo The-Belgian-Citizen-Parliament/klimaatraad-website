@@ -26,9 +26,12 @@ export class MailComponent {
   selectType?: string = null;
   askForLocation = false;
   noAutoLocation = true;
+  selectedParliament?: string = 'Federal';
   selectedConstituency?: string = null;
   selectedParty?: string  = null;
   nameFilter?: string  = null;
+
+  parliaments = ['Federal', 'Flemish', 'Walloon', 'Brussels Parliament'];
 
   constituencies = [
     'Antwerpen', 'Brussel-Hoofdstad', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'];
@@ -102,6 +105,7 @@ export class MailComponent {
   filterMps() {
     this.filteredMps = this.mps
       .filter(mp =>
+        (!this.selectedParliament || (mp.parliament === this.selectedParliament)) &&
         (!this.selectedConstituency || (mp.constituency === this.selectedConstituency)) &&
         (!this.selectedParty || (mp.party === this.selectedParty)) &&
         (!this.nameFilter || ((mp.firstName + ' ' + mp.lastName).toLowerCase().includes(this.nameFilter.toLowerCase()))))

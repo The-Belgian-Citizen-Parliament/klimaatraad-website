@@ -18,6 +18,7 @@
 
   "Mail your representatives": "Mail je vertegenwoordigers",
   "Who do you want to mail?": "Wie wil je mailen?",
+  "Parliament": "Parlement",
   "Constituency": "Kieskring",
   "Party": "Partij",
   "Hometown": "Geboren",
@@ -62,9 +63,10 @@
   "step3": "Stap 3/3",
   "step3title": "Stel je mail op",
   "step3explanation": "Neem je tijd om uit te leggen waarom dit belangrijk is voor jou, of gebruik één van de voorgedefiniëerde onderwerpen en teksten als je gehaast bent",
+  "No representatives found with these filters": "Geen vertegenwoordigers gevonden met deze filters",
 
   "Antwerpen": "Antwerpen",
-  "Brussel-Hoofdstad": "Brussel-Hoofdstad",
+  "Brussel-Hoofdstad": "Brussel",
   "Henegouwen": "Henegouwen",
   "Limburg": "Limburg",
   "Luik": "Luik",
