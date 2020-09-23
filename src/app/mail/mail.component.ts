@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Mail } from './mail';
 import { MailService } from './mail.service';
 import { environment } from 'src/environments/environment';
-import { members } from './kamer-members';
+import { members } from './mps/federal';
 import { MP } from './mp/mp';
 import { FR_BODIES, FR_SUBJECTS, NL_BODIES, NL_SUBJECTS } from './mail-options';
 

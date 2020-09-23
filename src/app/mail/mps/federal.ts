@@ -1,4 +1,4 @@
-import { MP } from './mp/mp';
+import { MP } from '../mp/mp';
 
 export const members: MP[] = [
   {
@@ -8,7 +8,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Oostende",
       "language": "Nederlands",
-      "localImg": "07508.jpg",
+      "localImg": "federal/07508.jpg",
       "firstName": "Björn",
       "lastName": "Anseeuw"
   },
@@ -19,7 +19,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Anderlecht",
       "language": "Frans",
-      "localImg": "07124.jpg",
+      "localImg": "federal/07124.jpg",
       "firstName": "Khalil",
       "lastName": "Aouasti"
   },
@@ -31,7 +31,7 @@ export const members: MP[] = [
       "constituency": "Luxemburg",
       "hometown": "Aarlen",
       "language": "Frans",
-      "localImg": "00866.jpg",
+      "localImg": "federal/00866.jpg",
       "firstName": "Josy",
       "lastName": "Arens"
   },
@@ -42,7 +42,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Dinant",
       "language": "Frans",
-      "localImg": "07169.jpg",
+      "localImg": "federal/07169.jpg",
       "firstName": "Hugues",
       "lastName": "Bayet"
   },
@@ -53,7 +53,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Verviers",
       "language": "Frans",
-      "localImg": "06733.jpg",
+      "localImg": "federal/06733.jpg",
       "firstName": "Malik",
       "lastName": "Ben Achour"
   },
@@ -64,7 +64,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Herentals",
       "language": "Nederlands",
-      "localImg": "06172.jpg",
+      "localImg": "federal/06172.jpg",
       "firstName": "Jan",
       "lastName": "Bertels"
   },
@@ -75,7 +75,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Luik",
       "language": "Frans",
-      "localImg": "07254.jpg",
+      "localImg": "federal/07254.jpg",
       "firstName": "Mathieu",
       "lastName": "Bihet"
   },
@@ -87,7 +87,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Brugge",
       "language": "Nederlands",
-      "localImg": "01039.gif",
+      "localImg": "federal/01039.gif",
       "firstName": "Hendrik",
       "lastName": "Bogaert"
   },
@@ -98,7 +98,7 @@ export const members: MP[] = [
       "constituency": "Namen",
       "hometown": "Charleroi",
       "language": "Frans",
-      "localImg": "06934.jpg",
+      "localImg": "federal/06934.jpg",
       "firstName": "Christophe",
       "lastName": "Bombled"
   },
@@ -109,7 +109,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Dujda (Marokko)",
       "language": "Frans",
-      "localImg": "07133.jpg",
+      "localImg": "federal/07133.jpg",
       "firstName": "Nabil",
       "lastName": "Boukili"
   },
@@ -120,7 +120,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Gent",
       "language": "Nederlands",
-      "localImg": "07346.jpg",
+      "localImg": "federal/07346.jpg",
       "firstName": "Jan",
       "lastName": "Briers"
   },
@@ -132,7 +132,7 @@ export const members: MP[] = [
       "constituency": "Waals-Brabant",
       "hometown": "Nijvel",
       "language": "Frans",
-      "localImg": "O1057.gif",
+      "localImg": "federal/O1057.gif",
       "firstName": "Emmanuel",
       "lastName": "Burton"
   },
@@ -144,7 +144,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Oostende",
       "language": "Nederlands",
-      "localImg": "07425.jpg",
+      "localImg": "federal/07425.jpg",
       "firstName": "Katleen",
       "lastName": "Bury"
   },
@@ -155,7 +155,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Sint-Niklaas",
       "language": "Nederlands",
-      "localImg": "06030.gif",
+      "localImg": "federal/06030.gif",
       "firstName": "Peter",
       "lastName": "Buysrogge"
   },
@@ -166,7 +166,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Lier",
       "language": "Nederlands",
-      "localImg": "07010.jpg",
+      "localImg": "federal/07010.jpg",
       "firstName": "Kim",
       "lastName": "Buyst"
   },
@@ -178,7 +178,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Rumst",
       "language": "Nederlands",
-      "localImg": "06128.gif",
+      "localImg": "federal/06128.gif",
       "firstName": "Kristof",
       "lastName": "Calvo"
   },
@@ -189,7 +189,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Verviers",
       "language": "Frans",
-      "localImg": "07245.jpg",
+      "localImg": "federal/07245.jpg",
       "firstName": "Julie",
       "lastName": "Chanson"
   },
@@ -201,7 +201,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Luik",
       "language": "Frans",
-      "localImg": "07244.jpg",
+      "localImg": "federal/07244.jpg",
       "firstName": "Samuel",
       "lastName": "Cogolati"
   },
@@ -212,7 +212,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Genk",
       "language": "Frans",
-      "localImg": "07271.jpg",
+      "localImg": "federal/07271.jpg",
       "firstName": "Gaby",
       "lastName": "Colebunders"
   },
@@ -223,7 +223,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Maaseik",
       "language": "Nederlands",
-      "localImg": "07199.jpg",
+      "localImg": "federal/07199.jpg",
       "firstName": "Barbara",
       "lastName": "Creemers"
   },
@@ -235,7 +235,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Dendermonde",
       "language": "Nederlands",
-      "localImg": "06873.jpg",
+      "localImg": "federal/06873.jpg",
       "firstName": "Steven",
       "lastName": "Creyelman"
   },
@@ -246,7 +246,7 @@ export const members: MP[] = [
       "id": "01307",
       "constituency": "West-Vlaanderen",
       "hometown": "Oostende",
-      "localImg": "01307.jpg",
+      "localImg": "federal/01307.jpg",
       "firstName": "John",
       "lastName": "Crombez",
       "language": "Nederlands"
@@ -258,7 +258,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Lier",
       "language": "Nederlands",
-      "localImg": "07048.jpg",
+      "localImg": "federal/07048.jpg",
       "firstName": "Greet",
       "lastName": "Daems"
   },
@@ -270,7 +270,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Fataki (DRC)",
       "language": "Frans",
-      "localImg": "00951.jpg",
+      "localImg": "federal/00951.jpg",
       "firstName": "Georges",
       "lastName": "Dallemagne"
   },
@@ -281,7 +281,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Charleroi",
       "language": "Frans",
-      "localImg": "07182.jpg",
+      "localImg": "federal/07182.jpg",
       "firstName": "Roberto",
       "lastName": "D'Amico"
   },
@@ -293,7 +293,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Lokeren",
       "language": "Nederlands",
-      "localImg": "07358.jpg",
+      "localImg": "federal/07358.jpg",
       "firstName": "Robby",
       "lastName": "De Caluwé"
   },
@@ -305,7 +305,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Nieuwpoort",
       "language": "Nederlands",
-      "localImg": "00954.jpg",
+      "localImg": "federal/00954.jpg",
       "firstName": "Jean-Marie",
       "lastName": "Dedecker"
   },
@@ -317,7 +317,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Doornik",
       "language": "Frans",
-      "localImg": "06336.jpg",
+      "localImg": "federal/06336.jpg",
       "firstName": "Ludivine",
       "lastName": "Dedonder"
   },
@@ -329,7 +329,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Ninove",
       "language": "Nederlands",
-      "localImg": "07352.jpg",
+      "localImg": "federal/07352.jpg",
       "firstName": "Tania",
       "lastName": "De Jonge"
   },
@@ -340,7 +340,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Ukkel",
       "language": "Frans",
-      "localImg": "07111.jpg",
+      "localImg": "federal/07111.jpg",
       "firstName": "Séverine",
       "lastName": "de Laveleye"
   },
@@ -352,7 +352,7 @@ export const members: MP[] = [
       "constituency": "Namen",
       "hometown": "Oignies-en-Thiérache",
       "language": "Frans",
-      "localImg": "00746.gif",
+      "localImg": "federal/00746.gif",
       "firstName": "Jean-Marc",
       "lastName": "Delizée"
   },
@@ -363,7 +363,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Tienen",
       "language": "Nederlands",
-      "localImg": "07419.jpg",
+      "localImg": "federal/07419.jpg",
       "firstName": "Bram",
       "lastName": "Delvaux"
   },
@@ -374,7 +374,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Brussel",
       "language": "Frans",
-      "localImg": "07122.jpg",
+      "localImg": "federal/07122.jpg",
       "firstName": "Michel",
       "lastName": "De Maegd"
   },
@@ -386,7 +386,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Brugge",
       "language": "Nederlands",
-      "localImg": "06805.gif",
+      "localImg": "federal/06805.gif",
       "firstName": "Franky",
       "lastName": "Demon"
   },
@@ -397,7 +397,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Brugge",
       "language": "Nederlands",
-      "localImg": "07387.jpg",
+      "localImg": "federal/07387.jpg",
       "firstName": "Kathleen",
       "lastName": "Depoorter"
   },
@@ -409,7 +409,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Izegem",
       "language": "Nederlands",
-      "localImg": "01129.jpg",
+      "localImg": "federal/01129.jpg",
       "firstName": "Ortwin",
       "lastName": "Depoortere"
   },
@@ -420,7 +420,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Kortrijk",
       "language": "Nederlands",
-      "localImg": "07494.jpg",
+      "localImg": "federal/07494.jpg",
       "firstName": "Melissa",
       "lastName": "Depraetere"
   },
@@ -432,7 +432,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Turnhout",
       "language": "Nederlands",
-      "localImg": "06588.gif",
+      "localImg": "federal/06588.gif",
       "firstName": "Peter",
       "lastName": "De Roover"
   },
@@ -444,7 +444,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Brussel",
       "language": "Frans",
-      "localImg": "07100.jpg",
+      "localImg": "federal/07100.jpg",
       "firstName": "François",
       "lastName": "De Smet"
   },
@@ -456,7 +456,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Zottegem",
       "language": "Nederlands",
-      "localImg": "07339.jpg",
+      "localImg": "federal/07339.jpg",
       "firstName": "Pieter",
       "lastName": "De Spiegeleer"
   },
@@ -468,7 +468,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Oostende",
       "language": "Nederlands",
-      "localImg": "01199.gif",
+      "localImg": "federal/01199.gif",
       "firstName": "Wouter",
       "lastName": "De Vriendt"
   },
@@ -479,7 +479,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Gent",
       "language": "Nederlands",
-      "localImg": "07399.jpg",
+      "localImg": "federal/07399.jpg",
       "firstName": "Steven",
       "lastName": "De Vuyst"
   },
@@ -491,7 +491,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Lier",
       "language": "Nederlands",
-      "localImg": "00124.gif",
+      "localImg": "federal/00124.gif",
       "firstName": "Patrick",
       "lastName": "Dewael"
   },
@@ -503,7 +503,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Deurne",
       "language": "Nederlands",
-      "localImg": "06141.gif",
+      "localImg": "federal/06141.gif",
       "firstName": "Sophie",
       "lastName": "De Wit"
   },
@@ -515,7 +515,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Izegem",
       "language": "Nederlands",
-      "localImg": "07477.jpg",
+      "localImg": "federal/07477.jpg",
       "firstName": "Nathalie",
       "lastName": "Dewulf"
   },
@@ -527,7 +527,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Aalst",
       "language": "Nederlands",
-      "localImg": "06907.gif",
+      "localImg": "federal/06907.gif",
       "firstName": "Christoph",
       "lastName": "D'Haese"
   },
@@ -539,7 +539,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Dendermonde",
       "language": "Nederlands",
-      "localImg": "01201.gif",
+      "localImg": "federal/01201.gif",
       "firstName": "Leen",
       "lastName": "Dierick"
   },
@@ -551,7 +551,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Mortsel",
       "language": "Nederlands",
-      "localImg": "00636.jpg",
+      "localImg": "federal/00636.jpg",
       "firstName": "Marijke",
       "lastName": "Dillen"
   },
@@ -562,7 +562,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Hoei",
       "language": "Frans",
-      "localImg": "anonymous.jpg",
+      "localImg": "federal/anonymous.jpg",
       "firstName": "Magali",
       "lastName": "Dock"
   },
@@ -573,7 +573,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Hasselt",
       "language": "Nederlands",
-      "localImg": "07207.jpg",
+      "localImg": "federal/07207.jpg",
       "firstName": "Joy",
       "lastName": "Donné"
   },
@@ -584,7 +584,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Sarcelles (Frankrijk)",
       "language": "Nederlands",
-      "localImg": "07192.jpg",
+      "localImg": "federal/07192.jpg",
       "firstName": "Nawal",
       "lastName": "Farih"
   },
@@ -596,7 +596,7 @@ export const members: MP[] = [
       "constituency": "Waals-Brabant",
       "hometown": "Walhain",
       "language": "Frans",
-      "localImg": "00761.gif",
+      "localImg": "federal/00761.gif",
       "firstName": "André",
       "lastName": "Flahaut"
   },
@@ -608,7 +608,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Ciney",
       "language": "Frans",
-      "localImg": "01076.gif",
+      "localImg": "federal/01076.gif",
       "firstName": "Catherine",
       "lastName": "Fonck"
   },
@@ -620,7 +620,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Lubbeek",
       "language": "Nederlands",
-      "localImg": "04666.gif",
+      "localImg": "federal/04666.gif",
       "firstName": "Theo",
       "lastName": "Francken"
   },
@@ -632,7 +632,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Antwerpen",
       "language": "Nederlands",
-      "localImg": "07022.jpg",
+      "localImg": "federal/07022.jpg",
       "firstName": "Michael",
       "lastName": "Freilich"
   },
@@ -644,7 +644,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Haine-Saint-Paul",
       "language": "Frans",
-      "localImg": "06663.gif",
+      "localImg": "federal/06663.gif",
       "firstName": "Benoît",
       "lastName": "Friart"
   },
@@ -656,7 +656,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Dendermonde",
       "language": "Nederlands",
-      "localImg": "06885.jpg",
+      "localImg": "federal/06885.jpg",
       "firstName": "Katja",
       "lastName": "Gabriëls"
   },
@@ -668,7 +668,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Aat",
       "language": "Frans",
-      "localImg": "06665.jpg",
+      "localImg": "federal/06665.jpg",
       "firstName": "Isabelle",
       "lastName": "Galant"
   },
@@ -679,7 +679,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Bree",
       "language": "Nederlands",
-      "localImg": "06499.jpg",
+      "localImg": "federal/06499.jpg",
       "firstName": "Frieda",
       "lastName": "Gijbels"
   },
@@ -691,7 +691,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Bilzen",
       "language": "Nederlands",
-      "localImg": "07228.jpg",
+      "localImg": "federal/07228.jpg",
       "firstName": "Erik",
       "lastName": "Gilissen"
   },
@@ -703,7 +703,7 @@ export const members: MP[] = [
       "constituency": "Namen",
       "hometown": "Namen",
       "language": "Frans",
-      "localImg": "01205.gif",
+      "localImg": "federal/01205.gif",
       "firstName": "Georges",
       "lastName": "Gilkinet"
   },
@@ -714,7 +714,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Ukkel",
       "language": "Frans",
-      "localImg": "O599.jpg",
+      "localImg": "federal/O599.jpg",
       "firstName": "Nathalie",
       "lastName": "Gilson"
   },
@@ -726,7 +726,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Herve",
       "language": "Frans",
-      "localImg": "07261.jpg",
+      "localImg": "federal/07261.jpg",
       "firstName": "Marc",
       "lastName": "Goblet"
   },
@@ -737,7 +737,7 @@ export const members: MP[] = [
       "constituency": "Luxemburg",
       "hometown": "Aarlen",
       "language": "Frans",
-      "localImg": "07295.jpg",
+      "localImg": "federal/07295.jpg",
       "firstName": "Mélissa",
       "lastName": "Hanus"
   },
@@ -749,7 +749,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Luik",
       "language": "Frans",
-      "localImg": "06759.gif",
+      "localImg": "federal/06759.gif",
       "firstName": "Raoul",
       "lastName": "Hedebouw"
   },
@@ -760,7 +760,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Gosselies",
       "language": "Frans",
-      "localImg": "06309.jpg",
+      "localImg": "federal/06309.jpg",
       "firstName": "Laurence",
       "lastName": "Hennuy"
   },
@@ -771,7 +771,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Leuven",
       "language": "Nederlands",
-      "localImg": "07417.jpg",
+      "localImg": "federal/07417.jpg",
       "firstName": "Katrien",
       "lastName": "Houtmeyers"
   },
@@ -782,7 +782,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Duinkerke-Noord (Frankrijk)",
       "language": "Nederlands",
-      "localImg": "07481.jpg",
+      "localImg": "federal/07481.jpg",
       "firstName": "Yngvild",
       "lastName": "Ingels"
   },
@@ -793,7 +793,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Luik",
       "language": "Frans",
-      "localImg": "01207.gif",
+      "localImg": "federal/01207.gif",
       "firstName": "Kattrin",
       "lastName": "Jadin"
   },
@@ -804,7 +804,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Leuven",
       "language": "Nederlands",
-      "localImg": "01070.gif",
+      "localImg": "federal/01070.gif",
       "firstName": "Karin",
       "lastName": "Jiroflée"
   },
@@ -816,7 +816,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Sint-Joost-ten-Node",
       "language": "Frans",
-      "localImg": "01310.gif",
+      "localImg": "federal/01310.gif",
       "firstName": "Zakia",
       "lastName": "Khattabi"
   },
@@ -828,7 +828,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Charleroi",
       "language": "Frans",
-      "localImg": "06645.gif",
+      "localImg": "federal/06645.gif",
       "firstName": "Emir",
       "lastName": "Kir"
   },
@@ -840,7 +840,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Maasmechelen",
       "language": "Nederlands",
-      "localImg": "01209.gif",
+      "localImg": "federal/01209.gif",
       "firstName": "Meryame",
       "lastName": "Kitir"
   },
@@ -852,7 +852,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Luik",
       "language": "Frans",
-      "localImg": "06461.gif",
+      "localImg": "federal/06461.gif",
       "firstName": "Ahmed",
       "lastName": "Laaouej"
   },
@@ -864,7 +864,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Gent",
       "language": "Nederlands",
-      "localImg": "06884.gif",
+      "localImg": "federal/06884.gif",
       "firstName": "Egbert",
       "lastName": "Lachaert"
   },
@@ -876,7 +876,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Hoei",
       "language": "Frans",
-      "localImg": "06389.jpg",
+      "localImg": "federal/06389.jpg",
       "firstName": "Christophe",
       "lastName": "Lacroix"
   },
@@ -887,7 +887,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Borgerhout",
       "language": "Nederlands",
-      "localImg": "01042.gif",
+      "localImg": "federal/01042.gif",
       "firstName": "Nahima",
       "lastName": "Lanjri"
   },
@@ -899,7 +899,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Baudour",
       "language": "Frans",
-      "localImg": "07153.jpg",
+      "localImg": "federal/07153.jpg",
       "firstName": "Marie-Colline",
       "lastName": "Leroy"
   },
@@ -910,7 +910,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Wilrijk",
       "language": "Nederlands",
-      "localImg": "07034.gif",
+      "localImg": "federal/07034.gif",
       "firstName": "Christian",
       "lastName": "Leysen"
   },
@@ -921,7 +921,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Aarschot",
       "language": "Nederlands",
-      "localImg": "07448.jpg",
+      "localImg": "federal/07448.jpg",
       "firstName": "Goedele",
       "lastName": "Liekens"
   },
@@ -932,7 +932,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Veurne",
       "language": "Nederlands",
-      "localImg": "06985.jpg",
+      "localImg": "federal/06985.jpg",
       "firstName": "Sander",
       "lastName": "Loones"
   },
@@ -943,7 +943,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Elsene",
       "language": "Nederlands",
-      "localImg": "07407.jpg",
+      "localImg": "federal/07407.jpg",
       "firstName": "Sammy",
       "lastName": "Mahdi"
   },
@@ -954,7 +954,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Bree",
       "language": "Nederlands",
-      "localImg": "07193.jpg",
+      "localImg": "federal/07193.jpg",
       "firstName": "Steven",
       "lastName": "Matheï"
   },
@@ -966,7 +966,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Luik",
       "language": "Frans",
-      "localImg": "01281.gif",
+      "localImg": "federal/01281.gif",
       "firstName": "Vanessa",
       "lastName": "Matz"
   },
@@ -978,7 +978,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Wilrijk",
       "language": "Frans",
-      "localImg": "07181.jpg",
+      "localImg": "federal/07181.jpg",
       "firstName": "Sofie",
       "lastName": "Merckx"
   },
@@ -989,7 +989,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Wilrijk",
       "language": "Nederlands",
-      "localImg": "07047.jpg",
+      "localImg": "federal/07047.jpg",
       "firstName": "Peter",
       "lastName": "Mertens"
   },
@@ -1000,7 +1000,7 @@ export const members: MP[] = [
       "id": "06591",
       "constituency": "Antwerpen",
       "language": "Nederlands",
-      "localImg": "06591.gif",
+      "localImg": "federal/06591.gif",
       "firstName": "Koen",
       "lastName": "Metsu",
       "hometown": "Edegem"
@@ -1013,7 +1013,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Hermalle-sous-Argenteau",
       "language": "Frans",
-      "localImg": "07270.jpg",
+      "localImg": "federal/07270.jpg",
       "firstName": "Nadia",
       "lastName": "Moscufo"
   },
@@ -1024,7 +1024,7 @@ export const members: MP[] = [
       "constituency": "Waals-Brabant",
       "hometown": "Ottignies-Louvain-la-Neuve",
       "language": "Frans",
-      "localImg": "06534.jpg",
+      "localImg": "federal/06534.jpg",
       "firstName": "Simon",
       "lastName": "Moutquin"
   },
@@ -1036,7 +1036,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Charleroi",
       "language": "Frans",
-      "localImg": "06326.gif",
+      "localImg": "federal/06326.gif",
       "firstName": "Özlem",
       "lastName": "Özen"
   },
@@ -1048,7 +1048,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Temse",
       "language": "Nederlands",
-      "localImg": "01236.gif",
+      "localImg": "federal/01236.gif",
       "firstName": "Barbara",
       "lastName": "Pas"
   },
@@ -1060,7 +1060,7 @@ export const members: MP[] = [
       "constituency": "Luxemburg",
       "hometown": "Musienene (DRC)",
       "language": "Frans",
-      "localImg": "06423.gif",
+      "localImg": "federal/06423.gif",
       "firstName": "Benoît",
       "lastName": "Piedboeuf"
   },
@@ -1072,7 +1072,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Sint-Agatha-Berchem",
       "language": "Frans",
-      "localImg": "06618.gif",
+      "localImg": "federal/06618.gif",
       "firstName": "Philippe",
       "lastName": "Pivin"
   },
@@ -1084,7 +1084,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Bilzen",
       "language": "Nederlands",
-      "localImg": "01292.jpg",
+      "localImg": "federal/01292.jpg",
       "firstName": "Annick",
       "lastName": "Ponthier"
   },
@@ -1096,7 +1096,7 @@ export const members: MP[] = [
       "constituency": "Namen",
       "hometown": "Bergen",
       "language": "Frans",
-      "localImg": "01216.jpg",
+      "localImg": "federal/01216.jpg",
       "firstName": "Maxime",
       "lastName": "Prévot"
   },
@@ -1107,7 +1107,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Bergen",
       "language": "Frans",
-      "localImg": "06967.jpg",
+      "localImg": "federal/06967.jpg",
       "firstName": "Patrick",
       "lastName": "Prévot"
   },
@@ -1118,7 +1118,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Bilzen",
       "language": "Nederlands",
-      "localImg": "06498.jpg",
+      "localImg": "federal/06498.jpg",
       "firstName": "Wouter",
       "lastName": "Raskin"
   },
@@ -1130,7 +1130,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Brugge",
       "language": "Nederlands",
-      "localImg": "07485.jpg",
+      "localImg": "federal/07485.jpg",
       "firstName": "Kurt",
       "lastName": "Ravyts"
   },
@@ -1142,7 +1142,7 @@ export const members: MP[] = [
       "constituency": "Waals-Brabant",
       "hometown": "Malmédy",
       "language": "Frans",
-      "localImg": "01217.jpg",
+      "localImg": "federal/01217.jpg",
       "firstName": "Florence",
       "lastName": "Reuter"
   },
@@ -1152,7 +1152,7 @@ export const members: MP[] = [
       "id": "07263",
       "constituency": "Luik",
       "language": "Frans",
-      "localImg": "07263.jpg",
+      "localImg": "federal/07263.jpg",
       "firstName": "Hervé",
       "lastName": "Rigot",
       "hometown": "Waremme"
@@ -1164,7 +1164,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Dendermonde",
       "language": "Nederlands",
-      "localImg": "07369.jpg",
+      "localImg": "federal/07369.jpg",
       "firstName": "Tomas",
       "lastName": "Roggeman"
   },
@@ -1176,7 +1176,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Eigenbrakel",
       "language": "Frans",
-      "localImg": "07102.jpg",
+      "localImg": "federal/07102.jpg",
       "firstName": "Sophie",
       "lastName": "Rohonyi"
   },
@@ -1187,7 +1187,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Teheran (Iran)",
       "language": "Nederlands",
-      "localImg": "07416.jpg",
+      "localImg": "federal/07416.jpg",
       "firstName": "Darya",
       "lastName": "Safai"
   },
@@ -1199,7 +1199,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Roeselare",
       "language": "Nederlands",
-      "localImg": "07076.jpg",
+      "localImg": "federal/07076.jpg",
       "firstName": "Ellen",
       "lastName": "Samyn"
   },
@@ -1211,7 +1211,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Luik",
       "language": "Frans",
-      "localImg": "06722.gif",
+      "localImg": "federal/06722.gif",
       "firstName": "Sarah",
       "lastName": "Schlitz"
   },
@@ -1222,7 +1222,7 @@ export const members: MP[] = [
       "constituency": "Waals Brabant",
       "hometown": "Nijvel",
       "language": "Frans",
-      "localImg": "anonymous.jpg",
+      "localImg": "federal/anonymous.jpg",
       "firstName": "Vincent",
       "lastName": "Scourneau"
   },
@@ -1233,7 +1233,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Wilrijk",
       "language": "Nederlands",
-      "localImg": "07063.gif",
+      "localImg": "federal/07063.gif",
       "firstName": "Ben",
       "lastName": "Segers"
   },
@@ -1245,7 +1245,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Doornik",
       "language": "Frans",
-      "localImg": "06682.gif",
+      "localImg": "federal/06682.gif",
       "firstName": "Daniel",
       "lastName": "Senesael"
   },
@@ -1257,7 +1257,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Poperinge",
       "language": "Nederlands",
-      "localImg": "04872.jpg",
+      "localImg": "federal/04872.jpg",
       "firstName": "Bercy",
       "lastName": "Slegers"
   },
@@ -1269,7 +1269,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Brugge",
       "language": "Nederlands",
-      "localImg": "O1330.jpg",
+      "localImg": "federal/O1330.jpg",
       "firstName": "Dominiek",
       "lastName": "Sneppe"
   },
@@ -1280,7 +1280,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Jette",
       "language": "Nederlands",
-      "localImg": "07410.jpg",
+      "localImg": "federal/07410.jpg",
       "firstName": "Jessika",
       "lastName": "Soors"
   },
@@ -1291,7 +1291,7 @@ export const members: MP[] = [
       "id": "06841",
       "constituency": "Vlaams-Brabant",
       "hometown": "Herk-de-Stad",
-      "localImg": "06841.gif",
+      "localImg": "federal/06841.gif",
       "firstName": "Jan",
       "lastName": "Spooren",
       "language": "Nederlands"
@@ -1304,7 +1304,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Nijvel",
       "language": "Frans",
-      "localImg": "07162.jpg",
+      "localImg": "federal/07162.jpg",
       "firstName": "Caroline",
       "lastName": "Taquin"
   },
@@ -1316,7 +1316,7 @@ export const members: MP[] = [
       "constituency": "Luik",
       "hometown": "Aat",
       "language": "Frans",
-      "localImg": "07262.jpg",
+      "localImg": "federal/07262.jpg",
       "firstName": "Sophie",
       "lastName": "Thémont"
   },
@@ -1328,7 +1328,7 @@ export const members: MP[] = [
       "constituency": "Luxemburg",
       "hometown": "Namen",
       "language": "Frans",
-      "localImg": "01309.jpg",
+      "localImg": "federal/01309.jpg",
       "firstName": "Cécile",
       "lastName": "Thibaut"
   },
@@ -1340,7 +1340,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Bergen",
       "language": "Frans",
-      "localImg": "01222.gif",
+      "localImg": "federal/01222.gif",
       "firstName": "Eric",
       "lastName": "Thiébaut"
   },
@@ -1351,7 +1351,7 @@ export const members: MP[] = [
       "constituency": "Namen",
       "hometown": "Namen",
       "language": "Frans",
-      "localImg": "O2619.jpg",
+      "localImg": "federal/O2619.jpg",
       "firstName": "Eliane",
       "lastName": "Tillieux"
   },
@@ -1362,7 +1362,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Lobbes",
       "language": "Frans",
-      "localImg": "07171.jpg",
+      "localImg": "federal/07171.jpg",
       "firstName": "Philippe",
       "lastName": "Tison"
   },
@@ -1374,7 +1374,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Hasselt",
       "language": "Nederlands",
-      "localImg": "07227.jpg",
+      "localImg": "federal/07227.jpg",
       "firstName": "Frank",
       "lastName": "Troosters"
   },
@@ -1385,7 +1385,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Bonheiden",
       "language": "Nederlands",
-      "localImg": "07411.jpg",
+      "localImg": "federal/07411.jpg",
       "firstName": "Dieter",
       "lastName": "Vanbesien"
   },
@@ -1396,7 +1396,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Gent",
       "language": "Nederlands",
-      "localImg": "07354.jpg",
+      "localImg": "federal/07354.jpg",
       "firstName": "Anneleen",
       "lastName": "Van Bossuyt"
   },
@@ -1408,7 +1408,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Wilrijk",
       "language": "Nederlands",
-      "localImg": "06590.gif",
+      "localImg": "federal/06590.gif",
       "firstName": "Yoleen",
       "lastName": "Van Camp"
   },
@@ -1419,7 +1419,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Essen",
       "language": "Nederlands",
-      "localImg": "01131.gif",
+      "localImg": "federal/01131.gif",
       "firstName": "Jef",
       "lastName": "Van den Bergh"
   },
@@ -1430,7 +1430,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Leuven",
       "language": "Nederlands",
-      "localImg": "07366.jpg",
+      "localImg": "federal/07366.jpg",
       "firstName": "Joris",
       "lastName": "Vandenbroucke"
   },
@@ -1442,7 +1442,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Brussel",
       "language": "Frans",
-      "localImg": "06638.jpg",
+      "localImg": "federal/06638.jpg",
       "firstName": "Gilles",
       "lastName": "Vanden Burre"
   },
@@ -1454,7 +1454,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Ukkel",
       "language": "Nederlands",
-      "localImg": "06823.gif",
+      "localImg": "federal/06823.gif",
       "firstName": "Tim",
       "lastName": "Vandenput"
   },
@@ -1465,7 +1465,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Oudenaarde",
       "language": "Nederlands",
-      "localImg": "06595.gif",
+      "localImg": "federal/06595.gif",
       "firstName": "Wim",
       "lastName": "Van der Donckt"
   },
@@ -1476,7 +1476,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Zoersel",
       "language": "Nederlands",
-      "localImg": "01226.jpg",
+      "localImg": "federal/01226.jpg",
       "firstName": "Tinne",
       "lastName": "Van der Straeten"
   },
@@ -1488,7 +1488,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Antwerpen",
       "language": "Nederlands",
-      "localImg": "07075.jpg",
+      "localImg": "federal/07075.jpg",
       "firstName": "Tom",
       "lastName": "Van Grieken"
   },
@@ -1500,7 +1500,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Gent",
       "language": "Nederlands",
-      "localImg": "01227.gif",
+      "localImg": "federal/01227.gif",
       "firstName": "Stefaan",
       "lastName": "Van Hecke"
   },
@@ -1512,7 +1512,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Sint-Agatha-Berchem",
       "language": "Frans",
-      "localImg": "06701.gif",
+      "localImg": "federal/06701.gif",
       "firstName": "Marco",
       "lastName": "Van Hees"
   },
@@ -1524,7 +1524,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Leuven",
       "language": "Nederlands",
-      "localImg": "anonymous.jpg",
+      "localImg": "federal/anonymous.jpg",
       "firstName": "Els",
       "lastName": "Van Hoof"
   },
@@ -1536,7 +1536,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Dendermonde",
       "language": "Nederlands",
-      "localImg": "07424.jpg",
+      "localImg": "federal/07424.jpg",
       "firstName": "Dries",
       "lastName": "Van Langenhove"
   },
@@ -1548,7 +1548,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Turnhout",
       "language": "Nederlands",
-      "localImg": "07077.jpg",
+      "localImg": "federal/07077.jpg",
       "firstName": "Reccino",
       "lastName": "Van Lommel"
   },
@@ -1560,7 +1560,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Ekeren",
       "language": "Nederlands",
-      "localImg": "06589.gif",
+      "localImg": "federal/06589.gif",
       "firstName": "Valerie",
       "lastName": "Van Peel"
   },
@@ -1572,7 +1572,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Gent",
       "language": "Nederlands",
-      "localImg": "00972.gif",
+      "localImg": "federal/00972.gif",
       "firstName": "Vincent",
       "lastName": "Van Quickenborne"
   },
@@ -1583,7 +1583,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Lüdenscheid (Duitsland)",
       "language": "Nederlands",
-      "localImg": "06897.jpg",
+      "localImg": "federal/06897.jpg",
       "firstName": "Anja",
       "lastName": "Vanrobaeys"
   },
@@ -1595,7 +1595,7 @@ export const members: MP[] = [
       "constituency": "Vlaams-Brabant",
       "hometown": "Halle",
       "language": "Nederlands",
-      "localImg": "06230.gif",
+      "localImg": "federal/06230.gif",
       "firstName": "Kristien",
       "lastName": "Van Vaerenbergh"
   },
@@ -1606,7 +1606,7 @@ export const members: MP[] = [
       "constituency": "Limburg",
       "hometown": "Lommel",
       "language": "Nederlands",
-      "localImg": "07219.jpg",
+      "localImg": "federal/07219.jpg",
       "firstName": "Kris",
       "lastName": "Verduyckt"
   },
@@ -1617,7 +1617,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Lier",
       "language": "Nederlands",
-      "localImg": "07035.jpg",
+      "localImg": "federal/07035.jpg",
       "firstName": "Marianne",
       "lastName": "Verhaert"
   },
@@ -1629,7 +1629,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Roeselare",
       "language": "Nederlands",
-      "localImg": "07502.jpg",
+      "localImg": "federal/07502.jpg",
       "firstName": "Kathleen",
       "lastName": "Verhelst"
   },
@@ -1641,7 +1641,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Balen",
       "language": "Nederlands",
-      "localImg": "00826.gif",
+      "localImg": "federal/00826.gif",
       "firstName": "Servais",
       "lastName": "Verherstraeten"
   },
@@ -1653,7 +1653,7 @@ export const members: MP[] = [
       "constituency": "West-Vlaanderen",
       "hometown": "Kortrijk",
       "language": "Nederlands",
-      "localImg": "07487.jpg",
+      "localImg": "federal/07487.jpg",
       "firstName": "Wouter",
       "lastName": "Vermeersch"
   },
@@ -1665,7 +1665,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Antwerpen",
       "language": "Nederlands",
-      "localImg": "07078.jpg",
+      "localImg": "federal/07078.jpg",
       "firstName": "Hans",
       "lastName": "Verreyt"
   },
@@ -1677,7 +1677,7 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Haine-Saint-Paul",
       "language": "Frans",
-      "localImg": "07154.jpg",
+      "localImg": "federal/07154.jpg",
       "firstName": "Albert",
       "lastName": "Vicaire"
   },
@@ -1688,7 +1688,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Waregem",
       "language": "Nederlands",
-      "localImg": "07137.jpg",
+      "localImg": "federal/07137.jpg",
       "firstName": "Maria",
       "lastName": "Vindevoghel"
   },
@@ -1700,7 +1700,7 @@ export const members: MP[] = [
       "constituency": "Namen",
       "hometown": "Ukkel",
       "language": "Frans",
-      "localImg": "07322.jpg",
+      "localImg": "federal/07322.jpg",
       "firstName": "Thierry",
       "lastName": "Warmoes"
   },
@@ -1712,7 +1712,7 @@ export const members: MP[] = [
       "constituency": "Oost-Vlaanderen",
       "hometown": "Gent",
       "language": "Nederlands",
-      "localImg": "06861.gif",
+      "localImg": "federal/06861.gif",
       "firstName": "Evita",
       "lastName": "Willaert"
   },
@@ -1724,7 +1724,7 @@ export const members: MP[] = [
       "constituency": "Antwerpen",
       "hometown": "Lier",
       "language": "Nederlands",
-      "localImg": "06147.gif",
+      "localImg": "federal/06147.gif",
       "firstName": "Bert",
       "lastName": "Wollants"
   },
@@ -1736,8 +1736,8 @@ export const members: MP[] = [
       "constituency": "Henegouwen",
       "hometown": "Haine-Saint-Paul",
       "language": "Frans",
-      "localImg": "07170.jpg",
+      "localImg": "federal/07170.jpg",
       "firstName": "Laurence",
       "lastName": "Zanchetta"
   }
-]
+];
