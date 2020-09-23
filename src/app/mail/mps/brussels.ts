@@ -1,4 +1,4 @@
-import { MP } from '../mp/mp';
+import { MP } from '../mp';
 
 export const members: MP[] = [
   {

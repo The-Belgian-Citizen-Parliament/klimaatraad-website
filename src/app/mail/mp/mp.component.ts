@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { MP } from './mp';
+import { MP } from '../mp';
 
 @Component({
   selector: 'app-mp',
