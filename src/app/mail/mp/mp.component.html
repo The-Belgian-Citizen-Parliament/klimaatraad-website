@@ -1,6 +1,6 @@
 <div class="mp-card" [class.unavailable]="!mp.email" (click)="changeSelection()" [class.selected]="mp.selected">
   <mat-checkbox class="mp-cb" name="selected" [(ngModel)]="mp.selected"></mat-checkbox>
-  <div class="mp-img"><img [src]="cdnBaseUrl + '/' + mp.localImg" onerror="this.src='/assets/anonymous.jpg'" /></div>
+  <div class="mp-img"><img [src]="cdnBaseUrl + '/mps/' + mp.localImg" onerror="this.src='/assets/anonymous.jpg'" /></div>
   <div class="mp-info">
     <strong class="name">{{ mp.firstName }} {{ mp.lastName }}</strong>
     <div class="info">

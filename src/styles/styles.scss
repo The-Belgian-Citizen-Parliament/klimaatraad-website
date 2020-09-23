@@ -1,6 +1,7 @@
 @import './evelyn/style.scss';
 @import './evelyn-extensions.scss';
 @import './material-theme.scss';
+@import './variables.scss';
 
 .mat-icon.inline {
   height: unset;
@@ -14,11 +15,11 @@ body {
 }
 
 .primary {
-  color: mat-color($app-primary);
+  color: $primary-color;
 }
 
 .accent {
-  color: mat-color($app-accent);
+  color: $accent-color;
 }
 
 // Material overwrites

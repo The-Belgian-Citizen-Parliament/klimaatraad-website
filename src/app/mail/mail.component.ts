@@ -2,9 +2,12 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Mail } from './mail';
 import { MailService } from './mail.service';
 import { environment } from 'src/environments/environment';
-import { members } from './mps/federal';
+import { mpsFederal } from './mps/federal';
 import { MP } from './mp';
 import { FR_BODIES, FR_SUBJECTS, NL_BODIES, NL_SUBJECTS } from './mail-options';
+import { mpsBrussels } from './mps/brussels';
+import { mpsFlemish } from './mps/flemish';
+import { mpsWalloon } from './mps/walloon';
 
 @Component({
   selector: 'app-mail',
@@ -16,7 +19,7 @@ export class MailComponent {
 
   mails: Mail[];
   newMail: Mail;
-  mps: MP[] = members;
+  mps: MP[] = [...mpsFederal, ...mpsBrussels, ...mpsFlemish, ...mpsWalloon ];
   filteredMps: MP[] = [];
   selectedMps: MP[] = [];
 

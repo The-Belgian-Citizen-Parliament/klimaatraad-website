@@ -1,6 +1,6 @@
 import { MP } from '../mp';
 
-export const members: MP[] = [
+export const mpsFlemish: MP[] = [
   {
       "parliament": "Flemish",
       "firstName": "Meyrem",

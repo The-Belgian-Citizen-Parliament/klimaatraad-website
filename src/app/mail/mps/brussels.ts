@@ -1,6 +1,6 @@
 import { MP } from '../mp';
 
-export const members: MP[] = [
+export const mpsBrussels: MP[] = [
   {
       "id": "ADELO",
       "firstName": "Ariane",
@@ -131,7 +131,7 @@ export const members: MP[] = [
       "parliament": "Brussels Parliament",
       "constituency": "Brussel-Hoofdstad",
       "email": "christophe.debeukelaer@parlement.brussels",
-      "party": "CDH",
+      "party": "cdH",
       "localImg": "brussels/debeukelaer2019.jpg"
   },
   {
@@ -256,7 +256,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Nijvel",
       "email": "gkazadi@parlement.brussels",
-      "party": "CDH",
+      "party": "cdH",
       "localImg": "brussels/kazadi2019.jpg"
   },
   {
@@ -287,7 +287,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Bukavu (D.R. Congo)",
       "email": "pierre@pierrekompany.be",
-      "party": "CDH",
+      "party": "cdH",
       "localImg": "brussels/kompany2019.jpg"
   },
   {
@@ -339,7 +339,7 @@ export const members: MP[] = [
       "parliament": "Brussels Parliament",
       "constituency": "Brussel-Hoofdstad",
       "email": "veronique.lefrancq@parlement.brussels",
-      "party": "CDH",
+      "party": "cdH",
       "localImg": "brussels/lefrancq2019.jpg"
   },
   {
@@ -894,7 +894,7 @@ export const members: MP[] = [
       "constituency": "Brussel-Hoofdstad",
       "hometown": "Ukkle",
       "email": "fremault.c@gmail.com",
-      "party": "CDH",
+      "party": "cdH",
       "localImg": "brussels/fremault2019.jpg"
   },
   {

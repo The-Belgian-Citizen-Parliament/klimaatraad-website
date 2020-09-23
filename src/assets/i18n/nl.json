@@ -31,7 +31,7 @@
   "Email": "Email",
   "exampleEmail": "voorbeeld@gmail.com",
   "Postal code": "Postcode",
-  "City": "Stad",
+  "City": "Gemeente",
   "Brussels": "Brussel",
   "OK - Almost there!": "OK - Bijna klaar!",
   "To": "Aan",
@@ -77,6 +77,6 @@
 
   "Brussels Parliament": "Brussels",
   "Walloon": "Waals",
-  "Flemish ": "Vlaams",
+  "Flemish": "Vlaams",
   "Federal": "Federaal"
 }
