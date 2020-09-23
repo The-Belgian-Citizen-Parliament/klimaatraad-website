@@ -6,8 +6,11 @@ export class MP {
   id: string;
   localImg: string;
   constituency: string;
-  hometown: string;
-  language: string;
+  city?: string;
+  hometown?: string;
+  language?: string;
+  gender?: string;
   email?: string;
+  twitter?: string;
   selected?: boolean;
 }
