@@ -10,5 +10,6 @@ CREATE TABLE mails (
   mail_to TEXT NOT NULL,
   mail_subject TEXT NOT NULL,
   mail_body TEXT NOT NULL,
-  sent_on TIMESTAMP NOT NULL
+  created_on TIMESTAMP NOT NULL,
+  sent_on TIMESTAMP
 );

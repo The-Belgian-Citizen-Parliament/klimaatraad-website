@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import * as mongodb from "mongodb";
+import { Pool } from "pg";
 import * as mailgun from "mailgun-js";
 import { Mail } from 'src/app/mail/mail';
 
@@ -16,43 +16,21 @@ export function bootstrap(app: express.Express) {
   app.use(bodyParser.json());
 
   // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
-  var db;
-
-  // Connect to the database before starting the application server.
-  mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/test", function (err, client) {
-    if (err) {
-      console.log(err);
-      process.exit(1);
-    }
-
-    // Save database object from the callback for reuse.
-    db = client.db();
-    console.log("Database connection ready");
+  var pool = new Pool({
+    connectionString: process.env.DATABASE_URL || 'postgres://$(whoami)',
+    ssl: { rejectUnauthorized: false }
   });
 
   // Only get firstName, lastName, city; where public flag is true
   app.get("/api/mails/last", function(req, res) {
-    db.collection(MAILS_COLLECTION)
-      .find({
-        allowPublic: true,
-      })
-      .sort({
-        sentOn: -1,
-      })
-      .limit(10)
-      .project({
-        firstName: 1,
-        lastName: 1,
-        city: 1,
-        sentOn: 1
-      })
-      .toArray(function(err, docs) {
-        if (err) {
-          handleError(res, err.message, "Failed to get contacts.");
-        } else {
-          res.status(200).json(docs);
-        }
-      });
+    pool.query(`
+      SELECT first_name as firstName, last_name as lastName, city, sent_on as sentOn
+      FROM mails
+      WHERE allow_public = 1
+      ORDER BY sent_on DESC
+      LIMIT 20`)
+      .then(result => res.status(200).json(result.rows))
+      .catch(err => handleError(res, err.message, "Failed to get contacts."));
   });
 
   app.post("/api/mails", function(req, res) {
