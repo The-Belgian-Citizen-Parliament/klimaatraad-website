@@ -1,6 +1,6 @@
 export class Mail {
   // tslint:disable-next-line: variable-name
-  _id?: string;
+  id?: string;
   firstName: string;
   lastName: string;
   email: string;
