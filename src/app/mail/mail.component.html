@@ -121,7 +121,7 @@
                     {{ 'OK - Almost there!' | translate }}</button>
                 </form>
 
-                <div *ngIf="personalDataComplete" fxLayout="column">
+                <form #mailForm="ngForm" *ngIf="personalDataComplete" fxLayout="column">
                   <h4 class="mb-0">{{ 'step3' | translate }}: {{ 'step3title' | translate }}</h4>
                   <div class="subtitle">{{ 'step3explanation' | translate }}.</div>
                   <div>
@@ -144,13 +144,13 @@
 
                   <mat-form-field fxFlex *ngIf="customSubject">
                     <mat-label>{{ 'Subject' | translate }}</mat-label>
-                    <input matInput placeholder="{{ 'customSubjectPlaceholder' | translate }}" name="customSubject"
+                    <input matInput required placeholder="{{ 'customSubjectPlaceholder' | translate }}" name="customSubject"
                       [(ngModel)]="newMail.subject" #customSubject>
                   </mat-form-field>
 
                   <mat-form-field fxFlex *ngIf="!customSubject">
                     <mat-label>{{ 'Subject' | translate }}</mat-label>
-                    <mat-select [(ngModel)]="newMail.subject" name="predefinedSubject" (selectionChange)="subjectChanged()">
+                    <mat-select required [(ngModel)]="newMail.subject" name="predefinedSubject" (selectionChange)="subjectChanged()">
                       <mat-option *ngFor="let subject of subjects" [value]="subject">
                         {{ subject }}
                       </mat-option>
@@ -160,7 +160,7 @@
 
                   <mat-form-field fxFlex>
                     <mat-label>{{ 'text' | translate }}</mat-label>
-                    <textarea matInput rows="10" placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
+                    <textarea matInput rows="10" required placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
                       [(ngModel)]="newMail.body"></textarea>
                     <mat-hint align="start"><strong>{{ 'We provide the opening and closure lines' | translate }}</strong> </mat-hint>
                   </mat-form-field>
@@ -175,8 +175,15 @@
                     <mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">{{ 'stayUpToDate' | translate }}</mat-checkbox>
                   </div>
 
-                  <button mat-raised-button color="primary" (click)="sendMail()">{{ 'Send' | translate }}!</button>
-                </div>
+                  <div>
+                    <mat-checkbox name="conscentGiven" [(ngModel)]="conscentGiven">{{'I have read and accept the' | translate }}
+                      <a target="_blank" routerLink="/privacy">{{ 'Privacy Statement' | translate }}</a>
+                    </mat-checkbox>
+                  </div>
+
+                  <button mat-raised-button color="primary" (click)="sendMail()"
+                    [disabled]="!mailForm.valid || !conscentGiven">{{ 'Send' | translate }}!</button>
+                </form>
               </div>
 
               <div *ngIf="sent">

@@ -45,6 +45,7 @@ export class MailComponent {
   selectionFilterSet = false;
   selectionComplete = false;
   personalDataComplete = false;
+  conscentGiven = false;
   sent = false;
 
   customSubject = false;
