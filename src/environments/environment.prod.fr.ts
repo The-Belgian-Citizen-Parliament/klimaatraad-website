@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://le-parlement-citoyen.herokuapp.com',
+  baseUrl: 'https://www.leparlementcitoyen.be',
   language: 'fr',
   cdnBaseUrl: 'https://vincentsels.be/ext/belgiancitizenparliament/img',
 };
