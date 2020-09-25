@@ -7,6 +7,7 @@ import { FaqComponent } from './faq/faq.component';
 import { MemorandumComponent } from './memorandum/memorandum.component';
 import { environment } from 'src/environments/environment';
 import { QuestionDetailComponent } from './faq/question-detail/question-detail.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 const routes: Routes = environment.language === 'nl' ? [
   { path: '', component: MainComponent },
@@ -14,6 +15,7 @@ const routes: Routes = environment.language === 'nl' ? [
   { path: 'voorstel', component: MemorandumComponent },
   { path: 'deelnemen', component: MailComponent },
   { path: 'faq', component: FaqComponent },
+  { path: 'privacy', component: PrivacyComponent },
   { path: 'vraag/:questionSlug', component: QuestionDetailComponent },
 ] : [
   { path: '', component: MainComponent },
@@ -21,6 +23,7 @@ const routes: Routes = environment.language === 'nl' ? [
   { path: 'proposition', component: MemorandumComponent },
   { path: 'participer', component: MailComponent },
   { path: 'faq', component: FaqComponent },
+  { path: 'privacy', component: PrivacyComponent },
   { path: 'deelnemen', redirectTo: 'participer' },
   { path: 'question/:questionSlug', component: QuestionDetailComponent },
 ];

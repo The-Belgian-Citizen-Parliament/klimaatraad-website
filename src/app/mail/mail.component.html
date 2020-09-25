@@ -86,7 +86,7 @@
                 <form #personalDataForm="ngForm" *ngIf="selectionComplete && selectedMps.length > 0 && !personalDataComplete"
                   fxLayout="column">
                   <h4 class="mb-0">{{ 'step2' | translate }}: {{ 'step2title' | translate }}</h4>
-                  <div class="subtitle">{{ 'step2explanation' | translate }} <a routerLink="privacy">{{ 'here' | translate }}</a>.</div>
+                  <div class="subtitle">{{ 'step2explanation' | translate }} <a target="_blank" routerLink="/privacy">{{ 'here' | translate }}</a>.</div>
 
                   <div fxFlex fxLayout="row" fxLayoutGap="12px">
                     <mat-form-field fxFlex="40">
