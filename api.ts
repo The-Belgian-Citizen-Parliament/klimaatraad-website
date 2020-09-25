@@ -30,7 +30,7 @@ export function bootstrap(app: express.Express) {
   // Only get firstName, lastName, city; where public flag is true
   app.get("/api/mails/last", function(req, res) {
     pool.query(`
-      SELECT first_name as "firstName", last_name as "lastName", city, created_on as "sentOn"
+      SELECT first_name as "firstName", substring(last_name, 1, 1) as "lastName", city, created_on as "sentOn"
       FROM mails
       WHERE allow_public = true
       ORDER BY sent_on DESC
