@@ -4,8 +4,6 @@ import { Pool } from "pg";
 import * as mailgun from "mailgun-js";
 import { Mail } from 'src/app/mail/mail';
 
-const MAILS_COLLECTION = "mails";
-
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code = null) {
   console.log("ERROR: " + reason);
@@ -38,12 +36,13 @@ export function bootstrap(app: express.Express) {
 
     if (!validate(req, newMail)) return;
 
-    db.collection(MAILS_COLLECTION).insertOne(newMail, function(err, doc) {
-      if (err) {
-        handleError(res, err.message, "Failed to create new mail.");
-      } else {
-        const id = doc.ops[0]._id;
-        newMail._id = id;
+    pool.query(`
+      INSERT INTO mails(first_name, last_name, email, postal_code, city, allow_public, stay_up_to_date, mail_to, mail_subject, mail_body, created_on, sent_on
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
+      [newMail.firstName, newMail.lastName, newMail.email, newMail.postalCode, newMail.city, newMail.allowPublic, newMail.stayUpToDate, newMail.to, newMail.subject, newMail.body, new Date(), null])
+      .then((inserted) => {
+        const id = inserted.rows[0].id;
+        newMail.id = id;
         console.log('Created email record: ', newMail);
 
         // Try to send mail
@@ -62,15 +61,16 @@ export function bootstrap(app: express.Express) {
                 handleError(res, mailErr, "Failed to send mail");
               } else {
                 console.log('Mail seems to be sent: ', body);
+                newMail.sentOn = new Date();
 
-                db.collection(MAILS_COLLECTION).replaceOne({_id: new mongodb.ObjectID(newMail._id)}, newMail, function(updateError, updatedMail) {
-                  if (updateError) {
-                    handleError(res, err.message, "Failed to set mail as sent");
-                  } else {
+                pool.query(`
+                  UPDATE mails SET sent_on = $1 WHERE id = $2`,
+                  [newMail.sentOn, id])
+                  .then(() => {
                     console.log('Mail marked as sent');
                     res.status(201).json(newMail);
-                  }
-                });
+                  })
+                  .catch((updateError) => handleError(res, updateError.message, "Failed to set mail as sent"));
               }
             });
           } catch (mailError) {
@@ -80,8 +80,8 @@ export function bootstrap(app: express.Express) {
           console.log('No mail configured, returning');
           res.status(201).json(newMail);
         }
-      }
-    });
+      })
+      .catch(insertError => handleError(res, insertError.message, "Failed to create new mail."))
   });
 
   function validate(res, mail: Mail) {
