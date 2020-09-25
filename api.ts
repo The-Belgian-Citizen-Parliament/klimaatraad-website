@@ -14,20 +14,28 @@ export function bootstrap(app: express.Express) {
   app.use(bodyParser.json());
 
   // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
-  var pool = new Pool({
-    connectionString: process.env.DATABASE_URL || 'postgres://$(whoami)',
+  const opts = process.env.DATABASE_URL ? {
+    connectionString: process.env.DATABASE_URL || 'postgres://$(whoami)?sslmode=disable',
     ssl: { rejectUnauthorized: false }
-  });
+  } : {
+    host: 'localhost',
+    port: 5432,
+    database: 'postgres',
+    user: 'postgres',
+    password: 'postgres',
+  };
+
+  var pool = new Pool(opts);
 
   // Only get firstName, lastName, city; where public flag is true
   app.get("/api/mails/last", function(req, res) {
     pool.query(`
-      SELECT first_name as firstName, last_name as lastName, city, sent_on as sentOn
+      SELECT first_name as "firstName", last_name as "lastName", city, created_on as "sentOn"
       FROM mails
-      WHERE allow_public = 1
+      WHERE allow_public = true
       ORDER BY sent_on DESC
       LIMIT 20`)
-      .then(result => res.status(200).json(result.rows))
+      .then((result) => res.status(200).json(result.rows))
       .catch(err => handleError(res, err.message, "Failed to get contacts."));
   });
 
@@ -37,8 +45,8 @@ export function bootstrap(app: express.Express) {
     if (!validate(req, newMail)) return;
 
     pool.query(`
-      INSERT INTO mails(first_name, last_name, email, postal_code, city, allow_public, stay_up_to_date, mail_to, mail_subject, mail_body, created_on, sent_on
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
+      INSERT INTO mails(first_name, last_name, email, postal_code, city, allow_public, stay_up_to_date, mail_to, mail_subject, mail_body, created_on, sent_on)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING id`,
       [newMail.firstName, newMail.lastName, newMail.email, newMail.postalCode, newMail.city, newMail.allowPublic, newMail.stayUpToDate, newMail.to, newMail.subject, newMail.body, new Date(), null])
       .then((inserted) => {
         const id = inserted.rows[0].id;
