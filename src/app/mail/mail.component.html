@@ -175,7 +175,7 @@
                     <mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">{{ 'stayUpToDate' | translate }}</mat-checkbox>
                   </div>
 
-                  <button mat-raised-button color="primary" *ngIf="!newMail._id" (click)="sendMail()">{{ 'Send' | translate }}!</button>
+                  <button mat-raised-button color="primary" (click)="sendMail()">{{ 'Send' | translate }}!</button>
                 </div>
               </div>
 
