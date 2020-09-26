@@ -130,7 +130,7 @@ export class MailComponent implements OnInit, OnDestroy {
   mailTrackBy = (idx, mail: Mail) => mail.sentOn;
 
   sendMail() {
-    this.mailService.createMail(this.newMail);
+    this.mailService.createMail(this.newMail).then(() => this.getMails());
     this.sent = true;
   }
 
