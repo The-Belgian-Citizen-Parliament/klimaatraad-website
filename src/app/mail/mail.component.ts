@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { Mail } from './mail';
 import { MailService } from './mail.service';
 import { environment } from 'src/environments/environment';
@@ -8,13 +8,14 @@ import { FR_BODIES, FR_SUBJECTS, NL_BODIES, NL_SUBJECTS } from './mail-options';
 import { mpsBrussels } from './mps/brussels';
 import { mpsFlemish } from './mps/flemish';
 import { mpsWalloon } from './mps/walloon';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-mail',
   templateUrl: './mail.component.html',
   styleUrls: ['./mail.component.scss']
 })
-export class MailComponent {
+export class MailComponent implements OnInit, OnDestroy {
   @ViewChild('customSubject') customSubjectElement: ElementRef;
 
   mails: Mail[];
@@ -51,7 +52,12 @@ export class MailComponent {
   customSubject = false;
   selectedMpListExpanded = false;
 
-  constructor(private mailService: MailService) {
+  isBrowser = false;
+  getMailsTimer = null;
+
+  constructor(@Inject(PLATFORM_ID) platformId: string, private mailService: MailService) {
+    this.isBrowser = isPlatformBrowser(platformId);
+
     this.subjects = environment.language === 'nl' ? NL_SUBJECTS : FR_SUBJECTS;
     this.bodies = environment.language === 'nl' ? NL_BODIES : FR_BODIES;
 
@@ -71,6 +77,16 @@ export class MailComponent {
   }
 
   ngOnInit() {
+    this.getMails();
+
+    if (this.isBrowser) this.getMailsTimer = setInterval(() => this.getMails(), 3000);
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.getMailsTimer);
+  }
+
+  getMails() {
     this.mailService
       .getLastMails()
       .then((mails: Mail[]) => {

@@ -197,7 +197,8 @@
               <strong>Namen recent deel...</strong>
               <ul>
                 <li *ngFor="let mail of mails">
-                  {{ mail.firstName }} {{ mail.lastName.charAt(0).toUpperCase() }}. <span *ngIf="mail.city">({{ mail.city }})</span>
+                  {{ mail.firstName }} {{ mail.lastName }}. <span *ngIf="mail.city">({{ mail.city }})</span> at {{ mail.sentOn | date:'yyyy-MM-dd' }}
+
                 </li>
               </ul>
             </div>
