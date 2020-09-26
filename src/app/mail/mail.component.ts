@@ -1,4 +1,7 @@
 import { Component, ElementRef, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import * as dayjs from 'dayjs';
+
 import { Mail } from './mail';
 import { MailService } from './mail.service';
 import { environment } from 'src/environments/environment';
@@ -8,7 +11,6 @@ import { FR_BODIES, FR_SUBJECTS, NL_BODIES, NL_SUBJECTS } from './mail-options';
 import { mpsBrussels } from './mps/brussels';
 import { mpsFlemish } from './mps/flemish';
 import { mpsWalloon } from './mps/walloon';
-import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-mail',
@@ -92,6 +94,10 @@ export class MailComponent implements OnInit, OnDestroy {
       .then((mails: Mail[]) => {
         this.mails = (mails || []);
       });
+  }
+
+  formatRelativeTime(sentOn) {
+    return dayjs().to(sentOn);
   }
 
   sendMail() {

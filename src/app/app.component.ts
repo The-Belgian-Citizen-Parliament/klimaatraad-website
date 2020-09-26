@@ -2,9 +2,14 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
-import { environment } from 'src/environments/environment';
 import { Title } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
+import * as dayjs from 'dayjs';
+import 'dayjs/locale/nl';
+import 'dayjs/locale/fr';
+import * as relativeTime from 'dayjs/plugin/relativeTime';
+
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +37,10 @@ export class AppComponent {
         window.scrollTo(0, 0);
       });
     }
+
+    if (environment.language === 'nl') dayjs.locale('nl');
+    else if (environment.language === 'fr') dayjs.locale('fr');
+    dayjs.extend(relativeTime);
   }
 
   setLanguage(lang) {

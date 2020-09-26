@@ -33,7 +33,7 @@ export function bootstrap(app: express.Express) {
       SELECT first_name as "firstName", substring(last_name, 1, 1) as "lastName", city, created_on as "sentOn"
       FROM mails
       WHERE allow_public = true
-      ORDER BY sent_on DESC
+      ORDER BY created_on DESC
       LIMIT 20`)
       .then((result) => res.status(200).json(result.rows))
       .catch(err => handleError(res, err.message, "Failed to get contacts."));
