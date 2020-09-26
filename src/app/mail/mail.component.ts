@@ -1,5 +1,6 @@
 import { Component, ElementRef, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 import * as dayjs from 'dayjs';
 
 import { Mail } from './mail';
@@ -15,7 +16,36 @@ import { mpsWalloon } from './mps/walloon';
 @Component({
   selector: 'app-mail',
   templateUrl: './mail.component.html',
-  styleUrls: ['./mail.component.scss']
+  styleUrls: ['./mail.component.scss'],
+  animations: [
+    trigger("inOutAnimation", [
+      state("in", style({ opacity: 1 })),
+      transition(":enter", [
+        animate(
+          300,
+          keyframes([
+            style({ opacity: 0, offset: 0 }),
+            style({ opacity: 0.25, offset: 0.25 }),
+            style({ opacity: 0.5, offset: 0.5 }),
+            style({ opacity: 0.75, offset: 0.75 }),
+            style({ opacity: 1, offset: 1 }),
+          ])
+        )
+      ]),
+      transition(":leave", [
+        animate(
+          300,
+          keyframes([
+            style({ opacity: 1, offset: 0 }),
+            style({ opacity: 0.75, offset: 0.25 }),
+            style({ opacity: 0.5, offset: 0.5 }),
+            style({ opacity: 0.25, offset: 0.75 }),
+            style({ opacity: 0, offset: 1 }),
+          ])
+        )
+      ])
+    ])
+  ]
 })
 export class MailComponent implements OnInit, OnDestroy {
   @ViewChild('customSubject') customSubjectElement: ElementRef;
@@ -96,15 +126,11 @@ export class MailComponent implements OnInit, OnDestroy {
       });
   }
 
-  formatRelativeTime(sentOn) {
-    return dayjs().to(sentOn);
-  }
+  formatRelativeTime = (sentOn) => dayjs().to(sentOn);
+  mailTrackBy = (idx, mail: Mail) => mail.sentOn;
 
   sendMail() {
-    this.mailService.createMail(this.newMail).then(() => this.mails = [
-      this.newMail,
-      ...this.mails,
-    ]);
+    this.mailService.createMail(this.newMail);
     this.sent = true;
   }
 
