@@ -176,13 +176,13 @@
                   </div>
 
                   <div>
-                    <mat-checkbox name="conscentGiven" [(ngModel)]="conscentGiven">{{'I have read and accept the' | translate }}
+                    <mat-checkbox name="consentGiven" [(ngModel)]="consentGiven">{{'I have read and accept the' | translate }}
                       <a target="_blank" routerLink="/privacy">{{ 'Privacy Statement' | translate }}</a>
                     </mat-checkbox>
                   </div>
 
                   <button mat-raised-button color="primary" (click)="sendMail()"
-                    [disabled]="!mailForm.valid || !conscentGiven">{{ 'Send' | translate }}!</button>
+                    [disabled]="!mailForm.valid || !consentGiven">{{ 'Send' | translate }}!</button>
                 </form>
               </div>
 
