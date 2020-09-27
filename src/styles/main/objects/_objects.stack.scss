@@ -1,0 +1,14 @@
+/**
+ * +-----------+
+ * |           |
+ * +-----------+
+ * |           |
+ * +-----------+
+ * |           |
+ * +-----------+
+ */
+
+%stack > * + * {
+  margin-top: $gutter-width;
+  margin-top: var(--gutter-width, $gutter-width);
+}

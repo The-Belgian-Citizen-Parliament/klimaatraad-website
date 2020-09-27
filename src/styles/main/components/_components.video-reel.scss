@@ -1,0 +1,58 @@
+.c-video-reel {
+  @extend %reel;
+  --reel-item-container-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: map-get($width-units, '7');
+  padding: map-get($spacing-units, '4') 0;
+
+  @include media-query('max:060') {
+    --reel-item-count: 2;
+  }
+}
+
+/*a*/.c-video-reel__item {
+  border: map-get($spacing-units, '4') solid transparent;
+  position: relative;
+  scroll-snap-align: center;
+
+  &:before {
+    background-color: map-get($colors, 'white');
+    border-radius: 50%;
+    content: '\f04b';
+    font-family: $font-family-icon;
+    font-size: font-unit('small');
+    font-weight: map-get($font-weights, 'bold');
+    height: 3em;
+    left: 50%;
+    line-height: 3em;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 3em;
+
+    @include feature-query('mask-image') {
+      mask-image: url("data:image/svg+xml,%3Csvg width='87' height='100' viewBox='0 0 87 100' fill='black' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M73.2169 16.9526C90.9655 36.6241 90.9824 55.4459 74.4659 76.4319C66.7039 86.2431 57.8223 93.9056 46.0563 97.8524C19.2713 106.809 -4.59912 86.577 0.75807 58.9284C3.2022 46.0761 6.62784 33.2743 11.0161 20.891C18.9948 -1.51785 49.0512 -7.10808 66.9903 10.0514C69.2142 12.2569 71.1802 14.6952 73.2169 16.9526Z'/%3E%3C/svg%3E%0A");
+      mask-position: 50%;
+      mask-repeat: no-repeat;
+      mask-size: 90% 100%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &:before {
+      background-color: map-get($colors, 'green');
+      color: map-get($colors, 'white');
+    }
+  }
+
+  &[data-video-playing="true"] {
+    background-color: map-get($colors, 'blue-powder');
+
+    &:before {
+      display: none !important;
+    }
+  }
+}

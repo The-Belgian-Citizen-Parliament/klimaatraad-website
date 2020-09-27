@@ -1,0 +1,31 @@
+a {
+  color: inherit;
+}
+
+/**
+ * Skip link for screen reader and keyboard users. This element is hidden by
+ * default and displayed on focus.
+ * @link https://www.w3.org/TR/WCAG20-TECHS/G1.html
+ */
+
+a[href="#main"] {
+  background-color: map-get($colors, 'blue');
+  bottom: 100%;
+  color: map-get($colors, 'white');
+  cursor: pointer;
+  display: inline-block;
+  font-weight: map-get($font-weights, 'medium');
+  left: 0;
+  line-height: 3;
+  padding: 0 1em;
+  position: absolute;
+  text-decoration: none;
+  white-space: nowrap;
+  z-index: -1;
+
+  &:focus {
+    bottom: auto;
+    top: 0;
+    z-index: 9999;
+  }
+}

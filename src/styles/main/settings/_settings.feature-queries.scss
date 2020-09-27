@@ -1,0 +1,21 @@
+/**
+ * A list of key-value pairs which can be used to output feature query-enclosed
+ * rulesets via the corresponding mixin.
+ *
+ * @link https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+ *
+ * @prop {String} key
+ * An alias for the feature query.
+ *
+ * @prop {String} value
+ * The declaration(s) to query, e.g. (display: grid) or (gap: 1rem).
+ */
+
+$feature-queries: (
+  'custom-properties': '(color: var(--primary))',
+  'grid': '(display: grid)',
+  'mask-image': '(mask-image: url(''))',
+  'object-fit': '(object-fit: cover)',
+  'subgrid': '(grid-template-rows: subgrid)',
+  'text-underline-offset': '(text-underline-offset: 1px)'
+);

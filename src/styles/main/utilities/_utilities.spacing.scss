@@ -1,0 +1,23 @@
+:root {
+  @each $alias, $unit in $spacing-units {
+    --s#{$alias}: #{$unit};
+  }
+}
+
+@each $alias, $unit in $spacing-units {
+  .u-margin-top-#{$alias} {
+    margin-top: $unit !important;
+  }
+
+  .u-margin-top-minus-#{$alias} {
+    margin-top: ($unit * -1) !important;
+  }
+
+  .u-padding-bottom-#{$alias} {
+    padding-bottom: $unit !important;
+  }
+
+  .u-padding-top-#{$alias} {
+    padding-top: $unit !important;
+  }
+}

@@ -1,0 +1,33 @@
+/**
+ * Fit an image or video asset to its parent container using `object-fit`.
+ * If the property is unsupported, fallback to an inline background image.
+ */
+
+@mixin fit-asset() {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @supports (object-fit: cover) {
+    background-image: none !important;
+  }
+
+  > img,
+  > video {
+    opacity: 0;
+    visibility: hidden;
+
+    @supports (object-fit: cover) {
+      height: 100%;
+      object-fit: cover;
+      object-position: 50%;
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+    }
+  }
+
+  > *:not(img):not(video) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,56 @@
+/**
+ * +-----------------------+
+ * |       |               |
+ * |-------|               |
+ * |#######|               |
+ * +-----------------------+
+ */
+
+%media-object {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: -#{$gutter-width};
+  margin-bottom: calc(var(--gutter-width, #{$gutter-width}) * -1);
+  margin-left: -#{$gutter-width};
+  margin-left: calc(var(--gutter-width, #{$gutter-width}) * -1);
+
+  > * {
+    margin-bottom: $gutter-width;
+    margin-bottom: var(--gutter-width, #{$gutter-width});
+    margin-left: $gutter-width;
+    margin-left: var(--gutter-width, #{$gutter-width});
+  }
+
+  /**
+   * 1. Limit structure to a maximum of _two_ child elements.
+   */
+
+  > *:nth-child(n+3) {
+    display: none !important; /* 1 */
+  }
+
+  /**
+   * Use Flexbox to automatically implement a column layout when the minimum
+   * width of the first child element (i.e. the figure element) exceeds the
+   * available width. Based on Every Layout sidebar implementation.
+   *
+   * @link https://every-layout.dev/layouts/sidebar/
+   *
+   * 1. Allow both child elements to grow to occupy the available space.
+   * 2. Sets the minimum width of the first child element.
+   */
+
+  > *:nth-child(-n+2) {
+    flex-grow: 1; /* 1 */
+  }
+
+  > /*figure*/*:nth-child(1) {
+    flex-basis: map-get($width-units, '1'); /* 2 */
+    max-width: map-get($width-units, '2');
+  }
+
+  > *:nth-child(2) {
+    flex-basis: 0;
+    min-width: percentage(2/3);
+  }
+}

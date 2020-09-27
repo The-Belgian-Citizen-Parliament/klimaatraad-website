@@ -1,0 +1,21 @@
+/*ul*/.c-tag-list {
+  font-size: 95%;
+  margin-top: map-get($spacing-units, '5');
+}
+
+/*li*/.c-tag-list__item {
+  display: inline-block;
+}
+
+
+/**
+ * Modifiers.
+ */
+
+/*ul*/.c-tag-list--hashtags {
+  @extend %cluster;
+  --gutter-width: #{map-get($spacing-units, '3')};
+  font-size: font-unit('h6');
+  justify-content: center;
+  margin-top: map-get($spacing-units, '6');
+}

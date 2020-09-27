@@ -1,0 +1,25 @@
+/**
+ * Set an element's height using intrinsic ratio and instruct its direct child
+ * element(s) to occupy the available height and width. This mixin is intended
+ * for use with image and video components.
+ *
+ * @link https://alistapart.com/article/creating-intrinsic-ratios-for-video/
+ *
+ * @param {Integer} $denominator [1]
+ * @param {Integer} $numerator [1]
+ */
+
+@mixin aspect-ratio($denominator: 1, $numerator: 1) {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: calc(#{$numerator} / #{$denominator} * 100%);
+  position: relative;
+
+  > * {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

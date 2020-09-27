@@ -1,0 +1,16 @@
+/**
+ * Enclose a ruleset inside a media query.
+ *
+ * @param {String} $media-query
+ * The media query alias. This alias must match a key in the corresponding map.
+ */
+
+@mixin media-query($media-query) {
+  @if type-of($media-query) == 'string' and map-has-key($media-queries, $media-query) {
+    @media #{map-get($media-queries, $media-query)} {
+      @content;
+    }
+  } @else {
+    @error 'This media query (#{$media-query}) does not return a match.';
+  }
+}

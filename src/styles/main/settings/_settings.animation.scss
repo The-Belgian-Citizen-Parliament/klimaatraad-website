@@ -1,0 +1,17 @@
+/**
+ * A list of key-value pairs which can be used to output aliased easing functions
+ * for use in animations and transitions.
+ *
+ * @link https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function
+ *
+ * @prop {String} key
+ * An alias for the function.
+ *
+ * @prop {String} value
+ * The actual function.
+ */
+
+$easing-functions: (
+  'bounce': cubic-bezier(0.175, 0.85, 0.35, 1.275),
+  'ease-in-out': cubic-bezier(0.4, 0, 0.2, 1)
+);

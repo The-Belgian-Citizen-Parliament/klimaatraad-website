@@ -1,0 +1,17 @@
+/**
+ * Set the base font unit. This value will be converted to `vw` (viewport width)
+ * units and used to calculate the default font unit.
+ *
+ * @var {Number} $base-font-unit
+ */
+
+$base-font-unit: 0.175;
+
+
+/**
+ * Set the base line height ratio.
+ *
+ * @var {Number} $base-line-height
+ */
+
+$base-line-height: 1.5;

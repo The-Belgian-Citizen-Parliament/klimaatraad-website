@@ -1,0 +1,32 @@
+/**
+ * A list of key-value pairs which can be used to output aliased color values
+ * and utility classes.
+ *
+ * @prop {String} key
+ * An alias for the color value.
+ *
+ * @prop {Color} value
+ * The actual color value.
+ */
+
+$colors: (
+  'black': #222,
+  'blue': #1C66D1,
+  'blue-powder': #BADFDE,
+  'blue-yale': #1650A2,
+  'green': #459B2C,
+  'grey-pale': #F2F2F2,
+  'red': #C8040E,
+  'white': #FFF
+);
+
+
+/**
+ * Assign colors to semantic variable names.
+ *
+ * @var {Color} $color-background
+ * @var {Color} $color-text
+ */
+
+$color-background: map-get($colors, 'white');
+$color-text: map-get($colors, 'black');

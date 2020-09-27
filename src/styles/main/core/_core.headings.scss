@@ -1,0 +1,49 @@
+/**
+ * Use the `clamp` and `calc` functions to scale typography relative to the
+ * width of the viewport, with a fixed minimum and maximum value. Fallback to a
+ * fixed value in browsers which do not support these functions.
+ *
+ * @link https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+ */
+
+h1, %h1, %h1 {
+  font-size: font-unit('h1');
+  font-size: clamp(#{font-unit('h3')}, calc(#{font-unit('h1', 1vw)} + 1em), #{font-unit('h1')});
+}
+
+h2, %h2, .h2 {
+  font-size: font-unit('h2');
+  font-size: clamp(#{font-unit('h4')}, calc(#{font-unit('h2', 1vw)} + 1em), #{font-unit('h2')});
+}
+
+h3, %h3, .h3 {
+  font-size: font-unit('h3');
+  font-size: clamp(#{font-unit('h5')}, calc(#{font-unit('h3', 1vw)} + 1em), #{font-unit('h3')});
+}
+
+h4, %h4, .h4 {
+  font-size: font-unit('h4');
+  font-size: clamp(#{font-unit('h6')}, calc(#{font-unit('h4', 1vw)} + 1em), #{font-unit('h4')});
+}
+
+h5, %h5, .h5 {
+  font-size: font-unit('h5');
+  font-size: clamp(1em, calc(#{font-unit('h5', 1vw)} + 1em), #{font-unit('h5')});
+}
+
+h6, %h6, .h6 {
+  font-size: font-unit('h6');
+  font-size: clamp(1em, calc(#{font-unit('h6', 1vw)} + 1em), #{font-unit('h6')});
+}
+
+
+/**
+ * 1. Tighten line height for large headings.
+ */
+
+h1, %h1, .h1,
+h2, %h2, .h2,
+h3, %h3, .h3 {
+  font-weight: map-get($font-weights, 'bold');
+  line-height: 1.25; /* 1 */
+}

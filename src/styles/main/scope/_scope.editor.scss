@@ -1,0 +1,9 @@
+.s-editor {
+  @extend %stack;
+
+  h2,
+  h3,
+  h4 {
+    --gutter-width: #{map-get($spacing-units, '6')};
+  }
+}

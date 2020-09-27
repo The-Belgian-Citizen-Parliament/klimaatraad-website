@@ -1,0 +1,16 @@
+/**
+ * Enclose a ruleset inside a feature query.
+ *
+ * @param {String} $feature-query
+ * The feature query alias. This alias must match a key in the corresponding map.
+ */
+
+@mixin feature-query($feature-query) {
+  @if type-of($feature-query) == 'string' and map-has-key($feature-queries, $feature-query) {
+    @supports #{map-get($feature-queries, $feature-query)} {
+      @content;
+    }
+  } @else {
+    @error 'This feature query (#{$feature-query}) does not return a match.';
+  }
+}

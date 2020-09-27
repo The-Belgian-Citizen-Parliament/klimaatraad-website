@@ -1,0 +1,21 @@
+.c-avatar {
+  @include fit-asset();
+  background-color: map-get($colors, 'grey-pale');
+  max-width: map-get($width-units, '1');
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 0;
+    padding-bottom: 125%;
+    width: 100%;
+  }
+}
+
+.c-avatar__image {
+  left: 0;
+  position: absolute;
+  top: 0;
+}

@@ -1,0 +1,56 @@
+.c-site-header {
+  @extend %container;
+  align-items: center;
+  color: map-get($colors, 'blue');
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  max-width: map-get($width-units, '9');
+  padding-bottom: map-get($spacing-units, '8');
+  padding-top: map-get($spacing-units, '6');
+
+  @include media-query('max:080') {
+    flex-wrap: wrap;
+  }
+
+  .c-language-switch,
+  .c-nav {
+    @include media-query('min:080') {
+      flex-basis: 40%;
+    }
+  }
+
+  .c-language-switch {
+    @include media-query('max:080') {
+      margin-left: map-get($spacing-units, '7');
+    }
+  }
+
+  /*.c-button*/.c-language-switch__button {
+    @include media-query('min:080') {
+      margin-left: auto;
+    }
+  }
+
+  .c-nav {
+    @include media-query('max:080') {
+      flex-basis: 100%;
+      flex-grow: 1;
+      margin-top: map-get($spacing-units, '6');
+      order: 1;
+    }
+
+    @include media-query('min:080') {
+      order: -1;
+    }
+  }
+
+  /**
+   * 1. Ensure vertical padding around the logo in the absence of taller
+   * adjacent elements.
+   */
+
+  .c-logo {
+    flex-shrink: 0;
+  }
+}
