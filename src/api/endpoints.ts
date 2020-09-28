@@ -52,7 +52,7 @@ export function bootstrap(app: express.Express) {
       .then((inserted) => {
         const id = inserted.rows[0].id;
         newMail.id = id;
-        console.log('Created email record: ', newMail);
+        console.log('Created email record: ', id);
 
         // Try to send mail
         if (process.env.MAILGUN_API_KEY) {

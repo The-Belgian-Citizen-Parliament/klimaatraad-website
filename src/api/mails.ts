@@ -22,7 +22,7 @@ export const mails = {
       <a href="https://www.hetburgerparlement.be">www.hetburgerparlement.be</a>
       </p>
       <p>
-      <small style="color: grey;">Je kan je steeds uitschrijven of vragen om je gegevens te laten verwijderen via een mailtje aan info@thecitizensparliament.be. Lees onze Privacy Statement hier: <a href="https://www.hetburgerparlement.be/privacy">https://www.hetburgerparlement.be/privacy</a>.</small>
+      <small style="color: grey;">Je kan je steeds uitschrijven of vragen om je gegevens te laten verwijderen via een mailtje aan info@thecitizensparliament.be. Lees onze Privacy Statement hier: <a style="color: grey;" href="https://www.hetburgerparlement.be/privacy">https://www.hetburgerparlement.be/privacy</a>.</small>
       </p>`,
     }
   }
