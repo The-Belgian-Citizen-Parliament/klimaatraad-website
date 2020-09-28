@@ -3,6 +3,7 @@ import * as bodyParser from "body-parser";
 import { Pool } from "pg";
 import * as mailgun from "mailgun-js";
 import { Mail } from 'src/app/mail/mail';
+import { mails } from './mails';
 
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code = null) {
@@ -70,6 +71,21 @@ export function bootstrap(app: express.Express) {
               } else {
                 console.log('Mail seems to be sent: ', body);
                 newMail.sentOn = new Date();
+
+                console.log('Sending thank you mail...');
+                const thankYouData = {
+                  from: mails[newMail.lang].from,
+                  to: newMail.email,
+                  subject: mails[newMail.lang].thankYou.subject,
+                  html: mails[newMail.lang].thankYou.bodyIntro.replace('$0', newMail.firstName) + (newMail.stayUpToDate ? mails[newMail.lang].thankYou.bodyUpToDate : '') + mails[newMail.lang].thankYou.bodyOutro,
+                }
+                mg.messages().send(thankYouData, (mailErr, body) => {
+                  if (mailErr) {
+                    handleError(res, mailErr, "Failed to send thank you mail");
+                  } else {
+                    console.log('Thank you mail seems to be sent: ', body);
+                  }
+                });
 
                 pool.query(`
                   UPDATE mails SET sent_on = $1 WHERE id = $2`,
