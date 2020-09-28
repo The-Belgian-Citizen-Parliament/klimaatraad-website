@@ -178,6 +178,15 @@ export class MailComponent implements OnInit, OnDestroy {
     this.selectionComplete = true;
   }
 
+  completePersonalData(completed) {
+    this.personalDataComplete = completed;
+    if (completed) {
+      this.newMail.body += this.newMail.firstName + ' ' + this.newMail.lastName;
+    } else {
+      this.newMail.body = this.newMail.body.replace(this.newMail.firstName + ' ' + this.newMail.lastName, '');
+    }
+  }
+
   clearSelected() {
     this.selectedMps = [];
     this.mps.forEach(mp => mp.selected = false)
