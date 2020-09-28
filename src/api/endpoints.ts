@@ -45,9 +45,9 @@ export function bootstrap(app: express.Express) {
     if (!validate(req, newMail)) return;
 
     pool.query(`
-      INSERT INTO mails(first_name, last_name, email, postal_code, city, allow_public, stay_up_to_date, mail_to, mail_subject, mail_body, created_on, sent_on)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING id`,
-      [newMail.firstName, newMail.lastName, newMail.email, newMail.postalCode, newMail.city, newMail.allowPublic, newMail.stayUpToDate, newMail.to, newMail.subject, newMail.body, new Date(), null])
+      INSERT INTO mails(first_name, last_name, email, postal_code, city, lang, allow_public, stay_up_to_date, mail_to, mail_subject, mail_body, created_on, sent_on)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING id`,
+      [newMail.firstName, newMail.lastName, newMail.email, newMail.postalCode, newMail.city, newMail.lang, newMail.allowPublic, newMail.stayUpToDate, newMail.to, newMail.subject, newMail.body, new Date(), null])
       .then((inserted) => {
         const id = inserted.rows[0].id;
         newMail.id = id;
@@ -99,10 +99,8 @@ export function bootstrap(app: express.Express) {
       handleError(res, "Invalid user input", "Must provide a lastName.", 400);
     } else if (!mail.email) {
       handleError(res, "Invalid user input", "Must provide a 'email'.", 400);
-    } else if (!mail.city) {
-      handleError(res, "Invalid user input", "Must provide a 'city'.", 400);
-    } else if (!mail.postalCode) {
-      handleError(res, "Invalid user input", "Must provide a 'postalCode'.", 400);
+    } else if (!mail.lang) {
+      handleError(res, "Invalid user input", "Must provide a 'lang'.", 400);
     } else if (!mail.subject) {
       handleError(res, "Invalid user input", "Must provide a 'subject'.", 400);
     } else if (!mail.body) {
