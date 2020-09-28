@@ -8,7 +8,7 @@ import { existsSync } from 'fs';
 
 import { AppServerModule } from './src/main.server';
 
-import * as api from './api';
+import * as api from './src/api/endpoints';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
