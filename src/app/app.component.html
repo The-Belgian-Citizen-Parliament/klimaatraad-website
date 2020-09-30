@@ -1,6 +1,6 @@
 <header class="c-site-header" id="site-header"><a class="c-logo" href="#0">
     <span class="u-visually-hidden">The Belgian Citizen Parliament</span>
-    <img class="c-logo-image" src="/assets/logo-nl.png">
+    <img class="c-logo-image" src="{{ lang === 'fr' ? '/assets/logo-fr.png' : '/assets/logo-nl.png' }}">
     <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true" style="display: none;">
       <use xlink:href="#logo-citizen-parliament"></use>
     </svg>
@@ -121,7 +121,7 @@
       <div class="grid__cell">
         <a class="c-logo" href="#0">
           <span class="u-visually-hidden">The Belgian Citizen Parliament</span>
-          <img class="c-logo-image" src="/img/logos/logo-nl.png">
+          <img class="c-logo-image" src="{{ lang === 'fr' ? '/assets/logo-fr.png' : '/assets/logo-nl.png' }}">
           <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true" style="display: none;">
             <use xlink:href="#logo-citizen-parliament"></use>
           </svg>

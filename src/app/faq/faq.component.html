@@ -1,50 +1,67 @@
-<section class="features-extended section">
-  <div class="container">
-    <div class="features-extended-inner section-inner">
-      <div class="features-extended-header text-center">
-        <div class="container-sm">
-          <h2 class="section-title mt-0">{{ 'Frequently Asked Questions' | translate }} </h2>
-          <p class="section-paragraph">
-            Je zit vast met veel vragen; zowel over de ernst van de ecologische uitdagingen waar we voor staan;
-            over waarom politici er niet in slagen afdoende maatregelen te nemen; als over de burgerassemblee.
-          </p>
-          <p>
-            <mat-form-field floatLabel="never" style="width: 300px; text-align: center;">
-              <input matInput #question [placeholder]="questionPlaceholder" [(ngModel)]="filter" (keyup)="filterQuestions()" />
-            </mat-form-field>
-          </p>
-        </div>
+<main id="main">
+  <div class="c-panel u-padding-top-0">
+    <div class="container">
+      <h1 class="c-page-title">{{ 'Frequently Asked Questions' | translate }}</h1>
+
+      <p>Je zit vast met veel vragen; zowel over de ernst van de ecologische uitdagingen waar we voor staan;
+        over waarom politici er niet in slagen afdoende maatregelen te nemen; als over de burgerassemblee.</p>
+
+    </div>
+  </div>
+  <div class="c-panel u-background-color-blue-powder">
+    <div class="container">
+      <div class="c-search-bar" role="search">
+        <input class="c-search-bar__input" id="search" type="search" #question [placeholder]="questionPlaceholder" [(ngModel)]="filter"
+          (keyup)="filterQuestions()">
       </div>
 
+      <ng-container *ngIf="!filter">
+        <div *ngFor="let topic of groupedQuestions" class="topic">
+          <h4 style="text-transform: capitalize;">{{ topic.topic }}</h4>
+          <ul class="c-list c-list--questions">
+            <li *ngFor="let question of topic.questions"><a routerLink="/faq" [fragment]="question.slug">{{ question.question }}</a></li>
+          </ul>
+        </div>
+
+        <p class="c-callout"><strong>Staat jouw vraag er niet tussen?</strong> <a href="#">We beantwoorden hem graag voor jou en nemen hem
+          hier op!</a></p>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="c-panel">
+    <div class="container">
+      <ng-container *ngIf="!filter">
+        <div *ngFor="let topic of groupedQuestions" class="question-container">
+          <div *ngFor="let question of topic.questions" [id]="question.slug" class="question-container">
+            <app-question [question]="question"></app-question>
+          </div>
+        </div>
+      </ng-container>
+
       <ng-container *ngIf="filter">
-        <app-question *ngFor="let question of filteredQuestions" [question]="question"></app-question>
+        <div *ngFor="let question of filteredQuestions" class="question-container">
+          <app-question [question]="question"></app-question>
+        </div>
 
         <p *ngIf="filter && filter.length > 2 && filteredQuestions.length == 0">
           Geen vragen gevonden met deze filter. <a [routerLink]="" (click)="clearFilter()">Toon terug alle vragen</a>
         </p>
       </ng-container>
-
-      <ng-container *ngIf="!filter">
-        <div *ngFor="let topic of groupedQuestions">
-          <h4 style="text-transform: capitalize;">{{ topic.topic }}</h4>
-          <ul class="questionsToC">
-            <li *ngFor="let question of topic.questions"><a routerLink="/faq" [fragment]="question.slug">{{ question.question }}</a></li>
-          </ul>
-        </div>
-
-        <div *ngFor="let topic of groupedQuestions">
-          <app-question [id]="question.slug" *ngFor="let question of topic.questions" [question]="question"></app-question>
-        </div>
-      </ng-container>
-
-      <div class="features-extended-header text-center">
-        <div class="container-sm">
-          <h2>Staat jouw vraag er niet tussen?</h2>
-          <p class="section-paragraph" style="margin-top: 16px">
-            <br /><a href="#">We beantwoorden hem graag voor jou en nemen hem hier op!</a>
-          </p>
-        </div>
-      </div>
     </div>
   </div>
-</section>
+
+  <div class="c-panel u-background-color-blue-gradient u-color-white">
+    <div class="container s-editor u-text-align-center">
+      <h3>This is a heading</h3>
+
+      <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus
+        auctor fringilla.</p>
+
+      <button class="c-button">
+        <span class="c-button__label">Take part</span>
+      </button>
+
+    </div>
+  </div>
+</main>

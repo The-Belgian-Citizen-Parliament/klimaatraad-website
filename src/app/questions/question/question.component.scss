@@ -16,15 +16,8 @@
   display: none;
 }
 
-ul.question-tags {
-  list-style: none;
-  opacity: 0.6;
-  padding-left: 0px;
-
-  li {
-    margin-right: 10px;
-    display: inline;
-  }
+.c-tag-list__item {
+  margin-right: 4px;
 }
 
 .question-link {
