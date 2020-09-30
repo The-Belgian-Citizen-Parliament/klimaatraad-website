@@ -8,16 +8,16 @@
   <nav class="c-nav" aria-label="Navigation">
     <ul class="c-nav__list">
       <li class="c-nav__item">
-        <a class="c-nav__button" href="#0">Take part</a>
+        <a class="c-nav__button" [routerLink]="lang === 'fr' ? '/participer' : '/deelnemen'">{{ 'Take part' | translate }}</a>
       </li>
       <li class="c-nav__item">
-        <a href="#0">Memorandum</a>
+        <a [routerLink]="lang === 'fr' ? '/proposition' : '/voorstel'">{{ 'The proposal' | translate }}</a>
       </li>
       <li class="c-nav__item">
-        <a href="#0">FAQ</a>
+        <a routerLink="/faq">{{ 'FAQ' | translate }}</a>
       </li>
       <li class="c-nav__item">
-        <a href="#0">About</a>
+        <a [routerLink]="lang === 'fr' ? '/sur' : '/over'">{{ 'About us' | translate }}</a>
       </li>
     </ul>
   </nav>
@@ -89,16 +89,16 @@
         <nav class="c-nav" aria-label="Navigation">
           <ul class="c-nav__list">
             <li class="c-nav__item">
-              <a class="c-nav__button" href="#0">Take part</a>
+              <a class="c-nav__button" [routerLink]="lang === 'fr' ? '/participer' : '/deelnemen'">{{ 'Take part' | translate }}</a>
             </li>
             <li class="c-nav__item">
-              <a href="#0">Memorandum</a>
+              <a [routerLink]="lang === 'fr' ? '/proposition' : '/voorstel'">{{ 'The proposal' | translate }}</a>
             </li>
             <li class="c-nav__item">
-              <a href="#0">FAQ</a>
+              <a routerLink="/faq">{{ 'FAQ' | translate }}</a>
             </li>
             <li class="c-nav__item">
-              <a href="#0">About</a>
+              <a [routerLink]="lang === 'fr' ? '/sur' : '/over'">{{ 'About us' | translate }}</a>
             </li>
           </ul>
         </nav>
