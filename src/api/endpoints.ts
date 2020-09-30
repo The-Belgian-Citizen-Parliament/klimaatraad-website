@@ -3,6 +3,7 @@ import * as bodyParser from "body-parser";
 import { Pool } from "pg";
 import * as mailgun from "mailgun-js";
 import { Mail } from 'src/app/mail/mail';
+import { mails } from './mails';
 
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code = null) {
@@ -45,13 +46,13 @@ export function bootstrap(app: express.Express) {
     if (!validate(req, newMail)) return;
 
     pool.query(`
-      INSERT INTO mails(first_name, last_name, email, postal_code, city, allow_public, stay_up_to_date, mail_to, mail_subject, mail_body, created_on, sent_on)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING id`,
-      [newMail.firstName, newMail.lastName, newMail.email, newMail.postalCode, newMail.city, newMail.allowPublic, newMail.stayUpToDate, newMail.to, newMail.subject, newMail.body, new Date(), null])
+      INSERT INTO mails(first_name, last_name, email, postal_code, city, lang, allow_public, stay_up_to_date, mail_to, mail_subject, mail_body, created_on, sent_on)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING id`,
+      [newMail.firstName, newMail.lastName, newMail.email, newMail.postalCode, newMail.city, newMail.lang, newMail.allowPublic, newMail.stayUpToDate, newMail.to, newMail.subject, newMail.body, new Date(), null])
       .then((inserted) => {
         const id = inserted.rows[0].id;
         newMail.id = id;
-        console.log('Created email record: ', newMail);
+        console.log('Created email record: ', id);
 
         // Try to send mail
         if (process.env.MAILGUN_API_KEY) {
@@ -59,7 +60,7 @@ export function bootstrap(app: express.Express) {
             console.log('Sending mail...');
             const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
             const data = {
-              from: newMail.email,
+              from: newMail.firstName + ' ' + newMail.lastName + '<' + newMail.email + '>',
               to: newMail.to,
               subject: newMail.subject,
               text: newMail.body,
@@ -70,6 +71,21 @@ export function bootstrap(app: express.Express) {
               } else {
                 console.log('Mail seems to be sent: ', body);
                 newMail.sentOn = new Date();
+
+                console.log('Sending thank you mail...');
+                const thankYouData = {
+                  from: mails[newMail.lang].from,
+                  to: newMail.email,
+                  subject: mails[newMail.lang].thankYou.subject,
+                  html: mails[newMail.lang].thankYou.bodyIntro.replace('$0', newMail.firstName) + (newMail.stayUpToDate ? mails[newMail.lang].thankYou.bodyUpToDate : '') + mails[newMail.lang].thankYou.bodyOutro,
+                }
+                mg.messages().send(thankYouData, (mailErr, body) => {
+                  if (mailErr) {
+                    handleError(res, mailErr, "Failed to send thank you mail");
+                  } else {
+                    console.log('Thank you mail seems to be sent: ', body);
+                  }
+                });
 
                 pool.query(`
                   UPDATE mails SET sent_on = $1 WHERE id = $2`,
@@ -99,10 +115,8 @@ export function bootstrap(app: express.Express) {
       handleError(res, "Invalid user input", "Must provide a lastName.", 400);
     } else if (!mail.email) {
       handleError(res, "Invalid user input", "Must provide a 'email'.", 400);
-    } else if (!mail.city) {
-      handleError(res, "Invalid user input", "Must provide a 'city'.", 400);
-    } else if (!mail.postalCode) {
-      handleError(res, "Invalid user input", "Must provide a 'postalCode'.", 400);
+    } else if (!mail.lang) {
+      handleError(res, "Invalid user input", "Must provide a 'lang'.", 400);
     } else if (!mail.subject) {
       handleError(res, "Invalid user input", "Must provide a 'subject'.", 400);
     } else if (!mail.body) {

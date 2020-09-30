@@ -6,6 +6,7 @@ export class Mail {
   email: string;
   postalCode: string;
   city: string;
+  lang: string;
 
   allowPublic: boolean;
   allowReplies: boolean;

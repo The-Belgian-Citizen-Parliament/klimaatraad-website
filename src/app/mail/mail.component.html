@@ -117,7 +117,7 @@
                     </mat-form-field>
                   </div>
 
-                  <button mat-raised-button color="primary" [disabled]="!personalDataForm.valid" (click)="personalDataComplete = true;">
+                  <button mat-raised-button color="primary" [disabled]="!personalDataForm.valid" (click)="completePersonalData(true);">
                     {{ 'OK - Almost there!' | translate }}</button>
                 </form>
 
@@ -135,11 +135,11 @@
                         (click)="selectedMpListExpanded = !selectedMpListExpanded">{{ selectedMpListExpanded ? ('hide' | translate) : ('show' | translate) }}</a>)
                     </span>
                     <span> (<a [routerLink]=""
-                        (click)="selectionComplete = false; personalDataComplete = false;">{{ 'change' | translate }}</a>)</span>
+                        (click)="selectionComplete = false; completePersonalData(false);">{{ 'change' | translate }}</a>)</span>
                   </div>
                   <div>
                     <strong>{{ 'From' | translate }}: </strong> {{ newMail.firstName }} {{ newMail.lastName}} (<a [routerLink]=""
-                      (click)="personalDataComplete = false;">wijzig</a>)
+                      (click)="completePersonalData(false);">wijzig</a>)
                   </div>
 
                   <mat-form-field fxFlex *ngIf="customSubject">
@@ -162,12 +162,11 @@
                     <mat-label>{{ 'text' | translate }}</mat-label>
                     <textarea matInput rows="10" required placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
                       [(ngModel)]="newMail.body"></textarea>
-                    <mat-hint align="start"><strong>{{ 'We provide the opening and closure lines' | translate }}</strong> </mat-hint>
                   </mat-form-field>
 
-                  <div>
+                  <!-- <div>
                     <mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">{{'allowPublic' | translate }}</mat-checkbox>
-                  </div>
+                  </div> -->
 
                   <!-- <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div> -->
 

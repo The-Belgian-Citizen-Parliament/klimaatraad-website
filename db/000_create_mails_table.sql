@@ -5,6 +5,7 @@ CREATE TABLE mails (
   email TEXT NOT NULL,
   postal_code TEXT,
   city TEXT,
+  lang TEXT NOT NULL,
   allow_public BOOLEAN NOT NULL,
   stay_up_to_date BOOLEAN NOT NULL,
   mail_to TEXT NOT NULL,

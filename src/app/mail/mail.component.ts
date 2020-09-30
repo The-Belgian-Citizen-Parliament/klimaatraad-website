@@ -100,6 +100,7 @@ export class MailComponent implements OnInit, OnDestroy {
     this.newMail.postalCode = '1070';
     this.newMail.firstName = 'Vincent';
     this.newMail.lastName = 'Sels';
+    this.newMail.lang = environment.language;
     this.newMail.allowPublic = true;
     this.newMail.allowReplies = true;
     this.newMail.stayUpToDate = false;
@@ -175,6 +176,15 @@ export class MailComponent implements OnInit, OnDestroy {
 
   confirmSelection() {
     this.selectionComplete = true;
+  }
+
+  completePersonalData(completed) {
+    this.personalDataComplete = completed;
+    if (completed) {
+      this.newMail.body += this.newMail.firstName + ' ' + this.newMail.lastName;
+    } else {
+      this.newMail.body = this.newMail.body.replace(this.newMail.firstName + ' ' + this.newMail.lastName, '');
+    }
   }
 
   clearSelected() {
