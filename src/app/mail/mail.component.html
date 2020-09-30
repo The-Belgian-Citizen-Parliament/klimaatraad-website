@@ -1,11 +1,8 @@
 <main id="main">
   <div class="c-panel u-padding-top-0">
-    <div class="container">
+    <div class="container container-wide">
       <ng-container *ngIf="!sent">
-        <h1 class="c-page-title">{{ 'Mail your representatives' | translate }}</h1>
-
-        <p>Je zit vast met veel vragen; zowel over de ernst van de ecologische uitdagingen waar we voor staan;
-          over waarom politici er niet in slagen afdoende maatregelen te nemen; als over de burgerassemblee.</p>
+        <h1 class="c-page-title" style="max-width: unset;">{{ 'Mail your representatives' | translate }}</h1>
       </ng-container>
 
       <ng-container *ngIf="sent">
