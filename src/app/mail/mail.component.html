@@ -213,4 +213,22 @@
       </div>
     </div>
   </div>
+
+  <div class="c-panel u-background-color-blue-gradient u-color-white" *ngIf="sent">
+    <div class="container s-editor u-text-align-center">
+      <h3>What more can you do?</h3>
+
+      <ul style="text-align: left;">
+        <li>Follow us on <a href="https://www.facebook.com/hetburgerparlement/">Facebook</a>.</li>
+        <li>Let your friends know: #ikhebdaarietsovertezeggen #hetburgerparlement</li>
+        <li>Use one of our Facebook frames</li>
+        <li>Spread the word among your friends!</li>
+      </ul>
+
+      <button class="c-button">
+        <a target="_blank" [href]="getRandomTwitterUrl()" class="c-button__label">Tweet about it!</a>
+      </button>
+
+    </div>
+  </div>
 </main>

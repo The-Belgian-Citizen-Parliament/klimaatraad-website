@@ -12,6 +12,7 @@ import { FR_BODIES, FR_SUBJECTS, NL_BODIES, NL_SUBJECTS } from './mail-options';
 import { mpsBrussels } from './mps/brussels';
 import { mpsFlemish } from './mps/flemish';
 import { mpsWalloon } from './mps/walloon';
+import { tweets } from './tweets';
 
 @Component({
   selector: 'app-mail',
@@ -49,6 +50,8 @@ import { mpsWalloon } from './mps/walloon';
 })
 export class MailComponent implements OnInit, OnDestroy {
   @ViewChild('customSubject') customSubjectElement: ElementRef;
+
+  lang = environment.language;
 
   mails: Mail[];
   newMail: Mail;
@@ -206,5 +209,13 @@ export class MailComponent implements OnInit, OnDestroy {
       this.customSubject = true;
       setTimeout(() => this.customSubjectElement.nativeElement.focus());
     }
+  }
+
+  getRandomTwitterUrl() {
+    const twitterContent = tweets[this.lang];
+    const randomText = twitterContent.texts[Math.floor(Math.random() * twitterContent.texts.length)];
+    const base = 'https://twitter.com/intent/tweet?text='
+    const tweet = encodeURIComponent(`${randomText} ${twitterContent.tags} ${twitterContent.url}`);
+    return base + tweet;
   }
 }
