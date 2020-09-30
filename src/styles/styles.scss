@@ -40,3 +40,9 @@ body {
 .container-wide {
   max-width: map-get($width-units, '8');
 }
+
+app-root {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+}

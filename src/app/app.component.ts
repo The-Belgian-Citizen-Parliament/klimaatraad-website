@@ -12,7 +12,7 @@ import * as relativeTime from 'dayjs/plugin/relativeTime';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'body',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
