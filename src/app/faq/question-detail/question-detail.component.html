@@ -1,21 +1,35 @@
-<section class="features-extended section">
-  <div class="container">
-    <div class="features-extended-inner section-inner">
-      <div class="features-extended-header text-center">
-        <div class="container-sm">
-          <h2 class="section-title mt-0">{{ question.question }} </h2>
-        </div>
-      </div>
+<main id="main">
+  <div class="c-panel u-background-color-blue-powder">
+    <div class="container">
+      <app-question [question]="question"></app-question>
+    </div>
+  </div>
 
-      <app-question [question]="question" [answerOnly]="true"></app-question>
+  <div class="c-panel">
+    <div class="container">
+      <h3>{{ 'Check out these other questions' | translate }}...</h3>
 
-      <h3 class="has-top-divider">{{ 'Other questions' | translate }}</h3>
-
-      <app-question *ngFor="let question of randomQuestions" [question]="question"></app-question>
-
-      <div class="features-extended-header text-center has-top-divider">
-        {{ 'Check out' | translate }} <a routerLink="/faq">{{ 'all questions' | translate }}</a>!
+      <div class="question-container" *ngFor="let question of randomQuestions">
+        <app-question [question]="question"></app-question>
       </div>
     </div>
   </div>
-</section>
+
+  <p class="c-callout">
+    {{ 'Check out' | translate }} <a routerLink="/faq">{{ 'all questions' | translate }}</a>!
+  </p>
+
+  <div class="c-panel u-background-color-blue-gradient u-color-white">
+    <div class="container s-editor u-text-align-center">
+      <h3>This is a heading</h3>
+
+      <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus
+        auctor fringilla.</p>
+
+      <button class="c-button">
+        <span class="c-button__label">Take part</span>
+      </button>
+
+    </div>
+  </div>
+</main>
