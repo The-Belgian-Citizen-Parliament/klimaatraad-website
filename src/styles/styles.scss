@@ -34,3 +34,9 @@ body {
 .c-callout {
   display: block;
 }
+
+// Main styles additions
+
+.container-wide {
+  max-width: map-get($width-units, '8');
+}
