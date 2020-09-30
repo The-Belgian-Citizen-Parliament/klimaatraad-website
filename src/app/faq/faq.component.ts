@@ -17,6 +17,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   lang = environment.language;
 
   filter = '';
+  tagFilter = null;
 
   questionPlaceholder = '';
   questionExamples = ['klimaat', 'burger', 'politici', 'legitiem'];
@@ -79,5 +80,13 @@ export class FaqComponent implements OnInit, OnDestroy {
     }
   }
 
-  clearFilter = () => this.filter = '';
+  setTagFilter(tag) {
+    this.tagFilter = tag;
+    this.filteredQuestions = this.allQuestions.filter(q => q.tags && q.tags.includes(tag));
+  }
+
+  clearFilter() {
+    this.tagFilter = null;
+    this.filter = '';
+  }
 }

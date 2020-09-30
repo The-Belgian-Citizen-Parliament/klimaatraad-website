@@ -15,7 +15,11 @@
           (keyup)="filterQuestions()">
       </div>
 
-      <ng-container *ngIf="!filter">
+      <div *ngIf="tagFilter">
+        <h4>{{ 'Tag filter' | translate }} <small><span class="c-tag c-tag__label">{{ tagFilter }}</span> (<a [routerLink]="" (click)="clearFilter()">{{ 'clear' | translate }}</a>)</small></h4>
+      </div>
+
+      <ng-container *ngIf="!filter && !tagFilter">
         <div *ngFor="let topic of groupedQuestions" class="topic">
           <h4 style="text-transform: capitalize;">{{ topic.topic }}</h4>
           <ul class="c-list c-list--questions">
@@ -30,20 +34,20 @@
 
   <div class="c-panel">
     <div class="container">
-      <ng-container *ngIf="!filter">
+      <ng-container *ngIf="!filter && !tagFilter">
         <div *ngFor="let topic of groupedQuestions" class="question-container">
           <div *ngFor="let question of topic.questions" [id]="question.slug" class="question-container">
-            <app-question [question]="question"></app-question>
+            <app-question [question]="question" (tagClicked)="setTagFilter($event)"></app-question>
           </div>
         </div>
       </ng-container>
 
-      <ng-container *ngIf="filter">
+      <ng-container *ngIf="filter || tagFilter">
         <div *ngFor="let question of filteredQuestions" class="question-container">
-          <app-question [question]="question"></app-question>
+          <app-question [question]="question" (tagClicked)="setTagFilter($event)"></app-question>
         </div>
 
-        <p *ngIf="filter && filter.length > 2 && filteredQuestions.length == 0">
+        <p *ngIf="(filter || tagFilter) && filter.length > 2 && filteredQuestions.length == 0">
           Geen vragen gevonden met deze filter. <a [routerLink]="" (click)="clearFilter()">Toon terug alle vragen</a>
         </p>
       </ng-container>

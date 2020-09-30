@@ -22,7 +22,7 @@
 
     <ul class="c-tag-list">
       <li class="c-tag-list__item" *ngFor="let tag of question.tags">
-        <a class="c-tag" href="#0">
+        <a class="c-tag" [routerLink]="" (click)="tagClicked(tag)">
           <span class="c-tag__label">{{ tag }}</span>
         </a>
       </li>

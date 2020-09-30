@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Question } from '../questions';
 
@@ -11,8 +11,11 @@ export class QuestionComponent {
   @Input() question: Question;
   @Input() answerOnly: boolean;
 
+  @Output('tagClicked') tagClickedEmitter = new EventEmitter<string>()
+
   lang = environment.language;
   expanded = false;
 
   expand = () => this.expanded = !this.expanded;
+  tagClicked = (tag) => this.tagClickedEmitter.emit(tag);
 }
