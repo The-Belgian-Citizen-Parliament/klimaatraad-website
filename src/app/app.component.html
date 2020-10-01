@@ -1,8 +1,8 @@
-<header class="c-site-header" id="site-header"><a class="c-logo" href="#0">
-    <span class="u-visually-hidden">The Belgian Citizen Parliament</span>
-    <img class="c-logo-image" src="{{ lang === 'fr' ? '/assets/logo-fr.png' : '/assets/logo-nl.png' }}">
-    <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true" style="display: none;">
-      <use xlink:href="#logo-citizen-parliament"></use>
+<header class="c-site-header" id="site-header"><a class="c-logo" routerLink="/">
+    <span class="u-visually-hidden">The Belgian Citizens' Parliament</span>
+    <svg class="c-logo__image" viewBox="0 0 400 360" role="img" aria-hidden="true">
+      <use *ngIf="lang === 'nl'" xlink:href="#logo-nl-colour"></use>
+      <use *ngIf="lang === 'fr'" xlink:href="#logo-fr-colour"></use>
     </svg>
   </a>
   <nav class="c-nav" aria-label="Navigation">
@@ -39,44 +39,11 @@
   </div>
 </header>
 
-<!-- <header class="site-header" [class.small]="smallHeader">
-    <div class="container">
-      <div class="site-header-inner">
-        <div class="brand header-brand">
-          <a routerLink="/">
-            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <title>Het Burgerparlement</title>
-              <defs>
-                <radialGradient cy="0%" fx="50%" fy="0%" r="100%" id="logo-gradient-footer">
-                  <stop stop-color="#00A2B8" offset="0%" />
-                  <stop stop-color="#00F9D2" offset="100%" />
-                </radialGradient>
-              </defs>
-              <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm0-10a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
-                fill="url(#logo-gradient-footer)" fill-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
-        <ul class="header-links list-reset m-0">
-          <li>
-            <a [routerLink]="lang === 'fr' ? '/proposition' : '/voorstel'">{{ 'The proposal' | translate }}</a>
-          </li>
-          <li>
-            <a routerLink="/faq">{{ 'Frequently Asked Questions' | translate }}</a>
-          </li>
-          <li>
-            <a class="button-evelyn button-sm button-shadow"
-              [routerLink]="lang === 'fr' ? '/participer' : '/deelnemen'">{{ 'Participate' | translate }}</a>
-          </li>
-          <li style="padding-left: 8px">
+<!--
             <a *ngIf="lang !== 'fr'" href="https://www.leparlementcitoyen.be" style="padding-left: 8px; padding-right: 8px;">FR</a>
             <a *ngIf="lang !== 'nl'" href="https://www.hetburgerparlement.be" style="padding-left: 8px; padding-right: 8px;">NL</a>
             <a *ngIf="lang !== 'en'" [routerLink]="" (click)="setLanguage('en')" style="padding-left: 8px; padding-right: 8px;">EN</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header> -->
+ -->
 
 <main>
   <router-outlet></router-outlet>
@@ -102,39 +69,39 @@
             </li>
           </ul>
         </nav>
-
       </div>
+
       <div class="grid__cell">
         <div class="c-icon-group">
-          <a class="c-icon" href="https://twitter.com" data-icon-entity="">
+          <a class="c-icon" href="https://twitter.com" data-icon-entity="&#xf099;">
             <span class="u-visually-hidden">Twitter</span>
           </a>
-          <a class="c-icon" href="https://facebook.com" data-icon-entity="">
+          <a class="c-icon" href="https://facebook.com" data-icon-entity="&#xf09a;">
             <span class="u-visually-hidden">Facebook</span>
           </a>
-          <a class="c-icon" href="https://instagram.com" data-icon-entity="">
+          <a class="c-icon" href="https://instagram.com" data-icon-entity="&#xf16d;">
             <span class="u-visually-hidden">Instagram</span>
           </a>
         </div>
-
       </div>
+
       <div class="grid__cell">
-        <a class="c-logo" href="#0">
-          <span class="u-visually-hidden">The Belgian Citizen Parliament</span>
-          <img class="c-logo-image" src="{{ lang === 'fr' ? '/assets/logo-fr.png' : '/assets/logo-nl.png' }}">
-          <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true" style="display: none;">
-            <use xlink:href="#logo-citizen-parliament"></use>
+        <a class="c-logo" routerLink="/">
+          <span class="u-visually-hidden">The Belgian Citizens' Parliament</span>
+          <svg class="c-logo__image" viewBox="0 0 400 360" role="img" aria-hidden="true">
+            <use *ngIf="lang === 'nl'" xlink:href="#logo-nl-mono"></use>
+            <use *ngIf="lang === 'fr'" xlink:href="#logo-fr-mono"></use>
           </svg>
         </a>
-
       </div>
+
       <div class="grid__cell">
-        <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus
-          auctor fringilla.</p>
+        <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
         <p class="small">This is small text. At iam decimum annum in spelunca iacet.</p>
-
       </div>
     </div>
   </div>
 </footer>
+
+<app-svg-logos></app-svg-logos>

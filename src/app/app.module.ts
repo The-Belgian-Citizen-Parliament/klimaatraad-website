@@ -23,6 +23,7 @@ import { MemorandumComponent } from './memorandum/memorandum.component';
 import { MpComponent } from './mail/mp/mp.component';
 import { QuestionDetailComponent } from './faq/question-detail/question-detail.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { SvgLogosComponent } from './svg/svg-logos.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
     MpComponent,
     QuestionDetailComponent,
     PrivacyComponent,
+    SvgLogosComponent,
   ],
   imports: [
     TranslateModule,
