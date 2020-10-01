@@ -24,6 +24,7 @@ import { MpComponent } from './mail/mp/mp.component';
 import { QuestionDetailComponent } from './faq/question-detail/question-detail.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { SvgLogosComponent } from './svg/svg-logos.component';
+import { SeoService } from './seo.service';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { SvgLogosComponent } from './svg/svg-logos.component';
     MailService,
     QuestionsService,
     Title,
+    SeoService,
   ],
   bootstrap: [AppComponent]
 })
