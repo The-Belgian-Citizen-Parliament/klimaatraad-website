@@ -9,7 +9,7 @@ a {
  */
 
 a[href="#main"] {
-  background-color: map-get($colors, 'blue');
+  background-color: map-get($colors, 'black');
   bottom: 100%;
   color: map-get($colors, 'white');
   cursor: pointer;

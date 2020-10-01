@@ -35,6 +35,6 @@
   }
 
   &[data-selected="true"] .c-media-object__figure {
-    background-color: map-get($colors, 'green');
+    background-color: map-get($colors, 'orange');
   }
 }

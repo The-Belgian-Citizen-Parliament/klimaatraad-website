@@ -15,7 +15,6 @@ body {
 
   &:before,
   &:after {
-    background-color: map-get($colors, 'blue-powder');
     content: '';
     position: fixed;
     z-index: 9999;
@@ -28,15 +27,17 @@ html {
   &:before,
   &:after {
     left: 0;
-    height: map-get($spacing-units, '5');
+    height: map-get($spacing-units, '3');
     right: 0;
   }
 
   &:before {
+    background-color: map-get($colors, 'pink');
     top: 0;
   }
 
   &:after {
+    background-color: map-get($colors, 'lemon');
     bottom: 0;
   }
 }
@@ -45,13 +46,15 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: map-get($spacing-units, '5');
+  padding: map-get($spacing-units, '3');
 
   &:before,
   &:after {
+    background-color: map-get($colors, 'pink');
+    background-image: linear-gradient(to bottom, transparent, map-get($colors, 'lemon'));
     bottom: 0;
     top: 0;
-    width: map-get($spacing-units, '5');
+    width: map-get($spacing-units, '3');
   }
 
   &:before {

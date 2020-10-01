@@ -1,5 +1,5 @@
 .c-site-footer {
-  background-color: map-get($colors, 'blue-powder');
+  background-color: map-get($colors, 'lemon');
   margin: 0 -#{map-get($spacing-units, '5')};
   padding: map-get($spacing-units, '7') 0;
 
@@ -72,8 +72,6 @@
   }
 
   .c-logo {
-    filter: grayscale(100%) brightness(25%);
-
     @include media-query('max:060') {
       margin: map-get($spacing-units, '5') auto;
     }
@@ -86,6 +84,13 @@
   /*a*/.c-nav__button {
     @include feature-query('mask-image') {
       background-color: map-get($colors, 'black');
+      color: map-get($colors, 'white');
+
+      &:hover,
+      &:focus {
+        background-color: map-get($colors, 'orange-red');
+        color: map-get($colors, 'white');
+      }
     }
   }
 }

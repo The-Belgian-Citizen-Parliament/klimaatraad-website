@@ -9,8 +9,8 @@
 
   &:hover,
   &:focus {
-    background-color: map-get($colors, 'blue');
-    color: map-get($colors, 'white');
+    background-color: map-get($colors, 'lemon');
+    color: map-get($colors, 'black');
   }
 
   &:hover .c-tag__label,
@@ -21,7 +21,7 @@
 
 
 /**
- *
+ * Modifiers.
  */
 
 /*a*/.c-tag--hashtag {

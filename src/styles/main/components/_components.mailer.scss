@@ -1,7 +1,9 @@
 .c-mailer {
+  background-color: map-get($colors, 'white');
   border: 2px solid currentColor;
   color: map-get($colors, 'black');
   display: flex;
+  margin-top: map-get($spacing-units, '6');
   text-align: left;
 
   @include feature-query('grid') {

@@ -1,7 +1,6 @@
 .c-site-header {
   @extend %container;
   align-items: center;
-  color: map-get($colors, 'blue');
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;

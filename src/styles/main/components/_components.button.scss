@@ -1,11 +1,12 @@
 .c-button {
-  background-color: map-get($colors, 'blue-powder');
+  background-color: map-get($colors, 'black');
   border: 1px solid transparent;
-  color: map-get($colors, 'black');
+  color: map-get($colors, 'white');
   cursor: pointer;
   display: inline-block;
   font-weight: map-get($font-weights, 'medium');
   line-height: 3;
+  outline: none;
   padding: 0 1em;
   text-decoration: none;
   white-space: nowrap;
@@ -23,12 +24,16 @@
 
   &:hover,
   &:focus {
-    background-color: map-get($colors, 'blue');
+    background-color: map-get($colors, 'orange-red');
     color: map-get($colors, 'white');
 
     .c-button__label {
       text-decoration: underline;
     }
+  }
+
+  &:focus .c-button__label {
+    outline: 1px dotted currentColor;
   }
 
   &[aria-current="page"],
@@ -41,21 +46,5 @@
   &[aria-disabled="true"],
   &[disabled] {
     opacity: 0.3;
-  }
-}
-
-
-/**
- * Modifiers.
- */
-
-.c-button--ghost {
-  background-color: transparent;
-  border-color: currentColor;
-
-  &:hover,
-  &:focus {
-    background-color: transparent;
-    color: map-get($colors, 'blue');
   }
 }
