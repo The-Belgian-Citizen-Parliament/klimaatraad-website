@@ -24,8 +24,13 @@ export class QuestionDetailComponent {
     this.randomQuestions = questionService.getRandomQuestions(3);
 
     translate.get('title').subscribe(((title) => {
-      seoService.updateTitle(this.question.question + ' - ' + title);
-      seoService.updateDescription(this.question.summary);
+      seoService.updateTitle(this.stripHtml(this.question.question) + ' - ' + title);
+      seoService.updateDescription(this.stripHtml(this.question.summary));
     }));
+  }
+
+  // Source: https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/822486#822486
+  stripHtml(html) {
+    return html.replace(/<[^>]*>?/gm, '');
   }
 }
