@@ -1,0 +1,17 @@
+/**
+ * Hide an element visually. The element will be visible to assistive technologies.
+ *
+ * @link https://a11yproject.com/posts/how-to-hide-content/
+ */
+
+%visually-hidden,
+.u-visually-hidden {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}

@@ -1,0 +1,25 @@
+/**
+ * +-----------------------+
+ * |     |###########|     |
+ * +-----------------------+
+ */
+
+%bookend {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  > * + * {
+    margin-left: $gutter-width;
+    margin-left: var(--gutter-width, $gutter-width);
+  }
+
+  /**
+   * 1. Limit structure to a maximum of _two_ child elements.
+   */
+
+  > *:nth-child(n+3) {
+    display: none !important; /* 1 */
+  }
+}

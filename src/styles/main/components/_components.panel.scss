@@ -1,0 +1,4 @@
+.c-panel {
+  @extend %stack;
+  padding: map-get($spacing-units, '8') 0;
+}

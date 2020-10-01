@@ -1,0 +1,23 @@
+/* stylelint-disable */
+
+/**
+ * Path to Font Awesome fonts relative to the compiled stylesheet
+ * (e.g. `font-awesome.min.css`).
+ */
+
+$fa-font-path: '/assets/fonts/font-awesome/';
+
+
+/**
+ * Import Font Awesome SCSS files from the package directory. Paths are specified
+ * relative to the current directory.
+ *
+ * @link https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers#installing-free
+ */
+
+@import "./../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "./../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "./../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "./../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
+/* stylelint-enable */

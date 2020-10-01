@@ -1,0 +1,23 @@
+@each $alias, $weight in $font-weights {
+  .u-font-weight-#{$alias} {
+    font-weight: $weight !important;
+  }
+}
+
+@each $alignment in ('left', 'center', 'right') {
+  .u-text-align-#{$alignment} {
+    text-align: #{$alignment} !important;
+  }
+}
+
+.u-text-decoration-none {
+  text-decoration: none !important;
+}
+
+.u-text-transform-lowercase {
+  text-transform: lowercase !important;
+}
+
+.u-text-transform-uppercase {
+  text-transform: uppercase !important;
+}

@@ -1,0 +1,173 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 0 !important;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address,
+code,
+pre,
+small {
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address {
+  font-style: normal;
+  font-weight: normal;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+br {
+  margin-top: 0 !important;
+}
+
+code {
+  display: inline-block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+table,
+tbody,
+tfoot,
+thead,
+td,
+th,
+tr {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  border: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+textarea {
+  display: block;
+  overflow: auto;
+  resize: none;
+}
+
+
+/**
+ * Disable animations and transitions for users who prefer reduced motion.
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/**
+ * Normalise the `select` element.
+ */
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #FFF;
+  border-radius: 0;
+  text-indent: 0.01px;
+  text-overflow: '';
+
+  &::-ms-expand {
+    display: none !important;
+  }
+}
+
+
+/**
+ * Normalise the `button` element.
+ */
+
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  overflow: visible;
+  text-decoration: none;
+  -webkit-font-smoothing: inherit;
+}
+
+
+/**
+ * Remove inner borders and padding in Firefox.
+ */
+
+button,
+input {
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+
+/**
+ * Hide the input clear button in IE10-11 and Microsoft Edge.
+ *
+ * @link https://developer.mozilla.org/en-US/docs/Web/CSS/::-ms-clear
+ */
+
+input::-ms-clear {
+  display: none !important;
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}

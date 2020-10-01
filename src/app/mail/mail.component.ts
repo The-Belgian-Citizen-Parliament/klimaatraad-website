@@ -1,4 +1,8 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import * as dayjs from 'dayjs';
+
 import { Mail } from './mail';
 import { MailService } from './mail.service';
 import { environment } from 'src/environments/environment';
@@ -8,14 +12,46 @@ import { FR_BODIES, FR_SUBJECTS, NL_BODIES, NL_SUBJECTS } from './mail-options';
 import { mpsBrussels } from './mps/brussels';
 import { mpsFlemish } from './mps/flemish';
 import { mpsWalloon } from './mps/walloon';
+import { tweets } from './tweets';
 
 @Component({
   selector: 'app-mail',
   templateUrl: './mail.component.html',
-  styleUrls: ['./mail.component.scss']
+  styleUrls: ['./mail.component.scss'],
+  animations: [
+    trigger("inOutAnimation", [
+      state("in", style({ opacity: 1 })),
+      transition(":enter", [
+        animate(
+          300,
+          keyframes([
+            style({ opacity: 0, offset: 0 }),
+            style({ opacity: 0.25, offset: 0.25 }),
+            style({ opacity: 0.5, offset: 0.5 }),
+            style({ opacity: 0.75, offset: 0.75 }),
+            style({ opacity: 1, offset: 1 }),
+          ])
+        )
+      ]),
+      transition(":leave", [
+        animate(
+          300,
+          keyframes([
+            style({ opacity: 1, offset: 0 }),
+            style({ opacity: 0.75, offset: 0.25 }),
+            style({ opacity: 0.5, offset: 0.5 }),
+            style({ opacity: 0.25, offset: 0.75 }),
+            style({ opacity: 0, offset: 1 }),
+          ])
+        )
+      ])
+    ])
+  ]
 })
-export class MailComponent {
+export class MailComponent implements OnInit, OnDestroy {
   @ViewChild('customSubject') customSubjectElement: ElementRef;
+
+  lang = environment.language;
 
   mails: Mail[];
   newMail: Mail;
@@ -45,12 +81,18 @@ export class MailComponent {
   selectionFilterSet = false;
   selectionComplete = false;
   personalDataComplete = false;
+  consentGiven = false;
   sent = false;
 
   customSubject = false;
   selectedMpListExpanded = false;
 
-  constructor(private mailService: MailService) {
+  isBrowser = false;
+  getMailsTimer = null;
+
+  constructor(@Inject(PLATFORM_ID) platformId: string, private mailService: MailService) {
+    this.isBrowser = isPlatformBrowser(platformId);
+
     this.subjects = environment.language === 'nl' ? NL_SUBJECTS : FR_SUBJECTS;
     this.bodies = environment.language === 'nl' ? NL_BODIES : FR_BODIES;
 
@@ -61,6 +103,7 @@ export class MailComponent {
     this.newMail.postalCode = '1070';
     this.newMail.firstName = 'Vincent';
     this.newMail.lastName = 'Sels';
+    this.newMail.lang = environment.language;
     this.newMail.allowPublic = true;
     this.newMail.allowReplies = true;
     this.newMail.stayUpToDate = false;
@@ -70,6 +113,16 @@ export class MailComponent {
   }
 
   ngOnInit() {
+    this.getMails();
+
+    if (this.isBrowser) this.getMailsTimer = setInterval(() => this.getMails(), 3000);
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.getMailsTimer);
+  }
+
+  getMails() {
     this.mailService
       .getLastMails()
       .then((mails: Mail[]) => {
@@ -77,11 +130,11 @@ export class MailComponent {
       });
   }
 
+  formatRelativeTime = (sentOn) => dayjs().to(sentOn);
+  mailTrackBy = (idx, mail: Mail) => mail.sentOn;
+
   sendMail() {
-    this.mailService.createMail(this.newMail).then(() => this.mails = [
-      this.newMail,
-      ...this.mails,
-    ]);
+    this.mailService.createMail(this.newMail).then(() => this.getMails());
     this.sent = true;
   }
 
@@ -128,6 +181,15 @@ export class MailComponent {
     this.selectionComplete = true;
   }
 
+  completePersonalData(completed) {
+    this.personalDataComplete = completed;
+    if (completed) {
+      this.newMail.body += this.newMail.firstName + ' ' + this.newMail.lastName;
+    } else {
+      this.newMail.body = this.newMail.body.replace(this.newMail.firstName + ' ' + this.newMail.lastName, '');
+    }
+  }
+
   clearSelected() {
     this.selectedMps = [];
     this.mps.forEach(mp => mp.selected = false)
@@ -147,5 +209,13 @@ export class MailComponent {
       this.customSubject = true;
       setTimeout(() => this.customSubjectElement.nativeElement.focus());
     }
+  }
+
+  getRandomTwitterUrl() {
+    const twitterContent = tweets[this.lang];
+    const randomText = twitterContent.texts[Math.floor(Math.random() * twitterContent.texts.length)];
+    const base = 'https://twitter.com/intent/tweet?text='
+    const tweet = encodeURIComponent(`${randomText} ${twitterContent.tags} ${twitterContent.url}`);
+    return base + tweet;
   }
 }

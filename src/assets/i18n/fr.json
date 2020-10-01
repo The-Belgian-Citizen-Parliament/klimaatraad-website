@@ -1,7 +1,11 @@
 {
+  "title": "Le Parlement Citoyen",
+  "description": "Onze nieuwe regering wil meer burgerparticipatie in de politiek en tegelijk ambitieuze milieumaatregelen? Het Burgerparlement heeft een concreet voorstel klaar! 101 burgers, representatief voor de Belgische bevolking, die gesteund door wetenschappers en experten nadenken over hoe we de grootste uitdaging van onze tijd te lijf kunnen gaan.",
+
   "The proposal": "La proposition",
+  "FAQ": "FAQ",
   "Frequently Asked Questions": "Questions et réponses",
-  "Participate": "Participer",
+  "Take part": "Participer",
   "About us": "About us",
   "Contact": "Contact",
   "Press": "Presse",
@@ -54,6 +58,7 @@
   "weWillKeepYouUpToDate": "We zullen je hoe dan ook op de hoogte houden van het verdere verloop van deze actie.",
   "No email": "Geen email adres",
   "No representatives found with these filters": "Geen vertegenwoordigers gevonden met deze filters",
+  "I have read and accept the": "I have read and accept the",
 
   "Antwerpen": "Anvers",
   "Brussel-Hoofdstad": "Bruxelles",

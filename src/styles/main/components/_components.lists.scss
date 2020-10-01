@@ -1,0 +1,42 @@
+/*dl*/.c-list--attributes {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: font-unit('micro');
+
+  /*dt*/.c-list__term,
+  /*dd*/.c-list__definition {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  /*dt*/.c-list__term {
+    flex-basis: percentage(1/3);
+    flex-grow: 1;
+    font-weight: map-get($font-weights, 'medium');
+    min-width: map-get($width-units, '1');
+    padding-right: map-get($spacing-units, '5');
+  }
+
+  /*dd*/.c-list__definition {
+    flex-basis: percentage(2/3);
+  }
+}
+
+/*ol*/.c-list--contents {
+  font-size: font-unit('micro');
+  padding-left: 2em;
+}
+
+/*ul*/.c-list--questions {
+  @extend %stack;
+  --gutter-width: #{map-get($spacing-units, '2')};
+  font-size: font-unit('small');
+  padding-left: 2em;
+}
+
+/*ul*/.c-list--recipients {
+  @extend %cluster;
+  --gutter-width: #{map-get($spacing-units, '2')};
+  list-style: none;
+}

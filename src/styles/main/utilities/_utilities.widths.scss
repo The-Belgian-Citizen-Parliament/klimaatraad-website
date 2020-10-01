@@ -1,0 +1,11 @@
+:root {
+  @each $alias, $unit in $width-units {
+    --w#{$alias}: #{$unit};
+  }
+}
+
+@each $alias, $unit in $width-units {
+  .u-max-width-#{$alias} {
+    max-width: $unit !important;
+  }
+}

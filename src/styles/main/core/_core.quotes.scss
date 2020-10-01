@@ -1,0 +1,32 @@
+blockquote p, q, .quote {
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
+
+blockquote {
+  @extend %stack;
+
+  p {
+    @extend %h5;
+    font-weight: map-get($font-weights, 'bold');
+  }
+
+  footer {
+    font-size: font-unit('small');
+
+    &:before {
+      background-color: currentColor;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      margin-right: 1ch;
+      vertical-align: middle;
+      width: 2ch;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/**
+ * +-----------------------+
+ * |####|             |####|
+ * +-----------------------+
+ */
+
+%container,
+.container {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: map-get($width-units, '5');
+  padding: 0 $gutter-width;
+  width: 95%;
+}

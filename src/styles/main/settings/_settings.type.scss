@@ -1,0 +1,79 @@
+/**
+ * Calculate the default font unit by converting the base font unit to `vw`
+ * (viewport width) units and adding the value to 1em.
+ */
+
+$font-unit: calc(#{$base-font-unit * 1vw} + 1em);
+
+
+/**
+ * A scale comprised of key-value pairs which can be used to output aliased
+ * font size values.
+ *
+ * @prop {String} key
+ * An alias for the multiplier.
+ *
+ * @prop {Number} value
+ * The multiplier. When passed to the `font-unit` function, this value is
+ * multiplied by a given unit (e.g. 1em) in order to return a valid font-size
+ * property value.
+ *
+ * 1. Equivalent to the default font unit.
+ */
+
+$font-units: (
+  'h1': 3,
+  'h2': 2.5,
+  'h3': 2,
+  'h4': 1.5,
+  'h5': 1.33,
+  'h6': 1.125,
+  'default': 1, /* 1 */
+  'small': 0.875,
+  'micro': 0.825
+);
+
+
+/**
+ * Assign font family variables.
+ *
+ * @var {String} $font-family-sans
+ * @var {String} $font-family-serif
+ * @var {String} $font-family-mono
+ * @var {String} $font-family-icon
+ * @var {String} $font-family-icon-brands
+ * @var {String} $font-family-display
+ *
+ * 1. Presumes the installation of Font Awesome (see font-awesome.scss).
+ */
+
+$font-family-sans: 'Roboto', Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, Times, serif;
+$font-family-mono: 'Courier, Courier New, monospace';
+$font-family-icon: 'Font Awesome\ 5 Free'; /* 1 */
+$font-family-icon-brands: 'Font Awesome\ 5 Brands'; /* 1 */
+$font-family-display: $font-family-sans;
+
+
+/**
+ * A list of key-value pairs which can be used to output aliased font weight
+ * values and utility classes.
+ *
+ * @prop {String} key
+ * An alias for the property value.
+ *
+ * @prop {Number} value
+ * The actual property value.
+ */
+
+$font-weights: (
+  'thin': 100,
+  'extralight': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'extrabold': 800,
+  'black': 900
+);

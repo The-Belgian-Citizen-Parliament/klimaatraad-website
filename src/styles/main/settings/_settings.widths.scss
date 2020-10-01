@@ -1,0 +1,35 @@
+/**
+ * Set the maximum page width as a multiple of the default spacing unit.
+ *
+ * @var {Number} $width-page-max
+ */
+
+$width-page-max: ($spacing-unit * 80);
+
+
+/**
+ * A scale comprised of key-value pairs which can be used to output aliased
+ * width values and utility classes.
+ *
+ * @prop {String} key
+ * An alias for the width value.
+ *
+ * @prop {Number} value
+ * The actual width value.
+ *
+ * 1. The scale's midpoint. Returns a value equivalent to half of the maximum
+ * page width.
+ */
+
+$width-units: (
+  '0': 0,
+  '1': (($width-page-max / 8) * 0.5),
+  '2': (($width-page-max / 8) * 1),
+  '3': (($width-page-max / 8) * 2),
+  '4': (($width-page-max / 8) * 3),
+  '5': (($width-page-max / 8) * 4), /* 1 */
+  '6': (($width-page-max / 8) * 5),
+  '7': (($width-page-max / 8) * 6),
+  '8': (($width-page-max / 8) * 7),
+  '9': $width-page-max
+);

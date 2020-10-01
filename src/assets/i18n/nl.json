@@ -1,7 +1,11 @@
 {
+  "title": "Het Burgerparlement",
+  "description": "Onze nieuwe regering wil meer burgerparticipatie in de politiek en tegelijk ambitieuze milieumaatregelen? Het Burgerparlement heeft een concreet voorstel klaar! 101 burgers, representatief voor de Belgische bevolking, die gesteund door wetenschappers en experten nadenken over hoe we de grootste uitdaging van onze tijd te lijf kunnen gaan.",
+
   "The proposal": "Het voorstel",
+  "FAQ": "FAQ",
   "Frequently Asked Questions": "Veelgestelde vragen",
-  "Participate": "Doe mee",
+  "Take part": "Neem deel",
   "About us": "Over ons",
   "Contact": "Contact",
   "Press": "Pers",
@@ -64,6 +68,7 @@
   "step3title": "Stel je mail op",
   "step3explanation": "Neem je tijd om uit te leggen waarom dit belangrijk is voor jou, of gebruik één van de voorgedefiniëerde onderwerpen en teksten als je gehaast bent",
   "No representatives found with these filters": "Geen vertegenwoordigers gevonden met deze filters",
+  "I have read and accept the": "Ik ga akkoord met de",
 
   "Antwerpen": "Antwerpen",
   "Brussel-Hoofdstad": "Brussel",

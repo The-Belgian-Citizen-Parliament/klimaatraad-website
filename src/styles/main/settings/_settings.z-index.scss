@@ -1,0 +1,31 @@
+/**
+ * A list of key-value pairs which can be used to output aliased z-index values.
+ *
+ * @prop {String} key
+ * An alias for the z-index value.
+ *
+ * @prop {Number} value
+ * The actual z-index value.
+ */
+
+$z-indexes: (
+
+  /**
+   * Global z-index values.
+   */
+
+  'below': -1,
+  'root': 0,
+  'standard': 1,
+  'above': 2,
+
+  /**
+   * Component-specific z-index values. These values should map to partials in
+   * the components layer.
+   */
+
+  'dropdown': 1000,
+  'notification': 7000,
+  'navigation': 8000,
+  'modal': 9000
+);

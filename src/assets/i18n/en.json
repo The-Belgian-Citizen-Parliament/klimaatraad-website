@@ -1,7 +1,11 @@
 {
+  "title": "The Citizens' Parliament",
+  "description": "Our new government wants more citizen participation in politics and at the same time ambitious environmental policy? The Citizens' Parliament has a proposition ready! 101 randomly selected citizens, representative of the Belgian population, who, with support of scientists and experts, think about the greatest challenge of our time.",
+
   "The proposal": "The proposal",
+  "FAQ": "FAQ",
   "Frequently Asked Questions": "Frequently Asked Questions",
-  "Participate": "Participate",
+  "Take part": "Take part",
   "About us": "About us",
   "Contact": "Contact",
   "Press": "Press",
@@ -68,6 +72,7 @@
   "step3title": "Compose your mail",
   "step3explanation": "Take your time to write why this is important to you, or use one of the predefined texts if you're in a hurry",
   "No representatives found with these filters": "No representatives found with these filters",
+  "I have read and accept the": "I have read and accept the",
 
   "Antwerpen": "Antwerp",
   "Brussel-Hoofdstad": "Brussels",

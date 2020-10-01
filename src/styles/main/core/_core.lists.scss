@@ -1,0 +1,14 @@
+dl:not([class]) {
+  dt {
+    font-weight: map-get($font-weights, 'bold');
+  }
+
+  dd + dt {
+    margin-top: 0.5em;
+  }
+}
+
+ol:not([class]),
+ul:not([class]) {
+  padding-left: 2em;
+}

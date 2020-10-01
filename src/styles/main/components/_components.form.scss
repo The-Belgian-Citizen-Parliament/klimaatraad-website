@@ -1,0 +1,146 @@
+.c-form,
+.c-form__section {
+  @extend %stack;
+}
+
+.c-form {
+  max-width: map-get($width-units, '6');
+}
+
+.c-form__field-group {
+  @extend %cluster;
+
+  > * {
+    flex-grow: 1;
+    min-width: map-get($width-units, '2');
+  }
+}
+
+.c-form__field > * + * {
+  margin-top: map-get($spacing-units, '3');
+}
+
+/*label*/.c-form__field__label,
+.c-form__field__instruction {
+  display: block;
+}
+
+/*label*/.c-form__field__label,
+/*label*/.c-form__option__label {
+  font-size: font-unit('small');
+}
+
+.c-form__field__instruction,
+/*ul*/.c-form__errors {
+  font-size: font-unit('micro');
+}
+
+/*ul*/.c-form__errors {
+  color: map-get($colors, 'red');
+  list-style: none;
+}
+
+.c-form__field--option + .c-form__field--option,
+.c-form__field__instruction {
+  margin-top: 0;
+}
+
+.c-form__field--option {
+  .c-form__input {
+    @extend %visually-hidden;
+
+    &[type="checkbox"] ~ .c-form__option__label:before {
+      content: '\f0c8'; /* far fa-square */
+    }
+
+    &[type="checkbox"]:checked ~ .c-form__option__label:before {
+      content: '\f14a'; /* far fa-check-square */
+    }
+
+    &[type="radio"] ~ .c-form__option__label:before {
+      content: '\f111'; /* far fa-circle */
+    }
+
+    &[type="radio"]:checked ~ .c-form__option__label:before {
+      font-weight: map-get($font-weights, 'black'); /* fas fa-circle */
+    }
+  }
+
+  /*label*/.c-form__option__label {
+    display: block;
+    margin-top: 0;
+    padding-left: 1.5em;
+    position: relative;
+
+    &:before {
+      color: currentColor;
+      font-family: $font-family-icon;
+      font-weight: map-get($font-weights, 'regular');
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+%form__input {
+  font-size: font-unit('small');
+  line-height: 2;
+  padding: 0 0.5em;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.c-form__input {
+  @at-root select#{&}, textarea#{&},
+  &[type="date"],
+  &[type="email"],
+  &[type="tel"],
+  &[type="text"],
+  &[type="url"] {
+    @extend %form__input;
+    background-color: map-get($colors, 'grey-pale');
+    border: 1px solid transparent;
+    color: map-get($colors, 'black');
+  }
+
+  @at-root textarea#{&} {
+    height: 10rem;
+    line-height: inherit;
+    padding: 1em;
+    white-space: normal;
+  }
+}
+
+
+/**
+ * Add icons to form inputs with an appropriate `data-icon` attribute.
+ */
+
+.c-form__input__wrapper {
+  color: map-get($colors, 'black');
+  position: relative;
+
+  &[data-icon-entity] {
+    &:after {
+      color: inherit;
+      content: attr(data-icon-entity);
+      font-family: $font-family-icon;
+      font-weight: map-get($font-weights, 'black');
+      margin-right: calc(1px + 0.5em);
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      @at-root .c-form__field--search & {
+        font-size: font-unit('micro');
+      }
+    }
+
+    .c-form__input {
+      padding-right: 2em;
+    }
+  }
+}

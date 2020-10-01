@@ -1,0 +1,42 @@
+/**
+ * Set the default spacing unit in rem (root em).
+ *
+ * @var {Number} $spacing-unit
+ */
+
+$spacing-unit: 1rem;
+
+
+/**
+ * A scale comprised of key-value pairs which can be used to output aliased
+ * spacing values and utility classes.
+ *
+ * @prop {String} key
+ * An alias for the spacing value.
+ *
+ * @prop {Number} value
+ * The actual spacing value.
+ *
+ * 1. The scale's midpoint. Returns a value equivalent to the default spacing unit.
+ */
+
+$spacing-units: (
+  '0': 0,
+  '1': ($spacing-unit * 0.125),
+  '2': ($spacing-unit * 0.25),
+  '3': ($spacing-unit * 0.5),
+  '4': ($spacing-unit * 0.75),
+  '5': ($spacing-unit), /* 1 */
+  '6': ($spacing-unit * 2),
+  '7': ($spacing-unit * 3),
+  '8': ($spacing-unit * 4),
+  '9': ($spacing-unit * 5)
+);
+
+
+/**
+ * Set the gutter width. This value is used to calculate default margins in the
+ * objects layer.
+ */
+
+$gutter-width: $spacing-unit;

@@ -1,0 +1,25 @@
+/**
+ * Return a valid `font-size` property value.
+ *
+ * @param {String} $alias [default]
+ * The font unit alias. This alias must match a key in the corresponding map.
+ *
+ * @param {Number} $unit [1em]
+ * The unit by which the aliased value will be multiplied.
+ */
+
+@function font-unit($alias: 'default', $unit: 1em) {
+
+  $map: $font-units;
+  $multiplier: map-get($map, $alias);
+
+  /**
+   * 1. If the multiplier is a valid unitless number, multiply it by the given unit.
+   */
+
+  @if type-of($multiplier) == 'number' and unitless($multiplier) == true {
+    @return ($unit * $multiplier); /* 1 */
+  } @else {
+    @error 'The supplied alias (#{$alias}) does not return a valid font unit.';
+  }
+}

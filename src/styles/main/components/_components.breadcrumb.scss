@@ -1,0 +1,17 @@
+/*ol*/.c-breadcrumb {
+  font-size: font-unit('small');
+}
+
+/*li*/.c-breadcrumb__item {
+  display: inline;
+
+  & + #{&}:before {
+    content: '\2192'; /* &rarr; */
+  }
+
+  a[aria-current="page"] {
+    cursor: pointer;
+    pointer-events: none;
+    text-decoration: none;
+  }
+}

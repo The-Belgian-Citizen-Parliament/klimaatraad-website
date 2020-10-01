@@ -1,0 +1,12 @@
+.c-badge {
+  background-color: map-get($colors, 'white');
+  border: 1px solid currentColor;
+  border-radius: 1em;
+  display: inline-block;
+  font-size: font-unit('micro');
+  font-weight: map-get($font-weights, 'medium');
+  line-height: 2;
+  padding: 0 0.5em;
+  vertical-align: middle;
+  white-space: nowrap;
+}

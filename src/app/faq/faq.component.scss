@@ -1,0 +1,12 @@
+.question-container:not(:first-child) {
+  margin-top: 5rem!important;
+}
+
+.topic {
+  margin-top: 12px;
+}
+
+.remove-tag-icon {
+  vertical-align: text-bottom;
+  cursor: pointer;
+}

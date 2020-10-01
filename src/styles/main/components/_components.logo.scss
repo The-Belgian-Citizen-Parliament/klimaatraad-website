@@ -1,0 +1,13 @@
+.c-logo,
+/*svg*/.c-logo__image {
+  display: block;
+  width: 100%;
+}
+
+.c-logo {
+  max-width: map-get($width-units, '1');
+}
+
+/*svg*/.c-logo__image {
+  fill: currentColor !important;
+}

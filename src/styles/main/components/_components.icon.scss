@@ -1,0 +1,21 @@
+.c-icon {
+  display: inline-block;
+  text-decoration: none;
+
+  &:before {
+    content: attr(data-icon-entity);
+    display: block;
+    font-family: $font-family-icon-brands;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+  }
+
+  &[aria-disabled="true"],
+  &[disabled] {
+    cursor: default;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}

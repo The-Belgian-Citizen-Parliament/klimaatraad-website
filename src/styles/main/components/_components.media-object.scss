@@ -1,0 +1,40 @@
+.c-media-object {
+  @extend %media-object;
+  --gutter-width: #{map-get($spacing-units, '6')};
+  align-items: flex-start;
+  max-width: map-get($width-units, '5');
+}
+
+.c-media-object__body {
+  @extend %stack;
+}
+
+/*.c-logo*/.c-media-object__logo {
+  max-width: none;
+}
+
+
+/**
+ * Modifiers.
+ */
+
+.c-media-object--person {
+  --gutter-width: #{map-get($spacing-units, '5')};
+  flex-wrap: nowrap;
+  padding: map-get($spacing-units, '5');
+  position: relative;
+
+  & + #{&} {
+    border-top: 2px solid currentColor;
+  }
+
+  .c-media-object__figure {
+    border: map-get($spacing-units, '3') solid transparent;
+    background-color: map-get($colors, 'white');
+    max-width: map-get($width-units, '1');
+  }
+
+  &[data-selected="true"] .c-media-object__figure {
+    background-color: map-get($colors, 'orange');
+  }
+}

@@ -1,0 +1,36 @@
+/**
+ * A list of key-value pairs which can be used to output media query-enclosed
+ * rulesets via the corresponding mixin.
+ *
+ * @prop {String} key
+ * An alias for the media query.
+ *
+ * @prop {String} value
+ * The media feature(s) to query, e.g. (hover: hover) or (orientation: portrait).
+ */
+
+$media-queries: (
+
+  /**
+   * Global minimum- and maximum-width viewport queries. Widths are calculated
+   * as a percentage of the page's maximum width.
+   */
+
+  'min:020': '(min-width: #{(($width-page-max / 5) * 1)})',
+  'min:040': '(min-width: #{(($width-page-max / 5) * 2)})',
+  'min:060': '(min-width: #{(($width-page-max / 5) * 3)})',
+  'min:080': '(min-width: #{(($width-page-max / 5) * 4)})',
+  'min:100': '(min-width: #{$width-page-max})',
+
+  'max:020': '(max-width: #{(($width-page-max / 5) * 1)})',
+  'max:040': '(max-width: #{(($width-page-max / 5) * 2)})',
+  'max:060': '(max-width: #{(($width-page-max / 5) * 3)})',
+  'max:080': '(max-width: #{(($width-page-max / 5) * 4)})',
+  'max:100': '(max-width: #{$width-page-max})',
+
+  /**
+   * Interaction queries.
+   */
+
+  'hover': '(hover: hover) and (pointer: fine)'
+);

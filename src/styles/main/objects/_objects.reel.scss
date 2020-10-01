@@ -1,0 +1,29 @@
+/**
+ * +-----------------------+--+
+ * |        |        |     |~~|
+ * +-----------------------+--+
+ */
+
+%reel {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  /**
+   * 1. Implement visible overflow (a.k.a. horizontal scroll affordance) by
+   * setting the divisible base percentage (container width) to a percentage
+   * other than 100%.
+   */
+
+  > * {
+    flex-basis: percentage(1/3);
+    flex-basis: calc(var(--reel-item-container-width, 100%) / var(--reel-item-count, 3)); /* 1 */
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-width: map-get($width-units, '2');
+    scroll-snap-align: start;
+    width: 100%;
+  }
+}

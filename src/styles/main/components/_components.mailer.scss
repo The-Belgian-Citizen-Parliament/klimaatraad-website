@@ -1,0 +1,76 @@
+.c-mailer {
+  background-color: map-get($colors, 'white');
+  border: 2px solid currentColor;
+  color: map-get($colors, 'black');
+  display: flex;
+  margin-top: map-get($spacing-units, '6');
+  text-align: left;
+
+  @include feature-query('grid') {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-column-count, 12), minmax(0, 1fr));
+  }
+
+  @include media-query('max:060') {
+    --grid-column-count: 1;
+    flex-flow: column nowrap;
+    grid-template-areas: 'a' 'b' 'c';
+  }
+
+  @include media-query('min:060') {
+    --grid-column-count: 5;
+    flex-flow: row wrap;
+    grid-template-areas:
+      'a a c c c'
+      'b b c c c';
+    grid-template-rows: 1fr minmax(auto, 80vh);
+  }
+}
+
+.c-mailer__filters,
+.c-mailer__form {
+  padding: map-get($spacing-units, '5');
+}
+
+.c-mailer__filters {
+  background-color: map-get($colors, 'black');
+  border-bottom: 2px solid transparent;
+  color: map-get($colors, 'white');
+
+  @include feature-query('grid') {
+    grid-area: a;
+  }
+
+  @include media-query('min:060') {
+    flex-basis: 100%;
+  }
+}
+
+.c-mailer__form {
+  @include feature-query('grid') {
+    grid-area: c;
+  }
+
+  @include media-query('min:060') {
+    border-left: 2px solid currentColor;
+    padding: map-get($spacing-units, '6');
+  }
+}
+
+.c-mailer__recipients {
+  background-color: map-get($colors, 'grey-pale');
+  overflow: auto;
+
+  @include feature-query('grid') {
+    grid-area: b;
+  }
+
+  @include media-query('max:060') {
+    border-bottom: 2px solid currentColor;
+    max-height: 40vh;
+  }
+
+  @include media-query('min:060') {
+    flex-basis: 40%;
+  }
+}

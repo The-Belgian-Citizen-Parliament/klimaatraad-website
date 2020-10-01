@@ -1,0 +1,19 @@
+.c-video {
+  background-color: map-get($colors, 'orange-red');
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -#{map-get($spacing-units, '9')};
+  max-width: map-get($width-units, '5');
+  padding: map-get($spacing-units, '3');
+
+  @include media-query('max:060') {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.c-video__viewport {
+  @include aspect-ratio(16, 9);
+  background-color: #000;
+}

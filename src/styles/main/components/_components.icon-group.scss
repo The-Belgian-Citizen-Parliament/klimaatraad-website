@@ -1,0 +1,4 @@
+.c-icon-group {
+  @extend %cluster;
+  --gutter-width: #{map-get($spacing-units, '2')};
+}

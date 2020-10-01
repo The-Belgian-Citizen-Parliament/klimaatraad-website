@@ -1,0 +1,25 @@
+.c-filter-bar {
+  @extend %cluster;
+  margin-top: map-get($spacing-units, '5');
+
+  > * {
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: map-get($width-units, '2');
+  }
+}
+
+.c-filter-bar__heading {
+  @extend %h6;
+  flex-basis: 100%;
+}
+
+/*.c-form__field*/.c-filter-bar__field {
+  .c-form__field__label {
+    @extend %visually-hidden;
+  }
+
+  .c-form__input__wrapper {
+    margin-top: 0;
+  }
+}

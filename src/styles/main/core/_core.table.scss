@@ -1,0 +1,64 @@
+table {
+  max-width: map-get($width-units, '6');
+  width: 100%;
+
+  thead:after,
+  tfoot:before {
+    content: '';
+    display: block;
+    height: ($gutter-width / 2);
+    height: calc(var(--gutter-width, #{$gutter-width}) / 2);
+    width: 100%;
+  }
+
+  th {
+    font-weight: map-get($font-weights, 'bold');
+    text-align: inherit;
+  }
+
+  th, td {
+    border: 0 solid currentColor;
+    vertical-align: top;
+  }
+
+  th + th,
+  th + td,
+  td + td {
+    padding-left: $gutter-width;
+    padding-left: var(--gutter-width, #{$gutter-width});
+  }
+
+  thead th,
+  tbody th,
+  tbody td {
+    padding-bottom: ($gutter-width / 2);
+    padding-bottom: calc(var(--gutter-width, #{$gutter-width}) / 2);
+  }
+
+  thead th {
+    border-bottom-width: 2px;
+  }
+
+  tbody tr + tr th,
+  tbody tr + tr td,
+  tfoot th,
+  tfoot td {
+    padding-top: ($gutter-width / 2);
+    padding-top: calc(var(--gutter-width, #{$gutter-width}) / 2);
+  }
+
+  tbody tr + tr th,
+  tbody tr + tr td {
+    border-top-width: 1px;
+  }
+
+  tfoot th,
+  tfoot td {
+    border-top-width: 2px;
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    padding-bottom: 0;
+  }
+}

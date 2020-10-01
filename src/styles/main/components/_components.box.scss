@@ -1,0 +1,5 @@
+.c-box {
+  @extend %stack;
+  background-color: map-get($colors, 'grey-pale');
+  padding: map-get($spacing-units, '5');
+}

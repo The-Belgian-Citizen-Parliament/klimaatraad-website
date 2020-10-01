@@ -1,0 +1,96 @@
+.c-site-footer {
+  background-color: map-get($colors, 'lemon');
+  margin: 0 -#{map-get($spacing-units, '5')};
+  padding: map-get($spacing-units, '7') 0;
+
+  .grid {
+    max-width: map-get($width-units, '9');
+  }
+
+  .grid__tracks {
+    @include media-query('max:060') {
+      --grid-column-count: 1;
+      --grid-column: span 1;
+      text-align: center;
+    }
+
+    @include media-query('min:060') {
+      --grid-gutter-width: #{map-get($spacing-units, '6')};
+    }
+
+    /**
+     * +-----------+-----------+
+     * |           |           |
+     * +-----------+-----------+
+     * |       |               |
+     * +-------+---------------+
+     * |                       |
+     * +-----------------------+
+     */
+
+    @include media-query('min:060') {
+      grid-template-areas:
+        'a a a a a a b b b b b b'
+        'c c c c d d d d d d d d';
+
+      > *:nth-child(1) { grid-area: a; }
+      > *:nth-child(2) { grid-area: b; }
+      > *:nth-child(3) { grid-area: c; }
+      > *:nth-child(4) { grid-area: d; }
+    }
+
+    /**
+     * +---------------+-------+
+     * |               |       |
+     * +-----+---------+       |
+     * |     |         |       |
+     * +-----+---------+-------+
+     */
+
+    @include media-query('min:080') {
+      grid-template-areas:
+        'a a a a a a a a b b b b'
+        'c c d d d d d d . . . .';
+    }
+  }
+
+  .grid__cell {
+    @extend %stack;
+  }
+
+  .c-icon-group,
+  /*ul*/.c-nav__list {
+    @include media-query('max:060') {
+      justify-content: center;
+    }
+  }
+
+  .c-icon-group {
+    @include media-query('min:060') {
+      justify-content: flex-end;
+    }
+  }
+
+  .c-logo {
+    @include media-query('max:060') {
+      margin: map-get($spacing-units, '5') auto;
+    }
+  }
+
+  .c-nav {
+    font-size: 95%;
+  }
+
+  /*a*/.c-nav__button {
+    @include feature-query('mask-image') {
+      background-color: map-get($colors, 'black');
+      color: map-get($colors, 'white');
+
+      &:hover,
+      &:focus {
+        background-color: map-get($colors, 'orange-red');
+        color: map-get($colors, 'white');
+      }
+    }
+  }
+}

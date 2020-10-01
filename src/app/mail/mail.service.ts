@@ -11,14 +11,12 @@ export class MailService {
     constructor(private http: HttpClient) {}
 
     getLastMails(): Promise<void | Mail[]> {
-      console.log('Retrieving latest emails... ');
       return this.http.get<Mail[]>(this.baseUrl + '/last')
                  .toPromise()
                  .catch(this.handleError);
     }
 
     createMail(newMail: Mail): Promise<void | Mail> {
-      console.log('Creating new email... ');
       return this.http.post<Mail>(this.baseUrl, newMail)
                  .toPromise()
                  .catch(this.handleError);
