@@ -19,12 +19,12 @@
     </div>
 
     <ng-container *ngIf="!filter && !tagFilter">
-      <div *ngFor="let topic of groupedQuestions" class="topic">
+      <ng-container *ngFor="let topic of groupedQuestions">
         <h2 class="h4 u-margin-top-6" style="text-transform: capitalize;">{{ topic.topic }}</h2>
         <ul class="c-list c-list--questions u-margin-top-5">
           <li *ngFor="let question of topic.questions"><a routerLink="/faq" [fragment]="question.slug">{{ question.question }}</a></li>
         </ul>
-      </div>
+      </ng-container>
 
       <div class="c-callout">
         <p><strong>Staat jouw vraag er niet tussen? </strong> <a routerLink="/about">We beantwoorden hem graag voor jou en
