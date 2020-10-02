@@ -26,6 +26,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { SvgLogosComponent } from './svg/svg-logos.component';
 import { SeoService } from './seo.service';
 import { AboutComponent } from './about/about.component';
+import { ParticipateComponent } from './participate/participate.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AboutComponent } from './about/about.component';
     PrivacyComponent,
     SvgLogosComponent,
     AboutComponent,
+    ParticipateComponent,
   ],
   imports: [
     TranslateModule,
