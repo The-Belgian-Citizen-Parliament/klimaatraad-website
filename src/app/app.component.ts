@@ -37,8 +37,10 @@ export class AppComponent {
       }),
       filter(({ activatedRoute, event }) => activatedRoute.outlet === 'primary'),
     ), this.translate.get(['title', 'description'])]).subscribe(([{ activatedRoute, event }, trans]) => {
-      const url = (event as NavigationEnd).url;
-      if (url.includes('vraag') || url.includes('question')) {
+      const path = (event as NavigationEnd).url;
+      const url = environment.baseUrl + path;
+      seoService.updateOgUrl(url);
+      if (path.includes('vraag') || path.includes('question')) {
         // Set by question component
       } else {
         // Set the default
