@@ -50,7 +50,7 @@
     @include media-query('min:080') {
       grid-template-areas:
         'a a a a a a a a b b b b'
-        'c c d d d d d d . . . .';
+        'c c d d d d d d d d . .';
     }
   }
 

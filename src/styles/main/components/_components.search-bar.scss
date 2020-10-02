@@ -4,11 +4,7 @@
   border: 1px solid currentColor;
   display: flex;
   flex-flow: row nowrap;
-
-  & + *,
-  * + & {
-    margin-top: map-get($spacing-units, '6');
-  }
+  margin-bottom: map-get($spacing-units, '7');
 }
 
 .c-search-bar__label,

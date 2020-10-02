@@ -1,6 +1,7 @@
 .c-logo-grid {
   @extend %cluster;
   --gutter-width: #{map-get($spacing-units, '6')};
+  align-items: center;
   justify-content: space-evenly;
 
   .c-logo {
@@ -8,7 +9,7 @@
     flex-basis: calc((100% / var(--image-grid-columns, 4)) - var(--gutter-width, #{$gutter-width}));
     flex-grow: 1;
     flex-shrink: 0;
-    min-width: map-get($width-units, '2');
+    min-width: ($spacing-unit * 7.5);
     width: 100%;
   }
 }

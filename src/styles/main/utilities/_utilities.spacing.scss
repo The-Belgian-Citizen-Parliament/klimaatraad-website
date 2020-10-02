@@ -21,3 +21,13 @@
     padding-top: $unit !important;
   }
 }
+
+/*.c-panel*/.u-overflow-top {
+  border-top: 1px solid transparent;
+  margin-top: map-get($spacing-units, '9') !important;
+  padding-top: 0 !important;
+
+  > *:first-child {
+    margin-top: (map-get($spacing-units, '9') * -1) !important;
+  }
+}

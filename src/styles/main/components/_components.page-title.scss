@@ -4,8 +4,8 @@
   margin-right: auto;
   max-width: 30ch;
 
-  & + *,
-  * + & {
+  * + &,
+  & + * {
     margin-top: map-get($spacing-units, '6');
   }
 }

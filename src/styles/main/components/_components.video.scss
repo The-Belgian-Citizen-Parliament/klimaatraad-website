@@ -2,7 +2,6 @@
   background-color: map-get($colors, 'orange-red');
   margin-left: auto;
   margin-right: auto;
-  margin-top: -#{map-get($spacing-units, '9')};
   max-width: map-get($width-units, '5');
   padding: map-get($spacing-units, '3');
 
