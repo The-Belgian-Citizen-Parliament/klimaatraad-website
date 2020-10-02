@@ -96,8 +96,8 @@
                   "with": "src/environments/environment.prod.fr.ts"
                 },
                 {
-                  "replace": "src/assets/og_logo.jpg",
-                  "with": "src/assets/og_logo_fr.jpg"
+                  "replace": "src/assets/img/og_logo.jpg",
+                  "with": "src/assets/img/og_logo_fr.jpg"
                 }
               ],
               "optimization": true,
@@ -184,8 +184,8 @@
                   "with": "src/environments/environment.prod.fr.ts"
                 },
                 {
-                  "replace": "src/assets/og_logo.jpg",
-                  "with": "src/assets/og_logo_fr.jpg"
+                  "replace": "src/assets/img/og_logo.jpg",
+                  "with": "src/assets/img/og_logo_fr.jpg"
                 }
               ],
               "sourceMap": false,
