@@ -3,9 +3,9 @@
     <img src="/assets/img/illustrations/acorn.png">
   </figure>
   <h3 id="question-1" class="h5 question-title" *ngIf="!answerOnly">
-    <span [innerHtml]="question.question"></span>
-    <a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug" class="question-link">
-      <mat-icon>link</mat-icon>
+    <a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug">
+      <span [innerHtml]="question.question"></span>
+      <mat-icon class="question-link">link</mat-icon>
     </a>
   </h3>
 
