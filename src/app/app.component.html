@@ -1,7 +1,7 @@
 <header class="c-site-header" id="site-header"><a class="c-logo" routerLink="/">
     <span class="u-visually-hidden">The Belgian Citizens' Parliament</span>
     <svg class="c-logo__image" viewBox="0 0 400 360" role="img" aria-hidden="true">
-      <use *ngIf="lang === 'nl'" xlink:href="#logo-nl-colour"></use>
+      <use *ngIf="lang !== 'fr'" xlink:href="#logo-nl-colour"></use>
       <use *ngIf="lang === 'fr'" xlink:href="#logo-fr-colour"></use>
     </svg>
   </a>
@@ -91,7 +91,7 @@
         <a class="c-logo" routerLink="/">
           <span class="u-visually-hidden">The Belgian Citizens' Parliament</span>
           <svg class="c-logo__image" viewBox="0 0 400 360" role="img" aria-hidden="true">
-            <use *ngIf="lang === 'nl'" xlink:href="#logo-nl-mono"></use>
+            <use *ngIf="lang !== 'fr'" xlink:href="#logo-nl-mono"></use>
             <use *ngIf="lang === 'fr'" xlink:href="#logo-fr-mono"></use>
           </svg>
         </a>
