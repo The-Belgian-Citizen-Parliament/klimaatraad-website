@@ -6,17 +6,16 @@
 
 <div class="c-panel">
   <div class="container">
-    <h3>{{ 'Check out these other questions' | translate }}...</h3>
+    <h2 class="h4 u-margin-top-6" style="text-transform: capitalize;">{{ 'Maybe you were also wondering' | translate }}...</h2>
+    <ul class="c-list c-list--questions u-margin-top-5">
+      <li *ngFor="let question of randomQuestions"><a [routerLink]="'/vraag/' + question.slug">{{ question.question }}</a></li>
+    </ul>
 
-    <div class="question-container" *ngFor="let question of randomQuestions">
-      <app-question [question]="question"></app-question>
+    <div class="c-callout u-margin-top-6">
+      <p>{{ 'Check out' | translate }} <a routerLink="/faq">{{ 'all questions' | translate }}</a> on our FAQ page!</p>
     </div>
   </div>
 </div>
-
-<p class="c-callout">
-  {{ 'Check out' | translate }} <a routerLink="/faq">{{ 'all questions' | translate }}</a> on our FAQ page!
-</p>
 
 <div class="c-panel u-background-color-pink">
   <div class="container s-editor u-text-align-center">

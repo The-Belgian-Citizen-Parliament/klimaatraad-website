@@ -1,12 +1,11 @@
 <div class="c-panel u-padding-top-0">
   <div class="container">
-    <h1 class="c-page-title">{{ 'Frequently Asked Questions' | translate }}</h1>
-
+    <h1 class="c-page-title" innerHtml="{{ 'Frequently Asked Questions' | translate }}"></h1>
     <p>Je zit vast met veel vragen; zowel over de ernst van de ecologische uitdagingen waar we voor staan;
       over waarom politici er niet in slagen afdoende maatregelen te nemen; als over de burgerassemblee.</p>
-
   </div>
 </div>
+
 <div class="c-panel u-background-color-grey-light">
   <div class="container">
     <div class="c-search-bar" role="search">
@@ -15,18 +14,22 @@
     </div>
 
     <div *ngIf="tagFilter">
-      <h4>{{ 'Tag filter' | translate }} <small><span class="c-tag c-tag__label">{{ tagFilter }} <mat-icon class="remove-tag-icon" (click)="clearFilter()">close</mat-icon></span></small></h4>
+      <h4>{{ 'Tag filter' | translate }} <small><span class="c-tag c-tag__label" style="vertical-align: bottom;">{{ tagFilter }} <mat-icon class="remove-tag-icon"
+              (click)="clearFilter()">close</mat-icon></span></small></h4>
     </div>
 
     <ng-container *ngIf="!filter && !tagFilter">
-      <div *ngFor="let topic of groupedQuestions" class="topic">
-        <h4 style="text-transform: capitalize;">{{ topic.topic }}</h4>
-        <ul class="c-list c-list--questions">
+      <ng-container *ngFor="let topic of groupedQuestions">
+        <h2 class="h4 u-margin-top-6" style="text-transform: capitalize;">{{ topic.topic }}</h2>
+        <ul class="c-list c-list--questions u-margin-top-5">
           <li *ngFor="let question of topic.questions"><a routerLink="/faq" [fragment]="question.slug">{{ question.question }}</a></li>
         </ul>
-      </div>
+      </ng-container>
 
-      <p class="c-callout"><strong>Staat jouw vraag er niet tussen? </strong> <a routerLink="/about">We beantwoorden hem graag voor jou en nemen hem hier op!</a></p>
+      <div class="c-callout">
+        <p><strong>Staat jouw vraag er niet tussen? </strong> <a routerLink="/about">We beantwoorden hem graag voor jou en
+          nemen hem hier op!</a></p>
+      </div>
     </ng-container>
   </div>
 </div>
@@ -53,8 +56,11 @@
   </div>
 </div>
 
-<div class="c-panel u-background-color-pink">
+<div class="c-panel u-background-color-pink u-margin-top-9 u-padding-top-5">
   <div class="container s-editor u-text-align-center">
+    <figure class="u-margin-top-minus-9 u-max-width-2" aria-hidden="true">
+      <img src="/assets/img/illustrations/letter-wings.png">
+    </figure>
     <h3>This is a heading</h3>
 
     <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus

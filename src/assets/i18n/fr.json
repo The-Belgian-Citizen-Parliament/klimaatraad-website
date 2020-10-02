@@ -4,7 +4,7 @@
 
   "The proposal": "La proposition",
   "FAQ": "FAQ",
-  "Frequently Asked Questions": "Questions et réponses",
+  "Frequently Asked Questions": "Questions et <span class=\"u-color-teal\">réponses</span>",
   "Take part": "Participer",
   "About us": "About us",
   "Contact": "Contact",

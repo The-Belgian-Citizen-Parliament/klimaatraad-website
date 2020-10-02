@@ -1,4 +1,12 @@
 .c-icon-group {
   @extend %cluster;
   --gutter-width: #{map-get($spacing-units, '2')};
+  align-items: center;
+  font-size: font-unit('h5');
+  justify-content: center;
+}
+
+.c-icon-group__label {
+  font-weight: map-get($font-weights, 'medium');
+  margin-right: 1em;
 }

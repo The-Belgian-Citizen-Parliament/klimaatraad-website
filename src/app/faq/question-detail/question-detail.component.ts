@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 import { Question } from 'src/app/questions/questions';
@@ -16,17 +16,19 @@ export class QuestionDetailComponent {
   randomQuestions: Question[];
 
   constructor(router: Router, questionService: QuestionsService, seoService: SeoService,
-    translate: TranslateService) {
-    const slug = /[^/]*$/.exec(router.url)[0];
-    if (!slug) router.navigate(['/faq']);
-    this.question = questionService.getQuestionBySlug(slug);
-    if (!this.question) router.navigate(['/faq']);
-    this.randomQuestions = questionService.getRandomQuestions(3);
+    translate: TranslateService, activeRoute: ActivatedRoute) {
+    activeRoute.params.subscribe(routeParams => {
+      const slug = /[^/]*$/.exec(router.url)[0];
+      if (!slug) router.navigate(['/faq']);
+      this.question = questionService.getQuestionBySlug(slug);
+      if (!this.question) router.navigate(['/faq']);
+      this.randomQuestions = questionService.getRandomQuestions(6);
 
-    translate.get('title').subscribe(((title) => {
-      seoService.updateTitle(this.stripHtml(this.question.question) + ' - ' + title);
-      seoService.updateDescription(this.stripHtml(this.question.summary));
-    }));
+      translate.get('title').subscribe(((title) => {
+        seoService.updateTitle(this.stripHtml(this.question.question) + ' - ' + title);
+        seoService.updateDescription(this.stripHtml(this.question.summary));
+      }));
+    });
   }
 
   // Source: https://stackoverflow.com/questions/822452/strip-html-from-text-javascript/822486#822486

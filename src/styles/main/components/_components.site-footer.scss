@@ -58,14 +58,9 @@
     @extend %stack;
   }
 
-  .c-icon-group,
-  /*ul*/.c-nav__list {
-    @include media-query('max:060') {
-      justify-content: center;
-    }
-  }
-
   .c-icon-group {
+    font-size: inherit;
+
     @include media-query('min:060') {
       justify-content: flex-end;
     }
@@ -79,6 +74,12 @@
 
   .c-nav {
     font-size: 95%;
+  }
+
+  /*ul*/.c-nav__list {
+    @include media-query('max:060') {
+      justify-content: center;
+    }
   }
 
   /*a*/.c-nav__button {
