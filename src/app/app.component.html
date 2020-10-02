@@ -22,18 +22,20 @@
     </ul>
   </nav>
   <div class="c-language-switch">
-    <button class="c-button c-language-switch__button" data-toggle="#language-switch" aria-expanded="false" aria-controls="language-switch">
-      <span class="c-button__label">EN</span>
+    <button class="c-button c-language-switch__button" (click)="toggleLanguageMenu()"
+      [attr.aria-expanded]="languageMenuVisible" attr.aria-controls="language-switch">
+      <span class="c-button__label" style="text-transform: uppercase;">{{ lang }}</span>
     </button>
-    <ul class="c-language-switch__menu" id="language-switch" aria-hidden="true">
-      <li class="c-language-switch__menu__item">
-        <a lang="en" href="#0" aria-current="page">English (EN)</a>
+    <ul class="c-language-switch__menu" id="language-switch" [attr.aria-hidden]="!languageMenuVisible"
+      *ngIf="languageMenuVisible">
+      <li class="c-language-switch__menu__item" *ngIf="lang !== 'en'">
+        <a lang="en" [routerLink]="" (click)="setLanguage('en'); toggleLanguageMenu()">English (EN)</a>
       </li>
-      <li class="c-language-switch__menu__item">
-        <a lang="fr" href="#0">Français (FR)</a>
+      <li class="c-language-switch__menu__item" *ngIf="lang !== 'fr'">
+        <a lang="fr" href="https://www.leparlementcitoyen.be">Français (FR)</a>
       </li>
-      <li class="c-language-switch__menu__item">
-        <a lang="nl" href="#0">Nederlands (NL)</a>
+      <li class="c-language-switch__menu__item" *ngIf="lang !== 'nl'">
+        <a lang="nl" href="https://www.hetburgerparlement.be">Nederlands (NL)</a>
       </li>
     </ul>
   </div>

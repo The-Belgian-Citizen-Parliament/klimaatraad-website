@@ -42,3 +42,7 @@ app-root {
   display: flex;
   flex-grow: 1;
 }
+
+.keep-newlines {
+  white-space: pre-wrap;
+}
