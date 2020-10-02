@@ -22,6 +22,8 @@ export class AppComponent {
   smallHeader = false;
   lang = environment.language;
 
+  languageMenuVisible = false;
+
   constructor(@Inject(PLATFORM_ID) platformId: string, public router: Router,
     activatedRoute: ActivatedRoute, private translate: TranslateService,
     private seoService: SeoService) {
@@ -68,6 +70,10 @@ export class AppComponent {
     if (environment.language === 'nl') dayjs.locale('nl');
     else if (environment.language === 'fr') dayjs.locale('fr');
     dayjs.extend(relativeTime);
+  }
+
+  toggleLanguageMenu() {
+    this.languageMenuVisible = !this.languageMenuVisible
   }
 
   setLanguage(lang) {
