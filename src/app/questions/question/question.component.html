@@ -1,29 +1,33 @@
-    <div class="s-editor">
-      <h3 id="question-1" class="h5 question-title" *ngIf="!answerOnly">
-        <span [innerHtml]="question.question"></span>
-        <a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug" class="question-link">
-          <mat-icon>link</mat-icon>
-        </a>
-      </h3>
+<div class="s-editor">
+  <figure class="u-align-left u-max-width-1" aria-hidden="true" *ngIf="!answerOnly">
+    <img src="/assets/img/illustrations/acorn.png">
+  </figure>
+  <h3 id="question-1" class="h5 question-title" *ngIf="!answerOnly">
+    <span [innerHtml]="question.question"></span>
+    <a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug" class="question-link">
+      <mat-icon>link</mat-icon>
+    </a>
+  </h3>
 
-      <div>
-        <p class="keep-newlines" [innerHtml]="question.summary"></p>
-        <div class="expand-button" *ngIf="question.answer && !expanded" (click)="expand()">
-          {{ 'Show more' | translate }} <mat-icon class="inline">expand_more</mat-icon>
-        </div>
-      </div>
-      <div class="answer" [class.hidden]="!expanded">
-        <p class="keep-newlines" [innerHtml]="question.answer"></p>
-        <div class="expand-button" *ngIf="expanded" (click)="expand()">
-          {{ 'Show less' | translate }} <mat-icon class="inline">expand_less</mat-icon>
-        </div>
-      </div>
+  <div>
+    <p class="keep-newlines" [innerHtml]="question.summary"></p>
+    <div class="expand-button" *ngIf="question.answer && !expanded" (click)="expand()">
+      {{ 'Show more' | translate }} <mat-icon class="inline">expand_more</mat-icon>
     </div>
+  </div>
 
-    <ul class="c-tag-list">
-      <li class="c-tag-list__item" *ngFor="let tag of question.tags">
-        <a class="c-tag" [routerLink]="" (click)="tagClicked(tag)">
-          <span class="c-tag__label">{{ tag }}</span>
-        </a>
-      </li>
-    </ul>
+  <div class="answer" [class.hidden]="!expanded">
+    <p class="keep-newlines" [innerHtml]="question.answer"></p>
+    <div class="expand-button" *ngIf="expanded" (click)="expand()">
+      {{ 'Show less' | translate }} <mat-icon class="inline">expand_less</mat-icon>
+    </div>
+  </div>
+</div>
+
+<ul class="c-tag-list">
+  <li class="c-tag-list__item" *ngFor="let tag of question.tags">
+    <a class="c-tag" [routerLink]="" (click)="tagClicked(tag)">
+      <span class="c-tag__label">{{ tag }}</span>
+    </a>
+  </li>
+</ul>
