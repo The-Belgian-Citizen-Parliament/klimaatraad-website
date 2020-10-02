@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 import { QuestionDetailComponent } from './faq/question-detail/question-detail.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = environment.language === 'nl' ? [
   { path: '', component: MainComponent },
@@ -19,6 +20,7 @@ const routes: Routes = environment.language === 'nl' ? [
   { path: 'over', component: AboutComponent, data: { 'title': 'About us' } },
   { path: 'privacy', component: PrivacyComponent, data: { 'title': 'Privacy Statement' } },
   { path: 'vraag/:questionSlug', component: QuestionDetailComponent },
+  { path: '**', component: NotFoundComponent },
 ] : [
   { path: '', component: MainComponent },
   { path: 'memorandum', redirectTo: 'proposition' },
@@ -29,6 +31,7 @@ const routes: Routes = environment.language === 'nl' ? [
   { path: 'privacy', component: PrivacyComponent, data: { 'title': 'Privacy Statement' } },
   { path: 'deelnemen', redirectTo: 'participer' },
   { path: 'question/:questionSlug', component: QuestionDetailComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

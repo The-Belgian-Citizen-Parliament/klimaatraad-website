@@ -27,6 +27,7 @@ import { SvgLogosComponent } from './svg/svg-logos.component';
 import { SeoService } from './seo.service';
 import { AboutComponent } from './about/about.component';
 import { ParticipateComponent } from './participate/participate.component';
+import { NotFoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ParticipateComponent } from './participate/participate.component';
     SvgLogosComponent,
     AboutComponent,
     ParticipateComponent,
+    NotFoundComponent,
   ],
   imports: [
     TranslateModule,
