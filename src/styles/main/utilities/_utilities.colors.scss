@@ -16,5 +16,5 @@
 
 .u-background-color-gradient {
   background-color: map-get($colors, 'orange-red');
-  background-image: linear-gradient(to top left, transparent #{percentage(1/3)}, #{map-get($colors, 'pink')});
+  background-image: linear-gradient(to top left, transparent #{percentage(1/3)}, #{map-get($colors, 'orange')});
 }

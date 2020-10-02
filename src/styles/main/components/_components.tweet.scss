@@ -1,0 +1,38 @@
+.c-tweet {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: map-get($width-units, '4');
+  text-align: center;
+}
+
+.c-tweet__body {
+  background-color: map-get($colors, 'white');
+  border-radius: 0.5em;
+  color: map-get($colors, 'black');
+  font-family: sans-serif;
+  font-weight: map-get($font-weights, 'regular');
+  min-height: 12em;
+  padding: 1em;
+  text-align: left;
+
+  a {
+    color: map-get($colors, 'twitter-blue');
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.c-tweet__button {
+  background-color: map-get($colors, 'twitter-blue');
+  font-size: font-unit('small');
+  margin-top: map-get($spacing-units, '5');
+
+  &:hover,
+  &:focus {
+    background-color: darken(map-get($colors, 'twitter-blue'), 5%);
+  }
+}

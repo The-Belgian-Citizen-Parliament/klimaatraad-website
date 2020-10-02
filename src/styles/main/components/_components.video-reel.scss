@@ -1,8 +1,7 @@
 .c-video-reel {
   @extend %reel;
   --reel-item-container-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: map-get($spacing-units, '7') auto 0;
   max-width: map-get($width-units, '7');
   padding: map-get($spacing-units, '3') 0;
 

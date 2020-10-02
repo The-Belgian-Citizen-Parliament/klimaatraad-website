@@ -25,6 +25,7 @@ import { QuestionDetailComponent } from './faq/question-detail/question-detail.c
 import { PrivacyComponent } from './privacy/privacy.component';
 import { SvgLogosComponent } from './svg/svg-logos.component';
 import { SeoService } from './seo.service';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SeoService } from './seo.service';
     QuestionDetailComponent,
     PrivacyComponent,
     SvgLogosComponent,
+    AboutComponent,
   ],
   imports: [
     TranslateModule,
