@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { QuestionsService } from '../questions/questions.service';
 import { Question } from '../questions/questions';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-main',
@@ -8,12 +9,19 @@ import { Question } from '../questions/questions';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+  questions: Question[] = [];
+  lang = environment.language;
+
+  constructor(private questionsService: QuestionsService) {
+    this.questions = questionsService.getRandomQuestions(4);
+    // this.currentVideo = this.videos[4];
+  }
+
   // @ViewChild('videoPlayer') videoPlayer: ElementRef;
   // @ViewChild('videoCarrousel') videoCarrousel: ElementRef;
 
   // iFrameLoaded = false;
 
-  // questions: Question[] = [];
 
   // videos = [
   //   { nr: 0, src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/nn1.mp4', poster: '/assets/vidposters/nn1.jpg' },

@@ -363,126 +363,36 @@
 <div class="c-panel">
   <div class="container s-editor u-text-align-center">
     <h2 class="h3"><span class="u-color-teal">Veelgestelde</span> vragen</h2>
-
-    <p>Je zit ongetwijfeld met erg veel vragen. Hier proberen we ze allemaal voor je te beantwoorden, klaar en duidelijk.</p>
-
+    <p>Je zit ongetwijfeld met erg veel vragen, bijvoorbeeld...</p>
   </div>
+
   <div class="grid grid--columns u-margin-top-7" data-column-count="2">
     <div class="grid__tracks">
-      <div class="grid__cell s-editor u-text-align-center">
+
+      <div class="grid__cell s-editor u-text-align-center" *ngFor="let question of questions">
         <figure class="u-max-width-1" aria-hidden="true">
           <img src="/assets/img/illustrations/acorn.png">
         </figure>
-        <h3 class="h5"><a href="#0">Duo Reges: constructio interrete. Ait enim se, si uratur, Quam hoc suave! dicturum?</a></h3>
-        <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus
-          auctor fringilla.</p>
+        <h3 class="h5"><a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug"
+          [innerHtml]="question.question"></a></h3>
+        <p class="keep-newlines" [innerHtml]="question.summary"></p>
 
         <ul class="c-tag-list">
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Item de contrariis</span>
-            </a>
-          </li>
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Item de contrariis</span>
-            </a>
-          </li>
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Videamus animi</span>
-            </a>
+          <li class="c-tag-list__item" *ngFor="let tag of question.tags">
+            <span class="c-tag">
+              <span class="c-tag__label">{{ tag }}</span>
+            </span>
           </li>
         </ul>
-
       </div>
-      <div class="grid__cell s-editor u-text-align-center">
-        <figure class="u-max-width-1" aria-hidden="true">
-          <img src="/assets/img/illustrations/acorn.png">
-        </figure>
-        <h3 class="h5"><a href="#0">Quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret?</a></h3>
-        <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus
-          auctor fringilla.</p>
 
-        <ul class="c-tag-list">
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Nam si propter</span>
-            </a>
-          </li>
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Nam si propter</span>
-            </a>
-          </li>
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Videamus animi</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-      <div class="grid__cell s-editor u-text-align-center">
-        <figure class="u-max-width-1" aria-hidden="true">
-          <img src="/assets/img/illustrations/acorn.png">
-        </figure>
-        <h3 class="h5"><a href="#0">Quae ista amicitia est? Frater et T. Sed quanta sit alias, nunc tantum possitne?</a></h3>
-        <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus
-          auctor fringilla.</p>
-
-        <ul class="c-tag-list">
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Etenim nec</span>
-            </a>
-          </li>
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Etenim nec</span>
-            </a>
-          </li>
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Etenim nec</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-      <div class="grid__cell s-editor u-text-align-center">
-        <figure class="u-max-width-1" aria-hidden="true">
-          <img src="/assets/img/illustrations/acorn.png">
-        </figure>
-        <h3 class="h5"><a href="#0">Tantum possitne esse tanta. Facillimum id quidem est, inquam?</a></h3>
-        <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus
-          auctor fringilla.</p>
-
-        <ul class="c-tag-list">
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Item de contrariis</span>
-            </a>
-          </li>
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Quam illa ardentis</span>
-            </a>
-          </li>
-          <li class="c-tag-list__item">
-            <a class="c-tag" href="#0">
-              <span class="c-tag__label">Videamus animi</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
     </div>
   </div>
+
   <div class="container u-margin-top-7 u-text-align-center">
-    <button class="c-button">
+    <a routerLink="/faq" class="c-button">
       <span class="c-button__label">Doorzoek alle vragen</span>
-    </button>
+    </a>
 
     <div class="c-callout">
       <p>Staat jouw vraag er niet tussen? <a href="mailto:info@citizenparliament.be">We beantwoorden hem graag voor jou en nemen hem hier
