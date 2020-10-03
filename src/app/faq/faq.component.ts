@@ -21,7 +21,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   tagFilter = null;
 
   questionPlaceholder = '';
-  questionExamples = ['klimaat', 'burger', 'politici', 'legitiem'];
+  questionExamples: string[] = [];
   counter = 0;
 
   allQuestions: Question[] = nl;
@@ -36,6 +36,10 @@ export class FaqComponent implements OnInit, OnDestroy {
 
   constructor(@Inject(PLATFORM_ID) platformId: string, private questionsService: QuestionsService,
     public randomImage: RandomImageService) {
+    this.questionExamples = this.lang == 'nl' ? ['groen', 'kost', 'uitstoot', 'ecologisch']
+      : this.lang === 'fr' ? ['ecolo', 'coute', 'emissions', 'ecologique']
+      : ['groen', 'cost', 'emissions', 'ecologic'];
+
     this.questionPlaceholder = this.questionExamples[0];
     this.isBrowser = isPlatformBrowser(platformId);
     setTimeout(() => this.questionField.nativeElement.focus());
