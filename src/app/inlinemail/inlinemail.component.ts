@@ -13,6 +13,7 @@ import { mpsFederal } from '../mail/mps/federal';
 import { mpsFlemish } from '../mail/mps/flemish';
 import { mpsWalloon } from '../mail/mps/walloon';
 import { tweets } from '../mail/tweets';
+import { LanguageService } from '../common/language.service';
 
 @Component({
   selector: 'app-inlinemail',
@@ -69,11 +70,21 @@ export class InlineMailComponent implements OnInit, OnDestroy {
 
   parliaments = ['Federal', 'Flemish', 'Walloon', 'Brussels Parliament'];
 
-  constituencies = [
-    'Antwerpen', 'Brussel-Hoofdstad', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'];
+  constituenciesPerLanguage = {
+    nl: ['Antwerpen', 'Brussel-Hoofdstad', 'Limburg', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'West-Vlaanderen'],
+    fr: ['Brussel-Hoofdstad', 'Henegouwen', 'Luik', 'Luxemburg', 'Namen', 'Waals-Brabant'],
+    en: ['Antwerpen', 'Brussel-Hoofdstad', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'],
+  };
 
-  parties = [
-    'PVDA-PTB', 'Ecolo-Groen', 'N-VA', 'PS', 'CD&V', 'Open Vld', 'sp.a', 'VB', 'MR', 'cdH', 'DéFI'];
+  constituencies: string[] = [];
+
+  partiesPerLanguage = {
+    nl: ['Ecolo-Groen', 'CD&V', 'Open Vld', 'sp.a'],
+    fr: ['Ecolo-Groen', 'PS', 'MR'],
+    en: ['Ecolo-Groen', 'PS', 'CD&V', 'Open Vld', 'sp.a', 'MR'],
+  }
+
+  parties: string[] = [];
 
   subjects = [];
   bodies = [];
@@ -90,7 +101,8 @@ export class InlineMailComponent implements OnInit, OnDestroy {
   isBrowser = false;
   getMailsTimer = null;
 
-  constructor(@Inject(PLATFORM_ID) platformId: string, private mailService: MailService) {
+  constructor(@Inject(PLATFORM_ID) platformId: string, private mailService: MailService,
+    languageService: LanguageService) {
     this.isBrowser = isPlatformBrowser(platformId);
 
     this.subjects = environment.language === 'nl' ? NL_SUBJECTS : FR_SUBJECTS;
@@ -110,6 +122,11 @@ export class InlineMailComponent implements OnInit, OnDestroy {
     this.newMail.sentOn = new Date();
     this.newMail.subject = this.subjects[Math.floor(Math.random() * this.subjects.length)];
     this.newMail.body = this.bodies[Math.floor(Math.random() * this.bodies.length)];
+
+    languageService.lang.subscribe((lang) => {
+      this.parties = this.partiesPerLanguage[lang];
+      this.constituencies = this.constituenciesPerLanguage[lang];
+    });
   }
 
   ngOnInit() {
