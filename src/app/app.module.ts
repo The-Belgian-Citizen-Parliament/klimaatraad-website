@@ -28,6 +28,7 @@ import { SeoService } from './seo.service';
 import { AboutComponent } from './about/about.component';
 import { ParticipateComponent } from './participate/participate.component';
 import { NotFoundComponent } from './notfound/notfound.component';
+import { TruncatePipe } from './common/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { NotFoundComponent } from './notfound/notfound.component';
     AboutComponent,
     ParticipateComponent,
     NotFoundComponent,
+    TruncatePipe,
   ],
   imports: [
     TranslateModule,

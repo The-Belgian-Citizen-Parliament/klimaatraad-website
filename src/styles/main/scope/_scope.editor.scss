@@ -42,6 +42,17 @@
         margin-right: (($width + map-get($spacing-units, '6')) * -1);
       }
     }
+
+    &.u-max-height-2 {
+      height: map-get($width-units, '2');
+
+      > img {
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+      }
+    }
   }
 
   figcaption {

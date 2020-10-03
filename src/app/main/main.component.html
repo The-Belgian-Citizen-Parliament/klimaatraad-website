@@ -33,28 +33,61 @@
   </div>
 </div>
 
-<div class="c-panel u-background-color-teal u-color-white u-text-align-center">
-  <div class="container s-editor">
-    <h2 class="h3">This is a heading</h2>
+<div class="c-panel u-background-color-lemon u-text-align-center u-overflow-top">
+  <div class="grid grid--columns" data-column-count="2">
+      <div class="grid__tracks">
 
-    <figure class="u-max-width-3" aria-hidden="true">
-      <img src="/assets/img/illustrations/birds.png">
-    </figure>
-    <p class="lead">This is a lead paragraph. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-      egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-    <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus
-      auctor fringilla.</p>
+              <div class="grid__cell s-editor">
+                  <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
+                      <img src="/assets/img/illustrations/jellyfish.png">
+                  </figure>
+                  <h2 class="h6">We staan voor ongeziene ecologische uitdagingen</h2>
 
+                  <p>Een opwarmend klimaat, biodiversiteitsverlies, gigantische vervuiling, ... Wetenschappers en activisten waarschuwen al jaren voor de ecologische crisis en haar ongelijke maatschappelijke impact.</p>
+
+              </div>
+
+              <div class="grid__cell s-editor">
+                  <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
+                      <img src="/assets/img/illustrations/gramophone.png">
+                  </figure>
+                  <h2 class="h6">Partijpolitiek slaagt er niet in het tij te keren</h2>
+
+                  <p>De voorbije, eindeloos aanslepende regeringsonderhandelingen maken het duidelijk: ook onze democratie is in crisis. Het getouwtrek zorgt voor een bestuurlijke stilstand, die we ons niet meer kunnen veroorloven.</p>
+
+              </div>
+
+              <div class="grid__cell s-editor">
+                  <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
+                      <img src="/assets/img/illustrations/diversity.png">
+                  </figure>
+                  <h2 class="h6">De oplossing: een Burgerparlement?</h2>
+
+                  <p>Gelote burgers kunnen samenwerken, in plaats van elkaar bekampen. Ze wetenschappers en experten, in plaats van oude dogma's. Ze moeten niet vrezen voor hun politieke carrière of herverkozen raken. Ze kunnen geïnformeerde, doorgesproken beslissingen nemen, gebaseerd op informatie uit alle hoeken van de samenleving.</p>
+
+              </div>
+
+              <div class="grid__cell s-editor">
+                  <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
+                      <img src="/assets/img/illustrations/owl.png">
+                  </figure>
+                  <h2 class="h6">Veel andere landen deden het ons al met succes voor</h2>
+
+                  <p>Gelukkig hoeven we het warme water niet uit te vinden. Steeds meer landen gingen ons al voor. In Frankrijk schiep het <em>Convention Citoyenne pour le Climat</em> onlangs een historisch precedent: na acht maanden kwamen de 150 leden van dit burgerparlement met een lijvig rapport vol concrete beleidsvoorstellen.</p>
+
+              </div>
+
+      </div>
   </div>
-  <div class="container u-margin-top-6">
-    <button class="c-button">
-      <span class="c-button__label">Lees het voorstel</span>
-    </button>
+  <div class="container u-margin-top-7 u-text-align-center">
+      <button class="c-button">
+  <span class="c-button__label">Lees het voorstel</span>
+</button>
 
   </div>
 </div>
+
 <div class="c-panel u-padding-top-9">
   <div class="container s-editor u-text-align-center">
     <h2><span class="u-color-teal">Contacteer</span> jouw <span class="u-color-orange-red">vertegenwoordigers</span></h2>
@@ -375,7 +408,7 @@
         </figure>
         <h3 class="h5"><a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug"
           [innerHtml]="question.question"></a></h3>
-        <p class="keep-newlines" [innerHtml]="question.summary"></p>
+        <p class="keep-newlines" [innerHtml]="question.summary | truncate:200"></p>
 
         <ul class="c-tag-list">
           <li class="c-tag-list__item" *ngFor="let tag of question.tags">
