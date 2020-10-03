@@ -2,7 +2,7 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, Event, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, ViewportScroller } from '@angular/common';
 import * as dayjs from 'dayjs';
 import 'dayjs/locale/nl';
 import 'dayjs/locale/fr';
@@ -26,7 +26,8 @@ export class AppComponent {
 
   constructor(@Inject(PLATFORM_ID) platformId: string, public router: Router,
     activatedRoute: ActivatedRoute, private translate: TranslateService,
-    private seoService: SeoService, public languageService: LanguageService) {
+    private seoService: SeoService, public languageService: LanguageService,
+    viewportScroller: ViewportScroller) {
 
     this.setTitleAndDescription();
 
@@ -64,7 +65,11 @@ export class AppComponent {
           return;
         }
 
-        window.scrollTo(0, 0);
+        if (window.location.hash) {
+          setTimeout(() => viewportScroller.scrollToAnchor('mail'));
+        } else {
+          setTimeout(() => window.scrollTo(0, 0));
+        }
         //setTimeout(() => window.scrollTo(0, 0));
       });
     }
