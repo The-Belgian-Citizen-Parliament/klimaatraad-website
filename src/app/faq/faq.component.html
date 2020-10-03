@@ -1,8 +1,7 @@
 <div class="c-panel u-padding-top-0">
   <div class="container">
     <h1 class="c-page-title" innerHtml="{{ 'Frequently Asked Questions' | translate }}"></h1>
-    <p>Je zit vast met veel vragen; zowel over de ernst van de ecologische uitdagingen waar we voor staan;
-      over waarom politici er niet in slagen afdoende maatregelen te nemen; als over de burgerassemblee.</p>
+    <p>{{ 'faqSubtitle' | translate }}</p>
   </div>
 </div>
 
@@ -27,8 +26,7 @@
       </ng-container>
 
       <div class="c-callout">
-        <p><strong>Staat jouw vraag er niet tussen? </strong> <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">We beantwoorden hem graag voor jou en
-          nemen hem hier op!</a></p>
+        <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'sendUsAMail' | translate }}</a></p>
       </div>
     </ng-container>
   </div>
@@ -50,7 +48,7 @@
       </div>
 
       <p *ngIf="(filter || tagFilter) && filter.length > 2 && filteredQuestions.length == 0">
-        Geen vragen gevonden met deze filter. <a [routerLink]="" (click)="clearFilter()">Toon terug alle vragen</a>
+        {{ 'noQuestionsWithThisFilter' | translate }} <a [routerLink]="" (click)="clearFilter()"> {{ 'showAllQuestions' | translate }}</a>
       </p>
     </ng-container>
   </div>

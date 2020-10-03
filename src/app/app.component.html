@@ -1,5 +1,5 @@
 <header class="c-site-header" id="site-header"><a class="c-logo" routerLink="/">
-    <span class="u-visually-hidden">The Belgian Citizens' Parliament</span>
+    <span class="u-visually-hidden">{{ 'title' | translate }}</span>
     <svg class="c-logo__image" viewBox="0 0 400 360" role="img" aria-hidden="true">
       <use *ngIf="lang !== 'fr'" xlink:href="#logo-nl-colour"></use>
       <use *ngIf="lang === 'fr'" xlink:href="#logo-fr-colour"></use>
@@ -89,7 +89,7 @@
 
       <div class="grid__cell">
         <a class="c-logo" routerLink="/">
-          <span class="u-visually-hidden">The Belgian Citizens' Parliament</span>
+          <span class="u-visually-hidden">{{ 'title' | translate }}</span>
           <svg class="c-logo__image" viewBox="0 0 400 360" role="img" aria-hidden="true">
             <use *ngIf="lang !== 'fr'" xlink:href="#logo-nl-mono"></use>
             <use *ngIf="lang === 'fr'" xlink:href="#logo-fr-mono"></use>
@@ -98,9 +98,9 @@
       </div>
 
       <div class="grid__cell">
-        <p>Het Burgerparlement is een initiatief van Extinction Rebellion Belgium, Greenpeace, Oxfam, Klimaatzaak, Youth for Climate, Grootouders voor het Klimaat, Oikos, Hart boven Hard, Agora, Burgerlijst, Act4Change en <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">vele andere</a> ecologische en sociale organisaties en bewegingen.</p>
+        <p>{{ 'footerMain' | translate }} <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'manyOthers' | translate }}</a>.</p>
 
-        <p class="small">Bij vragen over privacy of het beheer van uw gegevens lees onze <a routerLink="/privacy">privacyverklaring</a> of neem contact met ons op via <a href="mailto:info@thecitizensparliament.be">info@thecitizensparliament.be</a>.</p>
+        <p class="small" [innerHtml]="'footerSmall' | translate"></p>
     </div>
     </div>
   </div>

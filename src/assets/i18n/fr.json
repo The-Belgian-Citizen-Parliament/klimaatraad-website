@@ -15,6 +15,20 @@
   "Show more": "Toon meer",
   "Show less": "Toon minder",
 
+  "faqSubtitle": "Un Parlement Citoyen ? A quoi pourrait servir un salon de bavardage ? Est-ce que cela a déjà fonctionné ? Et qui va payer les frais ? Vous avez sûrement beaucoup de questions. Ici, nous allons essayer de répondre à toutes ces questions de manière claire et transparente.",
+  "yourQuestionNotHere": "Votre question n'y figure pas ?",
+  "sendUsAMail": "Envoyez-nous un courriel, nous voulons savoir !",
+  "noQuestionsWithThisFilter": "No questions found with this filter.",
+  "showAllQuestions": "Show all questions",
+
+  "contactYourRepresentativesTitle": "Contact your representatives",
+  "contactYourRepresentativesText": "Join our campaign! Send a mail to your representatives or send a tweet to our newly appointed ministers.",
+  "contactYourRepresentativesParticipate": "Participate",
+
+  "footerMain": "Het Burgerparlement is een initiatief van Extinction Rebellion Belgium, Greenpeace, Oxfam, Klimaatzaak, Youth for Climate, Grootouders voor het Klimaat, Oikos, Hart boven Hard, Agora, Burgerlijst, Act4Change en",
+  "manyOthers": "vele andere ecologische en sociale organisaties en bewegingen",
+  "footerSmall": "Bij vragen over privacy of het beheer van uw gegevens lees onze <a href=\"/privacy\">privacyverklaring</a> of neem contact met ons op via <a href=\"mailto:info@thecitizensparliament.be\">info@thecitizensparliament.be</a>.",
+
   "A national citizens parliament concerning the ecological emergencies": "Une assemblée citoyenne nationale sur l'urgence écologique",
   "Memorandum for the new federal government": "Mémorandum aux nouveau gouvernement",
   "openingMessage": "Art. 7bis de la Constitution belge: « Dans l’exercice de leurs compétences respectives, l’État fédéral, les communautés et les régions poursuivent les objectifs d’un développement durable, dans ses dimensions sociale, économique et environnementale, en tenant compte de la solidarité entre les générations ».",
