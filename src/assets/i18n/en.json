@@ -25,9 +25,11 @@
   "contactYourRepresentativesText": "Join our campaign! Send a mail to your representatives or send a tweet to our newly appointed ministers.",
   "contactYourRepresentativesParticipate": "Participate",
 
-  "footerMain": "The Citizens' Parliament is an initiative from Extinction Rebellion Belgium, Greenpeace, Oxfam, Klimaatzaak, Youth for Climate, Grootouders voor het Klimaat, Oikos, Hart boven Hard, Agora, Burgerlijst, Act4Change and",
-  "manyOthers": "many other ecological and social organizations and movements.",
+  "footerMain": "The Citizens’ Parliament is an initiative from a group of citizens, supported by a coalition of ",
+  "manyOthers": "more than 20 organizations and movements.",
   "footerSmall": "If you have questions regarding privacy or the storage of your data, read our <a href=\"/privacy\">privacy statement</a> or contact us via <a href=\"mailto:info@thecitizensparliament.be\">info@thecitizensparliament.be</a>.",
+  "illustrationsBy": "Illustrations by",
+  "andDesignBy": "and design by",
 
   "aboutTitle": "Meet <span class=\"u-color-teal\">the organizations</span> behind <span class=\"u-color-orange-red\">The Citizens' Parliament</span>",
   "aboutSubtitle": "The Citizens’ Parliament is an initiative from a group of citizens, supported by a coalition of organizations and movements. The whole campaign cost nothing and was created by the voluntary contributions of many.",

@@ -25,9 +25,11 @@
   "contactYourRepresentativesText": "Neem deel aan onze campagne! Stuur een mail naar jouw vertegenwoordiger of een tweet naar onze nieuwe ministers.",
   "contactYourRepresentativesParticipate": "Doe mee",
 
-  "footerMain": "Het Burgerparlement is een initiatief van Extinction Rebellion Belgium, Greenpeace, Oxfam, Klimaatzaak, Youth for Climate, Grootouders voor het Klimaat, Oikos, Hart boven Hard, Agora, Burgerlijst, Act4Change en",
-  "manyOthers": "vele andere ecologische en sociale organisaties en bewegingen",
+  "footerMain": "Het Burgerparlement is een initiatief van een groep burgers, ondersteund door een coalitie van ",
+  "manyOthers": "meer dan 20 organisaties en bewegingen",
   "footerSmall": "Bij vragen over privacy of het beheer van uw gegevens lees onze <a href=\"/privacy\">privacyverklaring</a> of neem contact met ons op via <a href=\"mailto:info@thecitizensparliament.be\">info@thecitizensparliament.be</a>.",
+  "illustrationsBy": "Illustraties door",
+  "andDesignBy": "en design door",
 
   "aboutTitle": "Maak kennis met <span class=\"u-color-teal\">de organisaties</span> achter <span class=\"u-color-orange-red\">Het Burgerparlement</span>",
   "aboutSubtitle": "Het Burgerparlement is een initiatief van een groep burgers, ondersteund door een coalitie van organisaties en bewegingen. De hele campagne kost nul euro en steunt op het vrijwillige engagement van velen.",
