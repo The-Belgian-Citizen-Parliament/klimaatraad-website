@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from 'src/app/common/language.service';
 
 import { Question } from 'src/app/questions/questions';
 import { QuestionsService } from 'src/app/questions/questions.service';
@@ -16,7 +17,7 @@ export class QuestionDetailComponent {
   randomQuestions: Question[];
 
   constructor(router: Router, questionService: QuestionsService, seoService: SeoService,
-    translate: TranslateService, activeRoute: ActivatedRoute) {
+    translate: TranslateService, activeRoute: ActivatedRoute, public languageService: LanguageService) {
     activeRoute.params.subscribe(routeParams => {
       const slug = /[^/]*$/.exec(router.url)[0];
       if (!slug) router.navigate(['/faq']);

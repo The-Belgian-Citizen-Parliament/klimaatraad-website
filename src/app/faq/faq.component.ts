@@ -6,6 +6,7 @@ import { QuestionsService } from '../questions/questions.service';
 import { nl, Question } from '../questions/questions';
 import { environment } from 'src/environments/environment';
 import { RandomImageService } from '../common/random-image.service';
+import { LanguageService } from '../common/language.service';
 
 @Component({
   selector: 'app-faq',
@@ -35,7 +36,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   imgs: string[] = [];
 
   constructor(@Inject(PLATFORM_ID) platformId: string, private questionsService: QuestionsService,
-    public randomImage: RandomImageService) {
+    public randomImage: RandomImageService, public languageService: LanguageService) {
     this.questionExamples = this.lang == 'nl' ? ['groen', 'kost', 'uitstoot', 'ecologisch']
       : this.lang === 'fr' ? ['ecolo', 'coute', 'emissions', 'ecologique']
       : ['groen', 'cost', 'emissions', 'ecologic'];

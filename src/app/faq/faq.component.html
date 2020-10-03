@@ -27,7 +27,7 @@
 
       <div class="c-callout">
         <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a
-            [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'sendUsAMail' | translate }}</a></p>
+            [routerLink]="languageService.route('about') | async">{{ 'sendUsAMail' | translate }}</a></p>
       </div>
     </ng-container>
   </div>

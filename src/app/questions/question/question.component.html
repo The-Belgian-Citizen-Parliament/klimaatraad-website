@@ -3,7 +3,7 @@
     <img [src]="image">
   </figure>
   <h3 id="question-1" class="h5 question-title" *ngIf="!answerOnly">
-    <a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug">
+    <a [routerLink]="languageService.route('question', question.slug) | async">
       <span [innerHtml]="question.question"></span>
       <mat-icon class="question-link">link</mat-icon>
     </a>

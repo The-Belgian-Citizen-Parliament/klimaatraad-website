@@ -3,6 +3,7 @@ import { QuestionsService } from '../questions/questions.service';
 import { Question } from '../questions/questions';
 import { environment } from 'src/environments/environment';
 import { RandomImageService } from '../common/random-image.service';
+import { LanguageService } from '../common/language.service';
 
 @Component({
   selector: 'app-main',
@@ -14,7 +15,8 @@ export class MainComponent {
   imgs: string[] = [];
   lang = environment.language;
 
-  constructor(private questionsService: QuestionsService, public randomImage: RandomImageService) {
+  constructor(private questionsService: QuestionsService, public randomImage: RandomImageService,
+    public languageService: LanguageService) {
     this.questions = questionsService.getRandomQuestions(4);
     this.imgs = randomImage.generateImages(4);
 

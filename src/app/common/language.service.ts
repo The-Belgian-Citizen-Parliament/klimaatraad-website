@@ -23,8 +23,8 @@ export class LanguageService {
 
   route(englishRouteLink, parameter = null): Observable<string> {
     return this.lang.pipe(map((lang) => {
-      if (lang === 'en') return englishRouteLink;
-      else return (this.routeMap[lang][englishRouteLink] || englishRouteLink)
+      if (lang === 'en') return '/' + englishRouteLink;
+      else return '/' + (this.routeMap[lang][englishRouteLink] || englishRouteLink)
         + (parameter ? ('/' + parameter) : '');
     }));
   }

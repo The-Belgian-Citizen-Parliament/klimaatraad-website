@@ -73,7 +73,7 @@
     </div>
   </div>
   <div class="container u-margin-top-7 u-text-align-center">
-    <button class="c-button" [routerLink]="lang === 'fr' ? '/proposition' : '/voorstel'">
+    <button class="c-button" [routerLink]="languageService.route('proposal') | async">
       <span class="c-button__label">{{ 'readTheProposal' | translate }}</span>
     </button>
 
@@ -419,7 +419,7 @@
         <figure class="u-max-width-1" aria-hidden="true">
           <img [src]="imgs[i]">
         </figure>
-        <h3 class="h5"><a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug" [innerHtml]="question.question"></a>
+        <h3 class="h5"><a [routerLink]="languageService.route('question', question.slug) | async" [innerHtml]="question.question"></a>
         </h3>
         <p class="keep-newlines" [innerHtml]="question.summary | truncate:200"></p>
 
