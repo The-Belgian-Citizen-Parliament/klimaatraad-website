@@ -48,3 +48,77 @@
     opacity: 0.3;
   }
 }
+
+
+/**
+ * Modifiers.
+ */
+
+.c-button--download {
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  margin: map-get($spacing-units, '9') auto;
+  padding: 0;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: inherit;
+
+    .c-button__label {
+      text-decoration: underline;
+
+      @include feature-query('text-underline-offset') {
+        text-decoration-thickness: 0.125em;
+        text-underline-offset: 0.25em;
+      }
+    }
+  }
+
+  &:before {
+    background: url('/assets/img/illustrations/proposal.png') no-repeat 50% 50%;
+    background-size: contain;
+    content: '';
+    display: block;
+    position: absolute;
+    width: map-get($width-units, '2');
+
+    @include media-query('max:060') {
+      bottom: 100%;
+      height: map-get($width-units, '1');
+      margin-bottom: -1em;
+    }
+
+    @include media-query('min:060') {
+      height: map-get($width-units, '2');
+      left: 0;
+      top: 50%;
+      transform: translate(-75%, -50%);
+    }
+  }
+
+  @include feature-query('mask-image') {
+    mask-image: none;
+    max-width: none;
+    overflow: visible;
+    padding-right: 0;
+
+    &:after {
+      background-color: map-get($colors, 'lemon');
+      content: '';
+      height: 4em;
+      mask-image: url("data:image/svg+xml,%3Csvg width='100' height='97' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.5083 96.0174C6.66728 96.1905 0.521347 90.5639 0.348221 77.493C0.0885326 62.0848 -0.430836 46.59 0.69448 31.2684C1.56011 19.2362 5.54197 10.9262 19.7383 4.69366C36.2718 -2.49105 49.7756 -0.759815 63.7987 5.38614C80.6785 12.8305 91.1526 27.4597 97.9045 44.0797C104.224 59.5745 95.827 75.3289 78.4278 78.272C61.8078 81.042 46.3996 85.7164 31.7705 93.5936C28.2214 95.498 23.8067 95.6711 22.5083 96.0174Z'/%3E%3C/svg%3E%0A");
+      mask-position: 50%;
+      mask-repeat: no-repeat;
+      mask-size: 75% 100%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(25%, -50%);
+      width: 100%;
+      z-index: map-get($z-indexes, 'below');
+    }
+  }
+}

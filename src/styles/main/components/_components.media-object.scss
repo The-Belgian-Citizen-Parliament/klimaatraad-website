@@ -21,8 +21,16 @@
 .c-media-object--person {
   --gutter-width: #{map-get($spacing-units, '5')};
   flex-wrap: nowrap;
+  margin: 0;
   padding: map-get($spacing-units, '5');
+  padding-bottom: 0;
+  padding-left: 0;
   position: relative;
+
+  &:hover,
+  &:focus-within {
+    background-color: map-get($colors, 'lemon');
+  }
 
   & + #{&} {
     border-top: 2px solid currentColor;
@@ -32,6 +40,15 @@
     border: map-get($spacing-units, '3') solid transparent;
     background-color: map-get($colors, 'white');
     max-width: map-get($width-units, '1');
+  }
+
+  .c-media-object__button {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 
   &[data-selected="true"] .c-media-object__figure {
