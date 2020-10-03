@@ -1,8 +1,7 @@
 <div class="c-panel u-padding-top-0">
   <div class="container">
-    <h1 class="c-page-title" innerHtml="{{ 'Frequently Asked Questions' | translate }}"></h1>
-    <p>Je zit vast met veel vragen; zowel over de ernst van de ecologische uitdagingen waar we voor staan;
-      over waarom politici er niet in slagen afdoende maatregelen te nemen; als over de burgerassemblee.</p>
+    <h1 class="c-page-title" innerHtml="{{ 'faqTitle' | translate }}"></h1>
+    <p>{{ 'faqSubtitle' | translate }}</p>
   </div>
 </div>
 
@@ -14,8 +13,8 @@
     </div>
 
     <div *ngIf="tagFilter">
-      <h4>{{ 'Tag filter' | translate }} <small><span class="c-tag c-tag__label" style="vertical-align: bottom;">{{ tagFilter }} <mat-icon class="remove-tag-icon"
-              (click)="clearFilter()">close</mat-icon></span></small></h4>
+      <h4>{{ 'Tag filter' | translate }} <small><span class="c-tag c-tag__label" style="vertical-align: bottom;">{{ tagFilter }} <mat-icon
+              class="remove-tag-icon" (click)="clearFilter()">close</mat-icon></span></small></h4>
     </div>
 
     <ng-container *ngIf="!filter && !tagFilter">
@@ -27,8 +26,8 @@
       </ng-container>
 
       <div class="c-callout">
-        <p><strong>Staat jouw vraag er niet tussen? </strong> <a routerLink="/about">We beantwoorden hem graag voor jou en
-          nemen hem hier op!</a></p>
+        <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a
+            [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'sendUsAMail' | translate }}</a></p>
       </div>
     </ng-container>
   </div>
@@ -38,19 +37,19 @@
   <div class="container">
     <ng-container *ngIf="!filter && !tagFilter">
       <div *ngFor="let topic of groupedQuestions" class="question-container">
-        <div *ngFor="let question of topic.questions" [id]="question.slug" class="question-container">
-          <app-question [question]="question" (tagClicked)="setTagFilter($event)"></app-question>
+        <div *ngFor="let question of topic.questions; let i = index;" [id]="question.slug" class="question-container">
+          <app-question [question]="question" [image]="imgs[i]" (tagClicked)="setTagFilter($event)"></app-question>
         </div>
       </div>
     </ng-container>
 
     <ng-container *ngIf="filter || tagFilter">
-      <div *ngFor="let question of filteredQuestions" class="question-container">
-        <app-question [question]="question" (tagClicked)="setTagFilter($event)"></app-question>
+      <div *ngFor="let question of filteredQuestions; let i = index;" class="question-container">
+        <app-question [question]="question" [image]="imgs[i]" (tagClicked)="setTagFilter($event)"></app-question>
       </div>
 
       <p *ngIf="(filter || tagFilter) && filter.length > 2 && filteredQuestions.length == 0">
-        Geen vragen gevonden met deze filter. <a [routerLink]="" (click)="clearFilter()">Toon terug alle vragen</a>
+        {{ 'noQuestionsWithThisFilter' | translate }} <a [routerLink]="" (click)="clearFilter()"> {{ 'showAllQuestions' | translate }}</a>
       </p>
     </ng-container>
   </div>

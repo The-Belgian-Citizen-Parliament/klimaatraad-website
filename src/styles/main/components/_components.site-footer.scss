@@ -50,7 +50,7 @@
     @include media-query('min:080') {
       grid-template-areas:
         'a a a a a a a a b b b b'
-        'c c d d d d d d . . . .';
+        'c c d d d d d d d d . .';
     }
   }
 
@@ -83,14 +83,16 @@
   }
 
   /*a*/.c-nav__button {
-    @include feature-query('mask-image') {
-      background-color: map-get($colors, 'black');
-      color: map-get($colors, 'white');
-
-      &:hover,
-      &:focus {
-        background-color: map-get($colors, 'orange-red');
+    @include media-query('min:040') {
+      @include feature-query('mask-image') {
+        background-color: map-get($colors, 'black');
         color: map-get($colors, 'white');
+
+        &:hover,
+        &:focus {
+          background-color: map-get($colors, 'orange-red');
+          color: map-get($colors, 'white');
+        }
       }
     }
   }

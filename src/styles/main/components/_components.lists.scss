@@ -32,6 +32,7 @@
   @extend %stack;
   --gutter-width: #{map-get($spacing-units, '2')};
   font-size: font-unit('small');
+  margin-top: map-get($spacing-units, '5');
   padding-left: 2em;
 
   @include media-query('min:100') {

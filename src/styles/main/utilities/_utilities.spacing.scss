@@ -21,3 +21,23 @@
     padding-top: $unit !important;
   }
 }
+
+/*.c-panel*/.u-overflow-bottom {
+  border-bottom: 1px solid transparent;
+  margin-bottom: map-get($spacing-units, '9') !important;
+  padding-bottom: 0 !important;
+
+  > *:last-child {
+    margin-bottom: (map-get($spacing-units, '9') * -1) !important;
+  }
+}
+
+/*.c-panel*/.u-overflow-top {
+  border-top: 1px solid transparent;
+  margin-top: map-get($spacing-units, '9') !important;
+  padding-top: 0 !important;
+
+  > *:first-child {
+    margin-top: (map-get($spacing-units, '9') * -1) !important;
+  }
+}

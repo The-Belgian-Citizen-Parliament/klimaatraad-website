@@ -10,6 +10,7 @@
   border-radius: 0.5em;
   color: map-get($colors, 'black');
   font-family: sans-serif;
+  font-size: font-unit('small');
   font-weight: map-get($font-weights, 'regular');
   min-height: 12em;
   padding: 1em;

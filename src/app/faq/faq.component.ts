@@ -5,6 +5,7 @@ import * as lunr from 'lunr';
 import { QuestionsService } from '../questions/questions.service';
 import { nl, Question } from '../questions/questions';
 import { environment } from 'src/environments/environment';
+import { RandomImageService } from '../common/random-image.service';
 
 @Component({
   selector: 'app-faq',
@@ -20,7 +21,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   tagFilter = null;
 
   questionPlaceholder = '';
-  questionExamples = ['klimaat', 'burger', 'politici', 'legitiem'];
+  questionExamples: string[] = [];
   counter = 0;
 
   allQuestions: Question[] = nl;
@@ -31,10 +32,18 @@ export class FaqComponent implements OnInit, OnDestroy {
   isBrowser = false;
   timer;
 
-  constructor(@Inject(PLATFORM_ID) platformId: string, private questionsService: QuestionsService) {
+  imgs: string[] = [];
+
+  constructor(@Inject(PLATFORM_ID) platformId: string, private questionsService: QuestionsService,
+    public randomImage: RandomImageService) {
+    this.questionExamples = this.lang == 'nl' ? ['groen', 'kost', 'uitstoot', 'ecologisch']
+      : this.lang === 'fr' ? ['ecolo', 'coute', 'emissions', 'ecologique']
+      : ['groen', 'cost', 'emissions', 'ecologic'];
+
     this.questionPlaceholder = this.questionExamples[0];
     this.isBrowser = isPlatformBrowser(platformId);
     setTimeout(() => this.questionField.nativeElement.focus());
+    this.imgs = randomImage.generateImages(50);
 
     this.groupedQuestions = this.allQuestions.reduce((all, curr) => {
       if (!all.find(t => t.topic === curr.tags[0])) all.push({ topic: curr.tags[0], questions: [] });

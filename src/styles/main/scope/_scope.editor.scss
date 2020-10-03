@@ -1,21 +1,12 @@
 .s-editor {
   @extend %stack;
 
-  h2,
-  h3,
-  h4,
-  blockquote,
-  figure,
-  figure + * {
-    --gutter-width: #{map-get($spacing-units, '6')};
-  }
-
   figure {
     margin-left: auto;
     margin-right: auto;
     max-width: map-get($width-units, '3');
     text-align: right;
-    width: percentage(7/10);
+    width: percentage(6/10);
 
     img {
       width: 100%;
@@ -51,10 +42,36 @@
         margin-right: (($width + map-get($spacing-units, '6')) * -1);
       }
     }
+
+    &.u-max-height-2 {
+      height: map-get($width-units, '2');
+
+      > img {
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+      }
+    }
   }
 
   figcaption {
     font-size: font-unit('micro');
     margin-top: map-get($spacing-units, '3');
+  }
+
+  ol,
+  ul {
+    @extend %stack;
+
+    li {
+      --gutter-width: #{map-get($spacing-units, '2')};
+    }
+  }
+
+  sup,
+  sub {
+    font-size: font-unit('micro');
+    line-height: 1;
   }
 }

@@ -1,5 +1,5 @@
 <header class="c-site-header" id="site-header"><a class="c-logo" routerLink="/">
-    <span class="u-visually-hidden">The Belgian Citizens' Parliament</span>
+    <span class="u-visually-hidden">{{ 'title' | translate }}</span>
     <svg class="c-logo__image" viewBox="0 0 400 360" role="img" aria-hidden="true">
       <use *ngIf="lang !== 'fr'" xlink:href="#logo-nl-colour"></use>
       <use *ngIf="lang === 'fr'" xlink:href="#logo-fr-colour"></use>
@@ -17,7 +17,7 @@
         <a routerLink="/faq">{{ 'FAQ' | translate }}</a>
       </li>
       <li class="c-nav__item">
-        <a [routerLink]="lang === 'fr' ? '/apropos' : '/over'">{{ 'About us' | translate }}</a>
+        <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'About us' | translate }}</a>
       </li>
     </ul>
   </nav>
@@ -32,11 +32,17 @@
         <a lang="en" [routerLink]="" (click)="setLanguage('en'); toggleLanguageMenu()">English (EN)</a>
       </li>
       <li class="c-language-switch__menu__item" *ngIf="lang !== 'fr'">
+        <a lang="fr" [routerLink]="" (click)="setLanguage('fr'); toggleLanguageMenu()">Français (FR)</a>
+      </li>
+      <li class="c-language-switch__menu__item" *ngIf="lang !== 'nl'">
+        <a lang="nl" [routerLink]="" (click)="setLanguage('nl'); toggleLanguageMenu()">Nederlands (NL)</a>
+      </li>
+      <!-- <li class="c-language-switch__menu__item" *ngIf="lang !== 'fr'">
         <a lang="fr" href="https://www.leparlementcitoyen.be">Français (FR)</a>
       </li>
       <li class="c-language-switch__menu__item" *ngIf="lang !== 'nl'">
         <a lang="nl" href="https://www.hetburgerparlement.be">Nederlands (NL)</a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </header>
@@ -67,7 +73,7 @@
               <a routerLink="/faq">{{ 'FAQ' | translate }}</a>
             </li>
             <li class="c-nav__item">
-              <a [routerLink]="lang === 'fr' ? '/apropos' : '/over'">{{ 'About us' | translate }}</a>
+              <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'About us' | translate }}</a>
             </li>
           </ul>
         </nav>
@@ -89,7 +95,7 @@
 
       <div class="grid__cell">
         <a class="c-logo" routerLink="/">
-          <span class="u-visually-hidden">The Belgian Citizens' Parliament</span>
+          <span class="u-visually-hidden">{{ 'title' | translate }}</span>
           <svg class="c-logo__image" viewBox="0 0 400 360" role="img" aria-hidden="true">
             <use *ngIf="lang !== 'fr'" xlink:href="#logo-nl-mono"></use>
             <use *ngIf="lang === 'fr'" xlink:href="#logo-fr-mono"></use>
@@ -98,10 +104,12 @@
       </div>
 
       <div class="grid__cell">
-        <p>This is a standard paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>{{ 'footerMain' | translate }} <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'manyOthers' | translate }}</a>.</p>
 
-        <p class="small">This is small text. At iam decimum annum in spelunca iacet.</p>
-      </div>
+        <p class="small" [innerHtml]="'footerSmall' | translate"></p>
+
+        <p class="small">{{ 'illustrationsBy' | translate }} Mary Autumn {{ 'andDesignBy' | translate }} Chloë Janssens.</p>
+    </div>
     </div>
   </div>
 </footer>

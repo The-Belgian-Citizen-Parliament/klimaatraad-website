@@ -1,10 +1,10 @@
 {
   "title": "Le Parlement Citoyen",
+  "shortDescription": "Een Burgerparlement rond de ecologische noodtoestand",
   "description": "Onze nieuwe regering wil meer burgerparticipatie in de politiek en tegelijk ambitieuze milieumaatregelen? Het Burgerparlement heeft een concreet voorstel klaar! 101 burgers, representatief voor de Belgische bevolking, die gesteund door wetenschappers en experten nadenken over hoe we de grootste uitdaging van onze tijd te lijf kunnen gaan.",
 
   "The proposal": "La proposition",
   "FAQ": "FAQ",
-  "Frequently Asked Questions": "Questions et <span class=\"u-color-teal\">réponses</span>",
   "Take part": "Participer",
   "About us": "About us",
   "Contact": "Contact",
@@ -13,6 +13,47 @@
 
   "Show more": "Toon meer",
   "Show less": "Toon minder",
+
+  "mainTitle": "Le temps est venu pour un <span class=\"u-color-teal\">Parlement Citoyen</span> sur <span class=\"u-color-orange-red\">l’urgence écologique</span>",
+  "mainSubtitle": "Davantage de participation citoyenne et une politique environnementale ambitieuse ? Le Parlement Citoyen a déjà une proposition concrète pour notre tout nouveau gouvernement ! 101 citoyen.ne.s tirés au sort pour représenter la population belge et pour réfléchir, avec l’appui d’experts, sur le plus grand défi de notre époque.",
+
+  "explainerTitle1": "Nous sommes confrontés à des défis écologiques sans précédent",
+  "explainerText1": "Le réchauffement climatique, la perte de biodiversité, le niveau catastrophique de la pollution… Les scientifiques et les activistes nous alertent depuis des années sur la crise écologique et son impact sur la société. C’est une réalité à laquelle les partis - de droite comme de gauche - devront faire face, tout comme leurs électeurs.",
+  "explainerTitle2": "Le système des partis a atteint ses limites",
+  "explainerText2": "Les négociations interminables pour la formation du gouvernement le prouvent: notre démocratie est en crise. Les marchandages nous entraînent dans une impasse politique que nous ne pouvons pas nous permettre. Nous devons travailler ensemble si nous voulons mettre en place une politique environnementale efficace qui inclut tous les niveaux de pouvoir, les citoyens, les scientifiques et les représentants politiques.",
+  "explainerTitle3": "La solution: un Parlement Citoyen?",
+  "explainerText3": "Les citoyens tirés au sort peuvent travailler ensemble, au lieu de se battre entre eux. Ils écouteront les scientifiques et les experts, au lieu d’obéir à des dogmes obsolètes. Ils ne doivent pas craindre pour leur carrière politique ni se faire réélire. Ils peuvent prendre des décisions éclairées et discutées sur la base d'informations provenant de tous les secteurs de la société.",
+  "explainerTitle4": "Nous ne sommes pas les seuls",
+  "explainerText4": "Heureusement, nous ne devons pas réinventer l'eau chaude. De plus en plus de pays se lancent dans cette voie: l’Irlande, le Canada, l'Australie, le Royaume-Uni... En France la Convention Citoyenne pour le Climat est un succès sans précédent: après huit mois de travaux, les 150 membres de cette Convention Citoyenne créée à l'initiative du président Emmanuel Macron, ont produit un volumineux rapport rempli de propositions politiques concrètes.",
+  "readTheProposal": "Léez la proposition",
+  "mainContactYourRepresentativesTitle": "<span class=\"u-color-teal\">Appèl</span> à nos <span class=\"u-color-orange-red\">politiciens</span>",
+  "mainContactYourRepresentativesText": "Qu'attend donc le gouvernement De Croo I ? Rejoignez notre campagne et envoyez un courriel à votre représentant ou un tweet à nos nouveaux ministres.",
+  "tweetThis": "Envoyez ce tweet",
+  "followOurCampaign": "Suivez la campagne",
+  "manyQuestions": "Vous avez sûrement beaucoup de questions, par exemple...",
+  "searchThroughAllQuestions": "Toutes les questions",
+
+  "faqTitle": "Questions et <span class=\"u-color-teal\">réponses</span>",
+  "faqSubtitle": "Un Parlement Citoyen ? A quoi pourrait servir un salon de bavardage ? Est-ce que cela a déjà fonctionné ? Et qui va payer les frais ? Vous avez sûrement beaucoup de questions. Ici, nous allons essayer de répondre à toutes ces questions de manière claire et transparente.",
+  "yourQuestionNotHere": "Votre question n'y figure pas ?",
+  "sendUsAMail": "Envoyez-nous un courriel, nous voulons savoir !",
+  "noQuestionsWithThisFilter": "No questions found with this filter.",
+  "showAllQuestions": "Show all questions",
+
+  "contactYourRepresentativesTitle": "Contact your representatives",
+  "contactYourRepresentativesText": "Join our campaign! Send a mail to your representatives or send a tweet to our newly appointed ministers.",
+  "contactYourRepresentativesParticipate": "Participate",
+
+  "footerMain": "Het Burgerparlement is een initiatief van Extinction Rebellion Belgium, Greenpeace, Oxfam, Klimaatzaak, Youth for Climate, Grootouders voor het Klimaat, Oikos, Hart boven Hard, Agora, Burgerlijst, Act4Change en",
+  "manyOthers": "vele andere ecologische en sociale organisaties en bewegingen",
+  "footerSmall": "Bij vragen over privacy of het beheer van uw gegevens lees onze <a href=\"/privacy\">privacyverklaring</a> of neem contact met ons op via <a href=\"mailto:info@thecitizensparliament.be\">info@thecitizensparliament.be</a>.",
+  "illustrationsBy": "Illustrations par",
+  "andDesignBy": "et design par",
+
+  "aboutTitle": "Meet the organizations behind The Citizens' Parliament",
+  "aboutSubtitle": "The Citizens’ Parliament is an initiative from a group of citizens, supported by a coalition of organizations and movements. The whole campaign cost nothing and was created by the voluntary contributions of many.",
+  "wantToJoinUs": "Wil jouw organisatie zich graag bij ons aansluiten of heb je andere vragen?",
+  "Contact us": "Neem contact met ons op!",
 
   "A national citizens parliament concerning the ecological emergencies": "Une assemblée citoyenne nationale sur l'urgence écologique",
   "Memorandum for the new federal government": "Mémorandum aux nouveau gouvernement",

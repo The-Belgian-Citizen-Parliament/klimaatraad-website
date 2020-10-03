@@ -38,7 +38,7 @@ export class AppComponent {
         return { activatedRoute, event };
       }),
       filter(({ activatedRoute, event }) => activatedRoute.outlet === 'primary'),
-    ), this.translate.get(['title', 'description'])]).subscribe(([{ activatedRoute, event }, trans]) => {
+    ), this.translate.get(['title', 'shortDescription'])]).subscribe(([{ activatedRoute, event }, trans]) => {
       const path = (event as NavigationEnd).url;
       const url = environment.baseUrl + path;
       seoService.updateOgUrl(url);
@@ -47,7 +47,7 @@ export class AppComponent {
       } else {
         // Set the default
         const title = trans['title'];
-        const description = trans['description'];
+        const description = trans['shortDescription'];
 
         seoService.updateDescription(description);
         if (activatedRoute.snapshot.data['title']) {
@@ -85,6 +85,6 @@ export class AppComponent {
 
   setTitleAndDescription() {
     this.translate.get('title').subscribe((title) => this.seoService.updateTitle(title));
-    this.translate.get('description').subscribe((description) => this.seoService.updateDescription(description));
+    this.translate.get('shortDescription').subscribe((description) => this.seoService.updateDescription(description));
   }
 }

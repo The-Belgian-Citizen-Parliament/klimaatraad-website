@@ -1,10 +1,10 @@
 {
   "title": "Het Burgerparlement",
+  "shortDescription": "Een Burgerparlement rond de ecologische noodtoestand",
   "description": "Onze nieuwe regering wil meer burgerparticipatie in de politiek en tegelijk ambitieuze milieumaatregelen? Het Burgerparlement heeft een concreet voorstel klaar! 101 burgers, representatief voor de Belgische bevolking, die gesteund door wetenschappers en experten nadenken over hoe we de grootste uitdaging van onze tijd te lijf kunnen gaan.",
 
   "The proposal": "Het voorstel",
   "FAQ": "FAQ",
-  "Frequently Asked Questions": "Veelgestelde <span class=\"u-color-teal\">vragen</span>",
   "Take part": "Neem deel",
   "About us": "Over ons",
   "Contact": "Contact",
@@ -13,6 +13,47 @@
 
   "Show more": "Toon meer",
   "Show less": "Toon minder",
+
+  "mainTitle": "Tijd voor een <span class=\"u-color-teal\">Burgerparlement</span> rond de <span class=\"u-color-orange-red\">ecologische noodtoestand</span>",
+  "mainSubtitle": "Meer burgerparticipatie en ambitieuze milieumaatregelen combineren? Het Burgerparlement heeft voor onze kersverse regering een concreet voorstel klaar! 101 burgers, representatief voor de Belgische bevolking en gesteund door experten, denken na over hoe we de grootste uitdaging van onze tijd te lijf kunnen gaan.",
+
+  "explainerTitle1": "We staan voor ongeziene ecologische uitdagingen",
+  "explainerText1": "Een opwarmend klimaat, biodiversiteitsverlies, gigantische vervuiling,… Wetenschappers en activisten waarschuwen al jaren voor de ecologische crisis en haar ongelijke maatschappelijke impact. Links én rechts moeten deze realiteit vroeg of laat onder ogen zien.",
+  "explainerTitle2": "Partijpolitiek slaagt er niet in het tij te keren",
+  "explainerText2": "De eindeloze regeringsonderhandelingen maken het duidelijk: ook onze democratie is in crisis. Het getouwtrek zorgt voor een bestuurlijke stilstand. Politieke partijen willen elkaar ‘kapot’ maken. Terwijl er samenwerking nodig is, tussen burgers, wetenschappers en politici. ",
+  "explainerTitle3": "De oplossing: een Burgerparlement?",
+  "explainerText3": "Man of vrouw, oud of jong, hoog- of laagopgeleid: iedereen zou moeten kunnen deelnemen aan het debat. Met voldoende tijd en informatie komt een groep gelote burgers tot waardevolle beleidsvoorstellen. Doordat zij geen verkiezingen moeten vrezen kunnen ze gemakkelijker nadenken op de lange termijn. ",
+  "explainerTitle4": "Heel wat landen gingen ons al voor",
+  "explainerText4": "Een Burgerparlement is geen wondermiddel. Toch bewees het al zijn waarde. In Ierland bogen burgers zich met succes over de abortuskwestie. De Franse president Emmanuel Macron organiseerde een burgerconventie rond klimaat. Gelote burgers vervangen de bestaande politiek niet maar kunnen ze versterken.",
+  "readTheProposal": "Lees het voorstel",
+  "mainContactYourRepresentativesTitle": "<span class=\"u-color-teal\">Oproep</span> aan onze <span class=\"u-color-orange-red\">politici</span>",
+  "mainContactYourRepresentativesText": "We roepen de regering De Croo I op om een Burgerparlement rond de ecologische noodtoestand op te richten. Iedereen kan deelnemen aan onze campagne. Stuur een mail naar jouw vertegenwoordiger of een tweet naar onze nieuwe ministers.",
+  "tweetThis": "Stuur deze tweet",
+  "followOurCampaign": "Volg de campagne",
+  "manyQuestions": "Je zit ongetwijfeld met erg veel vragen, bijvoorbeeld...",
+  "searchThroughAllQuestions": "Doorzoek alle vragen",
+
+  "faqTitle": "Veelgestelde <span class=\"u-color-teal\">vragen</span>",
+  "faqSubtitle": "Een Burgerparlement? Is dat geen praatbarak? Heeft dat ooit gewerkt? En wie gaat dat betalen? Je zit ongetwijfeld met erg veel vragen. Hier proberen we ze allemaal voor je te beantwoorden, klaar en duidelijk.",
+  "yourQuestionNotHere": "Staat jouw vraag er niet tussen?",
+  "sendUsAMail": "Stuur ons een mailtje, we zijn benieuwd!",
+  "noQuestionsWithThisFilter": "Geen vragen gevonden met deze filter.",
+  "showAllQuestions": "Toon terug alle vragen",
+
+  "contactYourRepresentativesTitle": "Contacteer je vertegenwoordigers",
+  "contactYourRepresentativesText": "Neem deel aan onze campagne! Stuur een mail naar jouw vertegenwoordiger of een tweet naar onze nieuwe ministers.",
+  "contactYourRepresentativesParticipate": "Doe mee",
+
+  "footerMain": "Het Burgerparlement is een initiatief van een groep burgers, ondersteund door een coalitie van ",
+  "manyOthers": "meer dan 20 organisaties en bewegingen",
+  "footerSmall": "Bij vragen over privacy of het beheer van uw gegevens lees onze <a href=\"/privacy\">privacyverklaring</a> of neem contact met ons op via <a href=\"mailto:info@thecitizensparliament.be\">info@thecitizensparliament.be</a>.",
+  "illustrationsBy": "Illustraties door",
+  "andDesignBy": "en design door",
+
+  "aboutTitle": "Maak kennis met <span class=\"u-color-teal\">de organisaties</span> achter <span class=\"u-color-orange-red\">Het Burgerparlement</span>",
+  "aboutSubtitle": "Het Burgerparlement is een initiatief van een groep burgers, ondersteund door een coalitie van organisaties en bewegingen. De hele campagne kost nul euro en steunt op het vrijwillige engagement van velen.",
+  "wantToJoinUs": "Wil jouw organisatie zich graag bij ons aansluiten of heb je andere vragen?",
+  "Contact us": "Neem contact met ons op!",
 
   "A national citizens parliament concerning the ecological emergencies": "Een nationaal burgerparlement rond de ecologische noodtoestand",
   "Memorandum for the new federal government": "Memorandum for the new federal government",

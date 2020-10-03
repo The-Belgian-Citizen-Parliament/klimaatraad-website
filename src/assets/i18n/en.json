@@ -1,10 +1,10 @@
 {
   "title": "The Citizens' Parliament",
+  "shortDescription": "A citizen's parliament about the ecological emergency",
   "description": "Our new government wants more citizen participation in politics and at the same time ambitious environmental policy? The Citizens' Parliament has a proposition ready! 101 randomly selected citizens, representative of the Belgian population, who, with support of scientists and experts, think about the greatest challenge of our time.",
 
   "The proposal": "The proposal",
   "FAQ": "FAQ",
-  "Frequently Asked Questions": "Frequently Asked <span class=\"u-color-teal\">Questions</span>",
   "Take part": "Take part",
   "About us": "About us",
   "Contact": "Contact",
@@ -13,6 +13,47 @@
 
   "Show more": "Show more",
   "Show less": "Show less",
+
+  "mainTitle": "Time for a <span class=\"u-color-teal\">Citizens' Parliament</span> about the <span class=\"u-color-orange-red\">ecological emergency</span>",
+  "mainSubtitle": "Combine more participation from citizens and an ambitious environmental policy? The Citizens' Parliament has a proposition ready for our brand-new government! 101 randomly selected citizens, representative of the Belgian population, who, with support of scientists and experts, think about the greatest challenge of our time.",
+
+  "explainerTitle1": "We’re facing unprecedented ecological challenges",
+  "explainerText1": "A warming climate, loss of biodiversity and insect mass, gigantic pollution,... Scientists and activists alike have been warning for years for the ecological crisis and its societal impact. It’s the reality the left ánd the right have to face, sooner or later.",
+  "explainerTitle2": "Party politics has proven ineffective",
+  "explainerText2": "The endlessly long government negotiations make it clear: also our democracy is in crisis. Fighting between parties results in governmental standstill. We need to work together if we want thorough environmental policy - all levels of government, citizens, scientists and politicians.",
+  "explainerTitle3": "The solution: A Citizens’ Parliament?",
+  "explainerText3": "Man or woman, young or old, many or few degrees: everyone should have their say at the table. With sufficient time and information, a group of randomly selected citizens can arrive at valuable policy proposals, carried by all. Not fearing the next elections, they can face the long term.",
+  "explainerTitle4": "Many other countries have led the way",
+  "explainerText4": "A citizens’ parliament is no panacea. Yet, it has proven to be valuable. In Ireland randomly selected citizens solved the abortion issue. The French president Macron organized a citizens’ convention around the climate. Randomly selected citizens don’t replace representative politics, but enrich it.",
+  "readTheProposal": "Read the proposal",
+  "mainContactYourRepresentativesTitle": "<span class=\"u-color-teal\">Call</span> to our <span class=\"u-color-orange-red\">politicians</span>",
+  "mainContactYourRepresentativesText": "We are calling on the government De Croo I to implement a Citizens’ Parliament about the ecological emergency. Everyone can participate in our campaign. Send a mail to your representative or tweet or brand-new ministers!",
+  "tweetThis": "Tweet this",
+  "followOurCampaign": "Follow our campaign",
+  "manyQuestions": "You’ll probably have lots of questions, for instance...",
+  "searchThroughAllQuestions": "Search through all questions",
+
+  "faqTitle": "Frequently Asked <span class=\"u-color-teal\">Questions</span>",
+  "faqSubtitle": "A citizens’ parliament? Has that ever worked? And who’s going to pay for that? You’ll probably have lots of questions. We hope to answer them all here.",
+  "yourQuestionNotHere": "Can’t find your question here?",
+  "sendUsAMail": "Drop us a line!",
+  "noQuestionsWithThisFilter": "No questions found with this filter.",
+  "showAllQuestions": "Show all questions",
+
+  "contactYourRepresentativesTitle": "Contact your representatives",
+  "contactYourRepresentativesText": "Join our campaign! Send a mail to your representatives or send a tweet to our newly appointed ministers.",
+  "contactYourRepresentativesParticipate": "Participate",
+
+  "footerMain": "The Citizens’ Parliament is an initiative from a group of citizens, supported by a coalition of ",
+  "manyOthers": "more than 20 organizations and movements.",
+  "footerSmall": "If you have questions regarding privacy or the storage of your data, read our <a href=\"/privacy\">privacy statement</a> or contact us via <a href=\"mailto:info@thecitizensparliament.be\">info@thecitizensparliament.be</a>.",
+  "illustrationsBy": "Illustrations by",
+  "andDesignBy": "and design by",
+
+  "aboutTitle": "Meet <span class=\"u-color-teal\">the organizations</span> behind <span class=\"u-color-orange-red\">The Citizens' Parliament</span>",
+  "aboutSubtitle": "The Citizens’ Parliament is an initiative from a group of citizens, supported by a coalition of organizations and movements. The whole campaign cost nothing and was created by the voluntary contributions of many.",
+  "wantToJoinUs": "Want to join us with your organization, or have any questions?",
+  "Contact us": "Let's get in touch!",
 
   "A national citizens parliament concerning the ecological emergencies": "A national citizens' parliament concerning the ecological emergencies",
   "Memorandum for the new federal government": "Memorandum aan de nieuwe federale regering",

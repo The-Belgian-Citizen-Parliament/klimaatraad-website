@@ -14,13 +14,13 @@
 
   .c-language-switch,
   .c-nav {
-    @include media-query('min:080') {
+    @include media-query('min:100') {
       flex-basis: 40%;
     }
   }
 
   .c-language-switch {
-    @include media-query('max:080') {
+    @include media-query('max:100') {
       margin-left: map-get($spacing-units, '7');
     }
   }
@@ -40,6 +40,11 @@
     }
 
     @include media-query('min:080') {
+      margin-left: auto;
+    }
+
+    @include media-query('min:100') {
+      margin-left: 0;
       order: -1;
     }
   }

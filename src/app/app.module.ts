@@ -27,6 +27,9 @@ import { SvgLogosComponent } from './svg/svg-logos.component';
 import { SeoService } from './seo.service';
 import { AboutComponent } from './about/about.component';
 import { ParticipateComponent } from './participate/participate.component';
+import { NotFoundComponent } from './notfound/notfound.component';
+import { TruncatePipe } from './common/truncate.pipe';
+import { RandomImageService } from './common/random-image.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,8 @@ import { ParticipateComponent } from './participate/participate.component';
     SvgLogosComponent,
     AboutComponent,
     ParticipateComponent,
+    NotFoundComponent,
+    TruncatePipe,
   ],
   imports: [
     TranslateModule,
@@ -62,6 +67,7 @@ import { ParticipateComponent } from './participate/participate.component';
     QuestionsService,
     Title,
     SeoService,
+    RandomImageService,
   ],
   bootstrap: [AppComponent]
 })

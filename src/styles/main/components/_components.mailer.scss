@@ -43,7 +43,7 @@
     grid-template-areas:
       'a a c c c'
       'b b c c c';
-    grid-template-rows: 1fr minmax(auto, 80vh);
+    grid-template-rows: auto 1fr;
   }
 }
 
@@ -79,7 +79,6 @@
 
 .c-mailer__recipients {
   background-color: map-get($colors, 'grey-pale');
-  overflow: auto;
 
   @include feature-query('grid') {
     grid-area: b;
@@ -87,10 +86,22 @@
 
   @include media-query('max:060') {
     border-bottom: 2px solid currentColor;
-    max-height: 40vh;
   }
 
   @include media-query('min:060') {
     flex-basis: 40%;
+  }
+}
+
+.c-mailer__recipients__viewport {
+  height: 100%;
+  overflow: auto;
+
+  @include media-query('max:060') {
+    max-height: 40vh;
+  }
+
+  @include media-query('min:060') {
+    max-height: 90vh;
   }
 }
