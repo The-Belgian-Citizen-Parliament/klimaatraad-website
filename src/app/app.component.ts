@@ -19,7 +19,7 @@ import { LanguageService } from './common/language.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  smallHeader = false;
+  initialLoad = true;
   lang = environment.language;
 
   languageMenuVisible = false;
@@ -65,7 +65,10 @@ export class AppComponent {
           return;
         }
 
-        if (window.location.hash) {
+        if (this.initialLoad) {
+          // Prevent hydration from suddenly scrolling back up
+          this.initialLoad = false;
+        } else if (window.location.hash) {
           setTimeout(() => viewportScroller.scrollToAnchor('mail'));
         } else {
           setTimeout(() => window.scrollTo(0, 0));
