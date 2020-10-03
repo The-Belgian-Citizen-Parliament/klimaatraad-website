@@ -71,9 +71,9 @@ export class InlineMailComponent implements OnInit, OnDestroy {
   parliaments = ['Federal', 'Flemish', 'Walloon', 'Brussels Parliament'];
 
   constituenciesPerLanguage = {
-    nl: ['Antwerpen', 'Brussel-Hoofdstad', 'Limburg', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'West-Vlaanderen'],
-    fr: ['Brussel-Hoofdstad', 'Henegouwen', 'Luik', 'Luxemburg', 'Namen', 'Waals-Brabant'],
-    en: ['Antwerpen', 'Brussel-Hoofdstad', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'],
+    nl: ['Antwerpen', 'Limburg', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'West-Vlaanderen'],
+    fr: ['Henegouwen', 'Luik', 'Luxemburg', 'Namen', 'Waals-Brabant'],
+    en: ['Antwerpen', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'],
   };
 
   constituencies: string[] = [];
@@ -127,7 +127,7 @@ export class InlineMailComponent implements OnInit, OnDestroy {
 
     languageService.lang.subscribe((lang) => {
       this.parties = this.partiesPerLanguage[lang];
-      this.constituencies = this.constituenciesPerLanguage[lang];
+      this.constituencies = ['Brussel-Hoofdstad', ...this.constituenciesPerLanguage[lang]];
       this.clearSelected();
       this.clearFilters();
     });
@@ -183,9 +183,9 @@ export class InlineMailComponent implements OnInit, OnDestroy {
     let ignoredConstituencies = [];
 
     if (lang === 'nl') {
-      ignoredConstituencies = this.partiesPerLanguage['fr'];
+      ignoredConstituencies = this.constituenciesPerLanguage['fr'];
     } else if (lang === 'fr') {
-      ignoredConstituencies = this.partiesPerLanguage['nl'];
+      ignoredConstituencies = this.constituenciesPerLanguage['nl'];
     }
 
     this.filteredMps = this.mps
