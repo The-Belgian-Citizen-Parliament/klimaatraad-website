@@ -364,7 +364,7 @@
             href="https://www.twitter.com/hashtag/BurgerParlement">#BurgerParlement</a></p>
         <a class="c-button c-tweet__button"
           href="https://twitter.com/intent/tweet/?text=%40alexanderdecroo%20This%20is%20the%20content%20of%20a%20tweet.%20Itaque%20sensibus%20rationem%20adiunxit%20et%20ratione%20effecta.%20Fugiunt%2C%20re%20eadem%20defendunt%2C%20quae%20Peripatetici%2C%20verba.%20Cupit%20enim%20d%C3%ADcere%20nihil%20posse%20beatam%20vitam.%20This%20tweet%20contains%20exactly%20280%20characters.%20%23ParlementCitoyen%20%23BurgerParlement">
-          <span class="c-button__label">Stuur deze tweet</span>
+          <span class="c-button__label">{{ 'tweetThis' | translate }}</span>
         </a>
       </div>
 
@@ -376,7 +376,7 @@
             href="https://www.twitter.com/hashtag/BurgerParlement">#BurgerParlement</a></p>
         <a class="c-button c-tweet__button"
           href="https://twitter.com/intent/tweet/?text=%40alexanderdecroo%20This%20is%20the%20content%20of%20a%20tweet.%20Itaque%20sensibus%20rationem%20adiunxit%20et%20ratione%20effecta.%20Fugiunt%2C%20re%20eadem%20defendunt%2C%20quae%20Peripatetici%2C%20verba.%20Cupit%20enim%20d%C3%ADcere%20nihil%20posse%20beatam%20vitam.%20This%20tweet%20contains%20exactly%20280%20characters.%20%23ParlementCitoyen%20%23BurgerParlement">
-          <span class="c-button__label">Stuur deze tweet</span>
+          <span class="c-button__label">{{ 'tweetThis' | translate }}</span>
         </a>
       </div>
 
@@ -388,13 +388,13 @@
             href="https://www.twitter.com/hashtag/BurgerParlement">#BurgerParlement</a></p>
         <a class="c-button c-tweet__button"
           href="https://twitter.com/intent/tweet/?text=%40alexanderdecroo%20This%20is%20the%20content%20of%20a%20tweet.%20Itaque%20sensibus%20rationem%20adiunxit%20et%20ratione%20effecta.%20Fugiunt%2C%20re%20eadem%20defendunt%2C%20quae%20Peripatetici%2C%20verba.%20Cupit%20enim%20d%C3%ADcere%20nihil%20posse%20beatam%20vitam.%20This%20tweet%20contains%20exactly%20280%20characters.%20%23ParlementCitoyen%20%23BurgerParlement">
-          <span class="c-button__label">Stuur deze tweet</span>
+          <span class="c-button__label">{{ 'tweetThis' | translate }}</span>
         </a>
       </div>
     </div>
   </div>
   <div class="c-icon-group h6 u-margin-top-7">
-    <span class="c-icon-group__label">Volg de campagne</span>
+    <span class="c-icon-group__label">{{ 'followOurCampaign' | translate }}</span>
     <a class="c-icon" href="https://twitter.com" data-icon-entity="">
       <span class="u-visually-hidden">Twitter</span>
     </a>
@@ -409,8 +409,8 @@
 
 <div class="c-panel">
   <div class="container s-editor u-text-align-center">
-    <h2 class="h3"><span class="u-color-teal">Veelgestelde</span> vragen</h2>
-    <p>Je zit ongetwijfeld met erg veel vragen, bijvoorbeeld...</p>
+    <h2 class="h3" innerHtml="{{ 'faqTitle' | translate }}"></h2>
+    <p>{{ 'manyQuestions' | translate }}</p>
   </div>
 
   <div class="grid grid--columns u-margin-top-7" data-column-count="2">
@@ -438,12 +438,12 @@
 
   <div class="container u-margin-top-7 u-text-align-center">
     <a routerLink="/faq" class="c-button">
-      <span class="c-button__label">Doorzoek alle vragen</span>
+      <span class="c-button__label">{{ 'searchThroughAllQuestions' | translate }}</span>
     </a>
 
     <div class="c-callout">
-      <p>Staat jouw vraag er niet tussen? <a href="mailto:info@citizenparliament.be">We beantwoorden hem graag voor jou en nemen hem hier
-          op!</a></p>
+      <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a
+          [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'sendUsAMail' | translate }}</a></p>
     </div>
 
   </div>

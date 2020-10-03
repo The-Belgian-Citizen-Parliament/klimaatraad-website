@@ -5,7 +5,6 @@
 
   "The proposal": "Het voorstel",
   "FAQ": "FAQ",
-  "Frequently Asked Questions": "Veelgestelde <span class=\"u-color-teal\">vragen</span>",
   "Take part": "Neem deel",
   "About us": "Over ons",
   "Contact": "Contact",
@@ -29,7 +28,12 @@
   "readTheProposal": "Lees het voorstel",
   "mainContactYourRepresentativesTitle": "<span class=\"u-color-teal\">Oproep</span> aan onze <span class=\"u-color-orange-red\">politici</span>",
   "mainContactYourRepresentativesText": "We roepen de regering De Croo I op om een Burgerparlement rond de ecologische noodtoestand op te richten. Iedereen kan deelnemen aan onze campagne. Stuur een mail naar jouw vertegenwoordiger of een tweet naar onze nieuwe ministers.",
+  "tweetThis": "Stuur deze tweet",
+  "followOurCampaign": "Volg de campagne",
+  "manyQuestions": "Je zit ongetwijfeld met erg veel vragen, bijvoorbeeld...",
+  "searchThroughAllQuestions": "Doorzoek alle vragen",
 
+  "faqTitle": "Veelgestelde <span class=\"u-color-teal\">vragen</span>",
   "faqSubtitle": "Een Burgerparlement? Is dat geen praatbarak? Heeft dat ooit gewerkt? En wie gaat dat betalen? Je zit ongetwijfeld met erg veel vragen. Hier proberen we ze allemaal voor je te beantwoorden, klaar en duidelijk.",
   "yourQuestionNotHere": "Staat jouw vraag er niet tussen?",
   "sendUsAMail": "Stuur ons een mailtje, we zijn benieuwd!",
