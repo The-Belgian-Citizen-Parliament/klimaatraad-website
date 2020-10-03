@@ -121,8 +121,10 @@
                 </mat-form-field>
               </div>
 
-              <button mat-raised-button color="primary" [disabled]="!personalDataForm.valid" (click)="completePersonalData(true);">
-                {{ 'OK - Almost there!' | translate }}</button>
+              <button class="c-button" [disabled]="!personalDataForm.valid" (click)="completePersonalData(true);"
+                style="margin-top: 12px;">
+                <span class="c-button__label">{{ 'OK - Almost there' | translate }}</span>
+              </button>
             </form>
 
             <form #mailForm="ngForm" *ngIf="personalDataComplete" fxLayout="column">
@@ -146,13 +148,13 @@
                   (click)="completePersonalData(false);">wijzig</a>)
               </div>
 
-              <mat-form-field fxFlex *ngIf="customSubject" style="margin-top: 12px;">
+              <mat-form-field appearance="fill" fxFlex *ngIf="customSubject" style="margin-top: 12px;">
                 <mat-label>{{ 'Subject' | translate }}</mat-label>
                 <input matInput required placeholder="{{ 'customSubjectPlaceholder' | translate }}" name="customSubject"
                   [(ngModel)]="newMail.subject" #customSubject>
               </mat-form-field>
 
-              <mat-form-field fxFlex *ngIf="!customSubject" style="margin-top: 12px;">
+              <mat-form-field appearance="fill" fxFlex *ngIf="!customSubject" style="margin-top: 12px;">
                 <mat-label>{{ 'Subject' | translate }}</mat-label>
                 <mat-select required [(ngModel)]="newMail.subject" name="predefinedSubject" (selectionChange)="subjectChanged()">
                   <mat-option *ngFor="let subject of subjects" [value]="subject">
@@ -162,7 +164,7 @@
                 </mat-select>
               </mat-form-field>
 
-              <mat-form-field fxFlex>
+              <mat-form-field appearance="fill" fxFlex>
                 <mat-label>{{ 'text' | translate }}</mat-label>
                 <textarea matInput rows="10" required placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
                   [(ngModel)]="newMail.body"></textarea>
@@ -184,8 +186,10 @@
                 </mat-checkbox>
               </div>
 
-              <button mat-raised-button color="primary" style="margin-top: 12px;" (click)="sendMail()"
-                [disabled]="!mailForm.valid || !consentGiven">{{ 'Send' | translate }}!</button>
+              <button class="c-button" (click)="sendMail()" [disabled]="!mailForm.valid || !consentGiven"
+                style="width: 150px; margin-top: 12px;">
+                <span class="c-button__label">{{ 'Send' | translate }}</span>
+              </button>
             </form>
           </div>
 
