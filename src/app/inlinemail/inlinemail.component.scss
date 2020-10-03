@@ -1,0 +1,55 @@
+.mp-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+app-mp {
+  display: inline-block;
+}
+
+.choice-list {
+  .mat-raised-button {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+}
+
+.action-list {
+  button {
+    margin-bottom: 12px;
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.mpSelectionList {
+  span:after {
+    content: ", "
+  }
+
+  span:last-child:after {
+    content: ""
+  }
+}
+
+.subtitle {
+  margin-bottom: 24px;
+}
+
+.info {
+  opacity: 0.7;
+}
+
+.signatories {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.signatory {
+  line-height: 100%;
+  margin-bottom: 6px;
+}

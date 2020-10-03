@@ -1,0 +1,26 @@
+.inline-mailer {
+  border-top: 2px solid currentColor;
+  color: map-get($colors, 'black');
+  margin: map-get($width-units, '2') auto 0;
+  max-width: map-get($width-units, '7');
+  position: relative;
+  text-align: left;
+
+  &:before {
+    background: url('/assets/img/illustrations/letters.png') no-repeat 50% bottom;
+    background-size: contain;
+    bottom: 100%;
+    content: '';
+    display: block;
+    height: map-get($width-units, '3');
+    left: 50%;
+    max-width: map-get($width-units, '5');
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 100%;
+
+    @include media-query('max:040') {
+      background-size: cover;
+    }
+  }
+}
