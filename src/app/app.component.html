@@ -32,11 +32,17 @@
         <a lang="en" [routerLink]="" (click)="setLanguage('en'); toggleLanguageMenu()">English (EN)</a>
       </li>
       <li class="c-language-switch__menu__item" *ngIf="lang !== 'fr'">
+        <a lang="fr" [routerLink]="" (click)="setLanguage('fr'); toggleLanguageMenu()">Français (FR)</a>
+      </li>
+      <li class="c-language-switch__menu__item" *ngIf="lang !== 'nl'">
+        <a lang="nl" [routerLink]="" (click)="setLanguage('nl'); toggleLanguageMenu()">Nederlands (NL)</a>
+      </li>
+      <!-- <li class="c-language-switch__menu__item" *ngIf="lang !== 'fr'">
         <a lang="fr" href="https://www.leparlementcitoyen.be">Français (FR)</a>
       </li>
       <li class="c-language-switch__menu__item" *ngIf="lang !== 'nl'">
         <a lang="nl" href="https://www.hetburgerparlement.be">Nederlands (NL)</a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </header>
