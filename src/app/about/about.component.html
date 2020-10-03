@@ -1,8 +1,9 @@
 <div class="c-panel u-padding-top-0">
   <div class="container">
-    <h1 class="c-page-title">Maak kennis met <span class="u-color-teal">de organisaties</span> achter <span class="u-color-orange-red">Het Burgerparlement</span></h1>
+    <h1 class="c-page-title" innerHtml="{{ 'aboutTitle' | translate }}">
+      </h1>
 
-    <p class="lead">Het Burgerparlement is een verzameling van allerhande burgers en enkele organisaties en bewegingen die achter de basisbeginselen van <a [routerLink]="lang === 'fr' ? '/proposition' : '/voorstel'">het voorstel</a> staan.</p>
+    <p class="lead">{{ 'aboutSubtitle' | translate }}</p>
   </div>
 </div>
 <div class="c-panel u-background-color-brown u-color-white">
@@ -47,7 +48,8 @@
 <div class="c-panel">
   <div class="container">
     <div class="c-callout">
-      <p>Wil je je hierbij aansluiten of heb je andere vragen? <a href="mailto:info@citizenparliament.be">Neem contact met ons op!</a></p>
+      <p>{{ 'wantToJoinUs' | translate }}
+         <a href="mailto:info@citizenparliament.be">{{ 'Contact us' | translate }}</a></p>
     </div>
   </div>
 </div>
