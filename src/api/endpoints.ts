@@ -35,7 +35,7 @@ export function bootstrap(app: express.Express) {
       FROM mails
       WHERE allow_public = true
       ORDER BY created_on DESC
-      LIMIT 20`)
+      LIMIT 10`)
       .then((result) => res.status(200).json(result.rows))
       .catch(err => handleError(res, err.message, "Failed to get contacts."));
   });

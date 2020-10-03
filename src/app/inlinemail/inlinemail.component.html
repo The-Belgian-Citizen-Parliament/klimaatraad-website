@@ -180,7 +180,7 @@
                 <mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">{{ 'stayUpToDate' | translate }}</mat-checkbox>
               </div>
 
-              <div>
+              <div style="margin-top: 6px;">
                 <mat-checkbox name="consentGiven" [(ngModel)]="consentGiven">{{'I have read and accept the' | translate }}
                   <a target="_blank" routerLink="/privacy">{{ 'Privacy Statement' | translate }}</a>
                 </mat-checkbox>
@@ -203,8 +203,7 @@
           <strong>Namen recent deel...</strong>
           <ul class="signatories">
             <li [@inOutAnimation]="'in'" *ngFor="let mail of mails; trackBy:mailTrackBy" class="signatory">
-              {{ mail.firstName }} {{ mail.lastName }} <span *ngIf="mail.city">, {{ mail.city }}</span>
-              <br /><span class="info">{{ formatRelativeTime(mail.sentOn)}}</span>
+              {{ mail.firstName }} {{ mail.lastName }} <span *ngIf="mail.city">, {{ mail.city }}</span> <span class="info"> {{ formatRelativeTime(mail.sentOn)}}</span>
             </li>
           </ul>
         </div>
