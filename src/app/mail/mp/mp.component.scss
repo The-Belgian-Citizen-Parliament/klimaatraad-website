@@ -13,11 +13,11 @@
   }
 
   &:hover {
-    box-shadow: 0 0 16px #E3E7EB;
+    background-color: #f7b991;
   }
 
   &.selected {
-    box-shadow: 0 0 16px #009688; // TODO: adapt to theme color
+    background-color: #FBEC99;
   }
 
   .mp-cb {
