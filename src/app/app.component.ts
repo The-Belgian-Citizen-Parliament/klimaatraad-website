@@ -2,16 +2,16 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, Event, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
-import { Title } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';
 import * as dayjs from 'dayjs';
 import 'dayjs/locale/nl';
 import 'dayjs/locale/fr';
 import * as relativeTime from 'dayjs/plugin/relativeTime';
+import { combineLatest } from 'rxjs/internal/observable/combineLatest';
 
 import { environment } from 'src/environments/environment';
 import { SeoService } from './seo.service';
-import { combineLatest } from 'rxjs/internal/observable/combineLatest';
+import { LanguageService } from './common/language.service';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +26,7 @@ export class AppComponent {
 
   constructor(@Inject(PLATFORM_ID) platformId: string, public router: Router,
     activatedRoute: ActivatedRoute, private translate: TranslateService,
-    private seoService: SeoService) {
+    private seoService: SeoService, public languageService: LanguageService) {
 
     this.setTitleAndDescription();
 
@@ -77,6 +77,7 @@ export class AppComponent {
   }
 
   setLanguage(lang) {
+    this.languageService.lang.next(lang);
     this.lang = lang;
     this.translate.setDefaultLang(this.lang);
     this.translate.use(this.lang);
