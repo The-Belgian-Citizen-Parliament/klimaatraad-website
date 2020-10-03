@@ -35,55 +35,62 @@
 
 <div class="c-panel u-background-color-lemon u-text-align-center u-overflow-top">
   <div class="grid grid--columns" data-column-count="2">
-      <div class="grid__tracks">
+    <div class="grid__tracks">
 
 
-              <div class="grid__cell s-editor">
-                  <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
-                      <img src="/assets/img/illustrations/jellyfish.png">
-                  </figure>
-                  <h2 class="h6">We staan voor ongeziene ecologische uitdagingen</h2>
+      <div class="grid__cell s-editor">
+        <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
+          <img src="/assets/img/illustrations/jellyfish.png">
+        </figure>
+        <h2 class="h6">We staan voor ongeziene ecologische uitdagingen</h2>
 
-                  <p>Een opwarmend klimaat, biodiversiteitsverlies, gigantische vervuiling,… Wetenschappers en activisten waarschuwen al jaren voor de ecologische crisis en haar ongelijke maatschappelijke impact. Links én rechts moeten deze realiteit vroeg of laat onder ogen zien.</p>
-
-              </div>
-
-              <div class="grid__cell s-editor">
-                  <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
-                      <img src="/assets/img/illustrations/gramophone.png">
-                  </figure>
-                  <h2 class="h6">Partijpolitiek slaagt er niet in het tij te keren</h2>
-
-                  <p>De eindeloze regeringsonderhandelingen maken het duidelijk: ook onze democratie is in crisis. Het getouwtrek zorgt voor een bestuurlijke stilstand. Politieke partijen willen elkaar ‘kapot’ maken. De wetenschap wordt genegeerd.</p>
-
-              </div>
-
-              <div class="grid__cell s-editor">
-                  <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
-                      <img src="/assets/img/illustrations/diversity.png">
-                  </figure>
-                  <h2 class="h6">De oplossing: een Burgerparlement?</h2>
-
-                  <p>Gelote burgers kunnen samenwerken, in plaats van elkaar bekampen. Ze volgen wetenschappers en experten, in plaats van partijdogma’s. Ze moeten niet vrezen voor hun politieke carrière of herverkozen raken. Ze kunnen geïnformeerde, doorgesproken beslissingen nemen, gebaseerd op informatie uit alle hoeken van de samenleving.</p>
-
-              </div>
-
-              <div class="grid__cell s-editor">
-                  <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
-                      <img src="/assets/img/illustrations/owl.png">
-                  </figure>
-                  <h2 class="h6">We staan er niet alleen voor</h2>
-
-                  <p>Gelukkig hoeven we het warme water niet uit te vinden. Steeds meer landen gingen ons al voor. In Frankrijk schiep het <i>Convention Citoyenne pour le Climat</i> onlangs een historisch precedent. Na acht maanden kwamen de 150 leden van dit burgerparlement met een lijvig rapport vol concrete beleidsvoorstellen.</p>
-
-              </div>
+        <p>Een opwarmend klimaat, biodiversiteitsverlies, gigantische vervuiling,… Wetenschappers en activisten waarschuwen al jaren voor de
+          ecologische crisis en haar ongelijke maatschappelijke impact. Links én rechts moeten deze realiteit vroeg of laat onder ogen zien.
+        </p>
 
       </div>
+
+      <div class="grid__cell s-editor">
+        <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
+          <img src="/assets/img/illustrations/gramophone.png">
+        </figure>
+        <h2 class="h6">Partijpolitiek slaagt er niet in het tij te keren</h2>
+
+        <p>De eindeloze regeringsonderhandelingen maken het duidelijk: ook onze democratie is in crisis. Het getouwtrek zorgt voor een
+          bestuurlijke stilstand. Politieke partijen willen elkaar ‘kapot’ maken. De wetenschap wordt genegeerd.</p>
+
+      </div>
+
+      <div class="grid__cell s-editor">
+        <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
+          <img src="/assets/img/illustrations/diversity.png">
+        </figure>
+        <h2 class="h6">De oplossing: een Burgerparlement?</h2>
+
+        <p>Gelote burgers kunnen samenwerken, in plaats van elkaar bekampen. Ze volgen wetenschappers en experten, in plaats van
+          partijdogma’s. Ze moeten niet vrezen voor hun politieke carrière of herverkozen raken. Ze kunnen geïnformeerde, doorgesproken
+          beslissingen nemen, gebaseerd op informatie uit alle hoeken van de samenleving.</p>
+
+      </div>
+
+      <div class="grid__cell s-editor">
+        <figure class="u-max-height-2 u-max-width-2" aria-hidden="true">
+          <img src="/assets/img/illustrations/owl.png">
+        </figure>
+        <h2 class="h6">We staan er niet alleen voor</h2>
+
+        <p>Gelukkig hoeven we het warme water niet uit te vinden. Steeds meer landen gingen ons al voor. In Frankrijk schiep het
+          <i>Convention Citoyenne pour le Climat</i> onlangs een historisch precedent. Na acht maanden kwamen de 150 leden van dit
+          burgerparlement met een lijvig rapport vol concrete beleidsvoorstellen.</p>
+
+      </div>
+
+    </div>
   </div>
   <div class="container u-margin-top-7 u-text-align-center">
-      <button class="c-button">
-  <span class="c-button__label">Lees het voorstel</span>
-</button>
+    <button class="c-button">
+      <span class="c-button__label">Lees het voorstel</span>
+    </button>
 
   </div>
 </div>
@@ -406,8 +413,8 @@
         <figure class="u-max-width-1" aria-hidden="true">
           <img [src]="imgs[i]">
         </figure>
-        <h3 class="h5"><a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug"
-          [innerHtml]="question.question"></a></h3>
+        <h3 class="h5"><a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug" [innerHtml]="question.question"></a>
+        </h3>
         <p class="keep-newlines" [innerHtml]="question.summary | truncate:200"></p>
 
         <ul class="c-tag-list">
