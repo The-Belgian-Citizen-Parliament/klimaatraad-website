@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { QuestionsService } from '../questions/questions.service';
 import { Question } from '../questions/questions';
 import { environment } from 'src/environments/environment';
+import { RandomImageService } from '../common/random-image.service';
 
 @Component({
   selector: 'app-main',
@@ -10,10 +11,13 @@ import { environment } from 'src/environments/environment';
 })
 export class MainComponent {
   questions: Question[] = [];
+  imgs: string[] = [];
   lang = environment.language;
 
-  constructor(private questionsService: QuestionsService) {
+  constructor(private questionsService: QuestionsService, public randomImage: RandomImageService) {
     this.questions = questionsService.getRandomQuestions(4);
+    this.imgs = randomImage.generateImages(4);
+
     // this.currentVideo = this.videos[4];
   }
 

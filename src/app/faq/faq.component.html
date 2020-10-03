@@ -38,15 +38,15 @@
   <div class="container">
     <ng-container *ngIf="!filter && !tagFilter">
       <div *ngFor="let topic of groupedQuestions" class="question-container">
-        <div *ngFor="let question of topic.questions" [id]="question.slug" class="question-container">
-          <app-question [question]="question" (tagClicked)="setTagFilter($event)"></app-question>
+        <div *ngFor="let question of topic.questions; let i = index;" [id]="question.slug" class="question-container">
+          <app-question [question]="question" [image]="imgs[i]" (tagClicked)="setTagFilter($event)"></app-question>
         </div>
       </div>
     </ng-container>
 
     <ng-container *ngIf="filter || tagFilter">
-      <div *ngFor="let question of filteredQuestions" class="question-container">
-        <app-question [question]="question" (tagClicked)="setTagFilter($event)"></app-question>
+      <div *ngFor="let question of filteredQuestions; let i = index;" class="question-container">
+        <app-question [question]="question" [image]="imgs[i]" (tagClicked)="setTagFilter($event)"></app-question>
       </div>
 
       <p *ngIf="(filter || tagFilter) && filter.length > 2 && filteredQuestions.length == 0">

@@ -29,6 +29,7 @@ import { AboutComponent } from './about/about.component';
 import { ParticipateComponent } from './participate/participate.component';
 import { NotFoundComponent } from './notfound/notfound.component';
 import { TruncatePipe } from './common/truncate.pipe';
+import { RandomImageService } from './common/random-image.service';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { TruncatePipe } from './common/truncate.pipe';
     QuestionsService,
     Title,
     SeoService,
+    RandomImageService,
   ],
   bootstrap: [AppComponent]
 })

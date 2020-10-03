@@ -1,6 +1,6 @@
 <div class="s-editor">
   <figure class="u-align-left u-max-width-1" aria-hidden="true" *ngIf="!answerOnly">
-    <img src="/assets/img/illustrations/acorn.png">
+    <img [src]="image">
   </figure>
   <h3 id="question-1" class="h5 question-title" *ngIf="!answerOnly">
     <a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug">
