@@ -1,0 +1,217 @@
+<div class="c-panel u-padding-top-9">
+  <div class="container s-editor u-text-align-center">
+    <h2 [innerHtml]="'mainContactYourRepresentativesTitle' | translate"></h2>
+    <p>{{ 'mainContactYourRepresentativesText' | translate }}</p>
+  </div>
+</div>
+
+<div class="c-panel u-background-color-pink u-margin-top-8">
+  <div class="inline-mailer">
+    <div class="container container-wide">
+      <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutGap="20px">
+        <div fxFlex="70" fxFlex.lt-lg="100">
+          <div *ngIf="!sent">
+            <div class="who" *ngIf="!selectionComplete" fxLayout="column">
+              <h4 class="mb-0">{{ 'step' | translate }} 1/3: <span innerHtml="{{ 'step1title' | translate }}"></span></h4>
+              <div class="subtitle">{{ 'step1explanation' | translate }}.</div>
+
+              <!-- <div class="choice-list" *ngIf="!selectType">
+              <button mat-raised-button color="primary" (click)="selectType = 'filters'">Selectie op kieskring, naam of partij</button>
+              <button mat-raised-button color="primary" (click)="selectType = 'region'">Op basis van locatie</button>
+            </div> -->
+
+              <div class="filters">
+                <div fxLayout fxLayoutGap="12px">
+                  <mat-form-field fxFlex="100">
+                    <mat-label>{{ 'Name' | translate }}</mat-label>
+                    <input matInput name="nameFilter" [(ngModel)]="nameFilter" (keyup)="filterMps()" />
+                  </mat-form-field>
+
+                  <!-- <mat-form-field fxFlex="50">
+                    <mat-label>{{ 'Parliament' | translate }}</mat-label>
+                    <mat-select [(ngModel)]="selectedParliament" name="selectedParliament" (selectionChange)="filterMps()">
+                      <mat-option [value]=""></mat-option>
+                      <mat-option *ngFor="let parliament of parliaments" [value]="parliament">
+                        {{ parliament | translate }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field> -->
+                </div>
+
+                <div fxLayout fxLayoutGap="12px">
+                  <mat-form-field fxFlex="50">
+                    <mat-label>{{ 'Constituency' | translate }}</mat-label>
+                    <mat-select [(ngModel)]="selectedConstituency" name="selectedConstituency" (selectionChange)="filterMps()">
+                      <mat-option [value]=""></mat-option>
+                      <mat-option *ngFor="let constituency of constituencies" [value]="constituency">
+                        {{ constituency | translate }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field fxFlex="50">
+                    <mat-label>{{ 'Party' | translate }}</mat-label>
+                    <mat-select [(ngModel)]="selectedParty" name="selectedParty" (selectionChange)="filterMps()">
+                      <mat-option [value]=""></mat-option>
+                      <mat-option *ngFor="let party of parties" [value]="party">
+                        {{ party | translate }}
+                      </mat-option>
+                      <!-- <mat-option value="ONAFH">{{ 'Independent' | translate }}</mat-option> -->
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="action-list">
+                <button mat-raised-button *ngIf="(selectedMps.length > 0) || selectionFilterSet" color="primary"
+                  (click)="confirmSelection()" [disabled]="selectedMps.length === 0">
+                  {{ 'Selection OK' | translate }}
+                  <ng-container *ngIf="selectedMps.length > 0">({{ selectedMps.length }})</ng-container>
+                </button>
+                <button mat-raised-button *ngIf="(selectedMps.length > 0) || selectionFilterSet" (click)="clearSelected()"
+                  [disabled]="selectedMps.length === 0">
+                  <mat-icon fxHide fxShow.xs>refresh</mat-icon><span fxHide.xs>{{ 'Clear selection' | translate }}</span>
+                </button>
+                <button mat-raised-button *ngIf="selectionFilterSet" (click)="selectAllVisibleFiltered()" style="float: right">
+                  <mat-icon fxHide fxShow.xs>library_add_check</mat-icon><span fxHide.xs>{{ 'Select all' | translate }}</span>
+                </button>
+              </div>
+
+              <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet && filteredMps && filteredMps.length === 0">
+                <i>{{ 'No representatives found with these filters' | translate }}</i>
+              </div>
+
+              <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet && filteredMps && filteredMps.length > 0">
+                <app-mp *ngFor="let mp of filteredMps" [mp]="mp" class="mp-card" (mpSelected)="mpSelected($event)"
+                  (mpDeselected)="mpDeselected($event)"></app-mp>
+              </div>
+            </div>
+
+            <form #personalDataForm="ngForm" *ngIf="selectionComplete && selectedMps.length > 0 && !personalDataComplete" fxLayout="column">
+              <h4 class="mb-0">{{ 'step' | translate }} 2/3: <span innerHtml="{{ 'step2title' | translate }}"></span></h4>
+              <div class="subtitle">{{ 'step2explanation' | translate }} <a target="_blank"
+                  routerLink="/privacy">{{ 'here' | translate }}</a>.</div>
+
+              <div fxFlex fxLayout="row" fxLayoutGap="12px">
+                <mat-form-field fxFlex="40">
+                  <mat-label>{{ 'First name' | translate }}</mat-label>
+                  <input matInput name="firstName" [(ngModel)]="newMail.firstName" required>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="60">
+                  <mat-label>{{ 'Last name' | translate }}</mat-label>
+                  <input matInput name="lastName" [(ngModel)]="newMail.lastName" required>
+                </mat-form-field>
+              </div>
+
+              <mat-form-field fxFlex>
+                <mat-label>{{ 'Email' | translate }}</mat-label>
+                <input matInput placeholder="{{ 'exampleEmail' | translate }}" name="email" [(ngModel)]="newMail.email" required>
+              </mat-form-field>
+
+              <div fxFlex fxLayout="row" fxLayoutGap="12px">
+                <mat-form-field fxFlex="30">
+                  <mat-label>{{ 'Postal code' | translate }}</mat-label>
+                  <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode" required>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="70">
+                  <mat-label>{{ 'City' | translate }}</mat-label>
+                  <input matInput placeholder="{{ 'Brussels' | translate }}" name="city" [(ngModel)]="newMail.city" required>
+                </mat-form-field>
+              </div>
+
+              <button class="c-button" [disabled]="!personalDataForm.valid" (click)="completePersonalData(true);"
+                style="margin-top: 12px;">
+                <span class="c-button__label">{{ 'OK - Almost there' | translate }}</span>
+              </button>
+            </form>
+
+            <form #mailForm="ngForm" *ngIf="personalDataComplete" fxLayout="column">
+              <h4 class="mb-0">{{ 'step' | translate }} 3/3: <span innerHtml="{{ 'step3title' | translate }}"></span></h4>
+              <div class="subtitle">{{ 'step3explanation' | translate }}</div>
+              <div>
+                <strong>{{ 'To' | translate }}: </strong>
+                <span *ngIf="(selectedMps.length <= 5 || selectedMpListExpanded)" class="mpSelectionList">
+                  <span *ngFor="let selectedMp of selectedMps">{{ selectedMp.firstName }} {{ selectedMp.lastName }}</span>
+                </span>
+                <span *ngIf="selectedMps.length > 5">
+                  <ng-container *ngIf="!selectedMpListExpanded">{{ selectedMps.length }} {{ 'representatives' | translate }}
+                  </ng-container> (<a [routerLink]=""
+                    (click)="selectedMpListExpanded = !selectedMpListExpanded">{{ selectedMpListExpanded ? ('hide' | translate) : ('show' | translate) }}</a>)
+                </span>
+                <span> (<a [routerLink]=""
+                    (click)="selectionComplete = false; completePersonalData(false);">{{ 'change' | translate }}</a>)</span>
+              </div>
+              <div>
+                <strong>{{ 'From' | translate }}: </strong> {{ newMail.firstName }} {{ newMail.lastName}} (<a [routerLink]=""
+                  (click)="completePersonalData(false);">wijzig</a>)
+              </div>
+
+              <mat-form-field appearance="fill" fxFlex *ngIf="customSubject" style="margin-top: 12px;">
+                <mat-label>{{ 'Subject' | translate }}</mat-label>
+                <input matInput required placeholder="{{ 'customSubjectPlaceholder' | translate }}" name="customSubject"
+                  [(ngModel)]="newMail.subject" #customSubject>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" fxFlex *ngIf="!customSubject" style="margin-top: 12px;">
+                <mat-label>{{ 'Subject' | translate }}</mat-label>
+                <mat-select required [(ngModel)]="newMail.subject" name="predefinedSubject" (selectionChange)="subjectChanged()">
+                  <mat-option *ngFor="let subject of subjects" [value]="subject">
+                    {{ subject }}
+                  </mat-option>
+                  <mat-option [value]="" style="font-style: italic;">{{ 'Write a subject yourself' | translate }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" fxFlex>
+                <mat-label>{{ 'text' | translate }}</mat-label>
+                <textarea matInput rows="10" required placeholder="Leg uit waarom je dit belangrijk vindt." name="body"
+                  [(ngModel)]="newMail.body"></textarea>
+              </mat-form-field>
+
+              <!-- <div>
+              <mat-checkbox name="allowPublic" [(ngModel)]="newMail.allowPublic">{{'allowPublic' | translate }}</mat-checkbox>
+            </div> -->
+
+              <!-- <div><mat-checkbox name="allowReplies" [(ngModel)]="newMail.allowReplies">Ik mail onder mijn eigen naam; dit laat toe dat mijn contactpersonen mij persoonlijk kunnen terugmailen.</mat-checkbox></div> -->
+
+              <div>
+                <mat-checkbox name="stayUpToDate" [(ngModel)]="newMail.stayUpToDate">{{ 'stayUpToDate' | translate }}</mat-checkbox>
+              </div>
+
+              <div style="margin-top: 6px;">
+                <mat-checkbox name="consentGiven" [(ngModel)]="consentGiven">{{'I have read and accept the' | translate }}
+                  <a target="_blank" routerLink="/privacy">{{ 'Privacy Statement' | translate }}</a>
+                </mat-checkbox>
+              </div>
+
+              <button class="c-button" (click)="sendMail()" [disabled]="!mailForm.valid || !consentGiven"
+                style="width: 150px; margin-top: 12px;">
+                <span class="c-button__label">{{ 'Send' | translate }}</span>
+              </button>
+            </form>
+          </div>
+
+          <div *ngIf="sent">
+            <h4 class="mb-0">{{ 'Thanks' | translate }}! ❤</h4>
+
+            <p>{{ 'representativesMailed' | translate }}</p>
+            <p *ngIf="newMail.stayUpToDate">{{ 'weWillKeepYouUpToDate' | translate }}</p>
+          </div>
+        </div>
+
+        <div fxFlex="30" fxFlex.lt-lg="100">
+          <strong>{{ 'Participated recently' | translate }}...</strong>
+          <ul class="signatories">
+            <li [@inOutAnimation]="'in'" *ngFor="let mail of mails; trackBy:mailTrackBy" class="signatory">
+              {{ mail.firstName }} {{ mail.lastName }}<span *ngIf="mail.city">, {{ mail.city }}</span>
+              <br /><span class="info"> {{ formatRelativeTime(mail.sentOn)}}</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

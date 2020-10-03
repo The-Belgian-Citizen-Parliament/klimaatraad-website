@@ -30,6 +30,8 @@ import { ParticipateComponent } from './participate/participate.component';
 import { NotFoundComponent } from './notfound/notfound.component';
 import { TruncatePipe } from './common/truncate.pipe';
 import { RandomImageService } from './common/random-image.service';
+import { LanguageService } from './common/language.service';
+import { InlineMailComponent } from './inlinemail/inlinemail.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { RandomImageService } from './common/random-image.service';
     ParticipateComponent,
     NotFoundComponent,
     TruncatePipe,
+    InlineMailComponent,
   ],
   imports: [
     TranslateModule,
@@ -68,6 +71,7 @@ import { RandomImageService } from './common/random-image.service';
     Title,
     SeoService,
     RandomImageService,
+    LanguageService
   ],
   bootstrap: [AppComponent]
 })

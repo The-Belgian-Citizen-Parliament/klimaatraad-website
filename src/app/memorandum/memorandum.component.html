@@ -1,13 +1,11 @@
 <div class="c-panel u-padding-top-0">
-  <div class="container">
-    <h1 class="c-page-title">Tijd voor een <span class="u-color-teal">Burgerparlement</span> rond de <span
-        class="u-color-orange-red">ecologische noodtoestand</span></h1>
+  <div class="container u-max-width-7 u-text-align-center">
+    <h1 class="c-page-title" [innerHtml]="'mainTitle' | translate"></h1>
 
-    <p class="lead">Meer burgerparticipatie en ambitieuze milieumaatregelen? Het Burgerparlement heeft voor onze kersverse regering een
-      concreet voorstel klaar! 101 burgers, representatief voor de Belgische bevolking, die gesteund door wetenschappers en experten
-      nadenken over hoe we de grootste uitdaging van onze tijd te lijf kunnen gaan.</p>
+    <p class="lead">{{ 'mainSubtitle' | translate }}</p>
   </div>
 </div>
+
 <div class="c-panel u-background-color-teal u-color-white">
   <div class="container s-editor">
     <figure class="u-float-left u-max-width-2" aria-hidden="true">
@@ -101,18 +99,5 @@
 
   </div>
 </div>
-<div class="c-panel u-background-color-pink u-overflow-top">
-  <div class="container s-editor u-text-align-center">
-    <figure class="u-max-width-2" aria-hidden="true">
-      <img src="/assets/img/illustrations/letter-wings.png">
-    </figure>
-    <h3>Contacteer jouw vertegenwoordigers</h3>
 
-    <p>Neem deel aan onze campagne! Stuur een mail naar jouw vertegenwoordiger of een tweet naar onze nieuwe ministers.</p>
-
-    <button class="c-button">
-      <span class="c-button__label">Doe mee</span>
-    </button>
-
-  </div>
-</div>
+<app-participate></app-participate>

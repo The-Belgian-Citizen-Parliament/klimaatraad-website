@@ -8,5 +8,13 @@
 
 .c-icon-group__label {
   font-weight: map-get($font-weights, 'medium');
-  margin-right: 1em;
+
+  @include media-query('max:040') {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  @include media-query('min:040') {
+    margin-right: 1em;
+  }
 }

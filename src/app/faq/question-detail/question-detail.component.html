@@ -8,7 +8,7 @@
   <div class="container">
     <h2 class="h4 u-margin-top-6" style="text-transform: capitalize;">{{ 'Maybe you were also wondering' | translate }}...</h2>
     <ul class="c-list c-list--questions u-margin-top-5">
-      <li *ngFor="let question of randomQuestions"><a [routerLink]="'/vraag/' + question.slug">{{ question.question }}</a></li>
+      <li *ngFor="let question of randomQuestions"><a [routerLink]="languageService.route('question', question.slug) | async">{{ question.question }}</a></li>
     </ul>
 
     <div class="c-callout u-margin-top-6">

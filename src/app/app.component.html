@@ -8,16 +8,16 @@
   <nav class="c-nav" aria-label="Navigation">
     <ul class="c-nav__list">
       <li class="c-nav__item">
-        <a class="c-nav__button" [routerLink]="lang === 'fr' ? '/participer' : '/deelnemen'">{{ 'Take part' | translate }}</a>
+        <a class="c-nav__button" routerLink="/" fragment="mail">{{ 'Take part' | translate }}</a>
       </li>
       <li class="c-nav__item">
-        <a [routerLink]="lang === 'fr' ? '/proposition' : '/voorstel'">{{ 'The proposal' | translate }}</a>
+        <a [routerLink]="languageService.route('proposal') | async">{{ 'The proposal' | translate }}</a>
       </li>
       <li class="c-nav__item">
         <a routerLink="/faq">{{ 'FAQ' | translate }}</a>
       </li>
       <li class="c-nav__item">
-        <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'About us' | translate }}</a>
+        <a [routerLink]="languageService.route('about') | async">{{ 'About us' | translate }}</a>
       </li>
     </ul>
   </nav>
@@ -64,16 +64,16 @@
         <nav class="c-nav" aria-label="Navigation">
           <ul class="c-nav__list">
             <li class="c-nav__item">
-              <a class="c-nav__button" [routerLink]="lang === 'fr' ? '/participer' : '/deelnemen'">{{ 'Take part' | translate }}</a>
+              <a class="c-nav__button" routerLink="/" fragment="mail">{{ 'Take part' | translate }}</a>
             </li>
             <li class="c-nav__item">
-              <a [routerLink]="lang === 'fr' ? '/proposition' : '/voorstel'">{{ 'The proposal' | translate }}</a>
+              <a [routerLink]="languageService.route('proposal') | async">{{ 'The proposal' | translate }}</a>
             </li>
             <li class="c-nav__item">
               <a routerLink="/faq">{{ 'FAQ' | translate }}</a>
             </li>
             <li class="c-nav__item">
-              <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'About us' | translate }}</a>
+              <a [routerLink]="languageService.route('about') | async">{{ 'About us' | translate }}</a>
             </li>
           </ul>
         </nav>
@@ -104,7 +104,7 @@
       </div>
 
       <div class="grid__cell">
-        <p>{{ 'footerMain' | translate }} <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'manyOthers' | translate }}</a>.</p>
+        <p>{{ 'footerMain' | translate }} <a [routerLink]="languageService.route('about') | async">{{ 'manyOthers' | translate }}</a>.</p>
 
         <p class="small" [innerHtml]="'footerSmall' | translate"></p>
 

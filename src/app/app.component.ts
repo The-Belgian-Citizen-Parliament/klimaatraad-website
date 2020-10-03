@@ -2,16 +2,16 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, Event, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
-import { Title } from '@angular/platform-browser';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, ViewportScroller } from '@angular/common';
 import * as dayjs from 'dayjs';
 import 'dayjs/locale/nl';
 import 'dayjs/locale/fr';
 import * as relativeTime from 'dayjs/plugin/relativeTime';
+import { combineLatest } from 'rxjs/internal/observable/combineLatest';
 
 import { environment } from 'src/environments/environment';
 import { SeoService } from './seo.service';
-import { combineLatest } from 'rxjs/internal/observable/combineLatest';
+import { LanguageService } from './common/language.service';
 
 @Component({
   selector: 'app-root',
@@ -19,14 +19,15 @@ import { combineLatest } from 'rxjs/internal/observable/combineLatest';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  smallHeader = false;
+  initialLoad = true;
   lang = environment.language;
 
   languageMenuVisible = false;
 
   constructor(@Inject(PLATFORM_ID) platformId: string, public router: Router,
     activatedRoute: ActivatedRoute, private translate: TranslateService,
-    private seoService: SeoService) {
+    private seoService: SeoService, public languageService: LanguageService,
+    viewportScroller: ViewportScroller) {
 
     this.setTitleAndDescription();
 
@@ -63,7 +64,16 @@ export class AppComponent {
         if (!(evt instanceof NavigationEnd)) {
           return;
         }
-        window.scrollTo(0, 0);
+
+        if (this.initialLoad) {
+          // Prevent hydration from suddenly scrolling back up
+          this.initialLoad = false;
+        } else if (window.location.hash) {
+          setTimeout(() => viewportScroller.scrollToAnchor('mail'));
+        } else {
+          setTimeout(() => window.scrollTo(0, 0));
+        }
+        //setTimeout(() => window.scrollTo(0, 0));
       });
     }
 
@@ -77,6 +87,7 @@ export class AppComponent {
   }
 
   setLanguage(lang) {
+    this.languageService.lang.next(lang);
     this.lang = lang;
     this.translate.setDefaultLang(this.lang);
     this.translate.use(this.lang);

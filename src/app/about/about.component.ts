@@ -1,5 +1,4 @@
 import { Component  } from '@angular/core';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-about',
@@ -7,5 +6,4 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  lang = environment.language;
 }

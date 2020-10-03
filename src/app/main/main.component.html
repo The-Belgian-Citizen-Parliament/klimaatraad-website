@@ -26,7 +26,6 @@
     <h1 class="c-page-title" [innerHtml]="'mainTitle' | translate"></h1>
 
     <p class="lead">{{ 'mainSubtitle' | translate }}</p>
-
   </div>
 </div>
 
@@ -74,284 +73,14 @@
     </div>
   </div>
   <div class="container u-margin-top-7 u-text-align-center">
-    <button class="c-button" [routerLink]="lang === 'fr' ? '/proposition' : '/voorstel'">
+    <button class="c-button" [routerLink]="languageService.route('proposal') | async">
       <span class="c-button__label">{{ 'readTheProposal' | translate }}</span>
     </button>
 
   </div>
 </div>
 
-<div class="c-panel u-padding-top-9">
-  <div class="container s-editor u-text-align-center">
-    <h2 [innerHtml]="'mainContactYourRepresentativesTitle' | translate"></h2>
-    <p>{{ 'mainContactYourRepresentativesText' | translate }}</p>
-  </div>
-</div>
-
-<div class="c-panel u-background-color-pink u-margin-top-8">
-  <div class="c-mailer">
-    <div class="c-mailer__filters">
-      <h2 class="h6">Wie wil je mailen?</h2>
-      <p class="small">Gebruik de filters en selecteer zoveel politici als je wilt.</p>
-      <div class="c-filter-bar">
-        <div class="c-form__field c-form__field--search c-filter-bar__field">
-          <label class="c-form__field__label" for="filter-search">Zoek op naam</label>
-          <div class="c-form__input__wrapper" data-icon-entity="">
-            <input class="c-form__input" id="search" type="text" placeholder="Zoek op naam">
-          </div>
-        </div>
-
-        <div class="c-form__field c-form__field--select c-filter-bar__field">
-          <label class="c-form__field__label" for="filter-parlement">Parlement</label>
-          <div class="c-form__input__wrapper" data-icon-entity="">
-            <select class="c-form__input" id="filter-parlement">
-              <option value="">Parlement</option>
-
-              <option value="1">Federaal</option>
-
-              <option value="2">Brussel</option>
-
-              <option value="3">Vlaanderen</option>
-
-              <option value="4">Wallonia</option>
-
-            </select>
-          </div>
-        </div>
-
-        <div class="c-form__field c-form__field--select c-filter-bar__field">
-          <label class="c-form__field__label" for="filter-kieskring">Kieskring</label>
-          <div class="c-form__input__wrapper" data-icon-entity="">
-            <select class="c-form__input" id="filter-kieskring">
-              <option value="">Kieskring</option>
-
-              <option value="1">Antwerpen</option>
-
-              <option value="2">Brussel</option>
-
-              <option value="3">Oost-Vlaanderen</option>
-
-              <option value="4">West-Vlaanderen</option>
-
-            </select>
-          </div>
-        </div>
-
-        <div class="c-form__field c-form__field--select c-filter-bar__field">
-          <label class="c-form__field__label" for="filter-partij">Partij</label>
-          <div class="c-form__input__wrapper" data-icon-entity="">
-            <select class="c-form__input" id="filter-partij">
-              <option value="">Partij</option>
-
-              <option value="1">CD&amp;V</option>
-
-              <option value="2">DéFi</option>
-
-              <option value="3">Ecolo</option>
-
-              <option value="4">Groen</option>
-
-              <option value="5">NVA</option>
-
-              <option value="6">PvDA</option>
-
-            </select>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-    <div class="c-mailer__recipients">
-      <div class="c-mailer__recipients__viewport">
-
-        <div class="c-media-object c-media-object--person" id="recipient-1" data-selected="true">
-          <figure class="c-avatar c-media-object__figure">
-            <img class="c-avatar__image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&amp;w=400&amp;h=400"
-              alt="This is a description of the image">
-          </figure>
-
-          <div class="c-media-object__body">
-            <h3 class="h6">Zakia Khattabi</h3>
-            <dl class="c-list c-list--attributes">
-              <dt class="c-list__term">Parlement</dt>
-              <dd class="c-list__definition">Federaal</dd>
-              <dt class="c-list__term">Kieskring</dt>
-              <dd class="c-list__definition">Brussel</dd>
-              <dt class="c-list__term">Partij</dt>
-              <dd class="c-list__definition">Groen</dd>
-            </dl>
-            <button class="c-media-object__button" data-select-recipient="recipient-1">
-              <span class="u-visually-hidden">Voeg toe aan ontvangers</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="c-media-object c-media-object--person" id="recipient-2">
-          <figure class="c-avatar c-media-object__figure">
-            <img class="c-avatar__image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&amp;w=400&amp;h=400"
-              alt="This is a description of the image">
-          </figure>
-
-          <div class="c-media-object__body">
-            <h3 class="h6">Georges Dallemagne</h3>
-            <dl class="c-list c-list--attributes">
-              <dt class="c-list__term">Parlement</dt>
-              <dd class="c-list__definition">Federaal</dd>
-              <dt class="c-list__term">Kieskring</dt>
-              <dd class="c-list__definition">Brussel</dd>
-              <dt class="c-list__term">Partij</dt>
-              <dd class="c-list__definition">cdH</dd>
-            </dl>
-            <button class="c-media-object__button" data-select-recipient="recipient-2">
-              <span class="u-visually-hidden">Voeg toe aan ontvangers</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="c-media-object c-media-object--person" id="recipient-3" data-selected="true">
-          <figure class="c-avatar c-media-object__figure">
-            <img class="c-avatar__image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&amp;w=400&amp;h=400"
-              alt="This is a description of the image">
-          </figure>
-
-          <div class="c-media-object__body">
-            <h3 class="h6">Philippe Pivin</h3>
-            <dl class="c-list c-list--attributes">
-              <dt class="c-list__term">Parlement</dt>
-              <dd class="c-list__definition">Federaal</dd>
-              <dt class="c-list__term">Kieskring</dt>
-              <dd class="c-list__definition">Brussel</dd>
-              <dt class="c-list__term">Partij</dt>
-              <dd class="c-list__definition">MR</dd>
-            </dl>
-            <button class="c-media-object__button" data-select-recipient="recipient-3">
-              <span class="u-visually-hidden">Voeg toe aan ontvangers</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="c-media-object c-media-object--person" id="recipient-4">
-          <figure class="c-avatar c-media-object__figure">
-            <img class="c-avatar__image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&amp;w=400&amp;h=400"
-              alt="This is a description of the image">
-          </figure>
-
-          <div class="c-media-object__body">
-            <h3 class="h6">Ahmed Laaouej</h3>
-            <dl class="c-list c-list--attributes">
-              <dt class="c-list__term">Parlement</dt>
-              <dd class="c-list__definition">Federaal</dd>
-              <dt class="c-list__term">Kieskring</dt>
-              <dd class="c-list__definition">Brussel</dd>
-              <dt class="c-list__term">Partij</dt>
-              <dd class="c-list__definition">PS</dd>
-            </dl>
-            <button class="c-media-object__button" data-select-recipient="recipient-4">
-              <span class="u-visually-hidden">Voeg toe aan ontvangers</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="c-media-object c-media-object--person" id="recipient-5">
-          <figure class="c-avatar c-media-object__figure">
-            <img class="c-avatar__image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&amp;w=400&amp;h=400"
-              alt="This is a description of the image">
-          </figure>
-
-          <div class="c-media-object__body">
-            <h3 class="h6">Sophie Rohonyi</h3>
-            <dl class="c-list c-list--attributes">
-              <dt class="c-list__term">Parlement</dt>
-              <dd class="c-list__definition">Federaal</dd>
-              <dt class="c-list__term">Kieskring</dt>
-              <dd class="c-list__definition">Brussel</dd>
-              <dt class="c-list__term">Partij</dt>
-              <dd class="c-list__definition">DéFI</dd>
-            </dl>
-            <button class="c-media-object__button" data-select-recipient="recipient-5">
-              <span class="u-visually-hidden">Voeg toe aan ontvangers</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <form class="c-form c-mailer__form">
-      <fieldset class="c-form__section c-form__section--fieldset">
-        <div class="c-form__field-group">
-          <div class="c-form__field c-form__field--text">
-            <label class="c-form__field__label" for="field-forename">Voornaam</label>
-            <input class="c-form__input" type="text" id="field-forename">
-          </div>
-          <div class="c-form__field c-form__field--text">
-            <label class="c-form__field__label" for="field-surname">Familienaam</label>
-            <input class="c-form__input" type="text" id="field-surname">
-          </div>
-        </div>
-        <div class="c-form__field c-form__field--text">
-          <label class="c-form__field__label" for="field-email">E-mail</label>
-          <input class="c-form__input" type="email" id="field-email">
-          <ul class="c-form__errors">
-            <li>Gelieve en geldig e-mailadres in te vullen.</li>
-          </ul>
-        </div>
-      </fieldset>
-      <fieldset class="c-form__section c-form__section--fieldset">
-        <div class="c-form__field c-form__field--text">
-          <label class="c-form__field__label" for="field-subject">Aan</label>
-          <ul class="c-list c-list--recipients">
-            <li class="c-list__item"><span class="c-badge">Zakia Khattabi</span>
-            </li>
-            <li class="c-list__item"><span class="c-badge">Philippe Pivin</span>
-            </li>
-          </ul>
-        </div>
-        <div class="c-form__field c-form__field--select">
-          <label class="c-form__field__label" for="field-subject">Onderwerp</label>
-          <div class="c-form__input__wrapper" data-icon-entity="">
-            <select class="c-form__input" id="field-subject">
-              <option value="">Please select</option>
-              <option>This is a subject line</option>
-              <option>This is another subject line</option>
-              <option>This is a third subject line</option>
-            </select>
-          </div>
-        </div>
-        <div class="c-form__field c-form__field--select">
-          <label class="c-form__field__label" for="field-body">Tekst</label>
-          <span class="c-form__field__instruction">This is an instruction.</span>
-          <div class="c-form__input__wrapper" data-icon-entity="">
-            <select class="c-form__input" id="field-body">
-              <option value="">Please select</option>
-              <option>This is a summary of the text</option>
-              <option>This is another summary of the text</option>
-              <option>This is a third summary of the text</option>
-            </select>
-          </div>
-        </div>
-        <div class="c-form__field c-form__field--textarea">
-          <label class="c-form__field__label" for="field-body">Preview</label>
-          <textarea class="c-form__input" id="field-body"
-            readonly="">This is placeholder text. Nam his libris eum malo quam reliquo ornatu villae delectari. Aufert enim sensus actionemque tollit omnem. Vide, quaeso, rectumne sit. Duo Reges: constructio interrete. Quo tandem modo? Audeo dicere, inquit. Gerendus est mos, modo recte sentiat. Non enim, si omnia non sequebatur, idcirco non erat ortus illinc. This is placeholder text. Nam his libris eum malo quam reliquo ornatu villae delectari. Aufert enim sensus actionemque tollit omnem. Vide, quaeso, rectumne sit. Duo Reges: constructio interrete. Quo tandem modo? Audeo dicere, inquit. Gerendus est mos, modo recte sentiat. Non enim, si omnia non sequebatur, idcirco non erat ortus illinc.</textarea>
-        </div>
-      </fieldset>
-      <div class="c-form__section c-form__section--actions">
-        <div class="c-form__field c-form__field--options">
-          <label class="u-visually-hidden">Checkbox</label>
-          <div class="c-form__field-stack">
-            <div class="c-form__field c-form__field--option">
-              <input class="c-form__input" type="checkbox" id="field-consent" value="1">
-              <label class="c-form__option__label" for="field-consent">This is a checkbox label. Quo invento omnis ab eo quasi.</label>
-            </div>
-          </div>
-        </div>
-        <button class="c-button">
-          <span class="c-button__label">Verzenden</span>
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
+<app-inlinemail id="mail"></app-inlinemail>
 
 <div class="c-panel u-background-color-gradient u-color-white">
   <div class="grid grid--columns" data-column-count="3">
@@ -415,12 +144,11 @@
 
   <div class="grid grid--columns u-margin-top-7" data-column-count="2">
     <div class="grid__tracks">
-
       <div class="grid__cell s-editor u-text-align-center" *ngFor="let question of questions; let i = index;">
         <figure class="u-max-width-1" aria-hidden="true">
           <img [src]="imgs[i]">
         </figure>
-        <h3 class="h5"><a [routerLink]="(lang === 'nl' ? '/vraag/' : '/question/') + question.slug" [innerHtml]="question.question"></a>
+        <h3 class="h5"><a [routerLink]="languageService.route('question', question.slug) | async" [innerHtml]="question.question"></a>
         </h3>
         <p class="keep-newlines" [innerHtml]="question.summary | truncate:200"></p>
 
@@ -432,7 +160,6 @@
           </li>
         </ul>
       </div>
-
     </div>
   </div>
 
@@ -443,7 +170,7 @@
 
     <div class="c-callout">
       <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a
-          [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'sendUsAMail' | translate }}</a></p>
+          [routerLink]="languageService.route('about') | async">{{ 'sendUsAMail' | translate }}</a></p>
     </div>
 
   </div>

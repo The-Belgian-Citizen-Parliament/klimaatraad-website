@@ -1,5 +1,6 @@
 @import './main/theme.scss';
 @import './material-theme.scss';
+@import './inline-mailer.scss';
 
 $primary-color: mat-color($app-primary);
 $accent-color: mat-color($app-accent);
@@ -24,6 +25,11 @@ $accent-color: mat-color($app-accent);
 .mat-checkbox-layout {
   white-space: unset !important;
 }
+
+.mat-checkbox.mat-accent .mat-checkbox-inner-container {
+  margin: 2px 8px auto 0 !important;
+}
+
 
 // Main styles overwrites
 

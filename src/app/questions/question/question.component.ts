@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/core';
+import { LanguageService } from 'src/app/common/language.service';
 import { RandomImageService } from 'src/app/common/random-image.service';
 import { environment } from 'src/environments/environment';
 import { Question } from '../questions';
@@ -18,7 +19,7 @@ export class QuestionComponent implements AfterViewInit {
   lang = environment.language;
   expanded = false;
 
-  constructor(private randomImage: RandomImageService) {
+  constructor(private randomImage: RandomImageService, public languageService: LanguageService) {
   }
 
   ngAfterViewInit(): void {

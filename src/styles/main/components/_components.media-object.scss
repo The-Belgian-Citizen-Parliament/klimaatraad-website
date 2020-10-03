@@ -22,18 +22,19 @@
   --gutter-width: #{map-get($spacing-units, '5')};
   flex-wrap: nowrap;
   margin: 0;
+  max-width: none;
   padding: map-get($spacing-units, '5');
   padding-bottom: 0;
   padding-left: 0;
   position: relative;
 
+  & + #{&} {
+    border-top: 2px solid currentColor;
+  }
+
   &:hover,
   &:focus-within {
     background-color: map-get($colors, 'lemon');
-  }
-
-  & + #{&} {
-    border-top: 2px solid currentColor;
   }
 
   .c-media-object__figure {
