@@ -13,8 +13,8 @@
     </div>
 
     <div *ngIf="tagFilter">
-      <h4>{{ 'Tag filter' | translate }} <small><span class="c-tag c-tag__label" style="vertical-align: bottom;">{{ tagFilter }} <mat-icon class="remove-tag-icon"
-              (click)="clearFilter()">close</mat-icon></span></small></h4>
+      <h4>{{ 'Tag filter' | translate }} <small><span class="c-tag c-tag__label" style="vertical-align: bottom;">{{ tagFilter }} <mat-icon
+              class="remove-tag-icon" (click)="clearFilter()">close</mat-icon></span></small></h4>
     </div>
 
     <ng-container *ngIf="!filter && !tagFilter">
@@ -26,7 +26,8 @@
       </ng-container>
 
       <div class="c-callout">
-        <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'sendUsAMail' | translate }}</a></p>
+        <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a
+            [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'sendUsAMail' | translate }}</a></p>
       </div>
     </ng-container>
   </div>
