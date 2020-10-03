@@ -4,7 +4,6 @@ import * as lunr from 'lunr';
 
 import { QuestionsService } from '../questions/questions.service';
 import { nl, Question } from '../questions/questions';
-import { environment } from 'src/environments/environment';
 import { RandomImageService } from '../common/random-image.service';
 import { LanguageService } from '../common/language.service';
 
@@ -15,8 +14,6 @@ import { LanguageService } from '../common/language.service';
 })
 export class FaqComponent implements OnInit, OnDestroy {
   @ViewChild('question', { static: false }) questionField: ElementRef;
-
-  lang = environment.language;
 
   filter = '';
   tagFilter = null;
@@ -37,9 +34,14 @@ export class FaqComponent implements OnInit, OnDestroy {
 
   constructor(@Inject(PLATFORM_ID) platformId: string, private questionsService: QuestionsService,
     public randomImage: RandomImageService, public languageService: LanguageService) {
-    this.questionExamples = this.lang == 'nl' ? ['groen', 'kost', 'uitstoot', 'ecologisch']
-      : this.lang === 'fr' ? ['ecolo', 'coute', 'emissions', 'ecologique']
-      : ['groen', 'cost', 'emissions', 'ecologic'];
+    languageService.lang.subscribe((lang) => {
+      this.questionExamples = lang === 'nl' ? ['groen', 'kost', 'uitstoot', 'ecologisch']
+        : lang === 'fr' ? ['ecolo', 'coute', 'emissions', 'ecologique']
+        : ['groen', 'cost', 'emissions', 'ecologic'];
+
+      this.clearFilter();
+      this.allQuestions = lang === 'nl' ? nl : lang === 'fr' ? nl : nl;
+    });
 
     this.questionPlaceholder = this.questionExamples[0];
     this.isBrowser = isPlatformBrowser(platformId);
@@ -96,6 +98,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   }
 
   clearFilter() {
+    this.filteredQuestions = [];
     this.tagFilter = null;
     this.filter = '';
   }

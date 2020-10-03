@@ -414,7 +414,6 @@
 
   <div class="grid grid--columns u-margin-top-7" data-column-count="2">
     <div class="grid__tracks">
-
       <div class="grid__cell s-editor u-text-align-center" *ngFor="let question of questions; let i = index;">
         <figure class="u-max-width-1" aria-hidden="true">
           <img [src]="imgs[i]">
@@ -431,7 +430,6 @@
           </li>
         </ul>
       </div>
-
     </div>
   </div>
 
@@ -442,7 +440,7 @@
 
     <div class="c-callout">
       <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a
-          [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">{{ 'sendUsAMail' | translate }}</a></p>
+          [routerLink]="languageService.route('about') | async">{{ 'sendUsAMail' | translate }}</a></p>
     </div>
 
   </div>
