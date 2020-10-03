@@ -27,7 +27,7 @@
       </ng-container>
 
       <div class="c-callout">
-        <p><strong>Staat jouw vraag er niet tussen? </strong> <a routerLink="/about">We beantwoorden hem graag voor jou en
+        <p><strong>Staat jouw vraag er niet tussen? </strong> <a [routerLink]="lang === 'fr' ? '/a-propos' : '/over'">We beantwoorden hem graag voor jou en
           nemen hem hier op!</a></p>
       </div>
     </ng-container>
