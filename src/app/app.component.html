@@ -8,7 +8,7 @@
   <nav class="c-nav" aria-label="Navigation">
     <ul class="c-nav__list">
       <li class="c-nav__item">
-        <a class="c-nav__button" [routerLink]="languageService.route('participate') | async">{{ 'Take part' | translate }}</a>
+        <a class="c-nav__button" routerLink="/" fragment="mail">{{ 'Take part' | translate }}</a>
       </li>
       <li class="c-nav__item">
         <a [routerLink]="languageService.route('proposal') | async">{{ 'The proposal' | translate }}</a>
@@ -64,7 +64,7 @@
         <nav class="c-nav" aria-label="Navigation">
           <ul class="c-nav__list">
             <li class="c-nav__item">
-              <a class="c-nav__button" [routerLink]="languageService.route('participate') | async">{{ 'Take part' | translate }}</a>
+              <a class="c-nav__button" routerLink="/" fragment="mail">{{ 'Take part' | translate }}</a>
             </li>
             <li class="c-nav__item">
               <a [routerLink]="languageService.route('proposal') | async">{{ 'The proposal' | translate }}</a>

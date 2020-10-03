@@ -63,7 +63,9 @@ export class AppComponent {
         if (!(evt instanceof NavigationEnd)) {
           return;
         }
+
         window.scrollTo(0, 0);
+        //setTimeout(() => window.scrollTo(0, 0));
       });
     }
 
