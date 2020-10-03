@@ -84,6 +84,8 @@ export class InlineMailComponent implements OnInit, OnDestroy {
     en: ['Ecolo-Groen', 'PS', 'CD&V', 'Open Vld', 'sp.a', 'MR'],
   }
 
+  excludedParties = ['PVDA-PTB', 'N-VA', 'VB', 'cdH', 'DéFI', 'ONAFH'];
+
   parties: string[] = [];
 
   subjects = [];
@@ -102,7 +104,7 @@ export class InlineMailComponent implements OnInit, OnDestroy {
   getMailsTimer = null;
 
   constructor(@Inject(PLATFORM_ID) platformId: string, private mailService: MailService,
-    languageService: LanguageService) {
+    private languageService: LanguageService) {
     this.isBrowser = isPlatformBrowser(platformId);
 
     this.subjects = environment.language === 'nl' ? NL_SUBJECTS : FR_SUBJECTS;
@@ -126,6 +128,8 @@ export class InlineMailComponent implements OnInit, OnDestroy {
     languageService.lang.subscribe((lang) => {
       this.parties = this.partiesPerLanguage[lang];
       this.constituencies = this.constituenciesPerLanguage[lang];
+      this.clearSelected();
+      this.clearFilters();
     });
   }
 
@@ -173,11 +177,25 @@ export class InlineMailComponent implements OnInit, OnDestroy {
   // }
 
   filterMps() {
+    const lang = this.languageService.lang.value;
+
+    let ignoredparties = [];
+    let ignoredConstituencies = [];
+
+    if (lang === 'nl') {
+      ignoredConstituencies = this.partiesPerLanguage['fr'];
+    } else if (lang === 'fr') {
+      ignoredConstituencies = this.partiesPerLanguage['nl'];
+    }
+
     this.filteredMps = this.mps
       .filter(mp =>
         (!this.selectedParliament || (mp.parliament === this.selectedParliament)) &&
         (!this.selectedConstituency || (mp.constituency === this.selectedConstituency)) &&
         (!this.selectedParty || (mp.party === this.selectedParty)) &&
+        (!this.excludedParties.includes(mp.party)) &&
+        (!ignoredConstituencies.includes(mp.constituency)) &&
+        (!ignoredparties.includes(mp.party)) &&
         (!this.nameFilter || ((mp.firstName + ' ' + mp.lastName).toLowerCase().includes(this.nameFilter.toLowerCase()))))
       .sort((a, b) => (a.email || 'ZZZZ').localeCompare(b.email || 'ZZZZ'));
 
@@ -205,6 +223,13 @@ export class InlineMailComponent implements OnInit, OnDestroy {
     } else {
       this.newMail.body = this.newMail.body.replace(this.newMail.firstName + ' ' + this.newMail.lastName, '');
     }
+  }
+
+  clearFilters() {
+    this.filteredMps = [];
+    this.nameFilter = null;
+    this.selectedConstituency = null;
+    this.selectedParty = null;
   }
 
   clearSelected() {
