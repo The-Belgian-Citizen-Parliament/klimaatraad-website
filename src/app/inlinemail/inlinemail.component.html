@@ -112,12 +112,12 @@
               <div fxFlex fxLayout="row" fxLayoutGap="12px">
                 <mat-form-field fxFlex="30">
                   <mat-label>{{ 'Postal code' | translate }}</mat-label>
-                  <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode" required>
+                  <input matInput placeholder="1000" name="postalCode" [(ngModel)]="newMail.postalCode">
                 </mat-form-field>
 
                 <mat-form-field fxFlex="70">
                   <mat-label>{{ 'City' | translate }}</mat-label>
-                  <input matInput placeholder="{{ 'Brussels' | translate }}" name="city" [(ngModel)]="newMail.city" required>
+                  <input matInput placeholder="{{ 'Brussels' | translate }}" name="city" [(ngModel)]="newMail.city">
                 </mat-form-field>
               </div>
 
