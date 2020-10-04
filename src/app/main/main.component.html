@@ -151,14 +151,6 @@
         <h3 class="h5"><a [routerLink]="languageService.route('question', question.slug) | async" [innerHtml]="question.question"></a>
         </h3>
         <p class="keep-newlines" [innerHtml]="question.summary | truncate:200"></p>
-
-        <ul class="c-tag-list">
-          <li class="c-tag-list__item" *ngFor="let tag of question.tags">
-            <span class="c-tag">
-              <span class="c-tag__label">{{ tag }}</span>
-            </span>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
