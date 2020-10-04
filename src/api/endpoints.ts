@@ -60,7 +60,8 @@ export function bootstrap(app: express.Express) {
             console.log('Sending mail...');
             const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN, host: 'api.eu.mailgun.net' });
             const data = {
-              from: newMail.firstName + ' ' + newMail.lastName + '<' + newMail.email + '>',
+              from: newMail.firstName + ' ' + newMail.lastName + ' <info@thecitizensparliament.be>', //  '<' + newMail.email + '>',
+              'h:Reply-To': newMail.email,
               to: newMail.to,
               subject: newMail.subject,
               text: newMail.body,
