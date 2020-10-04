@@ -14,3 +14,5 @@ CREATE TABLE mails (
   created_on TIMESTAMP NOT NULL,
   sent_on TIMESTAMP
 );
+
+ALTER TABLE mails ADD CONSTRAINT uk_email UNIQUE (email);
