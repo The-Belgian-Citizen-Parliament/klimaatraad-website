@@ -112,9 +112,7 @@ export class InlineMailComponent implements OnInit, OnDestroy {
 
     this.newMail = new Mail();
     this.newMail.email = 'vincent.sels@gmail.com';
-    this.newMail.to = 'vincent_sels@hotmail.com';
-    this.newMail.city = 'Anderlecht';
-    this.newMail.postalCode = '1070';
+    this.newMail.to = 'vincent_sels@hotmail.com,vincent.sels@gmail.com,vsel@protonmail.com';
     this.newMail.firstName = 'Vincent';
     this.newMail.lastName = 'Sels';
     this.newMail.lang = environment.language;

@@ -58,7 +58,7 @@ export function bootstrap(app: express.Express) {
         if (process.env.MAILGUN_API_KEY) {
           try {
             console.log('Sending mail...');
-            const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
+            const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN, host: 'api.eu.mailgun.net' });
             const data = {
               from: newMail.firstName + ' ' + newMail.lastName + '<' + newMail.email + '>',
               to: newMail.to,
