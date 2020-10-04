@@ -1,12 +1,12 @@
 <div class="c-panel u-padding-top-0">
   <div class="container u-max-width-7 u-text-align-center">
-    <h1 class="c-page-title" [innerHtml]="'mainTitle' | translate"></h1>
+    <h1 class="c-page-title" [innerHtml]="'proposalTitle' | translate"></h1>
 
-    <p class="lead">{{ 'mainSubtitle' | translate }}</p>
+    <!-- <p class="lead">{{ 'mainSubtitle' | translate }}</p> -->
   </div>
 </div>
 
-<div class="c-panel u-background-color-teal u-color-white">
+<!-- <div class="c-panel u-background-color-teal u-color-white">
   <div class="container s-editor">
     <figure class="u-float-left u-max-width-2" aria-hidden="true">
       <img src="/assets/img/illustrations/jellyfish.png">
@@ -55,46 +55,37 @@
       precedent. Na acht maanden kwamen de 150 leden van het Franse burgerparlement, geïnitieerd door president Emmanuel Macron, met een
       lijvig rapport vol concrete beleidsvoorstellen.</p>
   </div>
-</div>
+</div> -->
+
 <div class="c-panel">
   <div class="container s-editor">
     <figure class="u-max-width-4" aria-hidden="true">
       <img src="/assets/img/illustrations/birds.png">
     </figure>
-    <h2 class="h3"><span class="u-color-teal">Grondbeginselen</span> Burgerparlement</h2>
+    <!-- <h2 class="h3"><span class="u-color-teal">Grondbeginselen</span> Burgerparlement</h2> -->
 
-    <p>De ondertekenaars roepen de federale regering op er zich toe te verbinden om, voortbouwend op Art. 7bis van de Belgische
-      Grondwet<sup>1</sup>, in de loop van deze legislatuur een Burgerparlement te initiëren rond de ecologische noodtoestand. Dit orgaan
-    </p>
+    <p [innerHtml]="'proposalIntro1' | translate"></p>
+    <p [innerHtml]="'proposalIntro2' | translate"></p>
+
     <ul>
-      <li>behandelt een vraag die zich niet beperkt tot de klimaatopwarming maar het bredere perspectief van de ecologische crisis centraal
-        stelt en dus rekening houdt met de negen huidig geïdentificeerde planetaire grenzen<sup>2</sup></li>
-      <li>bestaat uit een door loting samengestelde groep burgers die, rekening houdend met een reeks demografische criteria, een voldoende
-        representatieve dwarsdoorsnede vormt van de totale Belgische bevolking;</li>
-      <li>houdt, om de participatiedrempel te verlagen, rekening met inclusiviteitswaarborgen zoals dagvergoedingen, transportvergoedingen,
-        accommodatie, kinderopvang en andere vormen van ondersteuning van zijn leden;</li>
-      <li>laat zich informeren door een groep experten en belanghebbenden die evenwichtig is samengesteld, rekening houdend met de
-        wetenschappelijke consensus rond de ecologische crisis;</li>
-      <li>bewaakt zijn onafhankelijkheid ten opzichte van politieke, economische en sociale actoren (waaronder de federale regering alsook
-        de organisaties en bewegingen die dit voorstel steunen) aan de hand van een evenwichtig samengesteld organigram met de nodige checks
-        en balances, gecoördineerd door een professionele organisatie gespecialiseerd in deliberatieve processen;</li>
-      <li>ontwikkelt beleidsvoorstellen voor een coherent beleid in respons op de ecologische noodtoestand, zowel op het federale en
-        gewestelijke niveau als op dat van de gemeenschappen;</li>
-      <li>heeft voldoende impact op het reële beleid van de federale staat, de gewesten en de gemeenschappen doordat elk van zijn
-        beleidsvoorstellen door de bevoegde regering(en) wordt geïmplementeerd of aan het bevoegde parlement of de bevoegde parlementen ter
-        stemming wordt voorgelegd (waarbij op afgewezen voorstellen telkens grondige en publiek toegankelijke motivaties volgen);</li>
-      <li>laat zich leiden door de volgende gidsprincipes: (1) proportionaliteit ten opzichte van de geadresseerde risico’s, (2) sociale
-        rechtvaardigheid, (3) een bewustzijn van de globale im- pact van de Belgische productie en consumptie en (4) het voorzorgsbeginsel.
-      </li>
+      <li [innerHtml]="'proposalDemand1' | translate"></li>
+      <li [innerHtml]="'proposalDemand2' | translate"></li>
+      <li [innerHtml]="'proposalDemand3' | translate"></li>
+      <li [innerHtml]="'proposalDemand4' | translate"></li>
+      <li [innerHtml]="'proposalDemand5' | translate"></li>
+      <li [innerHtml]="'proposalDemand6' | translate"></li>
+      <li [innerHtml]="'proposalDemand7' | translate"></li>
+      <li [innerHtml]="'proposalDemand8' | translate"></li>
     </ul>
-    <p class="small"><sup>1</sup> Bij de uitoefening van hun respectieve bevoegdheden streven de federale Staat, de gemeenschappen en de
-      gewesten de doelstellingen na van een duurzame ontwikkeling in haar sociale, economische en milieu- gebonden aspecten, rekening
-      houdend met de solidariteit tussen de generaties.</p>
-    <p class="small"><sup>2</sup> (1) de opwarming van de aarde, (2) het verlies van de biodiversiteit, (3) de stikstof- en fosforkringloop,
-      (4) het gat in de ozonlaag, (5) oceaanverzuring, (6) waterschaarste, (7) landgebruik, (8) chemische verontreiniging, (9) aerosolen in
-      de atmosfeer.</p>
+
+    <p [innerHtml]="'proposalOutro' | translate"></p>
+
+    <p class="small"><sup>1</sup> {{ 'proposalFootnote1' | translate }}</p>
+
+    <p class="small"><sup>2</sup> {{ 'proposalFootnote2' | translate }}</p>
+
     <button class="c-button c-button--download">
-      <span class="c-button__label">Download het uitgewerkte voorstel</span>
+      <a target="_blank" [href]="lang === 'nl' ? '/assets/proposal/het_burgerparlement_voorstel.pdf' : '/assets/proposal/le_parlement_citoyen_proposition.pdf'" class="c-button__label">{{ 'proposalDownload' | translate }}</a>
     </button>
 
   </div>
