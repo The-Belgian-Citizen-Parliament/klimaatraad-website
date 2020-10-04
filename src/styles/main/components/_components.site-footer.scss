@@ -1,6 +1,5 @@
 .c-site-footer {
   background-color: map-get($colors, 'lemon');
-  margin: 0 -#{map-get($spacing-units, '5')};
   padding: map-get($spacing-units, '7') 0;
 
   .grid {
@@ -50,7 +49,7 @@
     @include media-query('min:080') {
       grid-template-areas:
         'a a a a a a a a b b b b'
-        'c c d d d d d d d d . .';
+        'c c d d d d d d . . . .';
     }
   }
 
