@@ -17,19 +17,17 @@
               class="remove-tag-icon" (click)="clearFilter()">close</mat-icon></span></small></h4>
     </div>
 
-    <ng-container *ngIf="!filter && !tagFilter">
-      <ng-container *ngFor="let topic of groupedQuestions">
-        <h2 class="h4 u-margin-top-6" style="text-transform: capitalize;">{{ topic.topic }}</h2>
-        <ul class="c-list c-list--questions u-margin-top-5">
-          <li *ngFor="let question of topic.questions"><a routerLink="/faq" [fragment]="question.slug">{{ question.question }}</a></li>
-        </ul>
-      </ng-container>
-
-      <div class="c-callout">
-        <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a
-            [routerLink]="languageService.route('about') | async">{{ 'sendUsAMail' | translate }}</a></p>
-      </div>
+    <ng-container *ngFor="let topic of groupedQuestions">
+      <h2 class="h4 u-margin-top-6" style="text-transform: capitalize;">{{ topic.topic }}</h2>
+      <ul class="c-list c-list--questions u-margin-top-5">
+        <li *ngFor="let question of topic.questions"><a routerLink="/faq" [fragment]="question.slug">{{ question.question }}</a></li>
+      </ul>
     </ng-container>
+
+    <div class="c-callout">
+      <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a
+          [routerLink]="languageService.route('about') | async">{{ 'sendUsAMail' | translate }}</a></p>
+    </div>
   </div>
 </div>
 

@@ -48,12 +48,7 @@ export class FaqComponent implements OnInit, OnDestroy {
     setTimeout(() => this.questionField.nativeElement.focus());
     this.imgs = randomImage.generateImages(50);
 
-    this.groupedQuestions = this.allQuestions.reduce((all, curr) => {
-      if (!all.find(t => t.topic === curr.tags[0])) all.push({ topic: curr.tags[0], questions: [] });
-      const topic = all.find(t => t.topic === curr.tags[0]);
-      topic.questions.push(curr);
-      return all;
-    }, []);
+    this.groupQuestions();
 
     const self = this;
     this.allQuestionsIndex = lunr(function () {
@@ -78,6 +73,18 @@ export class FaqComponent implements OnInit, OnDestroy {
     if (this.timer) clearInterval(this.timer);
   }
 
+  groupQuestions() {
+    const setToGroup = (this.filteredQuestions && this.filteredQuestions.length > 0)
+      ? this.filteredQuestions : this.allQuestions;
+
+    this.groupedQuestions = setToGroup.reduce((all, curr) => {
+      if (!all.find(t => t.topic === curr.tags[0])) all.push({ topic: curr.tags[0], questions: [] });
+      const topic = all.find(t => t.topic === curr.tags[0]);
+      topic.questions.push(curr);
+      return all;
+    }, []);
+  }
+
   filterQuestions() {
     if (this.filter.length > 2) {
       const filterWithWildCards = this.filter.split(' ').filter(x => x).map(part => part + '*').join(' ');
@@ -85,16 +92,19 @@ export class FaqComponent implements OnInit, OnDestroy {
       this.filteredQuestions = this.allQuestionsIndex.search(filterWithWildCards)
         .map(result => this.allQuestions.find(q => q.question === result.ref));
 
+      this.groupQuestions();
       // this.filteredQuestions = this.allQuestions.filter(q => q.question.includes(this.filter) || q.summary.includes(this.filter)
       //   || (q.answer && q.answer.includes(this.filter)));
     } else if (this.filter.length === 0) {
       this.filteredQuestions = [];
+      this.groupQuestions();
     }
   }
 
   setTagFilter(tag) {
     this.tagFilter = tag;
     this.filteredQuestions = this.allQuestions.filter(q => q.tags && q.tags.includes(tag));
+    this.groupQuestions();
     window.scrollTo(0, 0);
   }
 
@@ -102,5 +112,6 @@ export class FaqComponent implements OnInit, OnDestroy {
     this.filteredQuestions = [];
     this.tagFilter = null;
     this.filter = '';
+    this.groupQuestions();
   }
 }
