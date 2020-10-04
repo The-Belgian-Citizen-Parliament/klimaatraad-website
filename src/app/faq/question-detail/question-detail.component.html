@@ -1,20 +1,23 @@
-<div class="c-panel u-background-color-blue-powder">
+<div class="c-panel u-padding-top-0">
   <div class="container">
-    <app-question [question]="question"></app-question>
-  </div>
-</div>
+    <h1 class="c-page-title" [innerHtml]="question.question"></h1>
 
-<div class="c-panel">
-  <div class="container">
-    <h2 class="h4 u-margin-top-6" style="text-transform: capitalize;">{{ 'Maybe you were also wondering' | translate }}...</h2>
-    <ul class="c-list c-list--questions u-margin-top-5">
-      <li *ngFor="let question of randomQuestions"><a [routerLink]="languageService.route('question', question.slug) | async">{{ question.question }}</a></li>
-    </ul>
+    <div class="s-editor">
+      <app-question [question]="question" [answerOnly]="true"></app-question>
 
-    <div class="c-callout u-margin-top-6">
-      <p>{{ 'Check out' | translate }} <a routerLink="/faq">{{ 'all questions' | translate }}</a> on our FAQ page!</p>
+      <div class="c-panel">
+        <h2 class="h4 u-margin-top-6" style="text-transform: capitalize;">{{ 'Maybe you were also wondering' | translate }}...</h2>
+        <ul class="c-list c-list--questions u-margin-top-5">
+          <li *ngFor="let question of randomQuestions"><a
+              [routerLink]="languageService.route('question', question.slug) | async">{{ question.question }}</a></li>
+        </ul>
+
+        <div class="c-callout u-margin-top-6">
+          <p>{{ 'Check out' | translate }} <a routerLink="/faq">{{ 'all questions' | translate }}</a> on our FAQ page!</p>
+        </div>
+      </div>
+
+      <app-participate></app-participate>
     </div>
   </div>
 </div>
-
-<app-participate></app-participate>
