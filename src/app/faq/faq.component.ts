@@ -95,6 +95,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   setTagFilter(tag) {
     this.tagFilter = tag;
     this.filteredQuestions = this.allQuestions.filter(q => q.tags && q.tags.includes(tag));
+    window.scrollTo(0, 0);
   }
 
   clearFilter() {
