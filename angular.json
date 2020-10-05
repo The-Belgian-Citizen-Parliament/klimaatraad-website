@@ -66,6 +66,10 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "src/assets/img/og_logo.jpg",
+                  "with": "src/assets/img/og_logo_nl.jpg"
                 }
               ],
               "optimization": true,
@@ -171,6 +175,10 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "src/assets/img/og_logo.jpg",
+                  "with": "src/assets/img/og_logo_nl.jpg"
                 }
               ],
               "sourceMap": false,
