@@ -21,6 +21,8 @@ import { LanguageService } from './common/language.service';
 export class AppComponent {
   initialLoad = true;
   lang = environment.language;
+  isBrowser = false;
+  isProd = environment.production;
 
   languageMenuVisible = false;
 
@@ -60,6 +62,7 @@ export class AppComponent {
     });
 
     if (isPlatformBrowser(platformId)) {
+      this.isBrowser = true;
       this.router.events.subscribe((evt) => {
         if (!(evt instanceof NavigationEnd)) {
           return;
@@ -86,6 +89,10 @@ export class AppComponent {
   }
 
   setLanguage(lang) {
+    if (this.isBrowser && this.isProd) {
+      window.location.href = lang === 'nl' ? 'https://www.hetburgerparlement.be' : 'https://www.leparlementcitoyen.be';
+    }
+
     this.languageService.lang.next(lang);
     this.lang = lang;
     this.translate.setDefaultLang(this.lang);
