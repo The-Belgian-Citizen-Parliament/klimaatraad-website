@@ -34,7 +34,7 @@
   "searchThroughAllQuestions": "Search through all questions",
 
   "faqTitle": "Frequently Asked <span class=\"u-color-teal\">Questions</span>",
-  "faqSubtitle": "A citizens’ parliament? Has that ever worked? And who’s going to pay for that? You’ll probably have lots of questions. We hope to answer them all here.",
+  "faqSubtitle": "A Citizens’ Parliament? Has that ever worked? And who’s going to pay for that? You’ll probably have lots of questions. We hope to answer them all here.",
   "yourQuestionNotHere": "Can’t find your question here?",
   "sendUsAMail": "Drop us a line!",
   "noQuestionsWithThisFilter": "No questions found with this filter.",
@@ -106,8 +106,6 @@
   "customSubjectPlaceholder": "Summarize why you think this is so important",
   "Write a subject yourself": "Write a subject yourself",
   "text": "text",
-  "We provide the opening and closure lines": "We provide the opening and closure lines",
-  "allowPublic": "My signature can appear openly on the site",
   "stayUpToDate": "I would like to stay up-to-date on the result of this campaign",
   "Send": "Send",
   "Thanks": "Thanks",
