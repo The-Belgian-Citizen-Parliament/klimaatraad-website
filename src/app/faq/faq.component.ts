@@ -7,6 +7,7 @@ import { RandomImageService } from '../common/random-image.service';
 import { LanguageService } from '../common/language.service';
 import { Question } from '../questions/question';
 import { questionsNl } from '../questions/questions.nl';
+import { questionsFr } from '../questions/questions.fr';
 
 @Component({
   selector: 'app-faq',
@@ -37,32 +38,33 @@ export class FaqComponent implements OnInit, OnDestroy {
     public randomImage: RandomImageService, public languageService: LanguageService) {
     languageService.lang.subscribe((lang) => {
       this.questionExamples = lang === 'nl' ? ['groen', 'kost', 'uitstoot', 'ecologisch']
-        : lang === 'fr' ? ['ecolo', 'coute', 'emissions', 'ecologique']
-        : ['groen', 'cost', 'emissions', 'ecologic'];
+        : lang === 'fr' ? ['ecolo', 'coute', 'citoyen', 'inclusivité']
+        : ['cost', 'emissions', 'ecologic'];
 
       this.clearFilter();
-      this.allQuestions = lang === 'nl' ? questionsNl : lang === 'fr' ? questionsNl : questionsNl;
+      this.allQuestions = lang === 'nl' ? questionsNl : lang === 'fr' ? questionsFr : questionsNl;
+
+      this.groupQuestions();
+
+      const self = this;
+
+      this.allQuestionsIndex = lunr(function () {
+        this.ref('question');
+        this.field('question');
+        this.field('summary');
+        this.field('answer');
+        this.field('tags');
+
+        self.allQuestions.forEach(function (doc) {
+          this.add(doc);
+        }, this)
+      });
     });
 
     this.questionPlaceholder = this.questionExamples[0];
     this.isBrowser = isPlatformBrowser(platformId);
     setTimeout(() => this.questionField.nativeElement.focus());
     this.imgs = randomImage.generateImages(50);
-
-    this.groupQuestions();
-
-    const self = this;
-    this.allQuestionsIndex = lunr(function () {
-      this.ref('question');
-      this.field('question');
-      this.field('summary');
-      this.field('answer');
-      this.field('tags');
-
-      self.allQuestions.forEach(function (doc) {
-        this.add(doc);
-      }, this)
-    })
   }
 
   ngOnInit(): void {

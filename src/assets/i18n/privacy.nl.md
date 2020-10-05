@@ -1,52 +1,54 @@
-## Campaign “A national citizens’ parliament concerning the ecological emergencies”
+## Campagne "Een nationaal burgerparlement betreffende de ecologische noodtoestand".
 
-This notice informs you about our use of your personal data in the framework of the campaign “A national citizens' parliament concerning the ecological emergencies”.
-We are “Het Burgerparlement / Le Parlement Citoyen” a coalition of citizens and social society
+Dit bericht informeert u over ons gebruik van uw persoonlijke gegevens in het kader van de campagne "Een nationaal burgerparlement betreffende de ecologische noodtoestand".
 
-#### Which of your personal data will be collected?
+Wij zijn "Het Burgerparlement / Le Parlement Citoyen", een coalitie van burgers en het maatschappelijk middenveld.
 
-We will collect the following categories of your personal data: name, email address, zip code, city, your choice about publication (or not) of your name on the website, the email address(es) of the politician(s) you mailed, the mail subject and body, and the date.
+#### Welke van uw persoonlijke gegevens worden verzameld?
 
-We do not collect any sensitive data about you (such as racial or ethnic origin, health information, etc.) unless you explicitly shared such data with us.
+Wij verzamelen de volgende persoonlijke gegevens: naam, e-mailadres, postcode, woonplaats, uw keuze voor de openbaarmaking (of weigering daarvan) van uw naam op de website, het e-mailadres of de e-mailadressen van de politicus (of politici) die u heeft gemaild, het onderwerp en de inhoud van de e-mail, en de datum.
 
-#### For which purpose and on what legal basis do we process your personal data?
+Wij verzamelen geen gevoelige gegevens over u (zoals ras of etnische afkomst, gezondheidsinformatie, etc.) tenzij u dergelijke gegevens expliciet met ons heeft gedeeld.
 
-We will process your personal data on the basis of the contractual terms of the campaign or your consent, for the following purposes:
+#### Met welk doel en op welke rechtsgrond verwerken wij uw persoonlijke gegevens?
 
-- Sending the mail in your name to the politician(s) you selected;
-- If you consented by selecting the relevant option on the form: show your first name, first letter of last name, and city on the mailing page;
-- If you consented by selecting the relevant option on the form: send you updates on the campaign.
+Wij verwerken uw persoonsgegevens op basis van de contractuele voorwaarden van de campagne of uw toestemming, voor de volgende doeleinden:
 
-When the data processing is based on your consent, you have the right to withdraw your consent at any time, without this compromising the lawfulness of the processing based on the consent made before this withdrawal.
+- Het versturen van de e-mail in uw naam naar de door u geselecteerde politicus(of politici);
+- Als u toestemming geeft door de betreffende optie op het formulier te selecteren: vermelden van uw voornaam, eerste letter van uw achternaam en woonplaats op de mailpagina;
+- Als u toestemming geeft door de betreffende optie op het formulier te selecteren: het versturen van updates over de campagne.
 
-In addition, based on our legitimate interest we may use your data on an anonymous basis for statistics on the number of unique participants or participants per city, which we may use as a means of pressure towards policy makers or other for campaigning purposes.
+Wanneer de gegevensverwerking gebaseerd is op uw toestemming, hebt u het recht om uw toestemming te allen tijde in te trekken, zonder dat dit afbreuk doet aan de rechtmatigheid van de gegevensverwerking op basis van uw toestemming die vóór deze intrekking is gegeven.
 
-#### Do we use your personal data to contact you?
+Daarnaast kunnen wij vanuit ons rechtmatige belang uw gegevens geanonimiseerd gebruiken voor statistieken over het aantal unieke deelnemers of deelnemers per stad, die wij kunnen gebruiken als drukkingsmiddel tegenover beleidsmakers of anderen, steeds voor campagnedoeleinden.
 
-We will not process your personal data in order to communicate with you about the progress of this campaign or our other activities unless you have given your consent for such purposes.
+#### Gebruiken wij uw persoonlijke gegevens om contact met u op te nemen?
 
-If at any time you decide not to receive information regarding the progress of this campaign or our other activities, you can, free of charge and without having to provide any justification, opt out of this type of communication and object to the future processing of your personal data for these purposes by using the opt-out procedure provided at the end of this notice and in any communication message you receive from us.
+Wij verwerken uw persoonsgegevens niet om met u te communiceren over de voortgang van deze campagne of onze andere activiteiten, tenzij u daarvoor toestemming heeft gegeven.
 
-#### How long do we keep your personal data?
+Indien u op enig moment besluit geen informatie (meer) te willen ontvangen over het verloop van deze campagne of onze andere activiteiten, kunt u zich, kosteloos en zonder dat u zich daarvoor hoeft te verantwoorden, afmelden voor dit soort communicatie en bezwaar maken tegen de toekomstige verwerking van uw persoonsgegevens voor deze doeleinden door gebruik te maken van de opt-out-procedure die aan het einde van ons privacybeleid en in elk communicatiebericht dat u van ons ontvangt, wordt vermeld.
 
-Your personal data will be deleted immediately after the end of this campaign. After the end of the campaign, only anonymous data and statistics will remain in our possession.
+#### Hoe lang bewaren wij uw persoonlijke gegevens?
 
-#### Who will receive your personal data?
+Uw persoonlijke gegevens worden onmiddellijk na afloop van deze campagne verwijderd. Na afloop van de campagne blijven alleen nog geanonimiseerde gegevens en statistieken in ons bezit.
 
-Your personal data will only be accessible to a handful of individuals who are the administrators of the campaign.
+#### Wie ontvangt uw persoonlijke gegevens?
 
-Except for the politicians to whom you address the email and the visitors of the site if you choose to publish your name, your personal data will not be shared with any third party unless such transfers are (i) based on your explicit consent, (ii) necessary for the performance of a contract entered into between you and us, or (iii) when this transfer is authorized or compulsory by law or by order of a public administration or judicial authority.
+Uw persoonlijke gegevens zijn alleen toegankelijk voor de enkele mensen die de beheerders van de campagne zijn.
 
-Our supplier of the hosting management tool (Heroku) and our hosting supplier (AWS) will have access to your personal data, solely for the purposes of facilitating this campaign.
+Met uitzondering van de politicus (of politici) aan wie u de e-mail adresseert en de bezoekers van de site indien u ervoor kiest om uw naam te publiceren, zullen uw persoonsgegevens niet worden gedeeld met derden, tenzij dergelijke overdrachten (i) gebaseerd zijn op uw uitdrukkelijke toestemming, (ii) noodzakelijk zijn voor de uitvoering van een overeenkomst die gesloten is tussen u en ons, of (iii) wanneer deze overdracht is toegestaan of verplicht door de wet of op bevel van een overheidsdienst of gerechtelijke autoriteit.
 
-#### Where is your personal data processed?
+Onze leverancier van de hosting management tool (Heroku) en onze hosting leverancier (AWS) hebben toegang tot uw persoonlijke gegevens, enkel en alleen in het kader van deze campagne.
 
-The administrators having access to your personal data are located in Belgium. Our suppliers Heroku (management tool) and AWS (servers) are keeping your personal data in the European Union where your data enjoy the same level of protection as in Belgium.
+#### Waar worden uw persoonsgegevens verwerkt?
 
-In case a transfer would involve the transmission of your personal data to countries outside the European Economic Area which are not considered by the European Commission to ensure an adequate level of protection of personal data, we would ensure that appropriate measures are implemented in accordance with applicable national and European legislation on personal data protection.
+De beheerders die toegang hebben tot uw persoonsgegevens bevinden zich in België. Onze leveranciers Heroku (management tool) en AWS (servers) bewaren uw persoonlijke gegevens in de Europese Unie waar uw gegevens hetzelfde beschermingsniveau genieten als in België.
 
-#### How to exercise your privacy rights?
+Indien een overdracht gepaard zou gaan met de overdracht van uw persoonsgegevens naar landen buiten de Europese Economische Ruimte die volgens de Europese Commissie niet in staat zijn een adequaat niveau van bescherming van persoonsgegevens te bieden, zorgen wij ervoor dat passende maatregelen worden genomen in overeenstemming met de toepasselijke nationale en Europese wetgeving inzake de bescherming van persoonsgegevens.
 
-You can at any time withdraw your consent, opt out from further communications or exercise your right to access your data, rectify it or have it deleted according to the applicable privacy laws by contacting info@thecitizensparliament.be. Please use the same address for any further information about our processing of your personal data.
+#### Hoe kunt u uw recht op privacy uitoefenen?
 
-As a data subject, you have the right to lodge a complaint with a supervisory authority in the Member State of the European Union of your usual place of residence if you consider that the processing of your personal data violates the applicable regulations on personal data.
+U kunt te allen tijde uw toestemming intrekken, afzien van verdere communicatie of uw recht op toegang tot uw gegevens uitoefenen, deze corrigeren of laten verwijderen volgens de geldende privacywetgeving door contact op te nemen met info@thecitizensparliament.be. 
+Gelieve datzelfde e-mailadres te gebruiken indien u verdere informatie over onze verwerking van uw persoonlijke gegevens wenst.
+
+Als betrokkene heeft u het recht om een klacht in te dienen bij een toezichthoudende autoriteit in de lidstaat van de Europese Unie van uw gebruikelijk woonplaats als u van mening bent dat de verwerking van uw persoonsgegevens in strijd is met de toepasselijke regelgeving inzake persoonsgegevens.
