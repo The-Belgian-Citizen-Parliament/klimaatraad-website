@@ -1,6 +1,7 @@
 ## Campaign “A national citizens’ parliament concerning the ecological emergencies”
 
 This notice informs you about our use of your personal data in the framework of the campaign “A national citizens' parliament concerning the ecological emergencies”.
+
 We are “Het Burgerparlement / Le Parlement Citoyen” a coalition of citizens and social society
 
 #### Which of your personal data will be collected?
