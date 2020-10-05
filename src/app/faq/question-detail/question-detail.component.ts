@@ -23,7 +23,7 @@ export class QuestionDetailComponent {
       if (!slug) router.navigate(['/faq']);
       this.question = questionService.getQuestionBySlug(slug);
       if (!this.question) router.navigate(['/faq']);
-      this.randomQuestions = questionService.getRandomQuestions(6);
+      questionService.getRandomQuestions(6).subscribe((q) => this.randomQuestions = q);
 
       translate.get('title').subscribe(((title) => {
         seoService.updateTitle(this.stripHtml(this.question.question) + ' - ' + title);
