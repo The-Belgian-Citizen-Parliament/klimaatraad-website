@@ -106,7 +106,8 @@
 
               <mat-form-field fxFlex>
                 <mat-label>{{ 'Email' | translate }}</mat-label>
-                <input matInput placeholder="{{ 'exampleEmail' | translate }}" name="email" [(ngModel)]="newMail.email" required>
+                <input matInput placeholder="{{ 'exampleEmail' | translate }}" name="email" [(ngModel)]="newMail.email"
+                  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
               </mat-form-field>
 
               <div fxFlex fxLayout="row" fxLayoutGap="12px">
