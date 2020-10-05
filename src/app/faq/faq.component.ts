@@ -3,9 +3,10 @@ import { isPlatformBrowser } from '@angular/common';
 import * as lunr from 'lunr';
 
 import { QuestionsService } from '../questions/questions.service';
-import { nl, Question } from '../questions/questions';
 import { RandomImageService } from '../common/random-image.service';
 import { LanguageService } from '../common/language.service';
+import { Question } from '../questions/question';
+import { questionsNl } from '../questions/questions.nl';
 
 @Component({
   selector: 'app-faq',
@@ -22,7 +23,7 @@ export class FaqComponent implements OnInit, OnDestroy {
   questionExamples: string[] = [];
   counter = 0;
 
-  allQuestions: Question[] = nl;
+  allQuestions: Question[] = questionsNl;
   filteredQuestions: Question[] = [];
   groupedQuestions = [];
   allQuestionsIndex;
@@ -40,7 +41,7 @@ export class FaqComponent implements OnInit, OnDestroy {
         : ['groen', 'cost', 'emissions', 'ecologic'];
 
       this.clearFilter();
-      this.allQuestions = lang === 'nl' ? nl : lang === 'fr' ? nl : nl;
+      this.allQuestions = lang === 'nl' ? questionsNl : lang === 'fr' ? questionsNl : questionsNl;
     });
 
     this.questionPlaceholder = this.questionExamples[0];
