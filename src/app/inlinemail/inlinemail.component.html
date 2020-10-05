@@ -22,12 +22,12 @@
 
               <div class="filters">
                 <div fxLayout fxLayoutGap="12px">
-                  <mat-form-field fxFlex="100">
+                  <mat-form-field fxFlex="50">
                     <mat-label>{{ 'Name' | translate }}</mat-label>
                     <input matInput name="nameFilter" [(ngModel)]="nameFilter" (keyup)="filterMps()" />
                   </mat-form-field>
 
-                  <!-- <mat-form-field fxFlex="50">
+                  <mat-form-field fxFlex="50">
                     <mat-label>{{ 'Parliament' | translate }}</mat-label>
                     <mat-select [(ngModel)]="selectedParliament" name="selectedParliament" (selectionChange)="filterMps()">
                       <mat-option [value]=""></mat-option>
@@ -35,7 +35,7 @@
                         {{ parliament | translate }}
                       </mat-option>
                     </mat-select>
-                  </mat-form-field> -->
+                  </mat-form-field>
                 </div>
 
                 <div fxLayout fxLayoutGap="12px">

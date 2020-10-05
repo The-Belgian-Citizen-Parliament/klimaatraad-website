@@ -12,7 +12,6 @@ import { mpsFlemish } from '../mail/mps/flemish';
 import { mpsWalloon } from '../mail/mps/walloon';
 import { LanguageService } from '../common/language.service';
 import { mailOptions } from '../mail/mail-options';
-import { MatButtonToggleChange } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-inlinemail',
@@ -67,23 +66,23 @@ export class InlineMailComponent implements OnInit, OnDestroy {
 
   parliaments = ['Federal', 'Flemish', 'Walloon', 'Brussels Parliament'];
 
-  constituenciesPerLanguage = {
-    nl: ['Antwerpen', 'Limburg', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'West-Vlaanderen'],
-    fr: ['Henegouwen', 'Luik', 'Luxemburg', 'Namen', 'Waals-Brabant'],
-    en: ['Antwerpen', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'],
-  };
+  // constituenciesPerLanguage = {
+  //   nl: ['Antwerpen', 'Limburg', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'West-Vlaanderen'],
+  //   fr: ['Henegouwen', 'Luik', 'Luxemburg', 'Namen', 'Waals-Brabant'],
+  //   en: ['Antwerpen', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'],
+  // };
 
-  constituencies: string[] = [];
+  constituencies: string[] = ['Antwerpen', 'Brussel-Hoofdstad', 'Henegouwen', 'Limburg', 'Luik', 'Luxemburg', 'Namen', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'Waals-Brabant', 'West-Vlaanderen'];
 
-  partiesPerLanguage = {
-    nl: ['Ecolo-Groen', 'CD&V', 'Open Vld', 'sp.a'],
-    fr: ['Ecolo-Groen', 'PS', 'MR'],
-    en: ['Ecolo-Groen', 'PS', 'CD&V', 'Open Vld', 'sp.a', 'MR'],
-  }
+  // partiesPerLanguage = {
+  //   nl: ['Ecolo-Groen', 'PVDA-PTB', 'N-VA', 'VB', 'CD&V', 'Open Vld', 'sp.a', 'ONAFH'],
+  //   fr: ['Ecolo-Groen', 'PVDA-PTB', 'PS', 'MR', 'cdH', 'DéFI', 'ONAFH'],
+  //   en: ['Ecolo-Groen', 'PVDA-PTB', 'N-VA', 'VB', 'PS', 'CD&V', 'Open Vld', 'sp.a', 'MR', 'cdH', 'DéFI', 'ONAFH'],
+  // }
 
-  excludedParties = ['PVDA-PTB', 'N-VA', 'VB', 'cdH', 'DéFI', 'ONAFH'];
+  // excludedParties = ['PVDA-PTB', 'N-VA', 'VB', 'cdH', 'DéFI', 'ONAFH'];
 
-  parties: string[] = [];
+  parties: string[] = ['Ecolo-Groen', 'PVDA-PTB', 'N-VA', 'VB', 'PS', 'CD&V', 'Open Vld', 'sp.a', 'MR', 'cdH', 'DéFI', 'ONAFH'];
 
   mailOptions;
 
@@ -114,8 +113,8 @@ export class InlineMailComponent implements OnInit, OnDestroy {
     this.newMail.sentOn = new Date();
 
     languageService.lang.subscribe((lang) => {
-      this.parties = this.partiesPerLanguage[lang];
-      this.constituencies = ['Brussel-Hoofdstad', ...this.constituenciesPerLanguage[lang]];
+      //this.parties = this.partiesPerLanguage[lang];
+      //this.constituencies = ['Brussel-Hoofdstad', ...this.constituenciesPerLanguage[lang]];
       this.clearSelected();
       this.clearFilters();
       this.newMail.lang = lang;
@@ -177,18 +176,18 @@ export class InlineMailComponent implements OnInit, OnDestroy {
     let ignoredparties = [];
     let ignoredConstituencies = [];
 
-    if (lang === 'nl') {
-      ignoredConstituencies = this.constituenciesPerLanguage['fr'];
-    } else if (lang === 'fr') {
-      ignoredConstituencies = this.constituenciesPerLanguage['nl'];
-    }
+    // if (lang === 'nl') {
+    //   ignoredConstituencies = this.constituenciesPerLanguage['fr'];
+    // } else if (lang === 'fr') {
+    //   ignoredConstituencies = this.constituenciesPerLanguage['nl'];
+    // }
 
     this.filteredMps = this.mps
       .filter(mp =>
         (!this.selectedParliament || (mp.parliament === this.selectedParliament)) &&
         (!this.selectedConstituency || (mp.constituency === this.selectedConstituency)) &&
         (!this.selectedParty || (mp.party === this.selectedParty)) &&
-        (!this.excludedParties.includes(mp.party)) &&
+        //(!this.excludedParties.includes(mp.party)) &&
         (!ignoredConstituencies.includes(mp.constituency)) &&
         (!ignoredparties.includes(mp.party)) &&
         (!this.nameFilter || ((mp.firstName + ' ' + mp.lastName).toLowerCase().includes(this.nameFilter.toLowerCase()))))
