@@ -9,7 +9,7 @@
   <div class="inline-mailer">
     <div class="container container-wide">
       <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutGap="20px">
-        <div fxFlex="70" fxFlex.lt-lg="100">
+        <div fxFlex="100" fxFlex.lt-lg="100">
           <div *ngIf="!sent">
             <div class="who" *ngIf="!selectionComplete" fxLayout="column">
               <h4 class="mb-0">{{ 'step' | translate }} 1/3: <span innerHtml="{{ 'step1title' | translate }}"></span></h4>
@@ -201,7 +201,7 @@
           </div>
         </div>
 
-        <div fxFlex="30" fxFlex.lt-lg="100">
+        <!-- <div fxFlex="30" fxFlex.lt-lg="100">
           <strong>{{ 'Participated recently' | translate }}...</strong>
           <ul class="signatories">
             <li [@inOutAnimation]="'in'" *ngFor="let mail of mails; trackBy:mailTrackBy" class="signatory">
@@ -209,7 +209,7 @@
               <br /><span class="info"> {{ formatRelativeTime(mail.sentOn)}}</span>
             </li>
           </ul>
-        </div>
+        </div> -->
 
       </div>
     </div>
