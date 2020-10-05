@@ -1,7 +1,7 @@
 export const mailOptions = {
   'nl': [
     {
-      subject: 'De oplossing voor de ecologische noodtoestand: het burgerparlement',
+      subject: 'Antwoord op de ecologische noodtoestand: het burgerparlement',
       body: `Beste vertegenwoordiger,
 
 Ik schrijf u in naam van Het Burgerparlement. Ik ben diep bezorgd om de ecologische noodtoestand. Weinigen onder ons kennen het verschil tussen 1,5 of 2°C opwarming. Wie leest immers lange wetenschappelijke rapporten? Een verschil van een halve graad lijkt miniem maar brengt meer zeespiegelstijging, overstromingen, branden, droogte, woestijnvorming, hittesterfte, water- en hongersnood teweeg. Met een enorme impact op de volksgezondheid, economie, geopolitiek, migratie,…
