@@ -4,7 +4,7 @@ export const mailOptions = {
       subject: 'De oplossing voor de ecologische noodtoestand: het burgerparlement',
       body: `Beste vertegenwoordiger,
 
-ik schrijf u in naam van Het Burgerparlement. Ik ben diep bezorgd om de ecologische noodtoestand. Weinigen onder ons kennen het verschil tussen 1,5 of 2°C opwarming. Wie leest immers lange wetenschappelijke rapporten? Een verschil van een halve graad lijkt miniem maar brengt meer zeespiegelstijging, overstromingen, branden, droogte, woestijnvorming, hittesterfte, water- en hongersnood teweeg. Met een enorme impact op de volksgezondheid, economie, geopolitiek, migratie,…
+Ik schrijf u in naam van Het Burgerparlement. Ik ben diep bezorgd om de ecologische noodtoestand. Weinigen onder ons kennen het verschil tussen 1,5 of 2°C opwarming. Wie leest immers lange wetenschappelijke rapporten? Een verschil van een halve graad lijkt miniem maar brengt meer zeespiegelstijging, overstromingen, branden, droogte, woestijnvorming, hittesterfte, water- en hongersnood teweeg. Met een enorme impact op de volksgezondheid, economie, geopolitiek, migratie,…
 
 Naast de klimaatopwarming is er ook verontreiniging, een catastrofaal biodiversiteitsverlies, de verzuring van onze oceanen,… De ecologische crisis is trouwens geen verre dreiging. Op vele plekken ter wereld wordt de leefomgeving van mensen al vernield. Ons land bleef tot nu toe gespaard van de ernstigste gevolgen. Toch dreigen ook hier oogsten te mislukken door een gebrek aan water en bestuivende insecten. De stijgende zeespiegel bedreigt onze kuststeden. Velen van ons zullen sterven als gevolg van hittegolven en vervuilde lucht. Dat kan alarmistisch klinken, maar de situatie is ronduit alarmerend. Leest u er zelf maar de rapporten van het IPCC en IPBES op na.
 
@@ -22,7 +22,7 @@ Met bezorgde maar hoopvolle groeten,
       subject: 'Alternatief voor politieke polarisering: het burgerparlement',
       body: `Beste vertegenwoordiger,
 
-ik schrijf u in naam van Het Burgerparlement. Diep geschokt was ik door de voorbije 15 maanden. De politiek liet zich niet van haar beste kant zien. Ik vroeg me af: wat is de maatschappelijke waarde nog van al dat politiek-strategische schaken? Waarom beweren partijen elkaar ‘kapot’ te willen maken? De scherpe polarisering doet meer kwaad dan goed. Ze zorgt ervoor dat mijn vertrouwen in de politieke vertegenwoordiging tot op een dieptepunt is gezakt.
+Ik schrijf u in naam van Het Burgerparlement. Diep geschokt was ik door de voorbije 15 maanden. De politiek liet zich niet van haar beste kant zien. Ik vroeg me af: wat is de maatschappelijke waarde nog van al dat politiek-strategische schaken? Waarom beweren partijen elkaar ‘kapot’ te willen maken? De scherpe polarisering doet meer kwaad dan goed. Ze zorgt ervoor dat mijn vertrouwen in de politieke vertegenwoordiging tot op een dieptepunt is gezakt.
 
 En dat terwijl we voor zoveel fundamentele uitdagingen staan. Ons land kampt niet enkel met een politieke crisis. Zoals nagenoeg elk land ter wereld dient het ook het hoofd te bieden aan de COVID-19 pandemie. Wetenschappelijk onderzoek toonde overtuigend aan dat de groeiende kans op pandemieën nauw samenhangt met de brede ecologische crisis. De volksgezondheid van de toekomst is met andere woorden door en door afhankelijk van de gezondheid van de planeet. Weinig burgers (en hun politieke vertegenwoordigers) kennen het verschil tussen de gevolgen van 1,5° en 2°C opwarming - dat verschil is catastrofaal. Op dit ogenblik stevenen we af opmeer dan 4°C verhitting in 2100.
 
