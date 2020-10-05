@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from 'src/app/common/language.service';
+import { Question } from 'src/app/questions/question';
 
-import { Question } from 'src/app/questions/questions';
 import { QuestionsService } from 'src/app/questions/questions.service';
 import { SeoService } from 'src/app/seo.service';
 

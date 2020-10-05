@@ -1,4 +1,6 @@
 import { Component  } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { LanguageService } from '../common/language.service';
 
 @Component({
   selector: 'app-memorandum',
@@ -6,4 +8,5 @@ import { Component  } from '@angular/core';
   styleUrls: ['./memorandum.component.scss']
 })
 export class MemorandumComponent {
+  lang = environment.language;
 }

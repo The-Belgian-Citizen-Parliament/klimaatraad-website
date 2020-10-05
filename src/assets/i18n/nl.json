@@ -51,13 +51,13 @@
   "andDesignBy": "en design door",
 
   "aboutTitle": "Maak kennis met <span class=\"u-color-teal\">de organisaties</span> achter <span class=\"u-color-orange-red\">Het Burgerparlement</span>",
-  "aboutSubtitle": "Het Burgerparlement is een initiatief van een groep burgers, ondersteund door een coalitie van organisaties en bewegingen. De hele campagne kost nul euro en steunt op het vrijwillige engagement van velen.",
+  "aboutSubtitle": "Het Burgerparlement is een initiatief van een groep burgers, ondersteund door een coalitie van meer dan 20 organisaties en bewegingen. De hele campagne kost nul euro en steunt op het vrijwillige engagement van velen",
   "wantToJoinUs": "Wil jouw organisatie zich graag bij ons aansluiten of heb je andere vragen?",
   "Contact us": "Neem contact met ons op!",
 
   "Extinction Rebellion Belgium": "Extinction Rebellion Belgium",
   "Greenpeace": "Greenpeace",
-  "Grootouders voor het klimaat": "Grootouders voor het klimaat",
+  "Grandparents pour le climat": "Grandparents pour le climat",
   "Hart Boven Hard": "Hart Boven Hard",
   "Klimaatzaak": "Klimaatzaak",
   "Oikos": "Oikos",
@@ -66,7 +66,7 @@
 
   "Extinction Rebellion Belgium Info": "is een internationale beweging die geweldloze directe actie gebruikt om overheden te overtuigen actie te ondernemen tegen de Klimaat- en Ecologische noodsituatie.",
   "Greenpeace Info": "bestaat omdat onze aarde kwetsbaar is en een stem verdient. Omdat er concrete oplossingen nodig zijn. Omdat er verandering nodig is. En actie!",
-  "Grootouders voor het klimaat Info": "zijn senioren die zeer bezorgd zijn over de klimaatverstoring. Wij willen graag een leefbare wereld nalaten aan onze kleinkinderen, de generatie van de klimaatjongeren.",
+  "Grandparents pour le climat Info": "zijn senioren die zeer bezorgd zijn over de klimaatverstoring. Wij willen graag een leefbare wereld nalaten aan onze kleinkinderen, de generatie van de klimaatjongeren.",
   "Hart Boven Hard Info": "streeft naar een herwaardering van de mens en zijn grondrechten in het hart van de samenleving: waarde boven winst, ieders recht op een menswaardig bestaan vóór de scheve wetten van de beurs en het profijt van een kleine minderheid.",
   "Klimaatzaak Info": "is een vzw opgericht om een rechtszaak op te starten tegen de bevoegde overheden. Inzet van de rechtszaak: België op zijn verantwoordelijkheid wijzen in de wereldwijde strijd tegen klimaatopwarming.",
   "Oikos Info": "werkt aan sociaal-ecologische verandering door het maatschappelijk debat te voeden vanuit ecologisch perspectief. De ecologische grenzen van de planeet en de solidariteit wereldwijd zijn hierbij de uitgangspunten.",
@@ -140,5 +140,24 @@
   "Federal": "Federaal",
 
   "PVDA-PTB": "PVDA",
-  "Ecolo-Groen": "Groen"
+  "Ecolo-Groen": "Groen",
+
+  "proposalTitle": "Het <span class=\"u-color-teal\">voorstel</span>",
+  "proposalSubtitle": "",
+
+  "proposalIntro1": "Het Burgerparlement & Greenpeace, Youth for Climate, Kaya, Oxfam, Klimaatzaak, Grandparents pour le Climat, Masereelfonds, Antwerpenize, Globelink vzw, Burgerlijst Antwerpen, Act4Change, AllForClimate, Oikos, Hart Boven Hard, State of the Arts, Antwerpen aan 't woord, Gents Milieufront, Agora, Extinction Rebellion, Furia, Palestina Solidariteit, Pousses et vous, EcoRes, Groupe One, Grootouders voor het Klimaat",
+  "proposalIntro2": "roepen de federale regering op er zich toe te verbinden om, voortbouwend op Art. 7bis van de Belgische Grondwet<sup>1</sup>, in de loop van deze legislatuur een Burgerparlement te initiëren rond de ecologische noodtoestand. Dit orgaan",
+  "proposalDemand1": "behandelt een vraag die zich niet beperkt tot de klimaatopwarming maar het bredere perspectief van de ecologische crisis centraal stelt en dus rekening houdt met de negen huidig geïdentificeerde planetaire grenzen<sup>2</sup>;",
+  "proposalDemand2": "bestaat uit een door loting samengestelde groep burgers die, rekening houdend met een reeks demografische criteria, een voldoende representatieve dwarsdoorsnede vormt van de totale Belgische bevolking;",
+  "proposalDemand3": "houdt, om de participatiedrempel te verlagen, rekening met inclusiviteitswaarborgen zoals dagvergoedingen, transportvergoedingen, accommodatie, kinderopvang en andere vormen van ondersteuning van zijn leden;",
+  "proposalDemand4": "laat zich informeren door een groep experten en belanghebbenden die evenwichtig is samengesteld, rekening houdend met de wetenschappelijke consensus rond de ecologische crisis;",
+  "proposalDemand5": "bewaakt zijn onafhankelijkheid ten opzichte van politieke, economische en sociale actoren (waaronder de federale regering alsook de organisaties en bewegingen die dit voorstel steunen) aan de hand van een evenwichtig samengesteld organigram met de nodige checks en balances, gecoördineerd door een professionele organisatie gespecialiseerd in deliberatieve processen;",
+  "proposalDemand6": "ontwikkelt beleidsvoorstellen voor een coherent beleid in respons op de ecologische noodtoestand, zowel op het federale en gewestelijke niveau als op dat van de gemeenschappen;",
+  "proposalDemand7": "heeft voldoende impact op het reële beleid van de federale staat, de gewesten en de gemeenschappen doordat elk van zijn beleidsvoorstellen door de bevoegde regering(en) wordt geïmplementeerd of aan het bevoegde parlement of de bevoegde parlementen ter stemming wordt voorgelegd (waarbij op afgewezen voorstellen telkens grondige en publiek toegankelijke motivaties volgen);",
+  "proposalDemand8": "laat zich leiden door de volgende gidsprincipes: (1) proportionaliteit ten opzichte van de geadresseerde risico’s, (2) sociale rechtvaardigheid, (3) een bewustzijn van de globale impact van de Belgische productie en consumptie en (4) het voorzorgsbeginsel.",
+  "proposalOutro": "Het Burgerparlement werkte een gedetailleerd plan uit op basis van de bovenstaande grondbeginselen. Dit werd niet in zijn totaliteit ondertekend door de verschillende groepen en organisaties in de ondersteunende coalitie, maar helpt om zich concreet voor te stellen hoe een Burgerparlement rond de ecologische noodtoestand eruit zou kunnen zien. U kan het plan hieronder nalezen.",
+  "proposalFootnote1": "“Bij de uitoefening van hun respectieve bevoegdheden streven de federale Staat, de gemeenschappen en de gewesten de doelstellingen na van een duurzame ontwikkeling in haar sociale, economische en milieu-gebonden aspecten, rekening houdend met de solidariteit tussen de generaties.”",
+  "proposalFootnote2": "(1) de opwarming van de aarde, (2) het verlies van de biodiversiteit, (3) de stikstof- en fosforkringloop, (4) het gat in de ozonlaag, (5) oceaanverzuring, (6) waterschaarste, (7) landgebruik, (8) chemische verontreiniging, (9) aerosolen in de atmosfeer.",
+
+  "proposalDownload": "Download het uitgewerkte voorstel"
 }

@@ -1,9 +1,9 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { QuestionsService } from '../questions/questions.service';
-import { Question } from '../questions/questions';
 import { environment } from 'src/environments/environment';
 import { RandomImageService } from '../common/random-image.service';
 import { LanguageService } from '../common/language.service';
+import { Question } from '../questions/question';
 
 @Component({
   selector: 'app-main',
