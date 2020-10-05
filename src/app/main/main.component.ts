@@ -17,7 +17,7 @@ export class MainComponent {
 
   constructor(private questionsService: QuestionsService, public randomImage: RandomImageService,
     public languageService: LanguageService) {
-    questionsService.getRandomQuestions(6).subscribe((q) => this.questions = q);
+    questionsService.getRandomQuestions(4).subscribe((q) => this.questions = q);
     this.imgs = randomImage.generateImages(4);
 
     languageService.lang.subscribe((lang) => this.lang = lang);
