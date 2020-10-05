@@ -68,8 +68,8 @@
                   "with": "src/environments/environment.prod.ts"
                 },
                 {
-                  "replace": "src/assets/img/og_logo.jpg",
-                  "with": "src/assets/img/og_logo_nl.jpg"
+                  "replace": "src/assets/img/og_logo_white.jpg",
+                  "with": "src/assets/img/og_logo_white_nl.jpg"
                 }
               ],
               "optimization": true,
@@ -100,8 +100,8 @@
                   "with": "src/environments/environment.prod.fr.ts"
                 },
                 {
-                  "replace": "src/assets/img/og_logo.jpg",
-                  "with": "src/assets/img/og_logo_fr.jpg"
+                  "replace": "src/assets/img/og_logo_white.jpg",
+                  "with": "src/assets/img/og_logo_white_fr.jpg"
                 }
               ],
               "optimization": true,
@@ -177,8 +177,8 @@
                   "with": "src/environments/environment.prod.ts"
                 },
                 {
-                  "replace": "src/assets/img/og_logo.jpg",
-                  "with": "src/assets/img/og_logo_nl.jpg"
+                  "replace": "src/assets/img/og_logo_white.jpg",
+                  "with": "src/assets/img/og_logo_white_nl.jpg"
                 }
               ],
               "sourceMap": false,
@@ -192,8 +192,8 @@
                   "with": "src/environments/environment.prod.fr.ts"
                 },
                 {
-                  "replace": "src/assets/img/og_logo.jpg",
-                  "with": "src/assets/img/og_logo_fr.jpg"
+                  "replace": "src/assets/img/og_logo_white.jpg",
+                  "with": "src/assets/img/og_logo_white_fr.jpg"
                 }
               ],
               "sourceMap": false,
