@@ -13,7 +13,6 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MailComponent } from './mail/mail.component';
 import { MailService } from './mail/mail.service';
 import { MainComponent } from './main/main.component';
 import { FaqComponent } from './faq/faq.component';
@@ -37,7 +36,6 @@ import { InlineMailComponent } from './inlinemail/inlinemail.component';
   declarations: [
     AppComponent,
     MainComponent,
-    MailComponent,
     FaqComponent,
     QuestionComponent,
     MemorandumComponent,

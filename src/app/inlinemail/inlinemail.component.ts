@@ -52,8 +52,6 @@ import { LanguageService } from '../common/language.service';
 export class InlineMailComponent implements OnInit, OnDestroy {
   @ViewChild('customSubject') customSubjectElement: ElementRef;
 
-  lang = environment.language;
-
   mails: Mail[];
   newMail: Mail;
   mps: MP[] = [...mpsFederal, ...mpsBrussels, ...mpsFlemish, ...mpsWalloon ];
@@ -107,21 +105,16 @@ export class InlineMailComponent implements OnInit, OnDestroy {
     private languageService: LanguageService) {
     this.isBrowser = isPlatformBrowser(platformId);
 
-    this.subjects = environment.language === 'nl' ? NL_SUBJECTS : FR_SUBJECTS;
-    this.bodies = environment.language === 'nl' ? NL_BODIES : FR_BODIES;
 
     this.newMail = new Mail();
-    this.newMail.email = 'vincent.sels@gmail.com';
+    this.newMail.email = '';
     this.newMail.to = 'vincent_sels@hotmail.com,vincent.sels@gmail.com,vsel@protonmail.com';
-    this.newMail.firstName = 'Vincent';
-    this.newMail.lastName = 'Sels';
-    this.newMail.lang = environment.language;
+    this.newMail.firstName = '';
+    this.newMail.lastName = '';
     this.newMail.allowPublic = true;
     this.newMail.allowReplies = true;
     this.newMail.stayUpToDate = false;
     this.newMail.sentOn = new Date();
-    this.newMail.subject = this.subjects[Math.floor(Math.random() * this.subjects.length)];
-    this.newMail.body = this.bodies[Math.floor(Math.random() * this.bodies.length)];
 
     languageService.lang.subscribe((lang) => {
       this.parties = this.partiesPerLanguage[lang];
@@ -129,6 +122,10 @@ export class InlineMailComponent implements OnInit, OnDestroy {
       this.clearSelected();
       this.clearFilters();
       this.newMail.lang = lang;
+      this.subjects = lang === 'nl' ? NL_SUBJECTS : FR_SUBJECTS;
+      this.bodies = lang === 'nl' ? NL_BODIES : FR_BODIES;
+      this.newMail.subject = this.subjects[Math.floor(Math.random() * this.subjects.length)];
+      this.newMail.body = this.bodies[Math.floor(Math.random() * this.bodies.length)];
     });
   }
 
@@ -250,13 +247,5 @@ export class InlineMailComponent implements OnInit, OnDestroy {
       this.customSubject = true;
       setTimeout(() => this.customSubjectElement.nativeElement.focus());
     }
-  }
-
-  getRandomTwitterUrl() {
-    const twitterContent = tweets[this.lang];
-    const randomText = twitterContent.texts[Math.floor(Math.random() * twitterContent.texts.length)];
-    const base = 'https://twitter.com/intent/tweet?text='
-    const tweet = encodeURIComponent(`${randomText} ${twitterContent.tags} ${twitterContent.url}`);
-    return base + tweet;
   }
 }

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MainComponent } from './main/main.component';
-import { MailComponent } from './mail/mail.component';
 import { FaqComponent } from './faq/faq.component';
 import { MemorandumComponent } from './memorandum/memorandum.component';
 import { QuestionDetailComponent } from './faq/question-detail/question-detail.component';
@@ -15,9 +14,6 @@ const routes: Routes = [
   { path: 'proposal', component: MemorandumComponent, data: { 'title': 'The proposal' } },
   { path: 'voorstel', component: MemorandumComponent, data: { 'title': 'The proposal' } },
   { path: 'proposition', component: MemorandumComponent, data: { 'title': 'The proposal' } },
-  { path: 'participate', component: MailComponent, data: { 'title': 'Take part' } },
-  { path: 'deelnemen', component: MailComponent, data: { 'title': 'Take part' } },
-  { path: 'participer', component: MailComponent, data: { 'title': 'Take part' } },
   { path: 'faq', component: FaqComponent, data: { 'title': 'FAQ' } },
   { path: 'about', component: AboutComponent, data: { 'title': 'About us' } },
   { path: 'over', component: AboutComponent, data: { 'title': 'About us' } },
