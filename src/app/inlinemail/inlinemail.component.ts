@@ -1,5 +1,5 @@
 import { Component, ElementRef, Inject, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, ViewportScroller } from '@angular/common';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 import * as dayjs from 'dayjs';
 
@@ -100,15 +100,14 @@ export class InlineMailComponent implements OnInit, OnDestroy {
   getMailsTimer = null;
 
   constructor(@Inject(PLATFORM_ID) platformId: string, private mailService: MailService,
-    private languageService: LanguageService) {
+    private languageService: LanguageService, private viewportScroller: ViewportScroller) {
     this.isBrowser = isPlatformBrowser(platformId);
 
-
     this.newMail = new Mail();
-    this.newMail.email = 'vincent_sels@hotmail.com';
+    this.newMail.email = '';
     this.newMail.to = 'vincent_sels@hotmail.com,vincent.sels@gmail.com,vsel@protonmail.com';
-    this.newMail.firstName = 'Vincent';
-    this.newMail.lastName = 'Sels';
+    this.newMail.firstName = '';
+    this.newMail.lastName = '';
     this.newMail.allowPublic = true;
     this.newMail.allowReplies = true;
     this.newMail.stayUpToDate = false;
@@ -127,7 +126,10 @@ export class InlineMailComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.getMails();
 
-    if (this.isBrowser) this.getMailsTimer = setInterval(() => this.getMails(), 4000);
+    if (this.isBrowser) {
+      this.sent = localStorage.getItem('sent') ? true : false;
+      this.getMailsTimer = setInterval(() => this.getMails(), 4000);
+    }
   }
 
   ngOnDestroy(): void {
@@ -148,6 +150,8 @@ export class InlineMailComponent implements OnInit, OnDestroy {
   sendMail() {
     this.mailService.createMail(this.newMail).then(() => this.getMails());
     this.sent = true;
+    localStorage.setItem('sent', 'true');
+    setTimeout(() => this.viewportScroller.scrollToAnchor('thanks'));
   }
 
   // TODO when we have time
