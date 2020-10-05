@@ -56,6 +56,7 @@ export class FaqComponent implements OnInit, OnDestroy {
       this.field('question');
       this.field('summary');
       this.field('answer');
+      this.field('tags');
 
       self.allQuestions.forEach(function (doc) {
         this.add(doc);
