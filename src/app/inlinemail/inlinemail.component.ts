@@ -104,7 +104,7 @@ export class InlineMailComponent implements OnInit, OnDestroy {
 
     this.newMail = new Mail();
     this.newMail.email = '';
-    this.newMail.to = 'vincent_sels@hotmail.com,vincent.sels@gmail.com,vsel@protonmail.com';
+    this.newMail.to = '';
     this.newMail.firstName = '';
     this.newMail.lastName = '';
     this.newMail.allowPublic = true;
@@ -147,6 +147,7 @@ export class InlineMailComponent implements OnInit, OnDestroy {
   mailTrackBy = (idx, mail: Mail) => mail.sentOn;
 
   sendMail() {
+    this.newMail.to = this.selectedMps.map(mp => mp.email).join(', ');
     this.mailService.createMail(this.newMail).then(() => this.getMails());
     this.sent = true;
     localStorage.setItem('sent', 'true');
