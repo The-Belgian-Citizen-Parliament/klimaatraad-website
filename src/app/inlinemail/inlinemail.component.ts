@@ -128,6 +128,7 @@ export class InlineMailComponent implements OnInit, OnDestroy {
       this.constituencies = ['Brussel-Hoofdstad', ...this.constituenciesPerLanguage[lang]];
       this.clearSelected();
       this.clearFilters();
+      this.newMail.lang = lang;
     });
   }
 
