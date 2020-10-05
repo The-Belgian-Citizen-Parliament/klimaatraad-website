@@ -20,6 +20,8 @@ export class MainComponent {
     this.questions = questionsService.getRandomQuestions(4);
     this.imgs = randomImage.generateImages(4);
 
+    languageService.lang.subscribe((lang) => this.lang = lang);
+
     // this.currentVideo = this.videos[4];
   }
 

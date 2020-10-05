@@ -5,7 +5,9 @@
   max-width: map-get($width-units, '7');
   position: relative;
   text-align: left;
-  padding-top: 2rem;
+  padding: 2rem;
+  border: 2px solid currentColor;
+  background-color: white;
 
   &:before {
     border-bottom: 2px solid currentColor;

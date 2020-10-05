@@ -22,12 +22,12 @@
 
               <div class="filters">
                 <div fxLayout fxLayoutGap="12px">
-                  <mat-form-field fxFlex="100">
+                  <mat-form-field fxFlex="50">
                     <mat-label>{{ 'Name' | translate }}</mat-label>
                     <input matInput name="nameFilter" [(ngModel)]="nameFilter" (keyup)="filterMps()" />
                   </mat-form-field>
 
-                  <!-- <mat-form-field fxFlex="50">
+                  <mat-form-field fxFlex="50">
                     <mat-label>{{ 'Parliament' | translate }}</mat-label>
                     <mat-select [(ngModel)]="selectedParliament" name="selectedParliament" (selectionChange)="filterMps()">
                       <mat-option [value]=""></mat-option>
@@ -35,7 +35,7 @@
                         {{ parliament | translate }}
                       </mat-option>
                     </mat-select>
-                  </mat-form-field> -->
+                  </mat-form-field>
                 </div>
 
                 <div fxLayout fxLayoutGap="12px">
@@ -106,7 +106,8 @@
 
               <mat-form-field fxFlex>
                 <mat-label>{{ 'Email' | translate }}</mat-label>
-                <input matInput placeholder="{{ 'exampleEmail' | translate }}" name="email" [(ngModel)]="newMail.email" required>
+                <input matInput placeholder="{{ 'exampleEmail' | translate }}" name="email" [(ngModel)]="newMail.email"
+                  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
               </mat-form-field>
 
               <div fxFlex fxLayout="row" fxLayoutGap="12px">
@@ -148,20 +149,19 @@
                   (click)="completePersonalData(false);">wijzig</a>)
               </div>
 
-              <mat-form-field appearance="fill" fxFlex *ngIf="customSubject" style="margin-top: 12px;">
+              <mat-form-field appearance="fill" fxFlex style="margin-top: 12px;">
+                <mat-label>{{ 'Mail' | translate }}</mat-label>
+                <mat-select [(ngModel)]="mailType" name="mailType" (selectionChange)="mailTypeChanged()">
+                  <mat-option value="self">{{ 'I write a mail myself' | translate }}</mat-option>
+                  <mat-option value="emergency">{{ 'I care most about the ecological emergency' | translate }}</mat-option>
+                  <mat-option value="standstil">{{ 'I care most about the political standstill' | translate }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" fxFlex>
                 <mat-label>{{ 'Subject' | translate }}</mat-label>
                 <input matInput required placeholder="{{ 'customSubjectPlaceholder' | translate }}" name="customSubject"
                   [(ngModel)]="newMail.subject" #customSubject>
-              </mat-form-field>
-
-              <mat-form-field appearance="fill" fxFlex *ngIf="!customSubject" style="margin-top: 12px;">
-                <mat-label>{{ 'Subject' | translate }}</mat-label>
-                <mat-select required [(ngModel)]="newMail.subject" name="predefinedSubject" (selectionChange)="subjectChanged()">
-                  <mat-option *ngFor="let subject of subjects" [value]="subject">
-                    {{ subject }}
-                  </mat-option>
-                  <mat-option [value]="" style="font-style: italic;">{{ 'Write a subject yourself' | translate }}</mat-option>
-                </mat-select>
               </mat-form-field>
 
               <mat-form-field appearance="fill" fxFlex>
@@ -193,7 +193,7 @@
             </form>
           </div>
 
-          <div *ngIf="sent">
+          <div *ngIf="sent" id="thanks">
             <h4 class="mb-0">{{ 'Thanks' | translate }}! ❤</h4>
 
             <p>{{ 'representativesMailed' | translate }}</p>
