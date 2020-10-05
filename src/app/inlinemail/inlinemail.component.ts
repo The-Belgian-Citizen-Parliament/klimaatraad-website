@@ -3,17 +3,16 @@ import { isPlatformBrowser } from '@angular/common';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 import * as dayjs from 'dayjs';
 
-import { environment } from 'src/environments/environment';
 import { Mail } from '../mail/mail';
-import { NL_SUBJECTS, FR_SUBJECTS, NL_BODIES, FR_BODIES } from '../mail/mail-options';
 import { MailService } from '../mail/mail.service';
 import { MP } from '../mail/mp';
 import { mpsBrussels } from '../mail/mps/brussels';
 import { mpsFederal } from '../mail/mps/federal';
 import { mpsFlemish } from '../mail/mps/flemish';
 import { mpsWalloon } from '../mail/mps/walloon';
-import { tweets } from '../mail/tweets';
 import { LanguageService } from '../common/language.service';
+import { mailOptions } from '../mail/mail-options';
+import { MatButtonToggleChange } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-inlinemail',
@@ -86,8 +85,7 @@ export class InlineMailComponent implements OnInit, OnDestroy {
 
   parties: string[] = [];
 
-  subjects = [];
-  bodies = [];
+  mailOptions;
 
   selectionFilterSet = false;
   selectionComplete = false;
@@ -95,7 +93,7 @@ export class InlineMailComponent implements OnInit, OnDestroy {
   consentGiven = false;
   sent = false;
 
-  customSubject = false;
+  mailType = 'self';
   selectedMpListExpanded = false;
 
   isBrowser = false;
@@ -107,10 +105,10 @@ export class InlineMailComponent implements OnInit, OnDestroy {
 
 
     this.newMail = new Mail();
-    this.newMail.email = '';
+    this.newMail.email = 'vincent_sels@hotmail.com';
     this.newMail.to = 'vincent_sels@hotmail.com,vincent.sels@gmail.com,vsel@protonmail.com';
-    this.newMail.firstName = '';
-    this.newMail.lastName = '';
+    this.newMail.firstName = 'Vincent';
+    this.newMail.lastName = 'Sels';
     this.newMail.allowPublic = true;
     this.newMail.allowReplies = true;
     this.newMail.stayUpToDate = false;
@@ -122,17 +120,14 @@ export class InlineMailComponent implements OnInit, OnDestroy {
       this.clearSelected();
       this.clearFilters();
       this.newMail.lang = lang;
-      this.subjects = lang === 'nl' ? NL_SUBJECTS : FR_SUBJECTS;
-      this.bodies = lang === 'nl' ? NL_BODIES : FR_BODIES;
-      this.newMail.subject = this.subjects[Math.floor(Math.random() * this.subjects.length)];
-      this.newMail.body = this.bodies[Math.floor(Math.random() * this.bodies.length)];
+      this.mailOptions = lang === 'nl' ? mailOptions.nl : mailOptions.fr;
     });
   }
 
   ngOnInit() {
     this.getMails();
 
-    if (this.isBrowser) this.getMailsTimer = setInterval(() => this.getMails(), 3000);
+    if (this.isBrowser) this.getMailsTimer = setInterval(() => this.getMails(), 4000);
   }
 
   ngOnDestroy(): void {
@@ -214,11 +209,11 @@ export class InlineMailComponent implements OnInit, OnDestroy {
 
   completePersonalData(completed) {
     this.personalDataComplete = completed;
-    if (completed) {
-      this.newMail.body += this.newMail.firstName + ' ' + this.newMail.lastName;
-    } else {
-      this.newMail.body = this.newMail.body.replace(this.newMail.firstName + ' ' + this.newMail.lastName, '');
-    }
+    // if (completed) {
+    //   this.newMail.body += this.newMail.firstName + ' ' + this.newMail.lastName;
+    // } else {
+    //   this.newMail.body = this.newMail.body.replace(this.newMail.firstName + ' ' + this.newMail.lastName, '');
+    // }
   }
 
   clearFilters() {
@@ -242,10 +237,16 @@ export class InlineMailComponent implements OnInit, OnDestroy {
     this.selectedMps = this.selectedMps.filter(s => s !== mp);
   }
 
-  subjectChanged() {
-    if (!this.newMail.subject) {
-      this.customSubject = true;
-      setTimeout(() => this.customSubjectElement.nativeElement.focus());
+  mailTypeChanged() {
+    if (this.mailType === 'self') {
+      this.newMail.subject = '';
+      this.newMail.body = '';
+    } else if (this.mailType === 'emergency') {
+      this.newMail.subject = this.mailOptions[0].subject;
+      this.newMail.body = this.mailOptions[0].body + this.newMail.firstName + ' ' + this.newMail.lastName;
+    } else {
+      this.newMail.subject = this.mailOptions[1].subject;
+      this.newMail.body = this.mailOptions[1].body + this.newMail.firstName + ' ' + this.newMail.lastName;
     }
   }
 }
