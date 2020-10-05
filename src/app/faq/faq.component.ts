@@ -8,6 +8,7 @@ import { LanguageService } from '../common/language.service';
 import { Question } from '../questions/question';
 import { questionsNl } from '../questions/questions.nl';
 import { questionsFr } from '../questions/questions.fr';
+import { questionsEn } from '../questions/questions.en';
 
 @Component({
   selector: 'app-faq',
@@ -42,7 +43,7 @@ export class FaqComponent implements OnInit, OnDestroy {
         : ['cost', 'emissions', 'ecologic'];
 
       this.clearFilter();
-      this.allQuestions = lang === 'nl' ? questionsNl : lang === 'fr' ? questionsFr : questionsNl;
+      this.allQuestions = lang === 'nl' ? questionsNl : lang === 'fr' ? questionsFr : questionsEn;
 
       this.groupQuestions();
 
