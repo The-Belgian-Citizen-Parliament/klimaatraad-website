@@ -40,24 +40,12 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://gpclimat.be/">
-            <img class="c-logo__image" src="/assets/img/logos/logo-grandparents-pour-le-climat.png" alt="{{ 'Grandparents pour le climat' | translate }}">
+          <a class="c-logo c-media-object__logo" [href]="(languageService.lang | async) === 'nl' ? 'https://www.grootoudersvoorhetklimaat.be/' : 'https://gpclimat.be/'">
+            <img class="c-logo__image" [src]="'/assets/img/logos/' + ((languageService.lang | async) === 'fr' ? 'logo-grandparents-pour-le-climat.png' : (languageService.lang | async) === 'nl' ? 'logo-grootouders-voor-het-klimaat.png' : 'logo-grandparents-for-climate.png')" alt="{{ 'Grandparents pour le climat' | translate }}">
           </a>
         </figure>
         <div class="c-media-object__body">
           <p><strong>{{ 'Grandparents pour le climat' | translate }}</strong> {{ 'Grandparents pour le climat Info' | translate }}</p>
-        </div>
-      </div>
-
-      <div class="c-media-object">
-        <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.grootoudersvoorhetklimaat.be">
-            <img class="c-logo__image" src="/assets/img/logos/logo-grootouders-voor-het-klimaat.png" alt="Grootouders voor het klimaat">
-          </a>
-        </figure>
-        <div class="c-media-object__body">
-          <p><strong>Grootouders voor het klimaat</strong> {{ 'Grootouders voor het klimaat Info' | translate }}</p>
-
         </div>
       </div>
 
