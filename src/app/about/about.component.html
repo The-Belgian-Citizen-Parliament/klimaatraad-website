@@ -40,8 +40,8 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://gpclimat.be/">
-            <img class="c-logo__image" src="/assets/img/logos/logo-grandparents-pour-le-climat.png" alt="{{ 'Grandparents pour le climat' | translate }}">
+          <a class="c-logo c-media-object__logo" [href]="(languageService.lang | async) === 'nl' ? 'https://www.grootoudersvoorhetklimaat.be/' : 'https://gpclimat.be/'">
+            <img class="c-logo__image" [src]="'/assets/img/logos/' + ((languageService.lang | async) === 'fr' ? 'logo-grandparents-pour-le-climat.png' : (languageService.lang | async) === 'nl' ? 'logo-grootouders-voor-het-klimaat.png' : 'logo-grandparents-for-climate.png')" alt="{{ 'Grandparents pour le climat' | translate }}">
           </a>
         </figure>
         <div class="c-media-object__body">
@@ -111,6 +111,30 @@
         </div>
       </div>
 
+      <div class="c-media-object">
+        <figure class="c-media-object__figure">
+          <a class="c-logo c-media-object__logo" href="https://www.gentsmilieufront.be">
+            <img class="c-logo__image" src="/assets/img/logos/gmf.png" alt="Gents MilieuFront">
+          </a>
+        </figure>
+        <div class="c-media-object__body">
+          <p><strong>Gents MilieuFront</strong> {{ 'Gents MilieuFront Info' | translate }}</p>
+
+        </div>
+      </div>
+
+      <div class="c-media-object">
+        <figure class="c-media-object__figure">
+          <a class="c-logo c-media-object__logo" href="https://www.poussesetvous.be">
+            <img class="c-logo__image" src="/assets/img/logos/logo-pousses-et-vous.png" alt="Pousses et Vous">
+          </a>
+        </figure>
+        <div class="c-media-object__body">
+          <p><strong>Pousses et Vous</strong> {{ 'Pousses et Vous Info' | translate }}</p>
+
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="c-logo-grid">
@@ -151,16 +175,8 @@
       </svg>
     </a>
 
-    <a class="c-logo" href="https://www.grootoudersvoorhetklimaat.be">
-      <img class="c-logo__image" src="/assets/img/logos/logo-grootouders-voor-het-klimaat.png" alt="Grootouders voor het klimaat">
-    </a>
-
     <a class="c-logo" href="https://www.palestinasolidariteit.be">
       <img class="c-logo__image" src="/assets/img/logos/logo-palestina-solidariteit.png" alt="Palestina Solidariteit">
-    </a>
-
-    <a class="c-logo" href="https://www.poussesetvous.be">
-      <img class="c-logo__image" src="/assets/img/logos/logo-pousses-et-vous.png" alt="Pousses et Vous">
     </a>
 
     <a class="c-logo" href="https://www.groupeone.be">
@@ -174,8 +190,7 @@
 
   <div class="container s-editor u-margin-top-7 u-text-align-center">
     <p><a href="https://antwerpenize.be">Antwerpenize</a> | <a href="http://antwerpenaantwoord.be">Antwerpen aan 't woord</a> | <a
-        href="#0">Club Eco</a> | <a href="https://www.globelink.be">Globelink VZW</a> | <a href="https://www.gentsmilieufront.be">Gents
-        Milieufront</a></p>
+        href="#0">Club Eco</a> | <a href="https://www.globelink.be">Globelink VZW</a></p>
     <figure class="u-max-width-3" aria-hidden="true">
       <img src="/assets/img/illustrations/wreath.png">
     </figure>

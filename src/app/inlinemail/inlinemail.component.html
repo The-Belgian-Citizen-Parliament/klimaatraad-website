@@ -202,11 +202,11 @@
         </div>
 
         <div fxFlex="30" fxFlex.lt-lg="100">
-          <strong>{{ 'Participated recently' | translate }}...</strong>
-          <ul class="signatories">
+          <strong>{{ 'Participated recently' | translate }}</strong>
+          <ul class="signatories" style="font-size: 80%; margin-top: 4px">
             <li [@inOutAnimation]="'in'" *ngFor="let mail of mails; trackBy:mailTrackBy" class="signatory">
-              {{ mail.firstName }} {{ mail.lastName }}<span *ngIf="mail.city">, {{ mail.city }}</span>
-              <br /><span class="info"> {{ formatRelativeTime(mail.sentOn)}}</span>
+              {{ mail.firstName }} {{ mail.lastName }}<span *ngIf="mail.city" style="text-transform: capitalize;">, {{ mail.city }}</span>
+              <span class="info" style="white-space: nowrap"> {{ formatRelativeTime(mail.sentOn)}}</span>
             </li>
           </ul>
         </div>

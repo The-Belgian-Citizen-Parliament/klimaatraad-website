@@ -127,7 +127,7 @@ export class InlineMailComponent implements OnInit, OnDestroy {
 
     if (this.isBrowser) {
       this.sent = localStorage.getItem('sent') ? true : false;
-      this.getMailsTimer = setInterval(() => this.getMails(), 4000);
+      this.getMailsTimer = setInterval(() => this.getMails(), 10000);
     }
   }
 
