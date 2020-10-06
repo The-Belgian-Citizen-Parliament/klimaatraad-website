@@ -96,8 +96,8 @@
                   "with": "src/environments/environment.prod.fr.ts"
                 },
                 {
-                  "replace": "src/assets/img/og-logo-small.jpg",
-                  "with": "src/assets/img/og-logo-small-fr.jpg"
+                  "replace": "src/assets/img/og-logo-new.jpg",
+                  "with": "src/assets/img/og-logo-new-fr.jpg"
                 }
               ],
               "optimization": true,
@@ -184,8 +184,8 @@
                   "with": "src/environments/environment.prod.fr.ts"
                 },
                 {
-                  "replace": "src/assets/img/og-logo-small.jpg",
-                  "with": "src/assets/img/og-logo-small-fr.jpg"
+                  "replace": "src/assets/img/og-logo-new.jpg",
+                  "with": "src/assets/img/og-logo-new-fr.jpg"
                 }
               ],
               "sourceMap": false,
