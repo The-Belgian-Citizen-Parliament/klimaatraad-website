@@ -87,9 +87,15 @@
           <a class="c-icon" target="_blank" [href]="lang === 'nl' ? 'https://facebook.com/hetburgerparlement' : 'https://facebook.com/LeParlementCitoyen'" data-icon-entity="&#xf09a;">
             <span class="u-visually-hidden">Facebook</span>
           </a>
+          <a *ngIf="lang !== 'nl'" class="c-icon" target="_blank" href="https://twitter.com/ParlementCito" data-icon-entity="&#xf099;">
+            <span class="u-visually-hidden">Twitter</span>
+          </a>
           <!-- <a class="c-icon" target="_blank" [href]="lang === 'nl' ? 'https://instagram.com/hetburgerparlement' : 'https://instagram.com/LeParlementCitoyen'" data-icon-entity="&#xf16d;">
             <span class="u-visually-hidden">Instagram</span>
           </a> -->
+          <a *ngIf="lang !== 'nl'" class="c-icon" target="_blank" href="https://instagram.com/LeParlementCitoyen" data-icon-entity="&#xf16d;">
+            <span class="u-visually-hidden">Instagram</span>
+          </a>
         </div>
       </div>
 
