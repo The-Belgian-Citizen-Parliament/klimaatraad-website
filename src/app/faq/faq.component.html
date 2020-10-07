@@ -42,7 +42,7 @@
     </ng-container>
 
     <ng-container *ngIf="filter || tagFilter">
-      <div *ngFor="let question of filteredQuestions; let i = index;" class="question-container">
+      <div *ngFor="let question of filteredQuestions; let i = index;" [id]="question.slug" class="question-container">
         <app-question [question]="question" [image]="imgs[i]" (tagClicked)="setTagFilter($event)"></app-question>
       </div>
 
