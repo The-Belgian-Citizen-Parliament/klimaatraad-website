@@ -19,16 +19,20 @@ export class QuestionDetailComponent {
   constructor(router: Router, questionService: QuestionsService, seoService: SeoService,
     translate: TranslateService, activeRoute: ActivatedRoute, public languageService: LanguageService) {
     activeRoute.params.subscribe(routeParams => {
-      const slug = /[^/]*$/.exec(router.url)[0];
-      if (!slug) router.navigate(['/faq']);
-      this.question = questionService.getQuestionBySlug(slug);
-      if (!this.question) router.navigate(['/faq']);
-      questionService.getRandomQuestions(6).subscribe((q) => this.randomQuestions = q);
+      try {
+        const slug = activeRoute.snapshot.url.slice(-1)[0].path;
+        if (!slug) router.navigate(['/faq']);
+        this.question = questionService.getQuestionBySlug(slug);
+        if (!this.question) router.navigate(['/faq']);
+        questionService.getRandomQuestions(6).subscribe((q) => this.randomQuestions = q);
 
-      translate.get('title').subscribe(((title) => {
-        seoService.updateTitle(this.stripHtml(this.question.question) + ' - ' + title);
-        seoService.updateDescription(this.stripHtml(this.question.summary));
-      }));
+        translate.get('title').subscribe(((title) => {
+          seoService.updateTitle(this.stripHtml(this.question.question) + ' - ' + title);
+          seoService.updateDescription(this.stripHtml(this.question.summary));
+        }));
+      } catch {
+        router.navigate(['/faq']);
+      }
     });
   }
 
