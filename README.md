@@ -14,8 +14,8 @@ After cloning, first install the dependencies:
 
 Add the remotes for the NL and FR heroku repositories:
 
-    git remote add heroku-nl https://git.heroku.com/klimaatraad.git
-    git remote add heroku-fr https://git.heroku.com/conseilclimat.git
+    git remote add heroku-nl https://git.heroku.com/het-burgerparlement.git
+    git remote add heroku-fr https://git.heroku.com/le-parlement-citoyen.git
 
 ## Developing
 
