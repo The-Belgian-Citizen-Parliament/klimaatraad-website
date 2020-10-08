@@ -32,7 +32,7 @@ Er zit niets anders op: linkse én rechtse partijen zullen deze realiteit vroeg 
 
 Welk soort politiek bestuur kan antwoorden bieden op dergelijke uitdagingen? Een Burgerparlement met gelote leden, die samen een representatieve dwarsdoorsnede vormen van de totale bevolking, kan de daadkracht van verkozen politici net vergroten in plaats van verzwakken. Voor verlammende electorale competitie is er geen tijd meer. We hebben samenwerking nodig. Wanneer de leden van een Burgerparlement kennismaken met de belangen en perspectieven van de anderen rond de tafel, worden ze diplomatischer en minder ideologievast. Het overstijgen van de politieke polarisering zorgt voor efficiëntere en dus snellere besluitvorming.
 
-Wij raden u aan om een kijkje te nemen op www.hetburgerparlement.be. Lees ons voorstel door, bespreek het binnen uw partij en in het parlement. Onze vraag is zeer concreet. Wij roepen de regering De Croo I op om op korte termijn een Burgerparlement rond de ecologische noodtoestand te initiëren, gebaseerd op de grondbeginselen die door een twintigtal groepen en organisaties worden gesteund.
+Wij raden u aan om een kijkje te nemen op https://www.hetburgerparlement.be. Lees ons voorstel door, bespreek het binnen uw partij en in het parlement. Onze vraag is zeer concreet. Wij roepen de regering De Croo I op om op korte termijn een Burgerparlement rond de ecologische noodtoestand te initiëren, gebaseerd op de grondbeginselen die door een twintigtal groepen en organisaties worden gesteund.
 
 Met bezorgde maar hoopvolle groeten,
 
