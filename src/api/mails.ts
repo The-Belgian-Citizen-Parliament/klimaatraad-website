@@ -29,14 +29,14 @@ export const mails = {
   fr: {
     from: 'Le Parlement Citoyen <info@thecitizensparliament.be>',
     thankYou: {
-      subject: 'Merci de soutenir le Parlement des citoyens!',
+      subject: 'Merci de soutenir le Parlement Citoyen!',
       bodyIntro: `<p>Merci $0!</p>
-      <p>Nous avons bien envoyé votre courriel. Nous sommes impatients, tout comme vous, de recevoir les réponses de nos représentants politiques.<p>
+      <p>Nous avons bien envoyé votre courriel. Et tout comme vous, nous avons hâte de recevoir les réponses de nos représentant.e.s politiques.<p>
       `,
-      bodyUpToDate: `<p>Vous avez indiqué que vous souhaitiez être tenu.e informé.e de l'évolution de la campagne. Nous vous contacterons dès que le gouvernement aura pris une décision ou que d'autres développements auront eu lieu.<p>`,
+      bodyUpToDate: `<p>Vous avez indiqué que vous souhaitez être tenu.e informé.e de l'évolution de la campagne. Nous vous contacterons dès que le gouvernement aura pris une décision ou que d'autres développements auront eu lieu.<p>`,
       bodyOutro: `<p><strong>Vous voulez en faire plus ?</strong>
       <ul>
-      <li>Suivez-nous sur <a href="https://www.facebook.com/LeParlementCitoyen/">Facebook</a>, <a href="https://twitter.com/ParlementCito">Twitter</a> et <a href="https://www.instagram.com/LeParlementCitoyen/">Instagram</a>. Et faites-le savoir à vos amis: #notrevoix compte, le temps est venu pour un #parlementcitoyen !</li>
+      <li>Suivez-nous sur <a href="https://www.facebook.com/LeParlementCitoyen/">Facebook</a>, <a href="https://twitter.com/ParlementCito">Twitter</a> et <a href="https://www.instagram.com/LeParlementCitoyen/">Instagram</a>. Et faites-le savoir à vos ami.e.s: #notrevoix compte, l’heure est venue pour un #parlementcitoyen !</li>
       <li>Ajoutez un de nos décors à votre photo de profil sur Facebook</li>
       <li>Parlez-en à vos amis !</li>
       </ul>
@@ -62,7 +62,7 @@ export const mails = {
       bodyUpToDate: `<p>You indicated that you would like to be informed on the progress of the campaign. We will contact you as soon as the government has made a decision or other developments have taken place!<p>`,
       bodyOutro: `<p><strong>Want to do more?</strong>
       <ul>
-      <li>Follow us on <a href="https://www.facebook.com/LeParlementCitoyen/">Facebook</a>, <a href="https://twitter.com/ParlementCito">Twitter</a> et <a href="https://www.instagram.com/LeParlementCitoyen/">Instagram</a>. Tell your friends, it’s time to use #ourvoice and demand a #citizensparliament!</li>
+      <li>Follow us on <a href="https://www.facebook.com/LeParlementCitoyen/">Facebook</a>, <a href="https://twitter.com/ParlementCito">Twitter</a> and <a href="https://www.instagram.com/LeParlementCitoyen/">Instagram</a>. Tell your friends, it’s time to use #ourvoice and demand a #citizensparliament!</li>
       <li>Update your profile picture on Facebook with one or our frames</li>
       <li>Share with your friends!</li>
       </ul>
