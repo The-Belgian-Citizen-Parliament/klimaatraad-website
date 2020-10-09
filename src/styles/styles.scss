@@ -30,6 +30,9 @@ $accent-color: mat-color($app-accent);
   margin: 2px 8px auto 0 !important;
 }
 
+[fxFlex] {
+  flex-basis: auto !important; // Fixes IE11 and Safari
+}
 
 // Main styles overwrites
 
