@@ -9,7 +9,7 @@ export const mails = {
       bodyUpToDate: `<p>Je gaf aan dat je graag op de hoogte gehouden wordt van het verloop van de campagne. We zullen je dan ook contacteren van zodra de regering een besluit genomen heeft of wanneer er zich andere ontwikkelingen hebben voorgedaan!<p>`,
       bodyOutro: `<p><strong>Wat kan je nog doen?</strong>
       <ul>
-      <li>Volg ons op <a href="https://www.facebook.com/hetburgerparlement/">Facebook</a>. En laat aan je vrienden weten: #onzestem telt, tijd voor een #burgerparlement!</li>
+      <li>Volg ons op <a href="https://www.facebook.com/hetburgerparlement/">Facebook</a> en <a href="https://twitter.com/burgerparlement">Twitter</a>. En laat aan je vrienden weten: #onzestem telt, tijd voor een #burgerparlement!</li>
       <li>Stel één van onze kaders in over je Facebook profiel pagina</li>
       <li>Spreek erover met je vrienden!</li>
       </ul>
