@@ -29,7 +29,44 @@
   </div>
 </div>
 
-<div class="c-panel u-background-color-lemon u-text-align-center u-overflow-top">
+<div class="c-panel u-background-color-gradient u-overflow-top">
+  <figure class="c-video">
+    <div class="c-video__viewport">
+      <video controls poster="/assets/vidposters/david.jpg" type="video/mp4" #videoPlayer
+        [src]="lang === 'nl' ? 'http://www.vincentsels.be/ext/belgiancitizenparliament/video/david_nl.mp4' : 'http://www.vincentsels.be/ext/belgiancitizenparliament/video/david_fr.mp4'">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <!-- <iframe width="100%" height="100%" src="https://vincentsels.be/ext/belgiancitizenparliament/video/maaike.mp4" frameborder="0"
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> -->
+    </div>
+  </figure>
+
+  <!-- <div class="c-video-reel">
+    <a class="c-video-reel__item" href="#0">
+      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
+        alt="This is a description of the image">
+    </a>
+    <a class="c-video-reel__item" href="#0" data-video-playing="true">
+      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
+        alt="This is a description of the image">
+    </a>
+    <a class="c-video-reel__item" href="#0">
+      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
+        alt="This is a description of the image">
+    </a>
+    <a class="c-video-reel__item" href="#0">
+      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
+        alt="This is a description of the image">
+    </a>
+    <a class="c-video-reel__item" href="#0">
+      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
+        alt="This is a description of the image">
+    </a>
+  </div> -->
+
+</div>
+
+<div class="c-panel u-background-color-lemon u-text-align-center">
   <div class="grid grid--columns" data-column-count="2">
     <div class="grid__tracks">
 
@@ -127,10 +164,12 @@
   <!-- <div class="c-icon-group h6 u-margin-top-7"> -->
   <div class="c-icon-group h6 u-margin-top-3">
     <span class="c-icon-group__label">{{ 'followOurCampaign' | translate }}</span>
-    <a class="c-icon" target="_blank" [href]="lang === 'nl' ? 'https://facebook.com/hetburgerparlement' : 'https://facebook.com/LeParlementCitoyen'" data-icon-entity="">
+    <a class="c-icon" target="_blank"
+      [href]="lang === 'nl' ? 'https://facebook.com/hetburgerparlement' : 'https://facebook.com/LeParlementCitoyen'" data-icon-entity="">
       <span class="u-visually-hidden">Facebook</span>
     </a>
-    <a class="c-icon" target="_blank" [href]="lang === 'nl' ? 'https://twitter.com/burgerparlement' : 'https://twitter.com/ParlementCito'" data-icon-entity="">
+    <a class="c-icon" target="_blank" [href]="lang === 'nl' ? 'https://twitter.com/burgerparlement' : 'https://twitter.com/ParlementCito'"
+      data-icon-entity="">
       <span class="u-visually-hidden">Twitter</span>
     </a>
     <a *ngIf="lang !== 'nl'" class="c-icon" target="_blank" href="https://instagram.com/LeParlementCitoyen" data-icon-entity="">
@@ -222,6 +261,19 @@
 
     <a class="c-logo" href="https://www.youth4climate.be">
       <img class="c-logo__image" src="/assets/img/logos/logo-youth-for-climate.png" alt="Youth For Climate">
+    </a>
+  </div>
+</div>
+
+<div *ngIf="lang === 'nl'" class="c-panel u-background-color-brown u-color-white" style="text-align: center;">
+  <span _ngcontent-serverapp-c137="" class="c-icon-group__label">{{ 'Gezien in de krant' | translate }}</span>
+  <div class="c-logo-grid">
+    <a class="c-logo" target="_blank" href="https://www.standaard.be/cnt/dmf20201005_97580279">
+      <img class="c-logo__image" src="/assets/img/logos/logo-ds.png" alt="De Standaard">
+    </a>
+
+    <a class="c-logo" target="_blank" href="https://www.demorgen.be/nieuws/burgerparlement-wil-politici-adviseren-over-ecologische-noodtoestand~b2cf68a2/">
+      <img class="c-logo__image" src="/assets/img/logos/logo-dm.png" alt="De Morgen">
     </a>
   </div>
 </div>
