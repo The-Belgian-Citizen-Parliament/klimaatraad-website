@@ -1,14 +1,6 @@
-.hero-media {
+.c-video__viewport {
   video {
     width: 100%;
-  }
-
-  iframe {
-    visibility: hidden;
-
-    &.loaded {
-      visibility: visible;
-    }
   }
 }
 
