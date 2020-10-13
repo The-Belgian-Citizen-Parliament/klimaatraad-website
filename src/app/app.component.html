@@ -81,13 +81,10 @@
 
       <div class="grid__cell">
         <div class="c-icon-group">
-          <!-- <a class="c-icon" target="_blank" [href]="lang === 'nl' ? 'https://twitter.com/hetburgerparlement' : 'https://twitter.com/LeParlementCitoyen'" data-icon-entity="&#xf099;">
-            <span class="u-visually-hidden">Twitter</span>
-          </a> -->
           <a class="c-icon" target="_blank" [href]="lang === 'nl' ? 'https://facebook.com/hetburgerparlement' : 'https://facebook.com/LeParlementCitoyen'" data-icon-entity="&#xf09a;">
             <span class="u-visually-hidden">Facebook</span>
           </a>
-          <a *ngIf="lang !== 'nl'" class="c-icon" target="_blank" href="https://twitter.com/ParlementCito" data-icon-entity="&#xf099;">
+          <a class="c-icon" target="_blank" [href]="lang === 'nl' ? 'https://twitter.com/burgerparlement' : 'https://twitter.com/ParlementCito'" data-icon-entity="&#xf099;">
             <span class="u-visually-hidden">Twitter</span>
           </a>
           <!-- <a class="c-icon" target="_blank" [href]="lang === 'nl' ? 'https://instagram.com/hetburgerparlement' : 'https://instagram.com/LeParlementCitoyen'" data-icon-entity="&#xf16d;">
@@ -95,6 +92,9 @@
           </a> -->
           <a *ngIf="lang !== 'nl'" class="c-icon" target="_blank" href="https://instagram.com/LeParlementCitoyen" data-icon-entity="&#xf16d;">
             <span class="u-visually-hidden">Instagram</span>
+          </a>
+          <a class="c-icon" target="_blank" href="https://t.me/citizensparliament" data-icon-entity="&#xf2c6;">
+            <span class="u-visually-hidden">Telegram</span>
           </a>
         </div>
       </div>

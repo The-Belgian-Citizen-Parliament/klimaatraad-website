@@ -90,7 +90,8 @@ export class AppComponent {
 
   setLanguage(lang) {
     if (this.isBrowser && this.isProd) {
-      window.location.href = lang === 'nl' ? 'https://www.hetburgerparlement.be' : 'https://www.leparlementcitoyen.be';
+      if (lang === 'nl') window.location.href = 'https://www.hetburgerparlement.be';
+      else if (lang === 'fr') window.location.href = 'https://www.leparlementcitoyen.be';
     }
 
     this.languageService.lang.next(lang);

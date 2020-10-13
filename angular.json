@@ -61,6 +61,9 @@
                 }
               ]
             },
+            "es5": {
+              "tsConfig": "./tsconfig-es5.app.json"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -129,6 +132,9 @@
             "browserTarget": "klimaatraad:build"
           },
           "configurations": {
+            "es5": {
+              "browserTarget": "klimaatraad:build:es5"
+            },
             "production": {
               "browserTarget": "klimaatraad:build:production"
             },
