@@ -9,7 +9,7 @@ export const mails = {
       bodyUpToDate: `<p>Je gaf aan dat je graag op de hoogte gehouden wordt van het verloop van de campagne. We zullen je dan ook contacteren van zodra de regering een besluit genomen heeft of wanneer er zich andere ontwikkelingen hebben voorgedaan!<p>`,
       bodyOutro: `<p><strong>Wat kan je nog doen?</strong>
       <ul>
-      <li>Volg ons op <a href="https://www.facebook.com/hetburgerparlement/">Facebook</a> en <a href="https://twitter.com/burgerparlement">Twitter</a>. En laat aan je vrienden weten: #onzestem telt, tijd voor een #burgerparlement!</li>
+      <li>Volg ons op <a href="https://www.facebook.com/hetburgerparlement/">Facebook</a>, <a href="https://twitter.com/burgerparlement">Twitter</a> en <a href="https://t.me/citizensparliament">Telegram</a>. En laat aan je vrienden weten: #onzestem telt, tijd voor een #burgerparlement!</li>
       <li>Stel één van onze kaders in over je Facebook profiel pagina</li>
       <li>Spreek erover met je vrienden!</li>
       </ul>
@@ -36,7 +36,7 @@ export const mails = {
       bodyUpToDate: `<p>Vous avez indiqué que vous souhaitez être tenu.e informé.e de l'évolution de la campagne. Nous vous contacterons dès que le gouvernement aura pris une décision ou que d'autres développements auront eu lieu.<p>`,
       bodyOutro: `<p><strong>Vous voulez en faire plus ?</strong>
       <ul>
-      <li>Suivez-nous sur <a href="https://www.facebook.com/LeParlementCitoyen/">Facebook</a>, <a href="https://twitter.com/ParlementCito">Twitter</a> et <a href="https://www.instagram.com/LeParlementCitoyen/">Instagram</a>. Et faites-le savoir à vos ami.e.s: #notrevoix compte, l’heure est venue pour un #parlementcitoyen !</li>
+      <li>Suivez-nous sur <a href="https://www.facebook.com/LeParlementCitoyen/">Facebook</a>, <a href="https://twitter.com/ParlementCito">Twitter</a>, <a href="https://www.instagram.com/LeParlementCitoyen/">Instagram</a> et <a href="https://t.me/citizensparliament">Telegram</a>. Et faites-le savoir à vos ami.e.s: #notrevoix compte, l’heure est venue pour un #parlementcitoyen !</li>
       <li>Ajoutez un de nos décors à votre photo de profil sur Facebook</li>
       <li>Parlez-en à vos amis !</li>
       </ul>
@@ -62,7 +62,7 @@ export const mails = {
       bodyUpToDate: `<p>You indicated that you would like to be informed on the progress of the campaign. We will contact you as soon as the government has made a decision or other developments have taken place!<p>`,
       bodyOutro: `<p><strong>Want to do more?</strong>
       <ul>
-      <li>Follow us on <a href="https://www.facebook.com/LeParlementCitoyen/">Facebook</a>, <a href="https://twitter.com/ParlementCito">Twitter</a> and <a href="https://www.instagram.com/LeParlementCitoyen/">Instagram</a>. Tell your friends, it’s time to use #ourvoice and demand a #citizensparliament!</li>
+      <li>Follow us on <a href="https://www.facebook.com/LeParlementCitoyen/">Facebook</a>, <a href="https://twitter.com/ParlementCito">Twitter</a>, <a href="https://www.instagram.com/LeParlementCitoyen/">Instagram</a> and <a href="https://t.me/citizensparliament">Telegram</a>. Tell your friends, it’s time to use #ourvoice and demand a #citizensparliament!</li>
       <li>Update your profile picture on Facebook with one or our frames</li>
       <li>Share with your friends!</li>
       </ul>
