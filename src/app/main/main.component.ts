@@ -20,35 +20,58 @@ export class MainComponent {
 
   currentVideo;
 
-  videos = [
-    { nr: 0,
-      srcNl: 'https://vincentsels.be/ext/belgiancitizenparliament/video/youna_nl.mp4',
-      srcFr: 'https://vincentsels.be/ext/belgiancitizenparliament/video/youna_fr.mp4',
-      poster: '/assets/vidposters/youna.jpg',
-      preview: '/assets/vidposters/youna_square.jpg'
-    },
-    {
-      nr: 1,
-      srcNl: 'https://vincentsels.be/ext/belgiancitizenparliament/video/sebastien_nl.mp4',
-      srcFl: 'https://vincentsels.be/ext/belgiancitizenparliament/video/sebastien_fr.mp4',
-      poster: '/assets/vidposters/sebastien.jpg',
-      preview: '/assets/vidposters/sebastien_square.jpg'
-    },
-    {
-      nr: 2,
-      srcNl: 'https://vincentsels.be/ext/belgiancitizenparliament/video/esmeralda_nl.mp4',
-      srcFr: 'https://vincentsels.be/ext/belgiancitizenparliament/video/esmeralda_fr.mp4',
-      poster: '/assets/vidposters/esmeralda.jpg',
-      preview: '/assets/vidposters/esmeralda_square.jpg'
-    },
-    {
-      nr: 3,
-      srcNl: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_nl.mp4',
-      srcFr: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_fr.mp4',
-      poster: '/assets/vidposters/david.jpg',
-      preview: '/assets/vidposters/david_square.jpg'
-    },
-  ];
+  videos = {
+    nl: [
+      {
+        nr: 0,
+        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/youna_nl.mp4',
+        poster: '/assets/vidposters/youna.jpg',
+        preview: '/assets/vidposters/youna_square.jpg'
+      },
+      {
+        nr: 1,
+        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/sebastien_nl.mp4',
+        poster: '/assets/vidposters/sebastien.jpg',
+        preview: '/assets/vidposters/sebastien_square.jpg'
+      },
+      {
+        nr: 2,
+        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/esmeralda_nl.mp4',
+        poster: '/assets/vidposters/esmeralda.jpg',
+        preview: '/assets/vidposters/esmeralda_square.jpg'
+      },
+      {
+        nr: 3,
+        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_nl.mp4',
+        poster: '/assets/vidposters/david.jpg',
+        preview: '/assets/vidposters/david_square.jpg'
+      }],
+    fr: [
+      {
+        nr: 0,
+        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/youna_fr.mp4',
+        poster: '/assets/vidposters/youna.jpg',
+        preview: '/assets/vidposters/youna_square.jpg'
+      },
+      {
+        nr: 1,
+        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/sebastien_fr.mp4',
+        poster: '/assets/vidposters/sebastien.jpg',
+        preview: '/assets/vidposters/sebastien_square.jpg'
+      },
+      {
+        nr: 2,
+        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/esmeralda_fr.mp4',
+        poster: '/assets/vidposters/esmeralda.jpg',
+        preview: '/assets/vidposters/esmeralda_square.jpg'
+      },
+      {
+        nr: 3,
+        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_fr.mp4',
+        poster: '/assets/vidposters/david.jpg',
+        preview: '/assets/vidposters/david_square.jpg'
+      }],
+  };
 
   constructor(private questionsService: QuestionsService, public randomImage: RandomImageService,
     public languageService: LanguageService) {
@@ -57,13 +80,13 @@ export class MainComponent {
 
     languageService.lang.subscribe((lang) => this.lang = lang);
 
-    this.currentVideo = this.videos[this.videos.length -1];
+    this.currentVideo = this.videos[this.lang][this.videos[this.lang].length - 1];
   }
 
   ngAfterViewInit(): void {
     (this.videoPlayer.nativeElement as HTMLVideoElement).onended = () => {
-      const nextVideoId = (this.currentVideo.nr + 1) % (this.videos.length);
-      this.playVid(this.videos[nextVideoId]);
+      const nextVideoId = (this.currentVideo.nr + 1) % (this.videos[this.lang].length);
+      this.playVid(this.videos[this.lang][nextVideoId]);
     }
   }
 

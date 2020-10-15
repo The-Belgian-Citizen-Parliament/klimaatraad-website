@@ -9,15 +9,15 @@
 <div class="c-panel u-background-color-gradient u-overflow-top">
   <figure class="c-video">
     <div class="c-video__viewport">
-      <video controls poster="/assets/vidposters/david.jpg" type="video/mp4" #videoPlayer
-        [src]="lang === 'nl' ? currentVideo.srcNl : currentVideo.srcFr">
+      <video controls [poster]="currentVideo.poster" type="video/mp4" #videoPlayer
+        [src]="currentVideo.src">
         Sorry, your browser doesn't support embedded videos.
       </video>
     </div>
   </figure>
 
   <div class="c-video-reel" #videoCarrousel cdkScrollable>
-    <a *ngFor="let vid of videos" class="c-video-reel__item" [routerLink]="" (click)="playVid(vid)">
+    <a *ngFor="let vid of videos[lang]" class="c-video-reel__item" [routerLink]="" (click)="playVid(vid)">
       <img [src]="vid.preview" [alt]="vid.alt">
     </a>
   </div>
