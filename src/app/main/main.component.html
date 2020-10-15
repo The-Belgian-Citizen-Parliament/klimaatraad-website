@@ -1,26 +1,3 @@
-<!-- <section class="hero text-light text-center">
-  <div class="container-sm">
-    <div class="hero-inner">
-      <h1 class="hero-title h2-mobile mt-0">{{ 'A national citizens parliament concerning the ecological emergencies' | translate }}</h1>
-      <p class="hero-paragraph">
-        {{ 'openingMessage' | translate }}
-      </p>
-      <p class="hero-cta"><a class="button-evelyn button-secondary button-shadow" routerLink="/deelnemen">Steun het
-          initiatief</a></p>
-      <div class="hero-media" id="het-concept">
-        <video controls [poster]="currentVideo.poster" [src]="currentVideo.src" type="video/mp4" #videoPlayer>
-          Sorry, your browser doesn't support embedded videos.
-        </video>
-          <div class="vid-carrousel" #videoCarrousel cdkScrollable>
-            <div class="vid-prev" (click)="scrollLeft()"></div>
-            <img class="vid-thumb" [src]="vid.poster" *ngFor="let vid of videos" (click)="playVid(vid)" />
-            <div class="vid-next" (click)="scrollRight()"></div>
-          </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 <div class="c-panel u-padding-top-0">
   <div class="container u-max-width-7 u-text-align-center">
     <h1 class="c-page-title" [innerHtml]="'mainTitle' | translate"></h1>
@@ -33,36 +10,17 @@
   <figure class="c-video">
     <div class="c-video__viewport">
       <video controls poster="/assets/vidposters/david.jpg" type="video/mp4" #videoPlayer
-        [src]="lang === 'nl' ? 'https://www.vincentsels.be/ext/belgiancitizenparliament/video/david_nl.mp4' : 'https://www.vincentsels.be/ext/belgiancitizenparliament/video/david_fr.mp4'">
+        [src]="lang === 'nl' ? currentVideo.srcNl : currentVideo.srcFr">
         Sorry, your browser doesn't support embedded videos.
       </video>
-      <!-- <iframe width="100%" height="100%" src="https://vincentsels.be/ext/belgiancitizenparliament/video/maaike.mp4" frameborder="0"
-        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> -->
     </div>
   </figure>
 
-  <!-- <div class="c-video-reel">
-    <a class="c-video-reel__item" href="#0">
-      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
-        alt="This is a description of the image">
+  <div class="c-video-reel" #videoCarrousel cdkScrollable>
+    <a *ngFor="let vid of videos" class="c-video-reel__item" [routerLink]="" (click)="playVid(vid)">
+      <img [src]="vid.preview" [alt]="vid.alt">
     </a>
-    <a class="c-video-reel__item" href="#0" data-video-playing="true">
-      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
-        alt="This is a description of the image">
-    </a>
-    <a class="c-video-reel__item" href="#0">
-      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
-        alt="This is a description of the image">
-    </a>
-    <a class="c-video-reel__item" href="#0">
-      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
-        alt="This is a description of the image">
-    </a>
-    <a class="c-video-reel__item" href="#0">
-      <img src="https://images.unsplash.com/photo-1505682614136-0a12f9f7beea?fit=crop&amp;w=800&amp;h=450"
-        alt="This is a description of the image">
-    </a>
-  </div> -->
+  </div>
 
 </div>
 
