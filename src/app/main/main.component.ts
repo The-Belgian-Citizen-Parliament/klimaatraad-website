@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { RandomImageService } from '../common/random-image.service';
 import { LanguageService } from '../common/language.service';
 import { Question } from '../questions/question';
+import { videos } from './videos';
 
 @Component({
   selector: 'app-main',
@@ -18,60 +19,8 @@ export class MainComponent {
   imgs: string[] = [];
   lang = environment.language;
 
+  videos = videos;
   currentVideo;
-
-  videos = {
-    nl: [
-      {
-        nr: 0,
-        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/youna_nl.mp4',
-        poster: '/assets/vidposters/youna.jpg',
-        preview: '/assets/vidposters/youna_square.jpg'
-      },
-      {
-        nr: 1,
-        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/sebastien_nl.mp4',
-        poster: '/assets/vidposters/sebastien.jpg',
-        preview: '/assets/vidposters/sebastien_square.jpg'
-      },
-      {
-        nr: 2,
-        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/esmeralda_nl.mp4',
-        poster: '/assets/vidposters/esmeralda.jpg',
-        preview: '/assets/vidposters/esmeralda_square.jpg'
-      },
-      {
-        nr: 3,
-        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_nl.mp4',
-        poster: '/assets/vidposters/david.jpg',
-        preview: '/assets/vidposters/david_square.jpg'
-      }],
-    fr: [
-      {
-        nr: 0,
-        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/youna_fr.mp4',
-        poster: '/assets/vidposters/youna.jpg',
-        preview: '/assets/vidposters/youna_square.jpg'
-      },
-      {
-        nr: 1,
-        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/sebastien_fr.mp4',
-        poster: '/assets/vidposters/sebastien.jpg',
-        preview: '/assets/vidposters/sebastien_square.jpg'
-      },
-      {
-        nr: 2,
-        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/esmeralda_fr.mp4',
-        poster: '/assets/vidposters/esmeralda.jpg',
-        preview: '/assets/vidposters/esmeralda_square.jpg'
-      },
-      {
-        nr: 3,
-        src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_fr.mp4',
-        poster: '/assets/vidposters/david.jpg',
-        preview: '/assets/vidposters/david_square.jpg'
-      }],
-  };
 
   constructor(private questionsService: QuestionsService, public randomImage: RandomImageService,
     public languageService: LanguageService) {
