@@ -6,7 +6,7 @@
   padding: map-get($spacing-units, '3') 0;
 
   @include media-query('max:060') {
-    --reel-item-count: 2;
+    --reel-item-count: 3;
   }
 }
 
