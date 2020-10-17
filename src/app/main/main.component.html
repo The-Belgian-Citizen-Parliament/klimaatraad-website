@@ -16,6 +16,11 @@
     </div>
   </figure>
 
+  <div class="vid-title">
+    <div class="vid-title-name">{{ currentVideo.name }}</div>
+    <div class="vid-title-function">{{ currentVideo.title }}</div>
+  </div>
+
   <div class="c-video-reel" #videoCarrousel cdkScrollable>
     <a *ngFor="let vid of videos[lang]" class="c-video-reel__item" [routerLink]="" (click)="playVid(vid)">
       <img [src]="vid.preview" [alt]="vid.alt">
