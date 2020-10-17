@@ -6,7 +6,7 @@ export const videos = {
       poster: '/assets/vidposters/youna.jpg',
       preview: '/assets/vidposters/youna_square.jpg',
       name: 'Youna Marette',
-      title: 'Génération Climat, woordvoerster Het Burgerparlement'
+      title: 'studente, woordvoerster Het Burgerparlement'
     },
     {
       nr: 1,
@@ -87,7 +87,7 @@ export const videos = {
       poster: '/assets/vidposters/youna.jpg',
       preview: '/assets/vidposters/youna_square.jpg',
       name: 'Youna Marette',
-      title: 'Génération Climat, porte-parole Le Parlement Citoyen'
+      title: 'étudiante, porte-parole Le Parlement Citoyen'
     },
     {
       nr: 1,
@@ -95,7 +95,7 @@ export const videos = {
       poster: '/assets/vidposters/sebastien.jpg',
       preview: '/assets/vidposters/sebastien_square.jpg',
       name: 'Sébastien Hendrickx',
-      title: 'docent, porte-parole Le Parlement Citoyen'
+      title: 'professeur, porte-parole Le Parlement Citoyen'
     },
     {
       nr: 2,
