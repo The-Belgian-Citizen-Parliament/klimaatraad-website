@@ -8,6 +8,15 @@
 
 $vid-courrousel-height: 180px;
 
+.vid-title {
+  text-align: center;
+
+  .vid-title-name {
+    font-size: 1.33em;
+    font-weight: 500;
+  }
+}
+
 .vid-carrousel {
   margin-top: 20px;
   width: 100%;

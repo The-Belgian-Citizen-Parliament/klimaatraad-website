@@ -16,6 +16,11 @@
     </div>
   </figure>
 
+  <div class="vid-title">
+    <div class="vid-title-name">{{ currentVideo.name }}</div>
+    <div class="vid-title-function">{{ currentVideo.title }}</div>
+  </div>
+
   <div class="c-video-reel" #videoCarrousel cdkScrollable>
     <a *ngFor="let vid of videos[lang]" class="c-video-reel__item" [routerLink]="" (click)="playVid(vid)">
       <img [src]="vid.preview" [alt]="vid.alt">
@@ -79,48 +84,38 @@
 
 <div class="c-panel u-background-color-gradient u-color-white">
 
-  <!-- <div class="grid grid--columns" data-column-count="3">
+  <div class="grid grid--columns" data-column-count="3" *ngIf="lang === 'nl'">
     <div class="grid__tracks">
       <div class="c-tweet">
-        <p class="c-tweet__body"><a href="https://www.twitter.com/alexanderdecroo">@alexanderdecroo</a> This is the content of a tweet.
-          Itaque sensibus rationem adiunxit et ratione effecta. Fugiunt, re eadem defendunt, quae Peripatetici, verba. Cupit enim dícere
-          nihil posse beatam vitam. This tweet contains exactly 280 characters. <a
-            href="https://www.twitter.com/hashtag/ParlementCitoyen">#ParlementCitoyen</a> <a
-            href="https://www.twitter.com/hashtag/BurgerParlement">#BurgerParlement</a></p>
-        <a class="c-button c-tweet__button"
-          href="https://twitter.com/intent/tweet/?text=%40alexanderdecroo%20This%20is%20the%20content%20of%20a%20tweet.%20Itaque%20sensibus%20rationem%20adiunxit%20et%20ratione%20effecta.%20Fugiunt%2C%20re%20eadem%20defendunt%2C%20quae%20Peripatetici%2C%20verba.%20Cupit%20enim%20d%C3%ADcere%20nihil%20posse%20beatam%20vitam.%20This%20tweet%20contains%20exactly%20280%20characters.%20%23ParlementCitoyen%20%23BurgerParlement">
+        <p class="c-tweet__body">
+          <a target="_blank" href="https://www.twitter.com/alexanderdecroo">@alexanderdecroo</a> meer burgerparticipatie en ambitieus milieubeleid combineren? Richt een <a target="_blank" href="https://www.twitter.com/hashtag/burgerparlement">#burgerparlement</a> op en laat gelote burgers, gesteund door experten, oplossingen zoeken voor de grootste uitdaging van onze tijd. <a target="_blank" href="https://www.twitter.com/burgerparlement">@burgerparlement</a> https://bit.ly/3dCoPNL
+        </p>
+        <a class="c-button c-tweet__button" target="_blank" href="https://twitter.com/intent/tweet?url=&text=%40alexanderdecroo%20meer%20burgerparticipatie%20en%20ambitieus%20milieubeleid%20combineren%3F%20Richt%20een%20%23burgerparlement%20op%20en%20laat%20gelote%20burgers%2C%20gesteund%20door%20experten%2C%20oplossingen%20zoeken%20voor%20de%20grootste%20uitdaging%20van%20onze%20tijd.%20%40burgerparlement%20https%3A%2F%2Fbit.ly%2F3dCoPNL">
           <span class="c-button__label">{{ 'tweetThis' | translate }}</span>
         </a>
       </div>
 
       <div class="c-tweet">
-        <p class="c-tweet__body"><a href="https://www.twitter.com/alexanderdecroo">@alexanderdecroo</a> This is the content of a tweet.
-          Itaque sensibus rationem adiunxit et ratione effecta. Fugiunt, re eadem defendunt, quae Peripatetici, verba. Cupit enim dícere
-          nihil posse beatam vitam. This tweet contains exactly 280 characters. <a
-            href="https://www.twitter.com/hashtag/ParlementCitoyen">#ParlementCitoyen</a> <a
-            href="https://www.twitter.com/hashtag/BurgerParlement">#BurgerParlement</a></p>
-        <a class="c-button c-tweet__button"
-          href="https://twitter.com/intent/tweet/?text=%40alexanderdecroo%20This%20is%20the%20content%20of%20a%20tweet.%20Itaque%20sensibus%20rationem%20adiunxit%20et%20ratione%20effecta.%20Fugiunt%2C%20re%20eadem%20defendunt%2C%20quae%20Peripatetici%2C%20verba.%20Cupit%20enim%20d%C3%ADcere%20nihil%20posse%20beatam%20vitam.%20This%20tweet%20contains%20exactly%20280%20characters.%20%23ParlementCitoyen%20%23BurgerParlement">
+        <p class="c-tweet__body">
+          <a target="_blank" href="https://www.twitter.com/TinneVdS">@TinneVdS</a> 60% CO2-reductie tegen 2030, kerncentrales dicht, elektrificatie wagenpark, geen prijsstijging... hoe spelen we dat klaar? Volg voorbeeld Frankrijk en VK en richt een #burgerparlement op. Laat gelote burgers mee aan het woord! <a target="_blank" href="https://www.twitter.com/burgerparlement">@burgerparlement</a> https://bit.ly/3dCoPNL
+        </p>
+        <a class="c-button c-tweet__button" target="_blank" href="https://twitter.com/intent/tweet?url=&text=%40TinneVdS%2060%25%20CO2-reductie%20tegen%202030%2C%20kerncentrales%20dicht%2C%20elektrificatie%20wagenpark%2C%20geen%20prijsstijging...%20hoe%20spelen%20we%20dat%20klaar%3F%20Volg%20voorbeeld%20Frankrijk%20en%20VK%20en%20richt%20een%20%23burgerparlement%20op.%20Laat%20gelote%20burgers%20mee%20aan%20het%20woord!%20%40burgerparlement%20https%3A%2F%2Fbit.ly%2F3dCoPNL">
           <span class="c-button__label">{{ 'tweetThis' | translate }}</span>
         </a>
       </div>
 
       <div class="c-tweet">
-        <p class="c-tweet__body"><a href="https://www.twitter.com/alexanderdecroo">@alexanderdecroo</a> This is the content of a tweet.
-          Itaque sensibus rationem adiunxit et ratione effecta. Fugiunt, re eadem defendunt, quae Peripatetici, verba. Cupit enim dícere
-          nihil posse beatam vitam. This tweet contains exactly 280 characters. <a
-            href="https://www.twitter.com/hashtag/ParlementCitoyen">#ParlementCitoyen</a> <a
-            href="https://www.twitter.com/hashtag/BurgerParlement">#BurgerParlement</a></p>
-        <a class="c-button c-tweet__button"
-          href="https://twitter.com/intent/tweet/?text=%40alexanderdecroo%20This%20is%20the%20content%20of%20a%20tweet.%20Itaque%20sensibus%20rationem%20adiunxit%20et%20ratione%20effecta.%20Fugiunt%2C%20re%20eadem%20defendunt%2C%20quae%20Peripatetici%2C%20verba.%20Cupit%20enim%20d%C3%ADcere%20nihil%20posse%20beatam%20vitam.%20This%20tweet%20contains%20exactly%20280%20characters.%20%23ParlementCitoyen%20%23BurgerParlement">
+        <p class="c-tweet__body">
+          Schrijf zelf een tweet aan onze premier <a target="_blank" href="https://www.twitter.com/alexanderdecroo">Alexander De Croo</a> en ministers van energie <a target="_blank" href="https://www.twitter.com/TinneVdS">Tinne Vand der Straten</a>, klimaat en leefmilieu <a target="_blank" href="https://twitter.com/khattabizakia">Zakia Khattabi</a>, kansengelijkheid <a target="_blank" href="https://twitter.com/sarahschlitz">Sarah Schiltz</a> of ambtenarenzaken <a target="_blank" href="https://twitter.com/pdsutter">Petra De Sutter</a>! <a target="_blank" href="https://www.twitter.com/burgerparlement">@burgerparlement</a> https://bit.ly/3dCoPNL
+        </p>
+        <a class="c-button c-tweet__button" target="_blank" href="https://twitter.com/intent/tweet?url=&text=%40alexanderdecroo%20%40TinneVdS%20%40khattabizakia%20%40sarahschlitz%20%40pdsutter%20Tijd%20voor%20een%20%23burgerparlement!%20%40burgerparlement%20https%3A%2F%2Fbit.ly%2F3dCoPNL">
           <span class="c-button__label">{{ 'tweetThis' | translate }}</span>
         </a>
       </div>
     </div>
-  </div> -->
+  </div>
 
-  <!-- <div class="c-icon-group h6 u-margin-top-7"> -->
-  <div class="c-icon-group h6 u-margin-top-3">
+  <div [class]="lang === 'nl' ? 'c-icon-group h6 u-margin-top-7' : 'c-icon-group h6 u-margin-top-3'">
     <span class="c-icon-group__label">{{ 'followOurCampaign' | translate }}</span>
     <a class="c-icon" target="_blank"
       [href]="lang === 'nl' ? 'https://facebook.com/hetburgerparlement' : 'https://facebook.com/LeParlementCitoyen'" data-icon-entity="">
@@ -166,14 +161,14 @@
       <span class="c-button__label">{{ 'searchThroughAllQuestions' | translate }}</span>
     </a>
 
-    <div class="c-callout">
+    <!-- <div class="c-callout">
       <p><strong>{{ 'yourQuestionNotHere' | translate }} </strong> <a
           [routerLink]="languageService.route('about') | async">{{ 'sendUsAMail' | translate }}</a></p>
-    </div>
+    </div> -->
 
   </div>
-  <figure class="u-margin-auto u-margin-top-7 u-max-width-2" aria-hidden="true">
-    <img src="/assets/img/illustrations/root.png">
+  <figure class="u-margin-auto u-margin-top-7 u-max-width-3" aria-hidden="true">
+    <img src="/assets/img/illustrations/flag.png">
   </figure>
 </div>
 
@@ -222,19 +217,6 @@
 
     <a class="c-logo" href="https://www.youth4climate.be">
       <img class="c-logo__image" src="/assets/img/logos/logo-youth-for-climate.png" alt="Youth For Climate">
-    </a>
-  </div>
-</div>
-
-<div *ngIf="lang === 'nl'" class="c-panel u-background-color-brown u-color-white" style="text-align: center;">
-  <span _ngcontent-serverapp-c137="" class="c-icon-group__label">{{ 'Gezien in de krant' | translate }}</span>
-  <div class="c-logo-grid">
-    <a class="c-logo" target="_blank" href="https://www.standaard.be/cnt/dmf20201005_97580279">
-      <img class="c-logo__image" src="/assets/img/logos/logo-ds.png" alt="De Standaard">
-    </a>
-
-    <a class="c-logo" target="_blank" href="https://www.demorgen.be/nieuws/burgerparlement-wil-politici-adviseren-over-ecologische-noodtoestand~b2cf68a2/">
-      <img class="c-logo__image" src="/assets/img/logos/logo-dm.png" alt="De Morgen">
     </a>
   </div>
 </div>
