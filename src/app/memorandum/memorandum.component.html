@@ -82,7 +82,7 @@
 
     <p class="small"><sup>1</sup> {{ 'proposalFootnote1' | translate }}</p>
 
-    <p class="small"><sup>2</sup> {{ 'proposalFootnote2' | translate }}</p>
+    <p class="small"><sup>2</sup> <span innerHtml="{{ 'proposalFootnote2' | translate }}"></span></p>
 
     <button class="c-button c-button--download">
       <a target="_blank" [href]="lang === 'nl' ? '/assets/proposal/het_burgerparlement_voorstel.pdf' : '/assets/proposal/le_parlement_citoyen_proposition.pdf'" class="c-button__label">{{ 'proposalDownload' | translate }}</a>
