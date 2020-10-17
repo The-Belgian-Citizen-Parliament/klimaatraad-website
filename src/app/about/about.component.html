@@ -40,8 +40,11 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" [href]="(languageService.lang | async) === 'nl' ? 'https://www.grootoudersvoorhetklimaat.be/' : 'https://gpclimat.be/'">
-            <img class="c-logo__image" [src]="'/assets/img/logos/' + ((languageService.lang | async) === 'fr' ? 'logo-grandparents-pour-le-climat.png' : (languageService.lang | async) === 'nl' ? 'logo-grootouders-voor-het-klimaat.png' : 'logo-grandparents-for-climate.png')" alt="{{ 'Grandparents pour le climat' | translate }}">
+          <a class="c-logo c-media-object__logo"
+            [href]="(languageService.lang | async) === 'nl' ? 'https://www.grootoudersvoorhetklimaat.be/' : 'https://gpclimat.be/'">
+            <img class="c-logo__image"
+              [src]="'/assets/img/logos/' + ((languageService.lang | async) === 'fr' ? 'logo-grandparents-pour-le-climat.png' : (languageService.lang | async) === 'nl' ? 'logo-grootouders-voor-het-klimaat.png' : 'logo-grandparents-for-climate.png')"
+              alt="{{ 'Grandparents pour le climat' | translate }}">
           </a>
         </figure>
         <div class="c-media-object__body">
@@ -207,6 +210,30 @@
     <div class="c-callout">
       <p>{{ 'wantToJoinUs' | translate }}
         <a href="mailto:info@thecitizensparliament.be">{{ 'Contact us' | translate }}</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="c-panel u-padding-top-5">
+  <div class="container s-editor u-text-align-center">
+    <h2 class="h3" [innerHtml]="'pressTitle' | translate"></h2>
+    <div class="u-margin-top-7">
+      <p>
+        <ng-container *ngIf="(languageService.lang | async) !== 'nl'">
+          <a target="_blank" href="https://www.lalibre.be/dernieres-depeches/belga/le-gouvernement-de-croo-appele-a-initier-un-parlement-citoyen-sur-l-urgence-ecologique-5f7db3fa7b50a641f635fe0d">La Libre</a> |
+          <a target="_blank" href="https://www.rtbf.be/info/belgique/detail_le-gouvernement-de-croo-appele-a-initier-un-parlement-citoyen-sur-l-urgence-ecologique?id=10602920">RTBF</a> |
+          <a target="_blank" href="https://www.levif.be/actualite/environnement/un-parlement-citoyen-pour-l-urgence-ecologique-le-parlement-actuel-n-arrive-pas-a-prendre-de-decision/article-normal-1342499.html">Le Vif</a> |
+          <a target="_blank" href="http://www.vivreici.be/article/detail_le-gouvernement-de-croo-appele-a-initier-un-parlement-citoyen-sur-l-urgence-ecologique?id=456514">Vivre ici</a>
+        </ng-container>
+        <ng-container *ngIf="(languageService.lang | async) !== 'fr'">
+          <a target="_blank" href="https://www.standaard.be/cnt/dmf20201005_97580279">De Standaard</a> |
+          <a target="_blank" href="https://www.demorgen.be/nieuws/burgerparlement-wil-politici-adviseren-over-ecologische-noodtoestand~b2cf68a2/">De Morgen</a> |
+          <a target="_blank" href="https://www.nieuwsblad.be/cnt/dmf20201007_96396455">Het Nieuwsblad</a> |
+          <a target="_blank" href="https://www.knack.be/nieuws/planet-earth/oproep-aan-regering-start-burgerparlement-om-ecologische-noodtoestand-aan-te-pakken/article-normal-1650691.html">Knack</a> |
+          <a target="_blank" href="https://www.sampol.be/2020/10/pleidooi-voor-een-nationaal-burgerparlement">Sampol</a> |
+          <a target="_blank" href="https://decorrespondent.nl/11707/meer-dan-een-inspraakavond-beter-dan-een-referendum-met-deze-democratische-vernieuwing-kan-de-burger-zelf-beleid-maken/5441384180309-90a007f4">De Correspondent</a>
+        </ng-container>
+      </p>
     </div>
   </div>
 </div>
