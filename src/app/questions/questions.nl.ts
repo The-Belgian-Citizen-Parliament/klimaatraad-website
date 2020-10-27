@@ -217,5 +217,11 @@ export const questionsNl: Question[] = [
     answer: '',
     tags: ['praktisch', 'deelnemen', 'loting', 'selectie'],
     slug: 'wat-als-ik-niet-wil-deelnemen',
+  }, {
+    question: 'Hebben vakbonden, en het middenveld in het algemeen, dan niks meer te zeggen?',
+    summary: 'Zeker wel! Naast de vertegenwoordiging via verkozen politici blijven ook andere vormen van vertegenwoordiging van het grootste belang. De stem van vakbonden en andere middenveldorganisaties kan aan bod komen in de beginfase van het deliberatieve proces, naast die van klimaatwetenschappers, ecologen, juridische experts, journalisten, activisten, architecten, vertegenwoordigers van het bedrijfsleven, de bouw-, landbouw- , energie-, transport- en mobiliteitssector, van ministeries, de ambtenarij, etc. Tijdens de eerste sessies van Het Burgerparlement worden de gelote burgers immers geïnformeerd door een brede waaier experten en belanghebbenden. Maar veruit de belangrijkste rol voor vakbonden en middenveldorganisaties is weggelegd na het afsluiten van de werkzaamheden van Het Burgerparlement. Zij dienen er mee op toe te zien dat de voorstellen van Het Burgerparlement voldoende impact hebben op het reële beleid.',
+    answer: '',
+    tags: ['parlement', 'experten', 'belanghebbenden'],
+    slug: 'wat-met-het-middenveld',
   },
 ];

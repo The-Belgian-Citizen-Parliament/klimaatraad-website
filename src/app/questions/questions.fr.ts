@@ -229,5 +229,11 @@ export const questionsFr: Question[] = [
     answer: '',
     tags: ['pratique', 'participation', 'tirage au sort'],
     slug: 'et-si-je-ne-veux-pas-participer',
+  }, {
+    question: 'Les syndicats, et la société civile en général, n’ont-ils plus rien à dire ?',
+    summary: 'Outre la représentation par des hommes et femmes politiques élu.e.s, d\'autres formes de représentation restent de la plus haute importance. La voix des syndicats et des autres organisations de la société civile peut être entendue dès les premières étapes du processus de délibération, aux côtés de celle des climatologues, des écologistes, des juristes, des journalistes, des militants, des architectes, des représentants des entreprises, des secteurs de la construction, de l\'agriculture, de l\'énergie, des transports et de la mobilité, des ministères, des fonctionnaires, etc. Lors des premières sessions du Parlement Citoyen, un large éventail d\'experts et de parties prenantes informent les citoyens tirés au sort. Toutefois, le rôle de loin le plus important pour les syndicats et les organisations de la société civile sera joué après la conclusion des travaux du Parlement Citoyen. Ils doivent s\'assurer que les propositions du Parlement Citoyen ont un impact suffisant sur la politique réelle.',
+    answer: '',
+    tags: ['parlement', 'experts'],
+    slug: 'les-syndicats-ont-ils-quelque-chose-a-dire',
   },
 ];
