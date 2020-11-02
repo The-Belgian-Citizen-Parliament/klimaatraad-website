@@ -218,5 +218,9 @@
     <a class="c-logo" href="https://www.youth4climate.be">
       <img class="c-logo__image" src="/assets/img/logos/logo-youth-for-climate.png" alt="Youth For Climate">
     </a>
+
+    <a class="c-logo" [routerLink]="languageService.route('about') | async" style="text-align: center;">
+      {{ 'viewAllSupportingOrganizations' | translate }}
+    </a>
   </div>
 </div>
