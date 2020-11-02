@@ -1,10 +1,21 @@
 .c-video__viewport {
   video {
     width: 100%;
+    object-fit: cover;
+    background-size: cover;
   }
 }
 
 $vid-courrousel-height: 180px;
+
+.vid-title {
+  text-align: center;
+
+  .vid-title-name {
+    font-size: 1.33em;
+    font-weight: 500;
+  }
+}
 
 .vid-carrousel {
   margin-top: 20px;

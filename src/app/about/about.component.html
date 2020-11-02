@@ -12,7 +12,7 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.extinctionrebellion.be">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.extinctionrebellion.be">
             <span class="u-visually-hidden">Extinction Rebellion Belgium</span>
             <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true">
               <use xlink:href="#logo-extinction-rebellion"></use>
@@ -26,7 +26,7 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.greenpeace.be">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.greenpeace.be">
             <span class="u-visually-hidden">Greenpeace</span>
             <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true">
               <use xlink:href="#logo-greenpeace"></use>
@@ -40,8 +40,11 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" [href]="(languageService.lang | async) === 'nl' ? 'https://www.grootoudersvoorhetklimaat.be/' : 'https://gpclimat.be/'">
-            <img class="c-logo__image" [src]="'/assets/img/logos/' + ((languageService.lang | async) === 'fr' ? 'logo-grandparents-pour-le-climat.png' : (languageService.lang | async) === 'nl' ? 'logo-grootouders-voor-het-klimaat.png' : 'logo-grandparents-for-climate.png')" alt="{{ 'Grandparents pour le climat' | translate }}">
+          <a class="c-logo c-media-object__logo" target="_blank"
+            [href]="(languageService.lang | async) === 'nl' ? 'https://www.grootoudersvoorhetklimaat.be/' : 'https://gpclimat.be/'">
+            <img class="c-logo__image"
+              [src]="'/assets/img/logos/' + ((languageService.lang | async) === 'fr' ? 'logo-grandparents-pour-le-climat.png' : (languageService.lang | async) === 'nl' ? 'logo-grootouders-voor-het-klimaat.png' : 'logo-grandparents-for-climate.png')"
+              alt="{{ 'Grandparents pour le climat' | translate }}">
           </a>
         </figure>
         <div class="c-media-object__body">
@@ -51,7 +54,7 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.hartbovenhard.be">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.hartbovenhard.be">
             <img class="c-logo__image" src="/assets/img/logos/logo-hart-boven-hard.png" alt="{{ 'Hart Boven Hard' | translate }}">
           </a>
         </figure>
@@ -62,7 +65,7 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.klimaatzaak.eu">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.klimaatzaak.eu">
             <span class="u-visually-hidden">Klimaatzaak</span>
             <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true">
               <use xlink:href="#logo-klimaatzaak"></use>
@@ -76,7 +79,7 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.oikos.be">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.oikos.be">
             <img class="c-logo__image" src="/assets/img/logos/logo-oikos.png" alt="Oikos">
           </a>
         </figure>
@@ -87,7 +90,7 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.oxfam.be">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.oxfam.be">
             <span class="u-visually-hidden">Oxfam</span>
             <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true">
               <use xlink:href="#logo-oxfam"></use>
@@ -101,96 +104,125 @@
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.youth4climate.be">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.youth4climate.be">
             <img class="c-logo__image" src="/assets/img/logos/logo-youth-for-climate.png" alt="Youth For Climate">
           </a>
         </figure>
         <div class="c-media-object__body">
           <p><strong>Youth For Climate</strong> {{ 'Youth For Climate Info' | translate }}</p>
-
         </div>
       </div>
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.gentsmilieufront.be">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://climate-express.be">
+            <img class="c-logo__image" src="/assets/img/logos/logo-climate-express.png" alt="Climate Express">
+          </a>
+        </figure>
+        <div class="c-media-object__body">
+          <p><strong>Climate Express</strong> {{ 'Climate Express Info' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="c-media-object">
+        <figure class="c-media-object__figure">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.vormingplus.be">
+            <img class="c-logo__image" src="/assets/img/logos/logo-vormingplus.png" alt="Vorming Plus">
+          </a>
+        </figure>
+        <div class="c-media-object__body">
+          <p><strong>Vorming Plus</strong> {{ 'Vorming Plus Info' | translate }}</p>
+        </div>
+      </div>
+
+      <div class="c-media-object">
+        <figure class="c-media-object__figure">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.gentsmilieufront.be">
             <img class="c-logo__image" src="/assets/img/logos/gmf.png" alt="Gents MilieuFront">
           </a>
         </figure>
         <div class="c-media-object__body">
           <p><strong>Gents MilieuFront</strong> {{ 'Gents MilieuFront Info' | translate }}</p>
-
         </div>
       </div>
 
       <div class="c-media-object">
         <figure class="c-media-object__figure">
-          <a class="c-logo c-media-object__logo" href="https://www.poussesetvous.be">
+          <a class="c-logo c-media-object__logo" target="_blank" href="https://www.poussesetvous.be">
             <img class="c-logo__image" src="/assets/img/logos/logo-pousses-et-vous.png" alt="Pousses et Vous">
           </a>
         </figure>
         <div class="c-media-object__body">
           <p><strong>Pousses et Vous</strong> {{ 'Pousses et Vous Info' | translate }}</p>
-
         </div>
       </div>
 
     </div>
   </div>
   <div class="c-logo-grid">
-    <a class="c-logo" href="https://www.act4change.be">
+    <a class="c-logo" target="_blank" href="https://www.act4change.be">
       <img class="c-logo__image" src="/assets/img/logos/logo-act4change.png" alt="Act4Change">
     </a>
 
-    <a class="c-logo" href="https://www.agora.brussels">
+    <a class="c-logo" target="_blank" href="https://www.agora.brussels">
       <span class="u-visually-hidden">Agora</span>
       <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true">
         <use xlink:href="#logo-agora"></use>
       </svg>
     </a>
 
-    <a class="c-logo" href="https://allforclimate.earth">
+    <a class="c-logo" target="_blank" href="https://allforclimate.earth">
       <img class="c-logo__image" src="/assets/img/logos/logo-all-for-climate.png" alt="All For Climate">
     </a>
 
-    <a class="c-logo" href="https://www.burgerlijst.be">
+    <a class="c-logo" target="_blank" href="https://www.burgerlijst.be">
       <span class="u-visually-hidden">Burgerlijst Antwerpen</span>
       <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true">
         <use xlink:href="#logo-burgerlijst"></use>
       </svg>
     </a>
 
-    <a class="c-logo" href="https://www.amazone.be">
+    <a class="c-logo" target="_blank" href="https://www.amazone.be">
       <img class="c-logo__image" src="/assets/img/logos/logo-vzw-amazone.png" alt="VZW Amazone">
     </a>
 
-    <a class="c-logo" href="http://www.coalitionkaya.be">
+    <a class="c-logo" target="_blank" href="http://www.coalitionkaya.be">
       <img class="c-logo__image" src="/assets/img/logos/logo-kaya.png" alt="KAYA">
     </a>
 
-    <a class="c-logo" href="https://www.masereelfonds.be">
+    <a class="c-logo" target="_blank" href="https://www.masereelfonds.be">
       <span class="u-visually-hidden">Masereelfonds</span>
       <svg class="c-logo__image" viewBox="0 0 120 40" role="img" aria-hidden="true">
         <use xlink:href="#logo-masereelfonds"></use>
       </svg>
     </a>
 
-    <a class="c-logo" href="https://www.palestinasolidariteit.be">
-      <img class="c-logo__image" src="/assets/img/logos/logo-palestina-solidariteit.png" alt="Palestina Solidariteit">
+    <a class="c-logo" target="_blank" href="https://riseforclimatebelgium.eu">
+      <img class="c-logo__image" src="/assets/img/logos/logo-riseforclimate.png" alt="Rise for Climate">
     </a>
 
-    <a class="c-logo" href="https://www.groupeone.be">
+    <a class="c-logo" target="_blank" href="https://www.groupeone.be">
       <img class="c-logo__image" src="/assets/img/logos/logo-groupeone.png" alt="Groupe One">
     </a>
 
-    <a class="c-logo" href="http://www.ecores.eu">
+    <a class="c-logo" target="_blank" href="http://www.ecores.eu">
       <img class="c-logo__image" src="/assets/img/logos/logo-ecores.png" alt="Ecores">
     </a>
   </div>
 
   <div class="container s-editor u-margin-top-7 u-text-align-center">
-    <p><a href="https://antwerpenize.be">Antwerpenize</a> | <a href="http://antwerpenaantwoord.be">Antwerpen aan 't woord</a> | <a
-        href="#0">Club Eco</a> | <a href="https://www.globelink.be">Globelink VZW</a></p>
+    <p>
+      <a target="_blank" href="http://state-of-the-arts.net">State of the arts</a> |
+      <a target="_blank" href="https://antwerpenize.be">Antwerpenize</a> |
+      <a target="_blank" href="http://antwerpenaantwoord.be">Antwerpen aan 't woord</a> |
+      <a [routerLink]="">Club Eco</a> |
+      <a target="_blank" href="https://www.globelink.be">Globelink vzw</a> |
+      <a target="_blank" href="{{ (languageService.lang | async) !== 'nl' ? 'https://forumpourlatransition.be' : 'https://forumpourlatransition.be/index.php/transitieforum/' }}">{{ 'Transitieforum' | translate }}</a> |
+      <a target="_blank" href="https://www.furiavzw.be">Furia</a> |
+      <a target="_blank" href="https://lespetitesmains.be">Les Petites Mains</a> |
+      <a target="_blank" href="https://mothersstepin.be">{{ 'Mothers step in' | translate }}</a> |
+      <a target="_blank" href="https://www.emergences.org">Émergences</a>
+    </p>
     <figure class="u-max-width-3" aria-hidden="true">
       <img src="/assets/img/illustrations/wreath.png">
     </figure>
@@ -202,6 +234,30 @@
     <div class="c-callout">
       <p>{{ 'wantToJoinUs' | translate }}
         <a href="mailto:info@thecitizensparliament.be">{{ 'Contact us' | translate }}</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="c-panel u-padding-top-5">
+  <div class="container s-editor u-text-align-center">
+    <h2 class="h3" [innerHtml]="'pressTitle' | translate"></h2>
+    <div class="u-margin-top-7">
+      <p>
+        <ng-container *ngIf="(languageService.lang | async) !== 'nl'">
+          <a target="_blank" href="https://www.lalibre.be/dernieres-depeches/belga/le-gouvernement-de-croo-appele-a-initier-un-parlement-citoyen-sur-l-urgence-ecologique-5f7db3fa7b50a641f635fe0d">La Libre</a> |
+          <a target="_blank" href="https://www.rtbf.be/info/belgique/detail_le-gouvernement-de-croo-appele-a-initier-un-parlement-citoyen-sur-l-urgence-ecologique?id=10602920">RTBF</a> |
+          <a target="_blank" href="https://www.levif.be/actualite/environnement/un-parlement-citoyen-pour-l-urgence-ecologique-le-parlement-actuel-n-arrive-pas-a-prendre-de-decision/article-normal-1342499.html">Le Vif</a> |
+          <a target="_blank" href="http://www.vivreici.be/article/detail_le-gouvernement-de-croo-appele-a-initier-un-parlement-citoyen-sur-l-urgence-ecologique?id=456514">Vivre ici</a>
+        </ng-container>
+        <ng-container *ngIf="(languageService.lang | async) !== 'fr'">
+          <a target="_blank" href="https://www.standaard.be/cnt/dmf20201005_97580279">De Standaard</a> |
+          <a target="_blank" href="https://www.demorgen.be/nieuws/burgerparlement-wil-politici-adviseren-over-ecologische-noodtoestand~b2cf68a2/">De Morgen</a> |
+          <a target="_blank" href="https://www.nieuwsblad.be/cnt/dmf20201007_96396455">Het Nieuwsblad</a> |
+          <a target="_blank" href="https://www.knack.be/nieuws/planet-earth/oproep-aan-regering-start-burgerparlement-om-ecologische-noodtoestand-aan-te-pakken/article-normal-1650691.html">Knack</a> |
+          <a target="_blank" href="https://www.sampol.be/2020/10/pleidooi-voor-een-nationaal-burgerparlement">Sampol</a> |
+          <a target="_blank" href="https://decorrespondent.nl/11707/meer-dan-een-inspraakavond-beter-dan-een-referendum-met-deze-democratische-vernieuwing-kan-de-burger-zelf-beleid-maken/5441384180309-90a007f4">De Correspondent</a>
+        </ng-container>
+      </p>
     </div>
   </div>
 </div>

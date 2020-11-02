@@ -39,21 +39,23 @@
   "sendUsAMail": "Drop us a line!",
   "noQuestionsWithThisFilter": "No questions found with this filter.",
   "showAllQuestions": "Show all questions",
+  "viewAllSupportingOrganizations": "View all 30+ supporting organizations",
 
   "contactYourRepresentativesTitle": "Contact your representatives",
   "contactYourRepresentativesText": "Join our campaign! Send a mail to your representatives or send a tweet to our newly appointed ministers.",
   "contactYourRepresentativesParticipate": "Participate",
 
   "footerMain": "The Citizens’ Parliament is an initiative from a group of citizens, supported by a coalition of ",
-  "manyOthers": "more than 20 organizations and movements",
+  "manyOthers": "some thirty organizations and movements",
   "footerSmall": "If you have questions regarding privacy or the storage of your data, read our <a href=\"/privacy\">privacy statement</a> or contact us via <a href=\"mailto:info@thecitizensparliament.be\">info@thecitizensparliament.be</a>.",
   "illustrationsBy": "Illustrations by",
   "andDesignBy": "and design by",
 
   "aboutTitle": "Meet <span class=\"u-color-teal\">the organizations</span> behind <span class=\"u-color-orange-red\">The Citizens' Parliament</span>",
-  "aboutSubtitle": "The Citizens’ Parliament is an initiative from a group of citizens, supported by a coalition of organizations and movements. The whole campaign cost nothing and was created by the voluntary contributions of many.",
+  "aboutSubtitle": "The Citizens’ Parliament is an initiative from a group of citizens, supported by a coalition of some thirty organizations and movements. The whole campaign was created by the voluntary contributions of many.",
   "wantToJoinUs": "Want to join us with your organization, or have any questions?",
   "Contact us": "Let's get in touch!",
+  "pressTitle": "Appeared in the <span class=\"u-color-teal\">press</span>",
 
   "Other questions": "Other questions",
   "Check out": "Check out",
@@ -69,6 +71,8 @@
   "Oikos": "Oikos",
   "Oxfam": "Oxfam",
   "Youth For Climate": "Youth For Climate",
+  "Transitieforum": "Transitieforum / Forum pour la Transition",
+  "Mothers step in": "Mothers step in",
 
   "Extinction Rebellion Belgium Info": "is an international movement that uses non-violent direct action to persuade governments to act on the Climate and Ecological Emergency.",
   "Greenpeace Info": "exists because this fragile earth deserves a voice. It needs solutions. It needs change. It needs action.",
@@ -80,6 +84,8 @@
   "Youth For Climate Info": "is an action group founded by Anuna De Wever and Kyra Gantois. Current climate policy is not ambitious enough. As long as it is not, they organize weekly strikes.",
   "Gents MilieuFront Info": "is a regional environmental association from Ghent and the surrounding area that wants to give the environment a boost through positive actions. GMF is supported by members and volunteers.",
   "Pousses et Vous Info": "is a non-profit organization offering animations around the environment, for all types of public, in the form of playful & interactive missions emphasizing critical thinking & scientific approach.",
+  "Climate Express Info": "is a group of volunteers who are politically unattached and strive for a decisive and solidary approach to the climate problem.",
+  "Vorming Plus Info": "are thirteen pluralistic socio-cultural organisations in as many regions in Flanders and Brussels. Together they strive for a sustainable, inclusive and democratic society.",
 
   "Mail your representatives": "Mail your representatives",
   "Who do you want to mail?": "Who do you want to mail?",
@@ -154,19 +160,19 @@
   "proposalTitle": "The <span class=\"u-color-teal\">proposal</span>",
   "proposalSubtitle": "",
 
-  "proposalIntro1": "Het Burgerparlement / Le Parlement Citoyen & Greenpeace, Youth for Climate, Kaya, Oxfam, Klimaatzaak, Grandparents pour le Climat, Masereelfonds, Antwerpenize, Globelink vzw, Burgerlijst Antwerpen, Act4Change, AllForClimate, Oikos, Hart Boven Hard, State of the Arts, Antwerpen aan 't woord, Gents Milieufront, Agora, Extinction Rebellion, Furia, Palestina Solidariteit, Pousses et vous, EcoRes, Groupe One, Grootouders voor het Klimaat",
+  "proposalIntro1": "Het Burgerparlement / Le Parlement Citoyen & Greenpeace, Youth for Climate, Kaya, Oxfam, Klimaatzaak, Grandparents pour le Climat, Masereelfonds, Antwerpenize, Globelink vzw, Burgerlijst Antwerpen, Act4Change, AllForClimate, Oikos, Hart Boven Hard, State of the Arts, Antwerpen aan 't woord, Gents Milieufront, Agora, Extinction Rebellion, Furia, Rise for Climate Belgium, Pousses et vous, EcoRes, Groupe One, Grootouders voor het Klimaat, vzw Amazone, Forum pour la Transition, Les p'tites mains, Vormingplus, Émergences, Mothers step in and Climate Express",
   "proposalIntro2": "call upon the Federal Government to commit itself, building on Art. 7bis of the Belgian Constitution<sup>1</sup>, to initiate a Citizens' Parliament during the course of this legislature, on the topic of the ecological state of emergency. This body",
-  "proposalDemand1": "deals with a question that is not limited to global warming but focuses on the broader perspective of the ecological crisis, and thus takes into account the nine planetary boundaries currently identified<sup>2</sup>;",
-  "proposalDemand2": "consists of a group of citizens drawn by lot, who, taking into account a series of demographic criteria, form a sufficiently representative cross-section of the total Belgian population;",
-  "proposalDemand3": "takes into account inclusiveness guarantees such as daily allowances, transport allowances, accommodation, childcare and other forms of support for its members, so as to lower the participation threshold;",
-  "proposalDemand4": "be informed by a group of experts and stakeholders with a balanced composition, taking into account the scientific consensus around the ecological crisis;",
-  "proposalDemand5": "guards its independence with respect to political, economic and social actors (including the federal government as well as the organisations and movements that support this proposal) by means of a well-balanced organisational chart with the necessary checks and balances, coordinated by a professional organisation specialised in deliberative processes;",
-  "proposalDemand6": "develops policy proposals for a coherent policy in response to the ecological emergency, both at the federal and regional levels and at that of the communities;",
-  "proposalDemand7": "has a sufficient impact on the real policy of the federal state, the regions and the communities, in that each of its policy proposals is implemented by the competent government(s) or is submitted to the competent parliament(s) for a vote (with thorough and publicly accessible reasons being given each time proposals are rejected);",
-  "proposalDemand8": "is guided by the following principles: (1) proportionality in relation to the risks addressed, (2) social justice, (3) an awareness of the overall impact of Belgian production and consumption and (4) the precautionary principle.",
+  "proposalDemand1": "deals with a question that is <span class=\"u-color-orange-red\">not limited to global warming</span> but focuses on the broader perspective of the ecological crisis, and thus takes into account the nine planetary boundaries currently identified<sup>2</sup>;",
+  "proposalDemand2": "consists of a group of <span class=\"u-color-orange-red\">citizens drawn by lot</span>, who, taking into account a series of demographic criteria, form a sufficiently representative cross-section of the total Belgian population;",
+  "proposalDemand3": "takes into account <span class=\"u-color-orange-red\">inclusiveness guarantees</span> such as daily allowances, transport allowances, accommodation, childcare and other forms of support for its members, so as to lower the participation threshold;",
+  "proposalDemand4": "be <span class=\"u-color-orange-red\">informed by a group of experts and stakeholders</span> with a balanced composition, taking into account the scientific consensus around the ecological crisis;",
+  "proposalDemand5": "guards its <span class=\"u-color-orange-red\">independence</span> with respect to political, economic and social actors (including the federal government as well as the organisations and movements that support this proposal) by means of a well-balanced organisational chart with the necessary checks and balances, coordinated by a professional organisation specialised in deliberative processes;",
+  "proposalDemand6": "develops policy proposals for a <span class=\"u-color-orange-red\">coherent policy</span> in response to the ecological emergency, both at the federal and regional levels and at that of the communities;",
+  "proposalDemand7": "has a sufficient impact on the real policy of the federal state, the regions and the communities, in that each of its policy proposals is <span class=\"u-color-orange-red\">implemented by the competent government(s)</span> or is <span class=\"u-color-orange-red\">submitted to the competent parliament(s) for a vote</span> (with thorough and publicly accessible reasons being given each time proposals are rejected);",
+  "proposalDemand8": "is guided by the following <span class=\"u-color-orange-red\">principles</span>: (1) proportionality in relation to the risks addressed, (2) social justice, (3) an awareness of the overall impact of Belgian production and consumption and (4) the precautionary principle.",
   "proposalOutro": "The Citizens' Parliament presents a detailed plan on the basis of the basic principles set out above. This was not signed in its entirety by the various groups and organisations in the supporting coalition, but helps to imagine in concrete terms what a Citizens' Parliament on the ecological emergency could look like. You can read the plan below (currently only in Dutch and French).",
   "proposalFootnote1": "Translation: “In exercising their respective powers, the Federal State, the Communities and the Regions shall pursue the objectives of sustainable development in its social, economic and environmental aspects, taking into account intergenerational solidarity.”",
-  "proposalFootnote2": "(1) global warming, (2) loss of biodiversity, (3) the nitrogen and phosphorus cycle, (4) the hole in the ozone layer, (5) ocean acidification, (6) water scarcity, (7) land use, (8) chemical pollution, (9) aerosols in the atmosphere.",
+  "proposalFootnote2": "(1) global warming, (2) loss of biodiversity, (3) the nitrogen and phosphorus cycle, (4) the hole in the ozone layer, (5) ocean acidification, (6) water scarcity, (7) land use, (8) chemical pollution, (9) aerosols in the atmosphere (<a target=\"_blank\" href=\"https://science.sciencemag.org/content/347/6223/1259855\">Will Steffen e.a.</a>)",
 
   "proposalDownload": "Download the complete proposal"
 }

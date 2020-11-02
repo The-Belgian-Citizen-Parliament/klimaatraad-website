@@ -3,7 +3,7 @@ import { Question } from './question';
 export const questionsFr: Question[] = [
   {
     question: 'Combien cela va-t-il coûter ?',
-    summary: 'En France, une <a target="_blank" href="https://www.conventioncitoyennepourleclimat.fr/budget/">initiative similaire</a> a coûté 5,4 millions d\'euros. Les dépenses ont été étroitement contrôlées par une commission d’audit indépendante, et réparties comme suit : 34% pour l’encadrement, l\'orientation et l\'organisation, 28% pour les dépenses et honoraires des membres, 16% pour la logistique et l’accueil, 9% pour la communication, 6% pour la communication avec le gouvernement, 5% pour les frais de tirage au sort, 2% pour les dépenses des experts. Ce montant peut paraître élevé mais il ne représente pas grand chose par rapport au mandat d’un Parlement Citoyen sur l’urgence écologique. Il est également relativement bas comparé, par exemple, au <a target="_blank" href="https://www.senate.be/event/20191213-budget/20191213-budget_nl.html">budget du Sénat belge</a>, une institution qui n\'a pratiquement plus aucun pouvoir et dont le budget annuel s\'élève à 46 millions d\'euros.',
+    summary: 'En France, une <a target="_blank" href="https://www.conventioncitoyennepourleclimat.fr/budget/">initiative similaire</a> a coûté 5,4 millions d\'euros. Les dépenses ont été étroitement contrôlées par une commission d’audit indépendante, et réparties comme suit : 34% pour l’encadrement, l\'orientation et l\'organisation, 28% pour les dépenses et honoraires des membres, 16% pour la logistique et l’accueil, 9% pour la communication, 6% pour la communication avec le gouvernement, 5% pour les frais de tirage au sort, 2% pour les dépenses des experts. Ce montant peut paraître élevé mais il ne représente pas grand chose par rapport au mandat d’un Parlement Citoyen sur l’urgence écologique. Il est également relativement bas comparé, par exemple, au <a target="_blank" href="https://www.senate.be/event/20191213-budget/20191213-budget_nl.html">budget du Sénat belge</a>, une institution qui n\'a pratiquement plus aucun pouvoir et dont le budget annuel s\'élève à 46 millions d\'euros. Ou bien comparez cela aux 70 millions d\'euros de subventions que les partis belges réunis reçoivent chaque année.',
     answer: '',
     tags: ['parlement', 'pratique', 'budget', 'cher', 'prix'],
     slug: 'ca-va-couter-combien',
@@ -229,5 +229,11 @@ export const questionsFr: Question[] = [
     answer: '',
     tags: ['pratique', 'participation', 'tirage au sort'],
     slug: 'et-si-je-ne-veux-pas-participer',
+  }, {
+    question: 'Les syndicats, et la société civile en général, n’ont-ils plus rien à dire ?',
+    summary: 'Outre la représentation par des hommes et femmes politiques élu.e.s, d\'autres formes de représentation restent de la plus haute importance. La voix des syndicats et des autres organisations de la société civile peut être entendue dès les premières étapes du processus de délibération, aux côtés de celle des climatologues, des écologistes, des juristes, des journalistes, des militants, des architectes, des représentants des entreprises, des secteurs de la construction, de l\'agriculture, de l\'énergie, des transports et de la mobilité, des ministères, des fonctionnaires, etc. Lors des premières sessions du Parlement Citoyen, un large éventail d\'experts et de parties prenantes informent les citoyens tirés au sort. Toutefois, le rôle de loin le plus important pour les syndicats et les organisations de la société civile sera joué après la conclusion des travaux du Parlement Citoyen. Ils doivent s\'assurer que les propositions du Parlement Citoyen ont un impact suffisant sur la politique réelle.',
+    answer: '',
+    tags: ['parlement', 'experts'],
+    slug: 'les-syndicats-ont-ils-quelque-chose-a-dire',
   },
 ];

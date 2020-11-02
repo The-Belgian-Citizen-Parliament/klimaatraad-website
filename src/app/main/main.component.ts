@@ -1,9 +1,10 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { QuestionsService } from '../questions/questions.service';
 import { environment } from 'src/environments/environment';
 import { RandomImageService } from '../common/random-image.service';
 import { LanguageService } from '../common/language.service';
 import { Question } from '../questions/question';
+import { videos } from './videos';
 
 @Component({
   selector: 'app-main',
@@ -11,9 +12,15 @@ import { Question } from '../questions/question';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+  @ViewChild('videoPlayer') videoPlayer: ElementRef;
+  @ViewChild('videoCarrousel') videoCarrousel: ElementRef;
+
   questions: Question[] = [];
   imgs: string[] = [];
   lang = environment.language;
+
+  videos = videos;
+  currentVideo;
 
   constructor(private questionsService: QuestionsService, public randomImage: RandomImageService,
     public languageService: LanguageService) {
@@ -22,49 +29,21 @@ export class MainComponent {
 
     languageService.lang.subscribe((lang) => this.lang = lang);
 
-    // this.currentVideo = this.videos[4];
+    this.currentVideo = this.videos[this.lang][this.videos[this.lang].length - 1];
   }
 
-  // @ViewChild('videoPlayer') videoPlayer: ElementRef;
-  // @ViewChild('videoCarrousel') videoCarrousel: ElementRef;
+  ngAfterViewInit(): void {
+    (this.videoPlayer.nativeElement as HTMLVideoElement).onended = () => {
+      const nextVideoId = (this.currentVideo.nr + 1) % (this.videos[this.lang].length);
+      this.playVid(this.videos[this.lang][nextVideoId]);
+    }
+  }
 
-  // iFrameLoaded = false;
+  playVid(vid) {
+    this.currentVideo = vid;
+    setTimeout(() => this.videoPlayer.nativeElement.play());
+    this.videoCarrousel.nativeElement.scrollLeft = (vid.nr * this.getImageWidth()) - (this.getImageWidth() / 2);
+  }
 
-
-  // videos = [
-  //   { nr: 0, src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/nn1.mp4', poster: '/assets/vidposters/nn1.jpg' },
-  //   { nr: 1, src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/nn2.mp4', poster: '/assets/vidposters/nn2.jpg' },
-  //   { nr: 2, src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/nn3.mp4', poster: '/assets/vidposters/nn3.jpg' },
-  //   { nr: 3, src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/nn4.mp4', poster: '/assets/vidposters/nn4.jpg' },
-  //   { nr: 4, src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/maaike.mp4', poster: '/assets/vidposters/maaike.jpg' },
-  // ];
-
-  // currentVideo;
-
-  // constructor(private questionsService: QuestionsService) {
-  //   this.questions = questionsService.getRandomQuestions(3);
-  //   this.currentVideo = this.videos[4];
-  // }
-
-  // ngAfterViewInit(): void {
-  //   (this.videoPlayer.nativeElement as HTMLVideoElement).onended = () => this.playVid(this.videos[this.currentVideo.nr + 1]);
-  // }
-
-  // moreQuestions = () => this.questions = this.questionsService.getRandomQuestions(3);
-
-  // playVid(vid) {
-  //   this.currentVideo = vid;
-  //   setTimeout(() => this.videoPlayer.nativeElement.play());
-  //   this.videoCarrousel.nativeElement.scrollLeft = (vid.nr * this.getImageWidth()) - (this.getImageWidth() / 2);
-  // }
-
-  // scrollLeft() {
-  //   this.videoCarrousel.nativeElement.scrollLeft -= this.getImageWidth()
-  // }
-
-  // scrollRight() {
-  //   this.videoCarrousel.nativeElement.scrollLeft += this.getImageWidth();
-  // }
-
-  // getImageWidth = () => this.videoCarrousel.nativeElement.children[1].offsetWidth; // 0 = scroll image
+  getImageWidth = () => this.videoCarrousel.nativeElement.children[0].offsetWidth;
 }

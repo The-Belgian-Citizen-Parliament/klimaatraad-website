@@ -8,5 +8,5 @@ import { LanguageService } from '../common/language.service';
   styleUrls: ['./memorandum.component.scss']
 })
 export class MemorandumComponent {
-  lang = environment.language;
+  constructor(public languageService: LanguageService) {}
 }
