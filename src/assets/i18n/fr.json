@@ -83,6 +83,7 @@
   "Pousses et Vous Info": "est une A.S.B.L proposant des animations autour de l'environnement, pour tout type de public, sous forme de missions ludiques & interactives mettant l'accent sur l'esprit critique & la démarche scientifique.",
   "Climate Express Info": "est un groupe de volontaires qui sont politiquement indépendants et engagés dans une approche décisive et solidaire du problème climatique.",
   "Vorming Plus Info": "sont treize organisations socioculturelles pluralistes dans autant de régions de Flandre et de Bruxelles. Ensemble, ils œuvrent pour une société durable, inclusive, solidaire et démocratique.",
+  "11.11.11 Info": "regroupe les forces de 60 organisations et d'environ 20 000 bénévoles répartis au sein de 330 groupes locaux. Ils s'engagent pour un objectif commun: un monde de justice et sans pauvreté.",
 
   "Show more": "En savoir plus",
   "Show less": "Montrer moins",
@@ -121,7 +122,7 @@
   "Thanks": "Merci",
   "representativesMailed": "Les représentants à qui vous avez choisi de vous adresser ont reçu votre courriel et peuvent désormais vous répondre. Croisons les doigts !",
   "weWillKeepYouUpToDate": "Nous vous tiendrons informés de l'avancement de cette action.",
-  "No email": "Pas d'adresse e-mail",
+  "No email": "Pas d'adresse e-mail publique",
   "step": "Étape",
   "step1title": "Qui voulez-vous envoyer?",
   "step1explanation": "Utilisez les filtres pour trouver et sélectionner les politiciens que vous souhaitez. Nous n'utilisons que les adresses mail accessibles au public.",
@@ -130,7 +131,9 @@
   "here": "ici",
   "step3title": "Composez votre courrier",
   "step3explanation": "Prenez votre temps pour écrire pourquoi c'est important pour vous, ou utilisez un des textes prédéfinis si vous êtes pressé.",
-  "No representatives found with these filters": "Aucun représentant trouvé avec ces filtres",
+  "No representatives found with these filters": "Aucun député trouvé avec ces filtres. Veuillez controler:",
+  "No representatives found with these filters Info 1": "Les ministres ne sont pas nécessairement des députés élus. Vous souhaitez contacter des ministres ? Envoyez-leur plutôt un tweet (suivra plus tard) !",
+  "No representatives found with these filters Info 2": "Vérifiez que vous avez sélectionné le bon parlement.",
   "I have read and accept the": "Aux fins de la présente campagne, je donne mon accord quant à la collecte et à l'utilisation de mes données, comme expliqué dans la version complète du",
   "Participated recently": "Ont participé récemment",
 
@@ -160,7 +163,7 @@
   "proposalTitle": "La <span class=\"u-color-teal\">proposition</span>",
   "proposalSubtitle": "",
 
-  "proposalIntro1": "Le Parlement Citoyen & Greenpeace, Youth for Climate, Kaya, Oxfam, Klimaatzaak, Grandparents pour le Climat, Masereelfonds, Antwerpenize, Globelink vzw, Burgerlijst Antwerpen, Act4Change, AllForClimate, Oikos, Hart Boven Hard, State of the Arts, Antwerpen aan 't woord, Gents Milieufront, Agora, Extinction Rebellion, Furia, Rise for Climate Belgium, Pousses et vous, EcoRes, Groupe One, Grootouders voor het Klimaat, vzw Amazone, Forum pour la Transition, Les p'tites mains, Vormingplus, Émergences, Mères au front et Climate Express",
+  "proposalIntro1": "Le Parlement Citoyen & Greenpeace, Youth for Climate, Kaya, Oxfam, Klimaatzaak, Grandparents pour le Climat, Boerenforum, 11.11.11, Masereelfonds, Antwerpenize, Globelink vzw, Burgerlijst Antwerpen, Act4Change, AllForClimate, Oikos, Hart Boven Hard, State of the Arts, Antwerpen aan 't woord, Gents Milieufront, Agora, Extinction Rebellion, Furia, Rise for Climate Belgium, Pousses et vous, EcoRes, Groupe One, Grootouders voor het Klimaat, vzw Amazone, Forum pour la Transition, Les p'tites mains, Vormingplus, Émergences, Mères au front, Netwerk Bewust Verbruiken et Climate Express",
   "proposalIntro2": "appellent le gouvernement fédéral à s'engager, en s'appuyant sur l'article 7bis de la Constitution belge<sup>1</sup>, à initier au cours de cette législature un Parlement Citoyen autour de l'urgence écologique. Cet organisme:",
   "proposalDemand1": "traitera d'une question qui ne <span class=\"u-color-orange-red\">se limite pas au réchauffement climatique</span>, mais portera sur la crise écologique de manière plus large et prendra ainsi en compte les neuf frontières planétaires actuellement identifiées<sup>2</sup> ;",
   "proposalDemand2": "consistera en un groupe de <span class=\"u-color-orange-red\">citoyen.ne.s tiré.e.s au sort</span> qui, tenant compte d'une série de critères démographiques, forment un échantillon représentatif de l’ensemble de la population belge ;",
