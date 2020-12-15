@@ -141,6 +141,12 @@ export const questionsNl: Question[] = [
     slug: 'waarom-zouden-willekeurige-burgers-in-mijn-plaats-kunnen-beslissen',
   }, {
     question: 'Ik heb jonge kinderen. Dan kan ik toch niet meedoen?',
+    summary: 'Toch wel. Er zijn inderdaad belangrijke participatiedrempels. De financiële drempel wordt weggenomen met dagvergoedingen, transportvergoedingen en accommodatie. En er wordt voorzien in kinderopvang, hulp bij ouderenzorg, zorg voor familieleden met een beperking,… Waar nodig (neem bvb leerkrachten) wordt vervanging mee gefaciliteerd.',
+    answer: '',
+    tags: ['praktisch', 'inclusiviteit', 'participatiedrempel', 'vergoeding', 'burgerparlementsverlof'],
+    slug: 'ik-heb-jonge-kinderen-dan-kan-ik-toch-niet-meedoen',
+  }, {
+    question: 'Ik moet werken. Dan kan ik toch niet meedoen?',
     summary: 'Toch wel. Elk lid krijgt dagvergoedingen (ook voor het nodige voorbereidende werk), transportvergoedingen en accommodatie. Ook zorgtaken kunnen mensen beletten om tijd vrij te maken voor de activiteiten van het Burgerparlement. Daarom wordt er voorzien in kinderopvang, hulp bij ouderenzorg, zorg voor familieleden met een beperking,… Werkenden krijgen een burgerparlementsverlof, gefinancierd door de overheid. Waar nodig (neem bvb leerkrachten) wordt vervanging mee gefaciliteerd.',
     answer: '',
     tags: ['praktisch', 'inclusiviteit', 'participatiedrempel', 'vergoeding', 'burgerparlementsverlof'],
@@ -198,6 +204,12 @@ export const questionsNl: Question[] = [
     summary: 'Blij dat je zo enthousiast bent! Maar sorry… Je kan je er niet voor inschrijven. Om partijdigheid te voorkomen, en ervoor te zorgen dat het parlement bestaat uit een dwarsdoorsnede van de bevolking van ons land, worden leden geloot uit de totale bevolking (rekening houdend met demografische criteria als gender, leeftijd, opleidingsniveau, etc.)',
     answer: '',
     tags: ['loting', 'deelnemen'],
+    slug: 'ik-wil-meedoen',
+  }, {
+    question: 'Ik wil meedoen aan de campagne! Wat kan ik doen?',
+    summary: 'Bedankt! Aarzel niet om over dit voorstel te spreken met vrienden, collega’s, familie. Share, like en retweet onze filmpjes en berichten op sociale media. Op deze website vind je ook de mogelijkheid om tweets en mails te adresseren aan politici naar keuze. Als je gelooft ons op andere manieren te kunnen ondersteunen, stuur dan een mailtje naar info@thecitizensparliament.be.',
+    answer: '',
+    tags: ['organisatie', 'deelnemen', 'campagne'],
     slug: 'ik-wil-meedoen',
   }, {
     question: 'Wat met deelnemers die het proces van het Burgerparlement verstoren?',
