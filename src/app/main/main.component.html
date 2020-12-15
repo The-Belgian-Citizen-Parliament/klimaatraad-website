@@ -106,7 +106,7 @@
 
       <div class="c-tweet">
         <p class="c-tweet__body">
-          Stuur een tweet naar onze premier <a target="_blank" href="https://www.twitter.com/alexanderdecroo">Alexander De Croo</a> en ministers van democratische vernieuwing <a target="_blank" href="https://www.twitter.com/AnneliesVerlind">Annelies Verlinden</a>, energie <a target="_blank" href="https://www.twitter.com/TinneVdS">Tinne Vand der Straten</a>, klimaat en leefmilieu <a target="_blank" href="https://twitter.com/khattabizakia">Zakia Khattabi</a>, kansengelijkheid <a target="_blank" href="https://twitter.com/sarahschlitz">Sarah Schiltz</a> en/of ambtenarenzaken <a target="_blank" href="https://twitter.com/pdsutter">Petra De Sutter</a>! <a target="_blank" href="https://www.twitter.com/burgerparlement">@burgerparlement</a> https://bit.ly/3dCoPNL
+          Stuur een tweet naar onze premier <a target="_blank" href="https://www.twitter.com/alexanderdecroo">Alexander De Croo</a> en ministers van democratische vernieuwing <a target="_blank" href="https://www.twitter.com/AnneliesVerlind">Annelies Verlinden</a>, energie <a target="_blank" href="https://www.twitter.com/TinneVdS">Tinne Vand der Straten</a>, klimaat en leefmilieu <a target="_blank" href="https://twitter.com/khattabizakia">Zakia Khattabi</a>, kansengelijkheid <a target="_blank" href="https://twitter.com/sarahschlitz">Sarah Schlitz</a> en/of ambtenarenzaken <a target="_blank" href="https://twitter.com/pdsutter">Petra De Sutter</a>! <a target="_blank" href="https://www.twitter.com/burgerparlement">@burgerparlement</a> https://bit.ly/3dCoPNL
         </p>
         <a class="c-button c-tweet__button" target="_blank" href="https://twitter.com/intent/tweet?url=&text=%40alexanderdecroo%20%40AnneliesVerlind%20%20%40TinneVdS%20%40khattabizakia%20%40sarahschlitz%20%40pdsutter%20Democratische%20vernieuwing%20combineren%20met%20doeltreffend%20milieubeleid%3F%20Tijd%20voor%20een%20%40burgerparlement!%20Alle%20info%3A%20https%3A%2F%2Fbit.ly%2F3dCoPNL%20%23burgerparlement%20%23onzestem">
           <span class="c-button__label">{{ 'tweetThis' | translate }}</span>
@@ -217,6 +217,10 @@
 
     <a class="c-logo" href="https://www.youth4climate.be">
       <img class="c-logo__image" src="/assets/img/logos/logo-youth-for-climate.png" alt="Youth For Climate">
+    </a>
+
+    <a class="c-logo" [routerLink]="languageService.route('about') | async" style="text-align: center;">
+      {{ 'viewAllSupportingOrganizations' | translate }}
     </a>
   </div>
 </div>

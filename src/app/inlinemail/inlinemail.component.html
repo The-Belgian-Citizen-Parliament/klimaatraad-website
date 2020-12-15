@@ -78,7 +78,13 @@
               </div>
 
               <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet && filteredMps && filteredMps.length === 0">
-                <i>{{ 'No representatives found with these filters' | translate }}</i>
+                <i>
+                  {{ 'No representatives found with these filters' | translate }}
+                  <ul style="margin: revert; padding: revert;">
+                    <li>{{ 'No representatives found with these filters Info 1' | translate }}</li>
+                    <li>{{ 'No representatives found with these filters Info 2' | translate }}</li>
+                  </ul>
+                </i>
               </div>
 
               <div class="mp-list" style="margin-bottom: 12px" *ngIf="selectionFilterSet && filteredMps && filteredMps.length > 0">

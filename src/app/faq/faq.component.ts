@@ -92,7 +92,7 @@ export class FaqComponent implements OnInit, OnDestroy {
 
   filterQuestions() {
     if (this.filter.length > 2) {
-      const filterWithWildCards = this.filter.split(' ').filter(x => x).map(part => part + '*').join(' ');
+      const filterWithWildCards = this.filter.split(' ').filter(x => x).map(part => part + ' ' + part + '*').join(' ');
 
       this.filteredQuestions = this.allQuestionsIndex.search(filterWithWildCards)
         .map(result => this.allQuestions.find(q => q.question === result.ref));

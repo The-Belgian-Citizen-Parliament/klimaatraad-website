@@ -14,6 +14,66 @@ export const questionsNl: Question[] = [
     tags: ['parlement', 'praktisch', 'kostprijs', 'duur', 'goedkoop', 'CCC'],
     slug: 'wie-gaat-dat-betalen',
   }, {
+    question: 'Dit voorstel is toch volledig onrealiseerbaar?',
+    summary: 'Het hangt ervan af over welke ‘realiteit’ je het hebt. De politieke realiteit of de realiteit van de ecologische crisis? In het laatste geval: onze nationale en internationale politici nemen deze nog niet voldoende ernstig, om het zacht uit te drukken. Soms lijkt het wel alsof zij op een andere planeet leven dan die van milieuwetenschappers. Wanneer je het bekijkt vanuit het oogpunt van de huidige Belgische politieke realiteit, dan is een Burgerparlement zeker geen eenvoudige zaak. Heel wat partijen hebben koudwatervrees, ondanks de vermelding van ‘democratische vernieuwing’ als een van de prioriteiten in het regeerakkoord van De Croo I. En toch: we vragen geen grote grondwettelijke omwenteling. We houden net rekening met de bestaande bestuurlijke complexiteit in dit land. In de gedetailleerde, <a href="https://www.hetburgerparlement.be/assets/proposal/het_burgerparlement_voorstel.pdf">lange versie</a> van ons voorstel kan je nalezen hoe het Burgerparlement precies in zijn werk zou kunnen gaan. Zo’n plan lijkt perfect realiseerbaar. Ook het nodige federale budget voor dit initiatief vrijmaken hoeft niet onoverkomelijk zijn. Als er 46 miljoen euro per jaar naar de Senaat kan gaan, een instelling met nauwelijks nog bevoegdheden, dan zou dit wel moeten lukken, toch?',
+    answer: '',
+    tags: ['parlement', 'praktisch', 'kostprijs', 'duur', 'goedkoop', 'politiek', 'wetenschap', 'onhaalbaar', 'voorbeelden'],
+    slug: 'voorstel-is-volledig-onrealiseerbaar',
+  }, {
+    question: 'Zitten bevoegdheden rond de ecologische crisis niet vooral op Europees niveau?',
+    summary: 'Eén van de belangrijkste begrippen om na te denken over goed bestuur is ‘subsidiariteit’: welk niveau heeft nood aan welk beleid en vice versa? In België leidt de veelgelaagdheid van het bestuur, opgedeeld in onder meer een federale Staat, gemeenschappen en gewesten, soms tot politiek vingerwijzen en het doorschuiven van taken en verantwoordelijkheden. De urgentie van de ecologische crisis dwingt (een ‘dwang’ vergelijkbaar met die van de coronacrisis) ons land echter tot coherent beleid en samenwerking. Daar wees een <a href="https://www.demorgen.be/politiek/europa-kritisch-voor-belgisch-klimaatplan-geen-coherent-geheel~b1db58c4/?utm_source=link&utm_medium=app&utm_campaign=shared%20content&utm_content=free" target="_blank">kritische Europese Commissie</a> ons recent trouwens nog op wanneer ze het Belgische klimaatplan evalueerde. In het geval van de ecologische noodtoestand ontvouwt de vraag van de subsidiariteit zich op een bijzonder complexe manier, gezien het ‘glokale’ (globale én lokale) karakter ervan. Heel wat beleidsinstrumenten om deze crisis te lijf te gaan bevinden zich eerder op het niveau van de Europese Unie dan op dat van het kleine België. Hoewel er voorstellen worden ontwikkeld voor een Europees burgerparlement, lijkt het ons toch belangrijk om ook in België de nodige stappen te zetten op bestuurlijk vlak, niet met muizenpootjes maar met zevenmijlslaarzen. Politieke vertegenwoordigers op verschillende niveaus kunnen het zich niet meer permitteren om op elkaar wachten. Overal zou het alle hens aan dek moeten zijn.',
+    answer: '',
+    tags: ['politiek', 'belgie', 'europa', 'bestuursniveaus'],
+    slug: 'bevoegdheden-zitten-op-europees-niveau',
+  }, {
+    question: 'Waarom behandelt het Burgerparlement slechts één enkel thema, dat van de ecologische crisis?',
+    summary: 'De ecologische crisis is niet \'één enkel thema\'; de grootste uitdaging waar de mensheid voor staat heeft impact op alle maatschappelijke domeinen. Een Burgerparlement zou zich dan ook buigen over de volgende thematische velden, die elke burger gemakkelijk kan verbinden met zijn of haar dagdagelijkse leven: (1) voedselvoorziening, landbouw en natuurbeheer, (2) arbeid, (3) huisvesting en ruimtelijke ordening, (4) mobiliteit en transport, (5) productie en grondstoffengebruik, (6) consumptie, (7) energie. Sommige problemen en sommige mogelijke oplossingen spelen zich af op verschillende thematische velden tegelijk. Om die reden stellen wij voor om in de eerste sessie van het Burgerparlement een training in systeemdenken op te nemen (zo’n training kan op een heel praktische manier). Ook wordt erop toegezien dat burgers doorheen het deliberatieve proces geregeld wisselen van thematische groepen - zo kunnen gemakkelijker de nodige inhoudelijke dwarsverbanden ontstaan. De crisis is door en door ‘ecologisch’ (alles staat op een complexe manier in verband met alles); ook het antwoord erop zal dat moeten zijn.',
+    answer: '',
+    tags: ['noodtoestand', 'ecologie', 'organisatie', 'praktisch'],
+    slug: 'waarom-gaat-het-enkel-over-de-ecologische-crisis',
+  }, {
+    question: 'Wat is het verschil met de G1000?',
+    summary: 'De G1000 was een belangrijk experiment ten tijde van de politieke crisis van 2010-2011, toen ons land het wereldrecord regeringsvormen behaalde (541 dagen). Het was iets heel anders dan wat wij voorstellen: het centrale event duurde slechts één dag - wij denken aan 11 driedaagse sessies gespreid over een jaar, wat absoluut nodig is voor een grondige informatieverstrekking en waardevolle deliberatie. De gelote burgers overlegden toen over uiteenlopende, onderling niet direct verbonden onderwerpen. De focus van het Burgerparlement zou de ecologische crisis zijn. Een kritiek was dat de groep uitgenodigde experten niet evenwichtig genoeg was samengesteld. Wij pleiten voor een ideologisch evenwicht, dat wel rekening houdt met de wetenschappelijke consensus rond de ecologische crisis. Met 700 deelnemers was de G1000 een enorme logistieke onderneming. Voor een goed functionerend burgerparlement heb je helemaal niet zoveel mensen nodig, wij denken aan 101 leden. De G1000 was een grassroots initiatief dat zelf budgetten verzamelde. In ons geval is enkel de campagne is grassroots, wij roepen de regering op om het Burgerparlement te initiëren, te financieren én publiek te verdedigen. Dat geeft het Burgerparlement direct meer politieke slagkracht. De G1000 vond 10 jaar geleden plaats. Sindsdien werd heel veel ervaring opgebouwd. De methodologie staat ondertussen meer op punt. Het initiatief was vooral een symbolisch statement in 2010-2011. Nu moeten we voorbij de symboliek. ',
+    answer: '',
+    tags: ['organisatie', 'praktisch', 'loting'],
+    slug: 'wat-is-het-verschil-met-de-g1000',
+  }, {
+    question: 'Is dit geen marginaal idee?',
+    summary: 'Neen. Heel wat landen gingen ons al voor: Frankrijk, Ierland, Zuid-Korea, Australië, Groot-Brittannië,… Zij organiseerden burgerparlementen rond uiteenlopende onderwerpen. Vandaag pleit zelfs het OECD - als economisch samenwerkingsverband van rijke landen niet direct een marginale club - voor deliberatieve democratie. Volgens een recente studie van CEVIPOL zou 75,8 % van de Belgen voorstander zijn van een burgervergadering bestaand uit door loting geselecteerde burgers. De regering De Croo I beweert bovendien in haar regeerakkoord in te zullen zetten op ‘democratische vernieuwing’, een bevoegdheid die valt onder het Ministerie van Binnenlandse Zaken, dat onder leiding staat van Annelies Verlinden (CD&V).',
+    answer: '',
+    tags: ['democratie', 'parktisch', 'bestuursniveaus'],
+    slug: 'is-dit-geen-marginaal-idee',
+  }, {
+    question: 'Voelt de brede bevolking wel voldoende urgentie om dit voorstel te steunen?',
+    summary: 'Doorwinterde klimaatnegationisten lijken ons een zeer kleine minderheid te zijn in België. Toch is het zo dat een groot deel van de bevolking niet de ernst van de ecologische crisis inziet, noch de snelheid waarmee ze zich ontvouwt. Onder wetenschappers leeft nochtans de consensus: de bewoonbaarheid van onze planeet staat op het spel. Een belangrijke reden voor het gebrek aan urgentie heeft te maken met informatieverstrekking. Een krant als de Britse The Guardian publiceerde het voorbije jaar 3000 artikels rond milieu en klimaat. In de kleine Belgische markt hebben nieuwsmedia sterk af te rekenen met commerciële druk. Publiceren over een crisis die hypercomplex is, overweldigend en soms ook wat saai en technisch, is vanuit dat oogpunt steeds een risico. Trump versus Biden leest nu eenmaal vlotter en verkoopt beter. Vaak hebben de redacties van kranten, tijdschriften en journaals door hun geslonken budgetten ook niet de kennis in huis om werkelijk over de ecologische crisis te kunnen berichten, op enkele uitzonderingen na. Het gaat bovendien niet louter over een bijzonder complexe en abstracte waarheid, die nog niet volop zichtbaar is in onze dagdagelijkse levens; het is ook nog eens een weinig opbeurende boodschap. Toch moeten we die, beter vroeger dan later, als samenleving onder ogen durven zien. ',
+    answer: '',
+    tags: ['noodtoestand', 'complexiteit'],
+    slug: 'voelt-de-brede-bevolking-wel-voldoende-urgentie-om-dit-voorstel-te-steunen',
+  }, {
+    question: 'Wat als leden van een Burgerparlement het bestaan van de ecologische crisis ontkennen?',
+    summary: 'Dat is goed mogelijk, al lijken doorwinterde klimaatnegationisten een minderheid te zijn in België. De ervaring met de Franse Convention Citoyenne pour le Climat leert bovendien dat burgers die zich daarvoor nauwelijks zorgen maakten om klimaat of milieu, dat wél deden na het horen van de wetenschappers die als experten kwamen spreken. De maatregelen die de 150 leden van de Convention - links én rechts georiënteerd - aan het eind van het proces voorstelden, gingen dan ook heel wat verder dan wat de gemiddelde politieke vertegenwoordiger vandaag op de agenda plaatst. ',
+    answer: '',
+    tags: ['praktisch', 'loting', 'klimaat'],
+    slug: 'wat-als-leden-van-het-burgerparlement-het-bestaan-van-de-ecologische-crisis-ontkennen',
+  }, {
+    question: 'Ontdoet een Burgerparlement het politieke debat niet van haar ideologische dimensie?',
+    summary: 'Pleiten voor een bewoonbare leefomgeving is niet rechts of links. De keuze voor welke maatregelen precies nodig zijn om dat doel te bereiken, daar kunnen ideologische voorkeuren wél een rol spelen. Als je een groep samenstelt met gelote burgers die rekening houdend met verschillende demografische criteria representatief is voor de totale bevolking, dan zijn die verschillende voorkeuren aanwezig aan de gesprekstafel. Wel blijkt uit veel eerdere initiatieven dat wanneer deze burgers kennismaken met de belangen en perspectieven van anderen, ze diplomatischer worden en minder ideologievast. Het overstijgen van de alomtegenwoordige politieke polarisering zorgt voor efficiëntere en meer gedragen besluitvorming, zeker wanneer het controversiële onderwerpen betreft. De Franse Convention Citoyenne pour le Climat toont wel aan dat nadat de burgers hun lijst met voorstellen voorleggen aan politici, het politieke spel niet gespeeld is. De Franse President Emmanuel Macron beweerde eerst de overgrote meerderheid van de voorstellen van de Convention uit te voeren, maar een aantal maanden later blijft van die belofte niet veel overeind, door actieve lobbying en politieke tegenkanting. De rol van politici en het brede middenveld blijft daarom van groot belang na een deliberatief proces. Een laatste punt: laat ons de grote economische belangen van een hele kleine minderheid ook niet verwarren met ideologische meningsverschillen. Ideologie wordt vaak misbruikt als rookgordijn.',
+    answer: '',
+    tags: ['politiek', 'polarisatie', 'ideologie'],
+    slug: 'ontdoet-een-burgerparlement-het-politieke-debat-niet-van-haar-ideologische-dimentie',
+  }, {
+    question: 'Hebben jullie geen al te naïeve opvattingen over de werking van macht?',
+    summary: 'Het is duidelijk dat bij het nadenken over maatregelen in het licht van de ecologische crisis, de grote economische belangen van een hele kleine minderheid van de bevolking op het spel staan. Dat die hele kleine minderheid een grote macht heeft, toonde de Franse Convention Citoyenne pour le Climat aan. Aanvankelijk beweerde de Franse President Emmanuel Macron de overgrote meerderheid van de voorstellen van de Convention uit te voeren, maar een aantal maanden later blijft van die belofte niet veel overeind, door actieve lobbying en politieke tegenkanting. De rol van politici en het brede middenveld blijft daarom van groot belang na een deliberatief proces. Wij geloven dat het moeilijker is voor een hele kleine minderheid van belanghebbenden om te lobbyen bij een groep van 101 gelote burgers dan bij verkozen politici. Het is ook minder gemakkelijk om de voorstellen van die groep burgers, representatief voor de totale bevolking, af te schieten dan de voorstellen van één enkele politieke partij. Ideologische meningsverschillen worden vaak misbruikt als rookgordijn. Vanuit machtspolitiek oogpunt bekeken lijkt een Burgerparlement ons daarom waardevolle zet. ',
+    answer: '',
+    tags: ['politiek', 'macht', 'democratie', 'ideologie', 'lobby'],
+    slug: 'te-negatieve-opvattingen-over-werking-macht',
+  }, {
+    question: 'In Frankrijk is een gelijkaardig initiatief toch mislukt?',
+    summary: 'De Convention Citoyenne pour le Climat was op verschillende vlakken baanbrekend. Het ontwerp van het deliberatieve proces, de financiële en aanvankelijke publieke steun van President Emmanuel Macron, de 149 grondig uitgewerkte voorstellen van de 150 Franse burgers,… Maar inderdaad, de Convention vertoont ook fundamentele gebreken. Macron beweerde eerst de overgrote meerderheid van de voorstellen van de Convention uit te voeren, maar een aantal maanden later blijft van die belofte niet veel overeind, door actieve lobbying en politieke tegenkanting. Volgens ons toont dit aan dat de rol van politici en het brede middenveld daarom van groot belang blijft na een deliberatief proces. Ook lijkt het ons cruciaal dat politici het idee publiek verdedigen tegenover de totale bevolking - met een breed publiek draagvlak voor een Burgerparlement staan ze veel sterker tegenover de macht van een hele kleine minderheid met grote economische belangen. ',
+    answer: '',
+    tags: ['parlement', 'CCC', 'gefaald', 'voorbeelden'],
+    slug: 'in-frankrijk-is-gelijkaardig-initiatief-mislukt',
+  }, {
     question: 'Zijn jullie niet gewoon handpoppen van Groen?',
     summary: 'Wij zijn een groep burgers die bezorgd zijn om de ecologische crisis, maar hebben geen banden met Groen, Ecolo of gelijk welke andere politieke partij. Elk van ons heeft zijn of haar ideologische voorkeuren, maar dit voorstel wil net iedereen betrekken bij het debat rond de enorme uitdagingen waar de ecologische crisis ons voor plaatst. Zowel links als rechts zullen deze realiteit vroeg of laat onder ogen moeten zien. Een Burgerparlement bestaat uit een groep burgers die representatief is voor de totale Belgische bevolking. Daardoor zullen de verschillende ideologische strekkingen er aanwezig zijn.',
     answer: '',
@@ -81,6 +141,12 @@ export const questionsNl: Question[] = [
     slug: 'waarom-zouden-willekeurige-burgers-in-mijn-plaats-kunnen-beslissen',
   }, {
     question: 'Ik heb jonge kinderen. Dan kan ik toch niet meedoen?',
+    summary: 'Toch wel. Er zijn inderdaad belangrijke participatiedrempels. De financiële drempel wordt weggenomen met dagvergoedingen, transportvergoedingen en accommodatie. En er wordt voorzien in kinderopvang, hulp bij ouderenzorg, zorg voor familieleden met een beperking,… Waar nodig (neem bvb leerkrachten) wordt vervanging mee gefaciliteerd.',
+    answer: '',
+    tags: ['praktisch', 'inclusiviteit', 'participatiedrempel', 'vergoeding', 'burgerparlementsverlof'],
+    slug: 'ik-heb-jonge-kinderen-dan-kan-ik-toch-niet-meedoen',
+  }, {
+    question: 'Ik moet werken. Dan kan ik toch niet meedoen?',
     summary: 'Toch wel. Elk lid krijgt dagvergoedingen (ook voor het nodige voorbereidende werk), transportvergoedingen en accommodatie. Ook zorgtaken kunnen mensen beletten om tijd vrij te maken voor de activiteiten van het Burgerparlement. Daarom wordt er voorzien in kinderopvang, hulp bij ouderenzorg, zorg voor familieleden met een beperking,… Werkenden krijgen een burgerparlementsverlof, gefinancierd door de overheid. Waar nodig (neem bvb leerkrachten) wordt vervanging mee gefaciliteerd.',
     answer: '',
     tags: ['praktisch', 'inclusiviteit', 'participatiedrempel', 'vergoeding', 'burgerparlementsverlof'],
@@ -138,6 +204,12 @@ export const questionsNl: Question[] = [
     summary: 'Blij dat je zo enthousiast bent! Maar sorry… Je kan je er niet voor inschrijven. Om partijdigheid te voorkomen, en ervoor te zorgen dat het parlement bestaat uit een dwarsdoorsnede van de bevolking van ons land, worden leden geloot uit de totale bevolking (rekening houdend met demografische criteria als gender, leeftijd, opleidingsniveau, etc.)',
     answer: '',
     tags: ['loting', 'deelnemen'],
+    slug: 'ik-wil-meedoen',
+  }, {
+    question: 'Ik wil meedoen aan de campagne! Wat kan ik doen?',
+    summary: 'Bedankt! Aarzel niet om over dit voorstel te spreken met vrienden, collega’s, familie. Share, like en retweet onze filmpjes en berichten op sociale media. Op deze website vind je ook de mogelijkheid om tweets en mails te adresseren aan politici naar keuze. Als je gelooft ons op andere manieren te kunnen ondersteunen, stuur dan een mailtje naar info@thecitizensparliament.be.',
+    answer: '',
+    tags: ['organisatie', 'deelnemen', 'campagne'],
     slug: 'ik-wil-meedoen',
   }, {
     question: 'Wat met deelnemers die het proces van het Burgerparlement verstoren?',

@@ -9,7 +9,7 @@
       <div class="info-hometown" *ngIf="mp.hometown"><span class="info-label">{{ 'Hometown' | translate }}: </span>{{ mp.hometown }}</div>
       <div class="info-city" *ngIf="mp.city"><span class="info-label">{{ 'City' | translate }}: </span>{{ mp.city }}</div>
       <div class="info-constituency" *ngIf="mp.constituency"><span class="info-label">{{ 'Constituency' | translate }}: </span>{{ mp.constituency | translate }}</div>
-      <div class="info-email" *ngIf="!mp.email" style="font-style: italic;">{{ 'No email' | translate }}</div>
+      <div class="info-email" *ngIf="!mp.email" style="font-style: italic;"><strong>{{ 'No email' | translate }}</strong></div>
     </div>
   </div>
 </div>

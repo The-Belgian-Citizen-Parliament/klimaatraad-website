@@ -32,6 +32,7 @@
   "followOurCampaign": "Volg de campagne",
   "manyQuestions": "Je zit ongetwijfeld met erg veel vragen, bijvoorbeeld...",
   "searchThroughAllQuestions": "Doorzoek alle vragen",
+  "viewAllSupportingOrganizations": "Bekijk alle 30+ organisaties",
 
   "faqTitle": "Veelgestelde <span class=\"u-color-teal\">vragen</span>",
   "faqSubtitle": "Een Burgerparlement? Is dat geen praatbarak? Heeft dat ooit gewerkt? En wie gaat dat betalen? Je zit ongetwijfeld met erg veel vragen. Hier proberen we ze allemaal voor je te beantwoorden, klaar en duidelijk.",
@@ -71,6 +72,7 @@
   "Oxfam": "Oxfam",
   "Youth For Climate": "Youth For Climate",
   "Transitieforum": "Transitieforum",
+  "Mothers step in": "Moeders in de weer",
 
   "Extinction Rebellion Belgium Info": "is een internationale beweging die geweldloze directe actie gebruikt om overheden te overtuigen actie te ondernemen tegen de Klimaat- en Ecologische noodsituatie.",
   "Greenpeace Info": "bestaat omdat onze aarde kwetsbaar is en een stem verdient. Omdat er concrete oplossingen nodig zijn. Omdat er verandering nodig is. En actie!",
@@ -84,6 +86,7 @@
   "Pousses et Vous Info": "is een non-profit organisatie die milieuactiviteiten aanbiedt voor alle soorten publiek, in de vorm van leuke en interactieve missies die gericht zijn op kritisch denken en de wetenschappelijke aanpak.",
   "Climate Express Info": "is een groep vrijwilligers die politiek ongebonden streven naar een daadkrachtige en solidaire aanpak van het klimaatprobleem.",
   "Vorming Plus Info": "zijn dertien pluralistische sociaal-culturele organisaties actief in evenveel regio’s in Vlaanderen en Brussel. Samen streven ze naar een duurzame, inclusieve, solidaire en democratische maatschappij.",
+  "11.11.11 Info": "zorgt ervoor dat we allemaal dezelfde basisrechten krijgen. Ze versterken de stem van mensen overal ter wereld die de mouwen opstropen en zich inzetten voor verandering.",
 
   "Mail your representatives": "Mail je vertegenwoordigers",
   "Who do you want to mail?": "Wie wil je mailen?",
@@ -121,7 +124,7 @@
   "Thanks": "Bedankt",
   "representativesMailed": "De door jou gekozen vertegenwoordigers ontvingen je mail en kunnen jou nu terugmailen. Fingers crossed!",
   "weWillKeepYouUpToDate": "We zullen je hoe dan ook op de hoogte houden van het verdere verloop van deze actie.",
-  "No email": "Geen email adres",
+  "No email": "Geen publiek email adres",
   "step": "Stap",
   "step1title": "<span class=\"u-color-teal\">Wie</span> wil je mailen?",
   "step1explanation": "Gebruik de filters en selecteer je politici naar keuze. We gebruiken enkel publiek beschikbare mailadressen.",
@@ -130,7 +133,9 @@
   "here": "hier",
   "step3title": "Stel je <span class=\"u-color-teal\">mail</span> op",
   "step3explanation": "Leg uit waarom dit belangrijk is voor jou. Een persoonlijke mail is het meest effectief! Gebruik één van de voorgedefiniëerde onderwerpen en teksten als je gehaast bent.",
-  "No representatives found with these filters": "Geen vertegenwoordigers gevonden met deze filters",
+  "No representatives found with these filters": "Geen parlementsleden gevonden met deze filters. Controleer het volgende:",
+  "No representatives found with these filters Info 1": "Niet alle ministers zijn ook verkozen parlementsleden. Wil je hen toch contacteren? Stuur hen in de plaats een tweet, hieronder!",
+  "No representatives found with these filters Info 2": "Ben je zeker dat je het juiste parlement selecteerde?",
   "I have read and accept the": "Ik ga akkoord met het gebruik van mijn data voor het doel van deze campagne zoals uitgelegd in de",
   "Participated recently": "Recent deelgenomen",
 
@@ -161,7 +166,7 @@
   "proposalTitle": "Het <span class=\"u-color-teal\">voorstel</span>",
   "proposalSubtitle": "",
 
-  "proposalIntro1": "Het Burgerparlement & Greenpeace, Youth for Climate, Kaya, Oxfam, Klimaatzaak, Grandparents pour le Climat, Masereelfonds, Antwerpenize, Globelink vzw, Burgerlijst Antwerpen, Act4Change, AllForClimate, Oikos, Hart Boven Hard, State of the Arts, Antwerpen aan 't woord, Gents Milieufront, Agora, Extinction Rebellion, Furia, Rise for Climate Belgium, Pousses et vous, EcoRes, Groupe One, Grootouders voor het Klimaat, vzw Amazone, Transitieforum, Les p'tites mains, Vormingplus en Climate Express",
+  "proposalIntro1": "Het Burgerparlement & Greenpeace, Youth for Climate, Kaya, Oxfam, Klimaatzaak, Grandparents pour le Climat, Boerenforum, 11.11.11, Masereelfonds, Antwerpenize, Globelink vzw, Burgerlijst Antwerpen, Act4Change, AllForClimate, Oikos, Hart Boven Hard, State of the Arts, Antwerpen aan 't woord, Gents Milieufront, Agora, Extinction Rebellion, Furia, Rise for Climate Belgium, Pousses et vous, EcoRes, Groupe One, Grootouders voor het Klimaat, vzw Amazone, Transitieforum, Les p'tites mains, Vormingplus, Émergences, Moeders in de weer, Netwerk Bewust Verbruiken en Climate Express",
   "proposalIntro2": "roepen de federale regering op er zich toe te verbinden om, voortbouwend op Art. 7bis van de Belgische Grondwet<sup>1</sup>, in de loop van deze legislatuur een Burgerparlement te initiëren rond de ecologische noodtoestand. Dit orgaan:",
   "proposalDemand1": "behandelt een vraag die zich <span class=\"u-color-orange-red\">niet beperkt tot de klimaatopwarming</span> maar het bredere perspectief van de ecologische crisis centraal stelt en dus rekening houdt met de negen huidig geïdentificeerde planetaire grenzen<sup>2</sup>;",
   "proposalDemand2": "bestaat uit een <span class=\"u-color-orange-red\">door loting samengestelde groep burgers</span> die, rekening houdend met een reeks demografische criteria, een voldoende representatieve dwarsdoorsnede vormt van de totale Belgische bevolking;",
