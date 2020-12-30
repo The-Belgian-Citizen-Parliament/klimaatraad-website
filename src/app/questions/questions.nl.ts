@@ -295,5 +295,23 @@ export const questionsNl: Question[] = [
     answer: '',
     tags: ['parlement', 'experten', 'belanghebbenden'],
     slug: 'wat-met-het-middenveld',
+  }, {
+    question: 'Spreekt uit jullie voorstel geen te groot vertrouwen in de burger?',
+    summary: 'Inderdaad, er spreekt een groot vertrouwen uit. In die zin is het een heel positief voorstel. Is het vertrouwen té groot? Neen, het is geen wensdenken. Buitenlandse voorbeelden tonen aan dat burgers de verantwoordelijkheid die ze in zo een Burgerparlement krijgen heel ernstig nemen. In Frankrijk hielden de leden van de Convention Citoyenne pour le Climat tussen de verschillende sessies door contact met elkaar, voerden ze informatiecampagnes in eigen stad. En in het katholieke Ierland was er decennia lang geen enkele politieke partij die haar nek wou uitsteken voor de legalisering van abortus. Uiteindelijk is daar een burgerassemblee tot een consensus gekomen dat in een referendum aan de bevolking werd voorgelegd, en daar is abortus nu legaal.',
+    answer: '',
+    tags: ['parlement', 'complexiteit'],
+    slug: 'te-groot-vertrouwen-in-burger',
+  }, {
+    question: 'Gezien de ernst van de ecologische crisis, moeten de experten niet snel aan zet komen?',
+    summary: 'Dat gaat niet werken. De voorstellen om de milieucrisis te bestrijden zullen een nog grotere impact hebben op ons dagelijks leven dan de voorschriften om het coronavirus het hoofd te bieden. Als die enkel van experten komen, zullen ze niet worden aanvaard door de brede bevolking. Dat zie je met de huidige pandemie ook al. Je moet een democratisch draagvlak hebben. Experten zijn ook maar representatief voor een bepaalde klasse van de bevolking. Hun beslissingen houden niet altijd rekening met levensomstandigheden van mensen die in een heel andere context leven. Het beste voorbeeld zijn de Gele Hesjes. Het feit dat een president op voorstel van experten een CO2-taks doorvoert maar daarbij geen rekening houdt met het feit dat veel mensen op het platteland hun auto dagelijks nodig hebben, heeft geleid tot hun volledig terechte protest.',
+    answer: '',
+    tags: ['parlement', 'experten', 'belanghebbenden', 'democratie', 'legitimiteit'],
+    slug: 'laat-direct-experts-aan-zet',
+  }, {
+    question: 'Is een Burgerparlement geen verkapte technocratie?',
+    summary: 'De gelote burgers worden bij aanvang inderdaad goed geïnformeerd. Dat onderscheidt een burgerparlement van een referendum. Hebben we daarom direct met een ‘technocratie’ of ‘expertocratie’ te maken? Neen. Ten eerste zijn de experten niet louter wetenschappers, ook ervaringsdeskundigen. Naast de milieuwetenschapper komt ook de boer aan het woord die al de gevolgen van de klimaatcrisis voelt. Ten tweede: in tegenstelling tot een technocratisch bestuur zijn het niet de experten die beleidsvoorstellen doen, maar de gelote burgers.',
+    answer: '',
+    tags: ['parlement', 'experten', 'belanghebbenden', 'legitimiteit'],
+    slug: 'burgerparlement-is-technocratie',
   },
 ];
