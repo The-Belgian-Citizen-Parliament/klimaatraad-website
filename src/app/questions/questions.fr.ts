@@ -295,5 +295,23 @@ export const questionsFr: Question[] = [
     answer: '',
     tags: ['parlement', 'experts'],
     slug: 'les-syndicats-ont-ils-quelque-chose-a-dire',
+  }, {
+    question: 'Votre proposition n\'exprime-t-elle pas une trop grande confiance en le grand public ?',
+    summary: 'En effet, elle exprime une grande confiance. En ce sens, c\'est une proposition très positive. La confiance est-elle trop grande ? Non, ce n\'est pas un voeu pieux. Les exemples étrangers montrent que les citoyens prennent très au sérieux la responsabilité qu\'ils ont dans un tel Parlement citoyen. En France, les membres de la Convention Citoyenne pour le Climat sont restés en contact entre les sessions, ont mené des campagnes d\'information dans leur propre ville. Et en Irlande catholique, pendant des décennies, aucun parti politique n\'a voulu s\'engager pour la légalisation de l\'avortement. Finalement, une assemblée citoyenne y a trouvé un consensus qui a été soumis à un référendum, et l\'avortement y est désormais légal.',
+    answer: '',
+    tags: ['parlement', 'experts'],
+    slug: 'beaucoup-de-confiance-en-le-grand-public',
+  }, {
+    question: 'Vu la gravité de la crise écologique, est-ce qu’on a pas besoin des experts qui pourraient agir rapidement ?',
+    summary: 'Cela ne marchera pas. Les propositions visant à lutter contre la crise environnementale auront un impact encore plus important sur notre vie quotidienne que les règlements relatifs au coronavirus. S\'ils ne proviennent que d\'experts, ils ne seront pas acceptés par la population en général. Vous pouvez le constater avec la pandémie actuelle. Vous devez bénéficier d\'un soutien démocratique. Les experts ne sont représentatifs que d\'une certaine classe de la population. Leurs décisions ne tiennent pas toujours compte des conditions de vie des personnes qui vivent dans un contexte complètement différent. Le meilleur exemple est celui des Gilets Jaunes. Le fait qu\'un président applique une taxe sur le CO2 sur proposition d\'experts, mais sans tenir compte du fait que de nombreuses personnes dans les zones rurales ont besoin de leur voiture tous les jours, a conduit à leur protestation tout à fait justifiée.',
+    answer: '',
+    tags: ['parlement', 'experts'],
+    slug: 'les-experts-doivent-pouvoir-agir-rapidement',
+  }, {
+    question: 'Un parlement citoyen n\'est-il pas une technocratie déguisée ?',
+    summary: 'Les citoyens tirés au sort sont en effet bien informés dès le départ. C\'est ce qui distingue un parlement citoyen d\'un référendum. Est-ce pour cela que nous avons directement affaire à une "technocratie" ou à une "expertocratie" ? Non. Tout d\'abord, les experts ne sont pas seulement des scientifiques, ils sont aussi des experts par expérience. En plus du scientifique de l\'environnement, l\'agriculteur qui ressent déjà les conséquences de la crise climatique a également son mot à dire. Deuxièmement : contrairement à un gouvernement technocratique, ce ne sont pas les experts qui font des propositions politiques, mais les citoyens tirés au sort.',
+    answer: '',
+    tags: ['parlement', 'experts'],
+    slug: 'parlement-citoyen-est-technocratie',
   },
 ];
