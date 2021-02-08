@@ -2,6 +2,14 @@ export const videos = {
   nl: [
     {
       nr: 0,
+      src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_nl.mp4',
+      poster: '/assets/vidposters/david.jpg',
+      preview: '/assets/vidposters/david_square.jpg',
+      name: 'David Van Reybrouck',
+      title: 'cultuurhistoricus, auteur \'Tegen Verkiezingen\''
+    },
+    {
+      nr: 1,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/youna_nl.mp4',
       poster: '/assets/vidposters/youna.jpg',
       preview: '/assets/vidposters/youna_square.jpg',
@@ -9,7 +17,7 @@ export const videos = {
       title: 'studente, woordvoerster Het Burgerparlement'
     },
     {
-      nr: 1,
+      nr: 2,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/sebastien_nl.mp4',
       poster: '/assets/vidposters/sebastien.jpg',
       preview: '/assets/vidposters/sebastien_square.jpg',
@@ -17,7 +25,7 @@ export const videos = {
       title: 'docent, woordvoerder Het Burgerparlement'
     },
     {
-      nr: 2,
+      nr: 3,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/esmeralda_nl.mp4',
       poster: '/assets/vidposters/esmeralda.jpg',
       preview: '/assets/vidposters/esmeralda_square.jpg',
@@ -25,7 +33,7 @@ export const videos = {
       title: 'dochter van koning Leopold III'
     },
     {
-      nr: 3,
+      nr: 4,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/Anuna_Quote.mp4',
       poster: '/assets/vidposters/anuna.jpg',
       preview: '/assets/vidposters/anuna_square.jpg',
@@ -33,7 +41,7 @@ export const videos = {
       title: 'Youth For Climate'
     },
     {
-      nr: 4,
+      nr: 5,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/Dirk_Quote.mp4',
       poster: '/assets/vidposters/dirk.jpg',
       preview: '/assets/vidposters/dirk_square.jpg',
@@ -41,7 +49,7 @@ export const videos = {
       title: 'bioloog'
     },
     {
-      nr: 5,
+      nr: 6,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/Khalid_Quote2.mp4',
       poster: '/assets/vidposters/khalid.jpg',
       preview: '/assets/vidposters/khalid_square.jpg',
@@ -49,7 +57,7 @@ export const videos = {
       title: 'imam'
     },
     {
-      nr: 6,
+      nr: 7,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/Maaike_Quote.mp4',
       poster: '/assets/vidposters/maaike.jpg',
       preview: '/assets/vidposters/maaike_square.jpg',
@@ -57,7 +65,7 @@ export const videos = {
       title: 'actrice'
     },
     {
-      nr: 7,
+      nr: 8,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/Marleen_Quote.mp4',
       poster: '/assets/vidposters/marleen.jpg',
       preview: '/assets/vidposters/marleen_square.jpg',
@@ -65,20 +73,12 @@ export const videos = {
       title: 'actrice'
     },
     {
-      nr: 8,
+      nr: 9,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/Veerle_Quote.mp4',
       poster: '/assets/vidposters/veerle.jpg',
       preview: '/assets/vidposters/veerle_square.jpg',
       name: 'Veerle Baetens',
       title: 'actrice'
-    },
-    {
-      nr: 9,
-      src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_nl.mp4',
-      poster: '/assets/vidposters/david.jpg',
-      preview: '/assets/vidposters/david_square.jpg',
-      name: 'David Van Reybrouck',
-      title: 'cultuurhistoricus, auteur \'Tegen Verkiezingen\''
     },
     {
       nr: 10,
@@ -89,6 +89,14 @@ export const videos = {
   fr: [
     {
       nr: 0,
+      src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_fr.mp4',
+      poster: '/assets/vidposters/david.jpg',
+      preview: '/assets/vidposters/david_square.jpg',
+      name: 'David Van Reybrouck',
+      title: 'historien de la culture, auteur \'Contre les Elections\''
+    },
+    {
+      nr: 1,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/youna_fr.mp4',
       poster: '/assets/vidposters/youna.jpg',
       preview: '/assets/vidposters/youna_square.jpg',
@@ -96,7 +104,7 @@ export const videos = {
       title: 'étudiante, porte-parole Le Parlement Citoyen'
     },
     {
-      nr: 1,
+      nr: 2,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/sebastien_fr.mp4',
       poster: '/assets/vidposters/sebastien.jpg',
       preview: '/assets/vidposters/sebastien_square.jpg',
@@ -104,7 +112,7 @@ export const videos = {
       title: 'professeur, porte-parole Le Parlement Citoyen'
     },
     {
-      nr: 2,
+      nr: 3,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/esmeralda_fr.mp4',
       poster: '/assets/vidposters/esmeralda.jpg',
       preview: '/assets/vidposters/esmeralda_square.jpg',
@@ -112,7 +120,7 @@ export const videos = {
       title: 'fille du roi Leopold III'
     },
     {
-      nr: 3,
+      nr: 4,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/Benjamin_Quote.mp4',
       poster: '/assets/vidposters/benjamin.jpg',
       preview: '/assets/vidposters/benjamin_square.jpg',
@@ -120,7 +128,7 @@ export const videos = {
       title: 'acteur'
     },
     {
-      nr: 4,
+      nr: 5,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/Anne_Quote.mp4',
       poster: '/assets/vidposters/anne.jpg',
       preview: '/assets/vidposters/anne_square.jpg',
@@ -128,20 +136,12 @@ export const videos = {
       title: 'actrice'
     },
     {
-      nr: 5,
+      nr: 6,
       src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/Veerle_QuoteSUB.mp4',
       poster: '/assets/vidposters/veerle.jpg',
       preview: '/assets/vidposters/veerle_square.jpg',
       name: 'Veerle Baetens',
       title: 'actrice'
-    },
-    {
-      nr: 6,
-      src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/david_fr.mp4',
-      poster: '/assets/vidposters/david.jpg',
-      preview: '/assets/vidposters/david_square.jpg',
-      name: 'David Van Reybrouck',
-      title: 'historien de la culture, auteur \'Contre les Elections\''
     },
     {
       nr: 7,
