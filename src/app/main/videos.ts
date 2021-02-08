@@ -79,6 +79,12 @@ export const videos = {
       preview: '/assets/vidposters/david_square.jpg',
       name: 'David Van Reybrouck',
       title: 'cultuurhistoricus, auteur \'Tegen Verkiezingen\''
+    },
+    {
+      nr: 10,
+      src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/campaign_animals_nl.mp4',
+      poster: '/assets/vidposters/campaign.jpg',
+      preview: '/assets/vidposters/campaign_square.jpg'
     }],
   fr: [
     {
@@ -136,5 +142,11 @@ export const videos = {
       preview: '/assets/vidposters/david_square.jpg',
       name: 'David Van Reybrouck',
       title: 'historien de la culture, auteur \'Contre les Elections\''
+    },
+    {
+      nr: 7,
+      src: 'https://vincentsels.be/ext/belgiancitizenparliament/video/campaign_animals_fr.mp4',
+      poster: '/assets/vidposters/campaign.jpg',
+      preview: '/assets/vidposters/campaign_square.jpg'
     }],
 };
