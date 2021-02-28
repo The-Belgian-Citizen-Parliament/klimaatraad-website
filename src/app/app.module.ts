@@ -31,6 +31,7 @@ import { TruncatePipe } from './common/truncate.pipe';
 import { RandomImageService } from './common/random-image.service';
 import { LanguageService } from './common/language.service';
 import { InlineMailComponent } from './inlinemail/inlinemail.component';
+import { LowercaseDirective } from './common/lowercase.directive';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { InlineMailComponent } from './inlinemail/inlinemail.component';
     NotFoundComponent,
     TruncatePipe,
     InlineMailComponent,
+    LowercaseDirective,
   ],
   imports: [
     TranslateModule,
