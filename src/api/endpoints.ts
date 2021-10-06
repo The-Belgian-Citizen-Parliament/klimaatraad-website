@@ -5,6 +5,9 @@ import * as mailgun from "mailgun-js";
 import { Mail } from 'src/app/mail/mail';
 import { mails } from './mails';
 
+const SEND_TO_FAKE_MAILS = true; // TODO: WARNING: SWITCH OFF
+const CHUNK_SIZE = 3; // TODO: WARNING: SET TO 10
+
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code = null) {
   console.log("ERROR: " + reason);
@@ -98,13 +101,18 @@ export function bootstrap(app: express.Express) {
             const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN, host: 'api.eu.mailgun.net' });
 
             // If more than 10 recipients are selected, split them up.
-            const chunkSize = 10;
-            const recipients = newMail.to.split(', ')
-            const recipientsAsChunks = toChunksOf(recipients, chunkSize);
+            let recipients = newMail.to.split(', ');
+
+            if (SEND_TO_FAKE_MAILS) {
+              let counter = 0;
+              recipients = recipients.map(() => `vsels${counter++}@teleworm.us`);
+            }
+
+            const recipientsAsChunks = toChunksOf(recipients, CHUNK_SIZE);
             const mailDataPerChunk = recipientsAsChunks.map(r => createMailData(newMail.firstName, newMail.lastName,
               newMail.email, r, newMail.subject, newMail.body));
 
-            console.log(`Sending ${mailDataPerChunk.length} mail(s) per chunk of ${chunkSize}.`);
+            console.log(`Sending ${mailDataPerChunk.length} mail(s) per chunk of ${CHUNK_SIZE}.`);
 
             const sendPromises = mailDataPerChunk.map(mailData => {
               return new Promise((resolve, reject) => {
