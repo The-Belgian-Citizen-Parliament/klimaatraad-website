@@ -5,8 +5,8 @@ import * as mailgun from "mailgun-js";
 import { Mail } from 'src/app/mail/mail';
 import { mails } from './mails';
 
-const SEND_TO_FAKE_MAILS = true; // TODO: WARNING: SWITCH OFF
-const CHUNK_SIZE = 3; // TODO: WARNING: SET TO 10
+const SEND_TO_FAKE_MAILS = false; // TODO: WARNING: SWITCH OFF WHEN DEPLOYING
+const CHUNK_SIZE = 10; // TODO: WARNING: SET TO 10 WHEN DEPLOYING
 
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code = null) {
