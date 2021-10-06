@@ -5,8 +5,8 @@
 You'll need the following:
 - Angular CLI v10
 - NPM v12
-- The Heroku CLI and an account
-- [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+- Postgresql
+- The deploy: Heroku CLI and an account
 
 After cloning, first install the dependencies:
 
