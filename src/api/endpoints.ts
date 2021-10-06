@@ -40,16 +40,54 @@ export function bootstrap(app: express.Express) {
       .catch(err => handleError(res, err.message, "Failed to get contacts."));
   });
 
+  function createMail(mail: Mail): Promise<any> {
+    return pool.query(`
+      INSERT INTO mails(first_name, last_name, email, postal_code, city, lang, allow_public, stay_up_to_date, mail_to, mail_subject, mail_body, created_on, sent_on)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING id`,
+      [mail.firstName, mail.lastName, mail.email, mail.postalCode, mail.city, mail.lang, mail.allowPublic, mail.stayUpToDate, mail.to, mail.subject, mail.body, new Date(), null]);
+  }
+
+  function toChunksOf(inputArray: string[], chunkSize) {
+    const result = inputArray.reduce((resultArray, item, index) => {
+      const chunkIndex = Math.floor(index / chunkSize);
+
+      if (!resultArray[chunkIndex]) {
+        resultArray[chunkIndex] = [] // start a new chunk
+      }
+
+      resultArray[chunkIndex].push(item)
+
+      return resultArray
+    }, []);
+
+    return result;
+  }
+
+  function createMailData(firstName: string, lastName: string, replyTo: string, recipients: string[], subject: string, body: string){
+    return ({
+      from: firstName + ' ' + lastName + ' <info@thecitizensparliament.be>', //  '<' + newMail.email + '>',
+      'h:Reply-To': replyTo,
+      to: recipients.join(', '),
+      subject: subject,
+      text: body,
+    });
+  }
+
+  function createThankYouMailData(lang: string, to: string, firstName: string, stayUpToDate: boolean) {
+    return ({
+      from: mails[lang].from,
+      to: to,
+      subject: mails[lang].thankYou.subject,
+      html: mails[lang].thankYou.bodyIntro.replace('$0', firstName) + (stayUpToDate ? mails[lang].thankYou.bodyUpToDate : '') + mails[lang].thankYou.bodyOutro,
+    });
+  }
+
   app.post("/api/mails", function(req, res) {
     const newMail = req.body as Mail;
 
     if (!validate(req, newMail)) return;
 
-    pool.query(`
-      INSERT INTO mails(first_name, last_name, email, postal_code, city, lang, allow_public, stay_up_to_date, mail_to, mail_subject, mail_body, created_on, sent_on)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING id`,
-      [newMail.firstName, newMail.lastName, newMail.email, newMail.postalCode, newMail.city, newMail.lang, newMail.allowPublic, newMail.stayUpToDate, newMail.to, newMail.subject, newMail.body, new Date(), null])
-      .then((inserted) => {
+    createMail(newMail).then((inserted) => {
         const id = inserted.rows[0].id;
         newMail.id = id;
         console.log('Created email record: ', id);
@@ -57,29 +95,40 @@ export function bootstrap(app: express.Express) {
         // Try to send mail
         if (process.env.MAILGUN_API_KEY) {
           try {
-            console.log('Sending mail...');
             const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN, host: 'api.eu.mailgun.net' });
-            const data = {
-              from: newMail.firstName + ' ' + newMail.lastName + ' <info@thecitizensparliament.be>', //  '<' + newMail.email + '>',
-              'h:Reply-To': newMail.email,
-              to: newMail.to,
-              subject: newMail.subject,
-              text: newMail.body,
-            };
-            mg.messages().send(data, (mailErr, body) => {
-              if (mailErr) {
-                handleError(res, mailErr, "Failed to send mail");
-              } else {
-                console.log('Mail seems to be sent: ', body);
+
+            // If more than 10 recipients are selected, split them up.
+            const chunkSize = 10;
+            const recipients = newMail.to.split(', ')
+            const recipientsAsChunks = toChunksOf(recipients, chunkSize);
+            const mailDataPerChunk = recipientsAsChunks.map(r => createMailData(newMail.firstName, newMail.lastName,
+              newMail.email, r, newMail.subject, newMail.body));
+
+            console.log(`Sending ${mailDataPerChunk.length} mail(s) per chunk of ${chunkSize}.`);
+
+            const sendPromises = mailDataPerChunk.map(mailData => {
+              return new Promise((resolve, reject) => {
+                mg.messages().send(mailData, (mailErr, body) => {
+                  if (mailErr) {
+                    console.log('Error sending mail to ' + mailData.to, mailErr);
+                    reject(mailErr);
+                  } else {
+                    console.log('Mail seems to be sent to ' + mailData.to, body);
+                    resolve(body);
+                  }
+                });
+              });
+            });
+
+            Promise.all(sendPromises)
+              .then((bodies) => {
+                // All mails sent successfully
+                console.log('All mails sent successfully!');
                 newMail.sentOn = new Date();
 
                 console.log('Sending thank you mail...');
-                const thankYouData = {
-                  from: mails[newMail.lang].from,
-                  to: newMail.email,
-                  subject: mails[newMail.lang].thankYou.subject,
-                  html: mails[newMail.lang].thankYou.bodyIntro.replace('$0', newMail.firstName) + (newMail.stayUpToDate ? mails[newMail.lang].thankYou.bodyUpToDate : '') + mails[newMail.lang].thankYou.bodyOutro,
-                }
+                const thankYouData = createThankYouMailData(newMail.lang, newMail.email, newMail.firstName, newMail.stayUpToDate);
+
                 mg.messages().send(thankYouData, (mailErr, body) => {
                   if (mailErr) {
                     handleError(res, mailErr, "Failed to send thank you mail");
@@ -96,8 +145,11 @@ export function bootstrap(app: express.Express) {
                     res.status(201).json(newMail);
                   })
                   .catch((updateError) => handleError(res, updateError.message, "Failed to set mail as sent"));
-              }
-            });
+              })
+              .catch((mailErr) => {
+                // Error while sending at least one mail
+                handleError(res, mailErr, "Failed to send mail");
+              });
           } catch (mailError) {
             handleError(res, mailError, "Failed to send mail");
           }
